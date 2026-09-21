@@ -1,0 +1,2054 @@
+/* =========================================
+   AQUASCAPE ABOUT HERO 2
+========================================= */
+
+.abx2-hero {
+    position: relative;
+    min-height: 90vh;
+    width: 100%;
+
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+
+    background: #f7fbf9;
+
+    color: #203129;
+
+    isolation: isolate;
+}
+
+/* =========================================
+   BACKGROUND GLOW
+========================================= */
+
+.abx2-glow {
+    position: absolute;
+
+    border-radius: 50%;
+
+    filter: blur(60px);
+
+    pointer-events: none;
+
+    z-index: -1;
+}
+
+.abx2-glow-blue {
+    width: 350px;
+    height: 350px;
+
+    top: -180px;
+    left: -100px;
+
+    background: rgba(22, 139, 209, 0.14);
+}
+
+.abx2-glow-green {
+    width: 400px;
+    height: 400px;
+
+    right: -180px;
+    bottom: -180px;
+
+    background: rgba(41, 148, 71, 0.13);
+}
+
+
+/* =========================================
+   MAIN CONTAINER
+========================================= */
+
+.abx2-hero-inner {
+    width: min(1250px, 92%);
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 0.9fr 1.1fr;
+
+    align-items: center;
+
+    gap: 60px;
+
+    padding: 10px 0 70px;
+}
+
+
+/* =========================================
+   LEFT CONTENT
+========================================= */
+
+.abx2-content {
+    position: relative;
+
+    z-index: 5;
+}
+
+
+/* Badge */
+
+.abx2-badge {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 9px 17px;
+
+    margin-bottom: 20px;
+
+    border-radius: 50px;
+
+    background: rgba(22, 139, 209, 0.08);
+
+    border: 1px solid rgba(22, 139, 209, 0.18);
+
+    color: #168bd1;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    animation: abx2FadeUp 0.7s ease both;
+}
+
+.abx2-badge i {
+    color: #299447;
+}
+
+
+/* Heading */
+
+.abx2-content h1 {
+    max-width: 650px;
+
+    margin: 0 0 20px;
+
+    font-size: clamp(30px, 5vw, 40px);
+
+    line-height: 1.05;
+
+    letter-spacing: -2px;
+
+    font-weight: 800;
+
+    animation: abx2FadeUp 0.8s 0.1s ease both;
+}
+
+.abx2-content h1 span {
+    display: block;
+
+    background:
+        linear-gradient(
+            90deg,
+            #168bd1,
+            #299447
+        );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    background-clip: text;
+}
+
+
+/* Paragraph */
+
+.abx2-content p {
+    max-width: 600px;
+
+    margin: 0 0 27px;
+
+    color: #66756d;
+
+    font-size: 16px;
+
+    line-height: 1.8;
+
+    animation: abx2FadeUp 0.8s 0.2s ease both;
+}
+
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.abx2-buttons {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    flex-wrap: wrap;
+
+    animation: abx2FadeUp 0.8s 0.3s ease both;
+}
+
+.abx2-primary,
+.abx2-secondary {
+    min-height: 47px;
+
+    padding: 0 20px;
+
+    border-radius: 8px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 9px;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    transition: 0.3s ease;
+}
+
+.abx2-primary {
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            135deg,
+            #168bd1,
+            #299447
+        );
+
+    box-shadow:
+        0 10px 25px rgba(22, 139, 209, 0.20);
+}
+
+.abx2-primary:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 15px 30px rgba(41, 148, 71, 0.25);
+}
+
+.abx2-primary i {
+    transition: 0.3s ease;
+}
+
+.abx2-primary:hover i {
+    transform: translateX(4px);
+}
+
+.abx2-secondary {
+    color: black;
+
+    border: 1px solid var(--green);
+
+}
+
+.abx2-secondary:hover {
+
+    color: var(--blue);
+
+    border: 1px solid var(--blue);
+
+}
+
+
+/* =========================================
+   MINI STATS
+========================================= */
+
+.abx2-mini-info {
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    margin-top: 34px;
+
+    animation: abx2FadeUp 0.8s 0.4s ease both;
+}
+
+.abx2-mini-info div:not(.abx2-divider) {
+    display: flex;
+
+    flex-direction: column;
+}
+
+.abx2-mini-info strong {
+    color: #168bd1;
+
+    font-size: 20px;
+
+    line-height: 1.2;
+}
+
+.abx2-mini-info span {
+    margin-top: 3px;
+
+    color: #7a8780;
+
+    font-size: 10px;
+
+    white-space: nowrap;
+}
+
+.abx2-divider {
+    width: 1px;
+
+    height: 30px;
+
+    background: rgba(32, 49, 41, 0.13);
+}
+
+
+/* =========================================
+   RIGHT VISUAL
+========================================= */
+
+.abx2-visual {
+    position: relative;
+
+    height: 500px;
+
+    animation: abx2VisualReveal 1s 0.2s ease both;
+}
+
+
+/* =========================================
+   MAIN IMAGE
+========================================= */
+
+.abx2-main-image {
+    position: absolute;
+
+    top: 20px;
+    right: 45px;
+
+    width: 72%;
+    height: 400px;
+
+    overflow: hidden;
+
+    border-radius: 28px;
+
+    border: 7px solid rgba(255, 255, 255, 0.9);
+
+    box-shadow:
+        0 25px 70px rgba(20, 60, 40, 0.18);
+
+    transform: rotate(2deg);
+
+    animation: abx2ImageFloat 6s ease-in-out infinite;
+}
+
+.abx2-main-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: 0.7s ease;
+}
+
+.abx2-main-image:hover img {
+    transform: scale(1.08);
+}
+
+.abx2-image-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            180deg,
+            transparent 55%,
+            rgba(0, 0, 0, 0.45)
+        );
+}
+
+.abx2-image-label {
+    position: absolute;
+
+    left: 20px;
+    bottom: 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 9px 14px;
+
+    border-radius: 50px;
+
+    background: rgba(0, 0, 0, 0.42);
+
+    backdrop-filter: blur(10px);
+
+    color: #ffffff;
+
+    font-size: 11px;
+
+    font-weight: 700;
+}
+
+.abx2-image-label i {
+    color: #55c7f5;
+}
+
+
+/* =========================================
+   SMALL IMAGE
+========================================= */
+
+.abx2-small-image {
+    position: absolute;
+
+    left: 5px;
+    bottom: 35px;
+
+    width: 205px;
+    height: 145px;
+
+    padding: 6px;
+
+    background: #ffffff;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 20px 45px rgba(20, 60, 40, 0.20);
+
+    transform: rotate(-6deg);
+
+    z-index: 5;
+
+    animation: abx2SmallFloat 5s ease-in-out infinite;
+}
+
+.abx2-small-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    border-radius: 15px;
+}
+
+
+/* =========================================
+   EXPERIENCE CIRCLE
+========================================= */
+
+.abx2-experience {
+    position: absolute;
+
+    top: 0;
+    left: 20px;
+
+    width: 125px;
+    height: 125px;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #168bd1,
+            #299447
+        );
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    z-index: 6;
+
+    box-shadow:
+        0 15px 35px rgba(22, 139, 209, 0.28);
+
+    animation: abx2BadgeFloat 4s ease-in-out infinite;
+}
+
+.abx2-experience-ring {
+    position: absolute;
+
+    inset: 7px;
+
+    border: 1px dashed rgba(255, 255, 255, 0.65);
+
+    border-radius: 50%;
+
+    animation: abx2Rotate 12s linear infinite;
+}
+
+.abx2-experience-content {
+    text-align: center;
+
+    color: #ffffff;
+
+    position: relative;
+}
+
+.abx2-experience-content strong {
+    display: block;
+
+    font-size: 29px;
+
+    line-height: 1;
+}
+
+.abx2-experience-content span {
+    display: block;
+
+    margin-top: 3px;
+
+    font-size: 10px;
+
+    font-weight: 800;
+}
+
+.abx2-experience-content small {
+    display: block;
+
+    margin-top: 2px;
+
+    font-size: 7px;
+
+    opacity: 0.8;
+}
+
+
+/* =========================================
+   WATER CARD
+========================================= */
+
+.abx2-water-card {
+    position: absolute;
+
+    right: 0;
+    bottom: 70px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 12px 15px;
+
+    border-radius: 15px;
+
+    background: rgba(255, 255, 255, 0.86);
+
+    border: 1px solid rgba(255, 255, 255, 0.8);
+
+    backdrop-filter: blur(15px);
+
+    box-shadow:
+        0 15px 35px rgba(20, 60, 40, 0.16);
+
+    z-index: 7;
+
+    animation: abx2CardFloat 4.5s ease-in-out infinite;
+}
+
+.abx2-water-icon {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 11px;
+
+    background: rgba(22, 139, 209, 0.10);
+
+    color: #168bd1;
+}
+
+.abx2-water-card strong {
+    display: block;
+
+    color: #203129;
+
+    font-size: 12px;
+}
+
+.abx2-water-card span {
+    display: block;
+
+    margin-top: 2px;
+
+    color: #7b8780;
+
+    font-size: 9px;
+}
+
+
+/* =========================================
+   FLOATING LEAVES
+========================================= */
+
+.abx2-floating-leaf {
+    position: absolute;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 38px;
+    height: 38px;
+
+    border-radius: 50%;
+
+    background: rgba(41, 148, 71, 0.10);
+
+    color: #299447;
+
+    z-index: 8;
+
+    animation: abx2LeafFloat 4s ease-in-out infinite;
+}
+
+.abx2-leaf-one {
+    right: 15px;
+    top: 95px;
+
+    font-size: 14px;
+}
+
+.abx2-leaf-two {
+    left: 100px;
+    top: 175px;
+
+    font-size: 12px;
+
+    animation-delay: 1.2s;
+}
+
+
+/* =========================================
+   WATER DROPS
+========================================= */
+
+.abx2-drop {
+    position: absolute;
+
+    width: 10px;
+    height: 14px;
+
+    border-radius: 70% 30% 60% 40%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #55c9f7,
+            #168bd1
+        );
+
+    opacity: 0.65;
+
+    z-index: 5;
+
+    animation: abx2DropFloat 4s ease-in-out infinite;
+}
+
+.abx2-drop-one {
+    top: 70px;
+    right: 10%;
+
+    animation-delay: 0.5s;
+}
+
+.abx2-drop-two {
+    top: 260px;
+    right: -5px;
+
+    animation-delay: 1.4s;
+}
+
+.abx2-drop-three {
+    bottom: 90px;
+    right: 25%;
+
+    animation-delay: 2s;
+}
+
+
+/* =========================================
+   SCROLL
+========================================= */
+
+.abx2-scroll {
+    position: absolute;
+
+    bottom: 17px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 5px;
+
+    color: #89968f;
+
+    font-size: 9px;
+
+    letter-spacing: 1.4px;
+
+    text-transform: uppercase;
+}
+
+.abx2-scroll i {
+    color: #299447;
+
+    animation: abx2Arrow 1.5s infinite;
+}
+
+
+/* =========================================
+   DARK MODE
+========================================= */
+
+body.dark .abx2-hero {
+    background: #000000;
+
+    color: #ffffff;
+}
+
+body.dark .abx2-content p {
+    color: #b7b7b7;
+}
+
+body.dark .abx2-badge {
+    background: rgba(22, 139, 209, 0.10);
+
+    border-color: rgba(22, 139, 209, 0.25);
+}
+
+body.dark .abx2-secondary {
+    background: rgba(41, 148, 71, 0.08);
+
+    color: #55d87a;
+
+    border-color: rgba(41, 148, 71, 0.35);
+}
+
+body.dark .abx2-mini-info span {
+    color: #999999;
+}
+
+body.dark .abx2-divider {
+    background: rgba(255, 255, 255, 0.16);
+}
+
+body.dark .abx2-main-image {
+    border-color: #0b0b0b;
+
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.8);
+}
+
+body.dark .abx2-small-image {
+    background: #050505;
+
+    box-shadow:
+        0 20px 45px rgba(0, 0, 0, 0.8);
+}
+
+body.dark .abx2-water-card {
+    background: rgba(8, 8, 8, 0.92);
+
+    border-color: rgba(255, 255, 255, 0.10);
+}
+
+body.dark .abx2-water-card strong {
+    color: #ffffff;
+}
+
+body.dark .abx2-water-card span {
+    color: #999999;
+}
+
+body.dark .abx2-scroll {
+    color: #888888;
+}
+
+
+/* =========================================
+   RTL
+========================================= */
+
+body.rtl .abx2-hero-inner {
+    direction: rtl;
+}
+
+body.rtl .abx2-content {
+    text-align: right;
+}
+
+body.rtl .abx2-buttons,
+body.rtl .abx2-mini-info {
+    direction: rtl;
+}
+
+body.rtl .abx2-main-image {
+    right: auto;
+    left: 45px;
+
+    transform: rotate(-2deg);
+}
+
+body.rtl .abx2-small-image {
+    left: auto;
+    right: 5px;
+
+    transform: rotate(6deg);
+}
+
+body.rtl .abx2-experience {
+    left: auto;
+    right: 20px;
+}
+
+body.rtl .abx2-water-card {
+    right: auto;
+    left: 0;
+}
+
+body.rtl .abx2-primary:hover i {
+    transform: translateX(-4px);
+}
+
+
+/* =========================================
+   ANIMATIONS
+========================================= */
+
+@keyframes abx2FadeUp {
+
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+@keyframes abx2VisualReveal {
+
+    from {
+        opacity: 0;
+        transform: translateX(40px) scale(0.96);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
+
+}
+
+@keyframes abx2ImageFloat {
+
+    0%,
+    100% {
+        transform: rotate(2deg) translateY(0);
+    }
+
+    50% {
+        transform: rotate(2deg) translateY(-10px);
+    }
+
+}
+
+@keyframes abx2SmallFloat {
+
+    0%,
+    100% {
+        transform: rotate(-6deg) translateY(0);
+    }
+
+    50% {
+        transform: rotate(-6deg) translateY(-12px);
+    }
+
+}
+
+@keyframes abx2BadgeFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+}
+
+@keyframes abx2CardFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-9px);
+    }
+
+}
+
+@keyframes abx2LeafFloat {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-12px) rotate(12deg);
+    }
+
+}
+
+@keyframes abx2DropFloat {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-18px) rotate(15deg);
+    }
+
+}
+
+@keyframes abx2Rotate {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+@keyframes abx2Arrow {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(5px);
+    }
+
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1050px) {
+
+    .abx2-hero-inner {
+        grid-template-columns: 1fr 1fr;
+
+        gap: 30px;
+    }
+
+    .abx2-content h1 {
+        font-size: 48px;
+    }
+
+    .abx2-visual {
+        height: 440px;
+    }
+
+    .abx2-main-image {
+        width: 78%;
+        height: 350px;
+    }
+
+    .abx2-small-image {
+        width: 175px;
+        height: 125px;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .abx2-hero {
+        min-height: auto;
+    }
+
+    .abx2-hero-inner {
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+
+        padding: 45px 0 70px;
+    }
+
+    .abx2-content {
+        text-align: center;
+    }
+
+    .abx2-content h1 {
+        font-size: 40px;
+
+        letter-spacing: -1px;
+    }
+
+    .abx2-content p {
+        margin-left: auto;
+        margin-right: auto;
+
+        font-size: 14px;
+    }
+
+    .abx2-buttons {
+        justify-content: center;
+    }
+
+    .abx2-mini-info {
+        justify-content: center;
+    }
+
+    .abx2-visual {
+        height: 400px;
+
+        width: 100%;
+    }
+
+    .abx2-main-image {
+        top: 20px;
+        right: 5%;
+
+        width: 75%;
+        height: 310px;
+    }
+
+    .abx2-small-image {
+        left: 3%;
+
+        width: 160px;
+        height: 110px;
+
+        bottom: 30px;
+    }
+
+    .abx2-experience {
+        width: 105px;
+        height: 105px;
+
+        left: 2px;
+    }
+
+    .abx2-water-card {
+        right: 0;
+
+        bottom: 55px;
+    }
+
+    .abx2-scroll {
+        display: none;
+    }
+
+    body.rtl .abx2-content {
+        text-align: center;
+    }
+
+    body.rtl .abx2-main-image {
+        left: 5%;
+    }
+
+    body.rtl .abx2-small-image {
+        right: 3%;
+    }
+
+    body.rtl .abx2-experience {
+        right: 2px;
+    }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+
+    .abx2-content h1 {
+        font-size: 32px;
+    }
+
+    .abx2-mini-info {
+        gap: 10px;
+    }
+
+    .abx2-mini-info strong {
+        font-size: 17px;
+    }
+
+    .abx2-mini-info span {
+        font-size: 8px;
+    }
+
+    .abx2-visual {
+        height: 350px;
+    }
+
+    .abx2-main-image {
+        height: 270px;
+
+        width: 78%;
+    }
+
+    .abx2-small-image {
+        width: 135px;
+        height: 95px;
+    }
+
+    .abx2-experience {
+        width: 90px;
+        height: 90px;
+    }
+
+    .abx2-experience-content strong {
+        font-size: 23px;
+    }
+
+    .abx2-water-card {
+        padding: 9px 11px;
+    }
+
+    .abx2-water-icon {
+        width: 32px;
+        height: 32px;
+    }
+
+}
+
+
+
+
+
+
+
+/* =========================================================
+   COMMON SECTION
+========================================================= */
+
+.about-section {
+
+    padding: 100px 7%;
+
+    position: relative;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease;
+}
+
+.section-header {
+
+    position: sticky;
+
+    z-index: 500;
+
+    max-width: 800px;
+
+    margin:
+        0 auto 55px;
+
+    text-align: center;
+}
+
+.section-tag {
+
+    display: inline-block;
+
+    color: var(--blue);
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 12px;
+
+    text-transform: uppercase;
+}
+
+.section-header h2 {
+
+    color: var(--heading);
+
+    font-size:
+        clamp(26px, 5vw, 35px);
+
+    line-height: 1.2;
+
+    margin-bottom: 18px;
+
+    font-weight: 800;
+}
+
+.section-header h2 span {
+
+    color: var(--green);
+}
+
+.section-header p {
+
+    color: var(--text);
+
+    max-width: 700px;
+
+    margin: auto;
+
+    font-size: 16px;
+}
+
+
+/* =========================================================
+   1. WHO WE ARE
+========================================================= */
+
+.who-section {
+    padding-top: 110px;
+}
+
+.who-wrapper {
+
+    max-width: 1350px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        0.85fr 1.15fr;
+
+    gap: 55px;
+
+    padding: 30px;
+
+    border:
+        1px solid var(--border);
+
+    border-radius:
+        var(--radius);
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--card),
+            var(--soft-green)
+        );
+
+    box-shadow:
+        var(--shadow);
+}
+
+
+/* IMAGE */
+
+.who-image {
+     
+    margin-top: 80px;
+
+    height: 620px;
+
+    overflow: hidden;
+
+    border-radius: 18px;
+
+    border:
+        1px solid var(--blue);
+}
+
+.who-image img {
+
+    height: 100%;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.6s ease;
+}
+
+.who-image:hover img {
+
+    transform:
+        scale(1.05);
+}
+
+
+/* CONTENT */
+
+.who-content {
+
+    padding:
+        15px 10px;
+}
+
+.content-tag {
+
+    color: var(--blue);
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.8px;
+
+    margin-bottom: 12px;
+}
+
+.who-content h3 {
+
+    color: var(--heading);
+
+    font-size:
+        clamp(26px, 5vw, 35px);
+
+    line-height: 1.25;
+
+    margin-bottom: 25px;
+
+    font-weight: 800;
+}
+
+.who-content h3 span {
+
+    color: var(--green);
+}
+
+
+/* PARAGRAPHS */
+
+.who-content p {
+
+    color: var(--text);
+
+    font-size: 15.5px;
+
+    line-height: 1.9;
+
+    margin-bottom: 18px;
+}
+
+
+/* HIGHLIGHTS */
+
+.who-highlights {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 15px;
+
+    margin-top: 30px;
+}
+
+.highlight {
+
+    padding: 18px;
+
+    border:
+        1px solid var(--green);
+
+    border-radius: 15px;
+
+    background:
+        var(--card);
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.highlight:hover {
+
+    transform:
+        translateY(-5px);
+
+    border-color:
+        var(--blue);
+}
+
+.highlight h4 {
+
+    color: var(--blue);
+
+    font-size: 16px;
+
+    margin-bottom: 5px;
+}
+
+.highlight p {
+
+    font-size: 13px;
+
+    margin: 0;
+
+    line-height: 1.6;
+}
+
+
+/* STATS */
+
+.who-stats {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 15px;
+
+    margin-top: 30px;
+}
+
+.stat-box {
+
+    text-align: center;
+
+    padding: 20px 10px;
+
+    border:
+        1px solid var(--green);
+
+    border-radius: 15px;
+
+    background:
+        var(--soft-blue);
+}
+
+.stat-box :hover{
+    transform: translatey(-4px);
+
+}
+
+.stat-box strong {
+
+    display: block;
+
+    color: var(--green);
+
+    font-size: 24px;
+
+    margin-bottom: 3px;
+}
+
+.stat-box span {
+
+    color: var(--muted);
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   2. OUR MISSION
+========================================================= */
+
+.mission-section {
+
+    background:
+        var(--soft-blue);
+}
+
+.mission-grid {
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.mission-card {
+
+    padding: 35px 28px;
+
+    border:
+        1px solid var(--green);
+
+    border-radius:
+        var(--radius);
+
+    background:
+        var(--card);
+
+    box-shadow:
+        var(--shadow);
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.mission-card:hover {
+
+    transform:
+        translateY(-8px);
+
+    border-color:
+        var(--green);
+}
+
+.mission-icon {
+
+    width: 55px;
+
+    height: 55px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 14px;
+
+    background:
+        var(--soft-green);
+
+    border:
+        1px solid var(--blue);
+
+    color: var(--green);
+
+    font-size: 20px;
+
+    font-weight: 800;
+
+    margin-bottom: 20px;
+}
+
+.mission-card h3 {
+
+    color: var(--heading);
+
+    font-size: 21px;
+
+    margin-bottom: 12px;
+}
+
+.mission-card h3 span {
+
+    color: var(--blue);
+}
+
+.mission-card p {
+
+    font-size: 14px;
+
+    line-height: 1.8;
+}
+
+/* =========================================================
+   4. WATER CONSERVATION
+========================================================= */
+
+.conservation-section {
+
+    background:
+        var(--soft-blue);
+
+}
+
+body.dark-theme .conservation-section {
+
+    background:
+        #000000;
+}
+
+.conservation-wrapper {
+
+    max-width: 1250px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 55px;
+
+    align-items: center;
+}
+
+.conservation-image {
+
+    height: 520px;
+
+    overflow: hidden;
+
+    border-radius:
+        var(--radius);
+
+    border:
+        1px solid var(--green);
+}
+
+.conservation-image img {
+
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.conservation-content {
+
+    padding: 10px;
+}
+
+.conservation-content .section-tag {
+
+    color: var(--blue);
+}
+
+.conservation-content h2 {
+
+    color: var(--blue);
+
+    font-size:
+        clamp(26px, 5vw, 35px);
+
+    line-height: 1.2;
+
+    margin-bottom: 20px;
+
+    font-weight: 800;
+}
+
+.conservation-content h2 span {
+
+    color: var(--green);
+}
+
+.conservation-content p {
+
+    color: grey;
+
+    font-size: 15px;
+
+    line-height: 1.9;
+
+    margin-bottom: 25px;
+}
+
+.check-list {
+
+    display: grid;
+
+    gap: 13px;
+}
+
+.check-item {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    color: grey;
+
+    font-size: 14px;
+}
+
+.check {
+
+    width: 23px;
+
+    height: 23px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background:
+        var(--green);
+
+    color: white;
+
+    font-size: 12px;
+
+    font-weight: bold;
+}
+
+
+
+/* =========================================================
+   5. OUR COMMITMENT
+========================================================= */
+
+.commitment-section {
+
+    position: relative;
+
+    min-height: 560px;
+
+    display: flex;
+
+    align-items: center;
+
+    background:
+        var(--soft-blue)
+
+}
+
+.commitment-section::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        url("images/irrigation-landscape.jpg")
+        center/cover no-repeat;
+
+    opacity: 0.20;
+}
+
+.commitment-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 850px;
+
+    margin: auto;
+
+    text-align: center;
+
+    padding: 40px;
+}
+
+.commitment-content .section-tag {
+
+    color: var(--blue);
+}
+
+.commitment-content h2 {
+
+    color: var(--blue);
+
+    font-size:
+        clamp(26px, 5vw, 35px);
+
+    line-height: 1.2;
+
+    margin-bottom: 22px;
+
+    font-weight: 800;
+}
+
+.commitment-content h2 span {
+
+    color: var(--green);
+}
+
+.commitment-content p {
+
+    color: grey;
+
+    font-size: 16px;
+
+    line-height: 1.9;
+
+    max-width: 760px;
+
+    margin: auto;
+}
+
+
+
+
+/* =========================================================
+   3. OUR TEAM
+========================================================= */
+
+.team-grid {
+
+    max-width: 1150px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.team-card {
+
+    background:
+        var(--card);
+
+    border:
+        1px solid var(--green);
+
+    border-radius:
+        var(--radius);
+
+    overflow: hidden;
+
+    box-shadow:
+        var(--shadow);
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.team-card:hover {
+
+    transform:
+        translateY(-8px);
+
+    border-color:
+        var(--blue);
+}
+
+.team-image {
+
+    height: 320px;
+
+    overflow: hidden;
+}
+
+.team-image img {
+
+    height: 100%;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.5s ease;
+}
+
+.team-card:hover .team-image img {
+
+    transform:
+        scale(1.05);
+}
+
+.team-info {
+
+    padding: 25px;
+
+    text-align: center;
+}
+
+.team-info h3 {
+
+    color: var(--heading);
+
+    font-size: 20px;
+
+    margin-bottom: 5px;
+}
+
+.team-info h3 span {
+
+    color: var(--green);
+}
+
+.team-role {
+
+    color: var(--blue);
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    margin-bottom: 12px;
+}
+
+.team-info p {
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+
+
+
+/* =========================================================
+   6. FINAL CTA
+========================================================= */
+
+.cta-section {
+
+    padding: 90px 7%;
+
+    background:
+        var(--soft-blue);
+
+    text-align: center;
+
+}
+
+.cta-container {
+
+    max-width: 850px;
+
+    margin: auto;
+
+    padding: 50px 30px;
+
+    border:
+        2px solid var(--blue);
+
+    border-radius:
+        var(--radius);
+
+}
+
+.cta-container .section-tag {
+
+    color: var(--blue-dark);
+}
+
+.cta-container h2 {
+
+    color: var(--blue);
+
+    font-size:
+        clamp(26px, 5vw, 35px);
+
+    line-height: 1.2;
+
+    margin-bottom: 18px;
+
+    font-weight: 800;
+}
+
+.cta-container h2 span {
+
+    color: var(--green);
+}
+
+.cta-container p {
+
+    color: grey;
+
+    max-width: 700px;
+
+    margin:
+        0 auto 28px;
+
+    line-height: 1.8;
+}
+
+.cta-button {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding:
+        14px 28px;
+
+    border-radius: 10px;
+
+
+       background:
+        linear-gradient(
+          135deg,
+          var(--blue),
+          var(--green)
+        );
+
+
+    color: var(--white);
+
+    font-size: 14px;
+
+    font-weight: 800;
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease;
+}
+
+.cta-button:hover {
+
+    transform:
+        translateY(-3px);
+
+}
+
+
+
+.section-header {
+    position: sticky;
+}

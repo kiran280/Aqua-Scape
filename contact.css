@@ -1,0 +1,3852 @@
+/* =========================================================
+   AQUASCAPE CONTACT HERO
+   Separate Hero CSS
+   Unique class names
+========================================================= */
+
+/* =========================================================
+   HERO MAIN
+========================================================= */
+
+.aqua-contact-hero {
+
+    min-height: 86vh;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    overflow: hidden;
+
+    background-image:
+
+        linear-gradient(
+            90deg,
+            rgba(0, 18, 27, 0.96) 0%,
+            rgba(0, 28, 38, 0.88) 32%,
+            rgba(0, 28, 36, 0.56) 60%,
+            rgba(0, 20, 25, 0.18) 100%
+        ),
+
+        url("images/contact.png");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+}
+
+
+/* =========================================================
+   BLUE/GREEN OVERLAY
+========================================================= */
+
+.aqua-contact-hero::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+
+        radial-gradient(
+            circle at 75% 45%,
+            rgba(21, 151, 229, 0.20),
+            transparent 30%
+        ),
+
+        radial-gradient(
+            circle at 85% 70%,
+            rgba(53, 184, 121, 0.20),
+            transparent 32%
+        );
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   ANIMATED GLOW
+========================================================= */
+
+.aqua-contact-hero-glow {
+
+    position: absolute;
+
+    width: 500px;
+
+    height: 500px;
+
+    right: -180px;
+
+    top: -190px;
+
+    border-radius: 50%;
+
+    background:
+
+        radial-gradient(
+            circle,
+            rgba(53, 201, 134, 0.35),
+            transparent 68%
+        );
+
+    filter: blur(4px);
+
+    animation:
+        aquaHeroGlowAnimation 7s ease-in-out infinite;
+
+    pointer-events: none;
+}
+
+
+@keyframes aquaHeroGlowAnimation {
+
+    0%,
+    100% {
+
+        transform: scale(1);
+
+        opacity: 0.55;
+    }
+
+    50% {
+
+        transform: scale(1.3);
+
+        opacity: 0.9;
+    }
+}
+
+
+/* =========================================================
+   DOT PATTERN
+========================================================= */
+
+.aqua-contact-hero-dots {
+
+    position: absolute;
+
+    width: 170px;
+
+    height: 170px;
+
+    right: 8%;
+
+    top: 17%;
+
+    background-image:
+
+        radial-gradient(
+            rgba(255, 255, 255, 0.45) 1.5px,
+            transparent 1.5px
+        );
+
+    background-size: 18px 18px;
+
+    opacity: 0.35;
+
+    animation:
+        aquaHeroDotsAnimation 5s ease-in-out infinite;
+}
+
+
+@keyframes aquaHeroDotsAnimation {
+
+    0%,
+    100% {
+
+        transform: translateY(0);
+
+    }
+
+    50% {
+
+        transform: translateY(-20px);
+
+    }
+}
+
+
+/* =========================================================
+   ORBIT RING
+========================================================= */
+
+.aqua-contact-hero-ring {
+
+    position: absolute;
+
+    width: 280px;
+
+    height: 280px;
+
+    right: 4%;
+
+    bottom: 8%;
+
+    border-radius: 50%;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.18);
+
+    animation:
+        aquaHeroRingAnimation 12s linear infinite;
+}
+
+
+@keyframes aquaHeroRingAnimation {
+
+    from {
+
+        transform: rotate(0deg);
+
+    }
+
+    to {
+
+        transform: rotate(360deg);
+
+    }
+}
+
+
+.aqua-contact-hero-ring::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 14px;
+
+    height: 14px;
+
+    border-radius: 50%;
+
+    background: #35d28a;
+
+    box-shadow:
+        0 0 20px #35d28a;
+
+    top: 18px;
+
+    left: 45px;
+}
+
+
+/* =========================================================
+   HERO CONTAINER
+========================================================= */
+
+.aqua-contact-hero-container {
+
+    width: min(1200px, 90%);
+
+    margin: auto;
+
+    position: relative;
+
+    z-index: 5;
+}
+
+
+/* =========================================================
+   HERO CONTENT
+========================================================= */
+
+.aqua-contact-hero-content {
+
+    width: 100%;
+
+    max-width: 720px;
+
+    padding: 60px 0;
+
+    animation:
+        aquaHeroContentAnimation 1.1s ease forwards;
+}
+
+
+@keyframes aquaHeroContentAnimation {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(45px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+
+    }
+}
+
+/* =========================================================
+   HERO TITLE
+========================================================= */
+
+.aqua-contact-hero-title {
+
+    font-size:
+        clamp(45px, 5vw, 50px);
+
+    line-height: 1.04;
+
+    font-weight: 800;
+
+    letter-spacing: -2.5px;
+
+    color: #ffffff;
+
+    margin-bottom: 24px;
+}
+
+
+.aqua-contact-hero-title span {
+
+    display: block;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            #20a9ef,
+            #45dd92
+        );
+
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+
+    background-clip: text;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.aqua-contact-hero-text {
+
+    max-width: 650px;
+
+    color:
+        rgba(255, 255, 255, 0.83);
+
+    font-size: 16px;
+
+    line-height: 1.8;
+
+    margin-bottom: 28px;
+}
+
+
+/* =========================================================
+   FEATURES
+========================================================= */
+
+.aqua-contact-hero-features {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 30px;
+
+    margin-bottom: 30px;
+
+    flex-wrap: wrap;
+}
+
+
+.aqua-contact-feature {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    color:
+        rgba(255, 255, 255, 0.9);
+
+    font-size: 12px;
+
+    font-weight: 600;
+}
+
+
+.aqua-contact-feature-icon {
+
+    width: 38px;
+
+    height: 38px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: #4de09a;
+
+    border:
+        1px solid
+        rgba(77, 224, 154, 0.5);
+
+    background:
+        rgba(53, 184, 121, 0.10);
+
+    transition: .3s ease;
+}
+
+
+.aqua-contact-feature:hover
+.aqua-contact-feature-icon {
+
+    transform: translateY(-5px);
+
+    background:
+        rgba(53, 184, 121, 0.22);
+
+    box-shadow:
+        0 8px 25px
+        rgba(53, 184, 121, .2);
+}
+
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.aqua-contact-hero-buttons {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    flex-wrap: wrap;
+}
+
+
+/* Primary */
+
+.aqua-contact-primary-btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    padding: 15px 23px;
+
+    border-radius: 50px;
+
+    color: #ffffff;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    background:
+
+        linear-gradient(
+            100deg,
+            #1597e5,
+            #35c987
+        );
+
+    box-shadow:
+        0 10px 30px
+        rgba(21, 151, 229, 0.20);
+
+    transition: all .35s ease;
+}
+
+
+.aqua-contact-primary-btn:hover {
+
+    transform:
+        translateY(-4px);
+
+    box-shadow:
+        0 16px 38px
+        rgba(21, 151, 229, 0.35);
+}
+
+
+.aqua-contact-primary-btn
+.fa-arrow-right {
+
+    transition: .3s ease;
+}
+
+
+.aqua-contact-primary-btn:hover
+.fa-arrow-right {
+
+    transform:
+        translateX(5px);
+}
+
+
+/* Secondary */
+
+.aqua-contact-secondary-btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 9px;
+
+    padding: 14px 22px;
+
+    border-radius: 50px;
+
+    color: black;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    border:
+        1px solid
+        var(--green);
+
+
+    backdrop-filter:
+        blur(10px);
+
+    transition: .35s ease;
+}
+
+
+.aqua-contact-secondary-btn:hover {
+
+
+    border-color:
+        var(--blue);
+
+    color: var(--blue);
+
+    transform:
+        translateY(-3px);
+}
+
+
+/* =========================================================
+   FLOATING WATER DROP
+========================================================= */
+
+.aqua-contact-floating-drop {
+
+    position: absolute;
+
+    right: 24%;
+
+    top: 25%;
+
+    width: 54px;
+
+    height: 54px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    color: #ffffff;
+
+    font-size: 20px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #1597e5,
+            #35c987
+        );
+
+    box-shadow:
+        0 0 35px
+        rgba(21, 151, 229, .35);
+
+    animation:
+        aquaDropFloat 4s ease-in-out infinite;
+
+    z-index: 4;
+}
+
+
+@keyframes aquaDropFloat {
+
+    0%,
+    100% {
+
+        transform:
+            translateY(0)
+            rotate(-8deg);
+
+    }
+
+    50% {
+
+        transform:
+            translateY(-18px)
+            rotate(8deg);
+
+    }
+}
+/* =========================================================
+   WAVE
+========================================================= */
+
+.aqua-contact-hero-wave {
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: -4px;
+
+    width: 100%;
+
+    height: 100px;
+
+    z-index: 6;
+
+    pointer-events: none;
+}
+
+
+.aqua-contact-hero-wave svg {
+
+    width: 100%;
+
+    height: 100%;
+}
+
+
+.aqua-contact-hero-wave path {
+
+    fill: var(--blue);
+}
+
+
+
+
+/* =========================================================
+   DARK MODE
+========================================================= */
+
+body.contact-dark-mode {
+
+    background: #000000;
+}
+
+
+body.contact-dark-mode
+.aqua-contact-hero-wave path {
+
+    fill: #000000;
+}
+
+
+body.contact-dark-mode
+.aqua-contact-hero {
+
+    background-image:
+
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, .96),
+            rgba(0, 15, 20, .84),
+            rgba(0, 0, 0, .25)
+        ),
+
+        url("images/contact.png");
+}
+
+
+/* =========================================================
+   RTL SUPPORT
+========================================================= */
+
+body.contact-rtl {
+
+    direction: rtl;
+}
+
+
+body.contact-rtl
+.aqua-contact-hero-content {
+
+    text-align: right;
+}
+
+
+body.contact-rtl
+.aqua-contact-hero-features {
+
+    justify-content: flex-start;
+
+    direction: rtl;
+}
+
+
+body.contact-rtl
+.aqua-contact-hero-buttons {
+
+    direction: rtl;
+}
+
+
+body.contact-rtl
+.aqua-contact-primary-btn
+.fa-arrow-right {
+
+    transform: rotate(180deg);
+}
+
+
+body.contact-rtl
+.aqua-contact-primary-btn:hover
+.fa-arrow-right {
+
+    transform:
+        rotate(180deg)
+        translateX(5px);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .aqua-contact-hero {
+
+        min-height: 80vh;
+
+        background-position:
+            65% center;
+    }
+
+
+    .aqua-contact-hero-content {
+
+        max-width: 650px;
+    }
+
+
+    .aqua-contact-floating-drop {
+
+        right: 10%;
+
+        top: 18%;
+    }
+
+
+    .aqua-contact-hero-ring {
+
+        right: -80px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+    .aqua-contact-hero {
+
+        min-height: 85vh;
+
+        background-position:
+            68% center;
+
+        background-image:
+
+            linear-gradient(
+                90deg,
+                rgba(0, 15, 22, .96),
+                rgba(0, 20, 27, .76)
+            ),
+
+            url("images/contact-hero.jpg");
+    }
+
+
+    .aqua-contact-hero-container {
+
+        width: 88%;
+    }
+
+
+    .aqua-contact-hero-content {
+
+        padding: 50px 0 90px;
+    }
+
+
+    .aqua-contact-hero-title {
+
+        font-size: 44px;
+
+        letter-spacing: -1.5px;
+    }
+
+
+    .aqua-contact-hero-text {
+
+        font-size: 14px;
+
+        line-height: 1.7;
+    }
+
+
+    .aqua-contact-hero-features {
+
+        gap: 15px;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+
+    .aqua-contact-hero-buttons {
+
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+
+    .aqua-contact-primary-btn,
+    .aqua-contact-secondary-btn {
+
+        width: 100%;
+    }
+
+
+    .aqua-contact-floating-drop {
+
+        display: none;
+    }
+
+
+    .aqua-contact-hero-dots {
+
+        right: -30px;
+
+        top: 12%;
+    }
+
+
+    .aqua-contact-hero-ring {
+
+        width: 180px;
+
+        height: 180px;
+
+        right: -90px;
+
+        bottom: 8%;
+    }
+
+
+    .aqua-contact-hero-wave {
+
+        height: 65px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 420px) {
+
+    .aqua-contact-hero-title {
+
+        font-size: 38px;
+    }
+
+
+    .aqua-contact-hero-label {
+
+        font-size: 10px;
+
+        letter-spacing: 1.5px;
+    }
+
+
+    .aqua-contact-feature {
+
+        font-size: 11px;
+    }
+
+}
+
+
+
+/* =====================================================
+   AQUASCAPE CONTACT INFORMATION SECTION
+   Completely separate CSS
+===================================================== */
+
+.aqua-contact-info-section {
+
+    width: 100%;
+
+    padding: 100px 0;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            180deg,
+            #f7fcfd 0%,
+            #ffffff 100%
+        );
+
+}
+
+
+/* =====================================================
+   DECORATIVE BACKGROUND
+===================================================== */
+
+.aqua-contact-info-section::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+
+    height: 500px;
+
+    top: -250px;
+
+    left: -200px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(21,151,229,.10),
+            transparent 68%
+        );
+
+    pointer-events: none;
+
+}
+
+
+.aqua-contact-info-section::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 450px;
+
+    height: 450px;
+
+    right: -200px;
+
+    bottom: -250px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(53,184,121,.12),
+            transparent 68%
+        );
+
+    pointer-events: none;
+
+}
+
+
+/* =====================================================
+   CONTAINER
+===================================================== */
+
+.aqua-contact-info-container {
+
+    width: min(1200px, 90%);
+
+    margin: auto;
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+
+/* =====================================================
+   HEADING
+===================================================== */
+
+.aqua-contact-info-heading {
+
+    max-width: 700px;
+
+    margin: 0 auto 55px;
+
+    text-align: center;
+
+}
+
+
+.aqua-contact-info-tag {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color: #1597e5;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+}
+
+
+
+
+.aqua-contact-info-heading h2 {
+
+    margin-top: 12px;
+
+    margin-bottom: 15px;
+
+    font-size:
+        clamp(26px, 5vw, 35px);
+
+    line-height: 1.15;
+
+    color: #152a31;
+
+    font-weight: 800;
+
+    letter-spacing: -1.2px;
+
+}
+
+
+.aqua-contact-info-heading h2 span {
+
+    background:
+        linear-gradient(
+            90deg,
+            #1597e5,
+            #35b879
+        );
+
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+
+    background-clip: text;
+
+}
+
+
+.aqua-contact-info-heading p {
+
+    max-width: 620px;
+
+    margin: auto;
+
+    color: #708087;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+
+}
+
+
+/* =====================================================
+   CONTACT GRID
+===================================================== */
+
+.aqua-contact-info-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 22px;
+
+}
+
+
+/* =====================================================
+   CONTACT CARD
+===================================================== */
+
+.aqua-contact-info-card {
+
+    position: relative;
+
+    min-height: 280px;
+
+    padding: 32px 28px;
+
+    border-radius: 24px;
+
+    background: #ffffff;
+
+    border:
+        1px solid
+        rgba(21,151,229,.12);
+
+    box-shadow:
+        0 15px 45px
+        rgba(18,55,65,.07);
+
+    overflow: hidden;
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease,
+        border-color .35s ease;
+
+}
+
+
+.aqua-contact-info-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 130px;
+
+    height: 130px;
+
+    right: -65px;
+
+    top: -65px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(21,151,229,.06);
+
+    transition: .4s ease;
+
+}
+
+
+.aqua-contact-info-card:hover {
+
+    transform:
+        translateY(-8px);
+
+    border-color:
+        rgba(21,151,229,.28);
+
+    box-shadow:
+        0 25px 60px
+        rgba(18,55,65,.12);
+
+}
+
+
+.aqua-contact-info-card:hover::before {
+
+    transform: scale(1.5);
+
+}
+
+
+/* =====================================================
+   ICON
+===================================================== */
+
+.aqua-contact-info-icon {
+
+    width: 62px;
+
+    height: 62px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 18px;
+
+    font-size: 22px;
+
+    margin-bottom: 23px;
+
+    transition: .35s ease;
+
+}
+
+
+.aqua-contact-blue-icon {
+
+    color: #1597e5;
+
+    background:
+        rgba(21,151,229,.11);
+
+}
+
+
+.aqua-contact-green-icon {
+
+    color: #35b879;
+
+    background:
+        rgba(53,184,121,.12);
+
+}
+
+
+.aqua-contact-info-card:hover
+.aqua-contact-info-icon {
+
+    transform:
+        translateY(-4px)
+        rotate(-5deg);
+
+}
+
+
+/* =====================================================
+   CARD CONTENT
+===================================================== */
+
+.aqua-contact-info-content > span {
+
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #1597e5;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.8px;
+
+}
+
+
+.aqua-contact-info-content h3 {
+
+    margin-bottom: 9px;
+
+    color: #182d34;
+
+    font-size: 19px;
+
+    font-weight: 700;
+
+}
+
+
+.aqua-contact-info-content a {
+
+    display: inline-block;
+
+    color: #1597e5;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    margin-bottom: 10px;
+
+    transition: .25s ease;
+
+}
+
+
+.aqua-contact-info-content a:hover {
+
+    color: #35b879;
+
+}
+
+
+.aqua-contact-info-content p {
+
+    color: #75848a;
+
+    font-size: 12px;
+
+    line-height: 1.7;
+
+}
+
+
+.aqua-contact-address {
+
+    margin-bottom: 7px;
+
+}
+
+
+.aqua-contact-info-content a i {
+
+    margin-left: 5px;
+
+    font-size: 10px;
+
+}
+
+
+/* =====================================================
+   CARD ARROW
+===================================================== */
+
+.aqua-contact-card-arrow {
+
+    position: absolute;
+
+    right: 25px;
+
+    bottom: 24px;
+
+    width: 35px;
+
+    height: 35px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    color: #1597e5;
+
+    background:
+        rgba(21,151,229,.08);
+
+    font-size: 12px;
+
+    transition: .3s ease;
+
+}
+
+
+.aqua-contact-info-card:hover
+.aqua-contact-card-arrow {
+
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            135deg,
+            #1597e5,
+            #35b879
+        );
+
+    transform:
+        translateX(4px);
+
+}
+
+
+/* =====================================================
+   CTA
+===================================================== */
+
+.aqua-contact-info-cta {
+
+    margin-top: 35px;
+
+    padding: 28px 32px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 22px;
+
+    border-radius: 24px;
+
+    background:
+        linear-gradient(
+            110deg,
+            #071f2a,
+            #073c42
+        );
+
+    position: relative;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 20px 50px
+        rgba(0,30,40,.15);
+
+}
+
+
+.aqua-contact-info-cta::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 300px;
+
+    height: 300px;
+
+    right: -120px;
+
+    top: -180px;
+
+    border-radius: 50%;
+
+    border:
+        45px solid
+        rgba(53,201,134,.08);
+
+}
+
+
+.aqua-contact-cta-icon {
+
+    width: 62px;
+
+    height: 62px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 18px;
+
+    color: #ffffff;
+
+    font-size: 22px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #1597e5,
+            #35b879
+        );
+
+}
+
+
+.aqua-contact-cta-text {
+
+    flex: 1;
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+
+.aqua-contact-cta-text span {
+
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #43db94;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.8px;
+
+}
+
+
+.aqua-contact-cta-text h3 {
+
+    margin-bottom: 5px;
+
+    color: #ffffff;
+
+    font-size: 21px;
+
+}
+
+
+.aqua-contact-cta-text p {
+
+    color:
+        rgba(255,255,255,.68);
+
+    font-size: 12px;
+
+    line-height: 1.6;
+
+}
+
+
+.aqua-contact-cta-button {
+
+    position: relative;
+
+    z-index: 2;
+
+    flex-shrink: 0;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 14px 20px;
+
+    border-radius: 50px;
+
+    color: #ffffff;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    background:
+        linear-gradient(
+            100deg,
+            #1597e5,
+            #35b879
+        );
+
+    transition: .3s ease;
+
+}
+
+
+.aqua-contact-cta-button:hover {
+
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        0 12px 30px
+        rgba(21,151,229,.28);
+
+}
+
+
+.aqua-contact-cta-button i {
+
+    transition: .3s ease;
+
+}
+
+
+.aqua-contact-cta-button:hover i {
+
+    transform:
+        translateX(5px);
+
+}
+
+/* =====================================================
+   RTL
+===================================================== */
+
+body.contact-rtl
+.aqua-contact-info-section {
+
+    direction: rtl;
+
+}
+
+
+body.contact-rtl
+.aqua-contact-info-heading {
+
+    text-align: center;
+
+}
+
+
+body.contact-rtl
+.aqua-contact-info-card {
+
+    text-align: right;
+
+}
+
+
+body.contact-rtl
+.aqua-contact-card-arrow {
+
+    right: auto;
+
+    left: 25px;
+
+}
+
+
+body.contact-rtl
+.aqua-contact-cta-button
+.fa-arrow-right {
+
+    transform: rotate(180deg);
+
+}
+
+
+body.contact-rtl
+.aqua-contact-cta-button:hover
+.fa-arrow-right {
+
+    transform:
+        rotate(180deg)
+        translateX(5px);
+
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 950px) {
+
+    .aqua-contact-info-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+
+    .aqua-contact-info-card:last-child {
+
+        grid-column:
+            1 / -1;
+
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 650px) {
+
+    .aqua-contact-info-section {
+
+        padding: 70px 0;
+
+    }
+
+
+    .aqua-contact-info-container {
+
+        width: 88%;
+
+    }
+
+
+    .aqua-contact-info-heading {
+
+        margin-bottom: 38px;
+
+    }
+
+
+    .aqua-contact-info-heading h2 {
+
+        font-size: 32px;
+
+    }
+
+
+    .aqua-contact-info-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 16px;
+
+    }
+
+
+    .aqua-contact-info-card:last-child {
+
+        grid-column: auto;
+
+    }
+
+
+    .aqua-contact-info-card {
+
+        min-height: 250px;
+
+    }
+
+
+    .aqua-contact-info-cta {
+
+        padding: 25px;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+    }
+
+
+    .aqua-contact-cta-button {
+
+        width: 100%;
+
+        justify-content: center;
+
+    }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 420px) {
+
+    .aqua-contact-info-heading h2 {
+
+        font-size: 29px;
+
+    }
+
+
+    .aqua-contact-info-card {
+
+        padding: 27px 23px;
+
+    }
+
+
+    .aqua-contact-info-cta {
+
+        padding: 22px;
+
+    }
+
+}
+
+
+
+
+/* =========================================================
+   AQUASCAPE — FORCE BLACK DARK MODE
+   Put this code at the VERY END of your CSS
+========================================================= */
+
+
+/* ---------- BODY ---------- */
+
+html.dark-mode,
+html.dark-mode body,
+body.dark-mode {
+
+    background-color: #000000 !important;
+    color: #ffffff !important;
+
+}
+
+
+/* ---------- CONTACT SECTION ---------- */
+
+html.dark-mode .aqua-contact-info-section,
+body.dark-mode .aqua-contact-info-section,
+body.contact-dark-mode .aqua-contact-info-section {
+
+    background: #000000 !important;
+    background-color: #000000 !important;
+
+    color: #ffffff !important;
+
+}
+
+
+/* ---------- REMOVE LIGHT BACKGROUND EFFECTS ---------- */
+
+html.dark-mode .aqua-contact-info-section::before,
+html.dark-mode .aqua-contact-info-section::after,
+body.dark-mode .aqua-contact-info-section::before,
+body.dark-mode .aqua-contact-info-section::after,
+body.contact-dark-mode .aqua-contact-info-section::before,
+body.contact-dark-mode .aqua-contact-info-section::after {
+
+    background: none !important;
+
+}
+
+
+/* ---------- CONTACT CARDS ---------- */
+
+html.dark-mode .aqua-contact-info-card,
+body.dark-mode .aqua-contact-info-card,
+body.contact-dark-mode .aqua-contact-info-card {
+
+    background: #050505 !important;
+
+    background-color: #050505 !important;
+
+    color: #ffffff !important;
+
+    border-color:
+        rgba(53, 184, 121, 0.25) !important;
+
+    box-shadow:
+        0 15px 45px rgba(0, 0, 0, 0.7) !important;
+
+}
+
+
+/* ---------- CARD HOVER ---------- */
+
+html.dark-mode .aqua-contact-info-card:hover,
+body.dark-mode .aqua-contact-info-card:hover,
+body.contact-dark-mode .aqua-contact-info-card:hover {
+
+    background: #0a0a0a !important;
+
+    background-color: #0a0a0a !important;
+
+    border-color:
+        rgba(53, 184, 121, 0.45) !important;
+
+}
+
+
+/* ---------- CARD TEXT ---------- */
+
+html.dark-mode .aqua-contact-info-heading h2,
+body.dark-mode .aqua-contact-info-heading h2,
+body.contact-dark-mode .aqua-contact-info-heading h2,
+
+html.dark-mode .aqua-contact-info-content h3,
+body.dark-mode .aqua-contact-info-content h3,
+body.contact-dark-mode .aqua-contact-info-content h3 {
+
+    color: #ffffff !important;
+
+}
+
+
+html.dark-mode .aqua-contact-info-heading p,
+body.dark-mode .aqua-contact-info-heading p,
+body.contact-dark-mode .aqua-contact-info-heading p,
+
+html.dark-mode .aqua-contact-info-content p,
+body.dark-mode .aqua-contact-info-content p,
+body.contact-dark-mode .aqua-contact-info-content p {
+
+    color: #aeb8bb !important;
+
+}
+
+
+/* ---------- ICON BACKGROUNDS ---------- */
+
+html.dark-mode .aqua-contact-blue-icon,
+body.dark-mode .aqua-contact-blue-icon,
+body.contact-dark-mode .aqua-contact-blue-icon {
+
+    background:
+        rgba(21, 151, 229, 0.12) !important;
+
+}
+
+
+html.dark-mode .aqua-contact-green-icon,
+body.dark-mode .aqua-contact-green-icon,
+body.contact-dark-mode .aqua-contact-green-icon {
+
+    background:
+        rgba(53, 184, 121, 0.12) !important;
+
+}
+
+
+/* ---------- CTA ---------- */
+
+html.dark-mode .aqua-contact-info-cta,
+body.dark-mode .aqua-contact-info-cta,
+body.contact-dark-mode .aqua-contact-info-cta {
+
+    background: #050505 !important;
+
+    background-color: #050505 !important;
+
+    color: #ffffff !important;
+
+    border:
+        1px solid
+        rgba(53, 184, 121, 0.25) !important;
+
+    box-shadow:
+        0 15px 45px
+        rgba(0, 0, 0, 0.7) !important;
+
+}
+
+
+/* ---------- CTA TEXT ---------- */
+
+html.dark-mode .aqua-contact-cta-text h3,
+body.dark-mode .aqua-contact-cta-text h3,
+body.contact-dark-mode .aqua-contact-cta-text h3 {
+
+    color: #ffffff !important;
+
+}
+
+
+html.dark-mode .aqua-contact-cta-text p,
+body.dark-mode .aqua-contact-cta-text p,
+body.contact-dark-mode .aqua-contact-cta-text p {
+
+    color: #aeb8bb !important;
+
+}
+
+
+/* ---------- CTA BUTTON ---------- */
+
+html.dark-mode .aqua-contact-cta-button,
+body.dark-mode .aqua-contact-cta-button,
+body.contact-dark-mode .aqua-contact-cta-button {
+
+    color: #ffffff !important;
+
+}
+
+
+/* ---------- CARD DECORATION ---------- */
+
+html.dark-mode .aqua-contact-info-card::before,
+body.dark-mode .aqua-contact-info-card::before,
+body.contact-dark-mode .aqua-contact-info-card::before {
+
+    background:
+        rgba(53, 184, 121, 0.04) !important;
+
+}
+
+
+/* =========================================================
+   IF YOUR THEME USES "dark" CLASS
+========================================================= */
+
+html.dark .aqua-contact-info-section,
+body.dark .aqua-contact-info-section {
+
+    background: #000000 !important;
+    background-color: #000000 !important;
+
+}
+
+
+html.dark .aqua-contact-info-card,
+body.dark .aqua-contact-info-card {
+
+    background: #050505 !important;
+    background-color: #050505 !important;
+
+    color: #ffffff !important;
+
+}
+
+
+html.dark .aqua-contact-info-heading h2,
+body.dark .aqua-contact-info-heading h2,
+
+html.dark .aqua-contact-info-content h3,
+body.dark .aqua-contact-info-content h3 {
+
+    color: #ffffff !important;
+
+}
+
+
+/* =========================================================
+   FORCE ALL SECTION CHILDREN TO STAY DARK
+========================================================= */
+
+html.dark-mode .aqua-contact-info-section > *,
+body.dark-mode .aqua-contact-info-section > *,
+body.contact-dark-mode .aqua-contact-info-section > * {
+
+    color: inherit;
+
+}
+
+
+/* =========================================================
+   MOST IMPORTANT — PURE BLACK
+========================================================= */
+
+html.dark-mode body,
+body.dark-mode,
+body.contact-dark-mode {
+
+    background: #000000 !important;
+
+}
+
+
+html.dark-mode .aqua-contact-info-section,
+body.dark-mode .aqua-contact-info-section,
+body.contact-dark-mode .aqua-contact-info-section {
+
+    background-image: none !important;
+
+    background: #000000 !important;
+
+}
+
+
+
+
+
+/* =========================================================
+   AQUASCAPE SITE ASSESSMENT
+   Separate CSS
+========================================================= */
+
+.aqua-assessment-section {
+
+    position: relative;
+
+    width: 100%;
+
+    padding: 110px 0;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f5fbfd 0%,
+            #ffffff 50%,
+            #f2faf6 100%
+        );
+
+}
+
+
+/* =========================================================
+   BACKGROUND DECORATION
+========================================================= */
+
+.aqua-assessment-section::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+
+    height: 500px;
+
+    top: -280px;
+
+    left: -180px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(21,151,229,.12),
+            transparent 70%
+        );
+
+}
+
+
+.aqua-assessment-section::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 450px;
+
+    height: 450px;
+
+    right: -220px;
+
+    bottom: -220px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(53,184,121,.13),
+            transparent 70%
+        );
+
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.aqua-assessment-container {
+
+    width: min(1200px, 90%);
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        .85fr 1.15fr;
+
+    gap: 70px;
+
+    align-items: center;
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+
+/* =========================================================
+   LEFT INTRO
+========================================================= */
+
+.aqua-assessment-intro {
+
+    max-width: 500px;
+
+}
+
+
+.aqua-assessment-tag {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    color: #1597e5;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 18px;
+
+}
+
+
+
+
+.aqua-assessment-intro h2 {
+
+    color: #152a31;
+
+    font-size:
+        clamp(26px, 5vw, 35px);
+
+    line-height: 1.1;
+
+    letter-spacing: -1.5px;
+
+    margin-bottom: 22px;
+
+    font-weight: 800;
+
+}
+
+
+.aqua-assessment-intro h2 span {
+
+    display: block;
+
+    background:
+        linear-gradient(
+            90deg,
+            #1597e5,
+            #35b879
+        );
+
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+
+    background-clip: text;
+
+}
+
+
+.aqua-assessment-description {
+
+    color: #6e7e84;
+
+    font-size: 14px;
+
+    line-height: 1.85;
+
+    margin-bottom: 32px;
+
+}
+
+
+/* =========================================================
+   BENEFITS
+========================================================= */
+
+.aqua-assessment-benefits {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+
+}
+
+
+.aqua-assessment-benefit {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+}
+
+
+.aqua-assessment-benefit-icon {
+
+    width: 48px;
+
+    height: 48px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 14px;
+
+    color: #1597e5;
+
+    background:
+        rgba(21,151,229,.09);
+
+    border:
+        1px solid
+        rgba(21,151,229,.13);
+
+}
+
+
+.aqua-assessment-benefit:nth-child(2)
+.aqua-assessment-benefit-icon {
+
+    color: #35b879;
+
+    background:
+        rgba(53,184,121,.10);
+
+    border-color:
+        rgba(53,184,121,.15);
+
+}
+
+
+.aqua-assessment-benefit h3 {
+
+    color: #20353b;
+
+    font-size: 14px;
+
+    margin-bottom: 4px;
+
+}
+
+
+.aqua-assessment-benefit p {
+
+    color: #7b898e;
+
+    font-size: 11px;
+
+    line-height: 1.6;
+
+}
+
+
+/* =========================================================
+   FORM WRAPPER
+========================================================= */
+
+.aqua-assessment-form-wrapper {
+
+    padding: 38px;
+
+    border-radius: 28px;
+
+    background: #ffffff;
+
+    border:
+        1px solid
+        rgba(21,151,229,.13);
+
+    box-shadow:
+        0 25px 70px
+        rgba(20,55,65,.10);
+
+}
+
+
+/* =========================================================
+   FORM HEADING
+========================================================= */
+
+.aqua-assessment-form-heading {
+
+    margin-bottom: 25px;
+
+}
+
+
+.aqua-assessment-form-heading span {
+
+    color: #35b879;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.8px;
+
+}
+
+
+.aqua-assessment-form-heading h3 {
+
+    margin-top: 7px;
+
+    margin-bottom: 5px;
+
+    color: #172d34;
+
+    font-size: 24px;
+
+}
+
+
+.aqua-assessment-form-heading p {
+
+    color: #7b898e;
+
+    font-size: 12px;
+
+}
+
+
+/* =========================================================
+   FORM GRID
+========================================================= */
+
+.aqua-assessment-form {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 17px;
+
+}
+
+
+.aqua-assessment-field {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+
+}
+
+
+.aqua-assessment-full {
+
+    grid-column: 1 / -1;
+
+}
+
+
+.aqua-assessment-field label {
+
+    color: #30464d;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+}
+
+
+/* =========================================================
+   INPUT
+========================================================= */
+
+.aqua-assessment-input {
+
+    min-height: 48px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 0 14px;
+
+    border-radius: 12px;
+
+    background: #f7fafb;
+
+    border:
+        1px solid
+        #e3ebee;
+
+    transition:
+        border-color .25s ease,
+        box-shadow .25s ease,
+        background .25s ease;
+
+}
+
+
+.aqua-assessment-input:focus-within {
+
+    background: #ffffff;
+
+    border-color: #1597e5;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(21,151,229,.08);
+
+}
+
+
+.aqua-assessment-input > i {
+
+    flex-shrink: 0;
+
+    color: #1597e5;
+
+    font-size: 13px;
+
+}
+
+
+.aqua-assessment-input input,
+.aqua-assessment-input select,
+.aqua-assessment-input textarea {
+
+    width: 100%;
+
+    border: none;
+
+    outline: none;
+
+    background: transparent;
+
+    color: #263b41;
+
+    font-family: inherit;
+
+    font-size: 12px;
+
+}
+
+
+.aqua-assessment-input input,
+.aqua-assessment-input select {
+
+    height: 46px;
+
+}
+
+
+.aqua-assessment-input textarea {
+
+    padding: 14px 0;
+
+    resize: vertical;
+
+    min-height: 80px;
+
+}
+
+
+.aqua-assessment-input input::placeholder,
+.aqua-assessment-input textarea::placeholder {
+
+    color: #a3afb3;
+
+}
+
+
+.aqua-assessment-input select {
+
+    cursor: pointer;
+
+}
+
+
+/* =========================================================
+   TEXTAREA
+========================================================= */
+
+.aqua-assessment-textarea {
+
+    align-items: flex-start;
+
+}
+
+
+.aqua-assessment-textarea > i {
+
+    margin-top: 15px;
+
+}
+
+
+/* =========================================================
+   SUBMIT
+========================================================= */
+
+.aqua-assessment-submit-area {
+
+    grid-column: 1 / -1;
+
+    margin-top: 5px;
+
+}
+
+
+.aqua-assessment-submit {
+
+    width: 100%;
+
+    min-height: 52px;
+
+    border: none;
+
+    border-radius: 13px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    cursor: pointer;
+
+    color: #ffffff;
+
+    font-family: inherit;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    background:
+        linear-gradient(
+            100deg,
+            #1597e5,
+            #35b879
+        );
+
+    box-shadow:
+        0 12px 30px
+        rgba(21,151,229,.20);
+
+    transition: .3s ease;
+
+}
+
+
+.aqua-assessment-submit:hover {
+
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        0 17px 35px
+        rgba(21,151,229,.30);
+
+}
+
+
+.aqua-assessment-submit i {
+
+    transition: .3s ease;
+
+}
+
+
+.aqua-assessment-submit:hover i {
+
+    transform:
+        translateX(5px);
+
+}
+
+
+.aqua-assessment-submit-area small {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 5px;
+
+    margin-top: 10px;
+
+    color: #8a969a;
+
+    font-size: 9px;
+
+}
+
+
+.aqua-assessment-submit-area small i {
+
+    color: #35b879;
+
+}
+
+
+/* =========================================================
+   SUCCESS MESSAGE
+========================================================= */
+
+.aqua-assessment-success {
+
+    display: none;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-top: 15px;
+
+    padding: 13px;
+
+    border-radius: 10px;
+
+    color: #35b879;
+
+    background:
+        rgba(53,184,121,.09);
+
+    border:
+        1px solid
+        rgba(53,184,121,.20);
+
+    font-size: 11px;
+
+}
+
+
+.aqua-assessment-success-show {
+
+    display: flex;
+
+}
+
+
+.aqua-assessment-success i {
+
+    font-size: 18px;
+
+}
+
+
+/* =========================================================
+   RTL
+========================================================= */
+
+body.contact-rtl .aqua-assessment-section,
+body.rtl .aqua-assessment-section {
+
+    direction: rtl;
+
+}
+
+
+body.contact-rtl .aqua-assessment-input,
+body.rtl .aqua-assessment-input {
+
+    text-align: right;
+
+}
+
+
+body.contact-rtl .aqua-assessment-submit i,
+body.rtl .aqua-assessment-submit i {
+
+    transform: rotate(180deg);
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .aqua-assessment-container {
+
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+
+    }
+
+
+    .aqua-assessment-intro {
+
+        max-width: 700px;
+
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+    .aqua-assessment-section {
+
+        padding: 70px 0;
+
+    }
+
+
+    .aqua-assessment-container {
+
+        width: 90%;
+
+    }
+
+
+    .aqua-assessment-intro h2 {
+
+        font-size: 34px;
+
+    }
+
+
+    .aqua-assessment-form-wrapper {
+
+        padding: 25px 20px;
+
+        border-radius: 20px;
+
+    }
+
+
+    .aqua-assessment-form {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .aqua-assessment-full {
+
+        grid-column: auto;
+
+    }
+
+
+    .aqua-assessment-submit-area {
+
+        grid-column: auto;
+
+    }
+
+}
+
+
+/* =========================================================
+   AQUASCAPE SITE ASSESSMENT — FORCE DARK MODE
+   Put this at the VERY END of your CSS
+========================================================= */
+
+/* Main section */
+html.dark-mode .aqua-assessment-section,
+body.dark-mode .aqua-assessment-section,
+html.dark .aqua-assessment-section,
+body.dark .aqua-assessment-section,
+body.contact-dark-mode .aqua-assessment-section,
+body.dark-theme .aqua-assessment-section,
+html[data-theme="dark"] .aqua-assessment-section,
+body[data-theme="dark"] .aqua-assessment-section {
+    background: #000000 !important;
+    background-image: none !important;
+    color: #ffffff !important;
+}
+
+/* Remove decorative light backgrounds */
+html.dark-mode .aqua-assessment-section::before,
+html.dark-mode .aqua-assessment-section::after,
+body.dark-mode .aqua-assessment-section::before,
+body.dark-mode .aqua-assessment-section::after,
+html.dark .aqua-assessment-section::before,
+html.dark .aqua-assessment-section::after,
+body.dark .aqua-assessment-section::before,
+body.dark .aqua-assessment-section::after {
+    background: transparent !important;
+}
+
+/* Main headings */
+html.dark-mode .aqua-assessment-section h2,
+body.dark-mode .aqua-assessment-section h2,
+html.dark .aqua-assessment-section h2,
+body.dark .aqua-assessment-section h2,
+body.contact-dark-mode .aqua-assessment-section h2 {
+    color: #ffffff !important;
+}
+
+/* Green/blue heading span */
+html.dark-mode .aqua-assessment-section h2 span,
+body.dark-mode .aqua-assessment-section h2 span,
+html.dark .aqua-assessment-section h2 span,
+body.dark .aqua-assessment-section h2 span,
+body.contact-dark-mode .aqua-assessment-section h2 span {
+    color: #22c55e !important;
+}
+
+/* Paragraphs */
+html.dark-mode .aqua-assessment-section p,
+body.dark-mode .aqua-assessment-section p,
+html.dark .aqua-assessment-section p,
+body.dark .aqua-assessment-section p,
+body.contact-dark-mode .aqua-assessment-section p {
+    color: #bdbdbd !important;
+}
+
+/* Form wrapper */
+html.dark-mode .aqua-assessment-form-wrapper,
+body.dark-mode .aqua-assessment-form-wrapper,
+html.dark .aqua-assessment-form-wrapper,
+body.dark .aqua-assessment-form-wrapper,
+body.contact-dark-mode .aqua-assessment-form-wrapper,
+html[data-theme="dark"] .aqua-assessment-form-wrapper,
+body[data-theme="dark"] .aqua-assessment-form-wrapper {
+    background: #050505 !important;
+    background-color: #050505 !important;
+    border: 1px solid #222222 !important;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7) !important;
+}
+
+/* Form heading */
+html.dark-mode .aqua-assessment-form-heading h3,
+body.dark-mode .aqua-assessment-form-heading h3,
+html.dark .aqua-assessment-form-heading h3,
+body.dark .aqua-assessment-form-heading h3,
+body.contact-dark-mode .aqua-assessment-form-heading h3 {
+    color: #ffffff !important;
+}
+
+/* Labels */
+html.dark-mode .aqua-assessment-field label,
+body.dark-mode .aqua-assessment-field label,
+html.dark .aqua-assessment-field label,
+body.dark .aqua-assessment-field label,
+body.contact-dark-mode .aqua-assessment-field label {
+    color: #eeeeee !important;
+}
+
+/* Input containers */
+html.dark-mode .aqua-assessment-input,
+body.dark-mode .aqua-assessment-input,
+html.dark .aqua-assessment-input,
+body.dark .aqua-assessment-input,
+body.contact-dark-mode .aqua-assessment-input {
+    background: #0b0b0b !important;
+    background-color: #0b0b0b !important;
+    border-color: #292929 !important;
+}
+
+/* Input icons */
+html.dark-mode .aqua-assessment-input i,
+body.dark-mode .aqua-assessment-input i,
+html.dark .aqua-assessment-input i,
+body.dark .aqua-assessment-input i,
+body.contact-dark-mode .aqua-assessment-input i {
+    color: #22c55e !important;
+}
+
+/* Input fields */
+html.dark-mode .aqua-assessment-input input,
+html.dark-mode .aqua-assessment-input textarea,
+html.dark-mode .aqua-assessment-input select,
+body.dark-mode .aqua-assessment-input input,
+body.dark-mode .aqua-assessment-input textarea,
+body.dark-mode .aqua-assessment-input select,
+html.dark .aqua-assessment-input input,
+html.dark .aqua-assessment-input textarea,
+html.dark .aqua-assessment-input select,
+body.dark .aqua-assessment-input input,
+body.dark .aqua-assessment-input textarea,
+body.dark .aqua-assessment-input select,
+body.contact-dark-mode .aqua-assessment-input input,
+body.contact-dark-mode .aqua-assessment-input textarea,
+body.contact-dark-mode .aqua-assessment-input select {
+    background: #0b0b0b !important;
+    color: #ffffff !important;
+    border-color: transparent !important;
+}
+
+/* Placeholder */
+html.dark-mode .aqua-assessment-input input::placeholder,
+html.dark-mode .aqua-assessment-input textarea::placeholder,
+body.dark-mode .aqua-assessment-input input::placeholder,
+body.dark-mode .aqua-assessment-input textarea::placeholder,
+html.dark .aqua-assessment-input input::placeholder,
+html.dark .aqua-assessment-input textarea::placeholder,
+body.dark .aqua-assessment-input input::placeholder,
+body.dark .aqua-assessment-input textarea::placeholder,
+body.contact-dark-mode .aqua-assessment-input input::placeholder,
+body.contact-dark-mode .aqua-assessment-input textarea::placeholder {
+    color: #777777 !important;
+}
+
+/* Select dropdown */
+html.dark-mode .aqua-assessment-input select,
+body.dark-mode .aqua-assessment-input select,
+html.dark .aqua-assessment-input select,
+body.dark .aqua-assessment-input select,
+body.contact-dark-mode .aqua-assessment-input select {
+    color: #ffffff !important;
+    background-color: #0b0b0b !important;
+}
+
+/* Benefits */
+html.dark-mode .aqua-assessment-benefit,
+body.dark-mode .aqua-assessment-benefit,
+html.dark .aqua-assessment-benefit,
+body.dark .aqua-assessment-benefit,
+body.contact-dark-mode .aqua-assessment-benefit {
+    background: #050505 !important;
+    border-color: #222222 !important;
+}
+
+/* Benefit headings */
+html.dark-mode .aqua-assessment-benefit h3,
+body.dark-mode .aqua-assessment-benefit h3,
+html.dark .aqua-assessment-benefit h3,
+body.dark .aqua-assessment-benefit h3,
+body.contact-dark-mode .aqua-assessment-benefit h3 {
+    color: #ffffff !important;
+}
+
+/* Benefit text */
+html.dark-mode .aqua-assessment-benefit p,
+body.dark-mode .aqua-assessment-benefit p,
+html.dark .aqua-assessment-benefit p,
+body.dark .aqua-assessment-benefit p,
+body.contact-dark-mode .aqua-assessment-benefit p {
+    color: #999999 !important;
+}
+
+/* Benefit icons */
+html.dark-mode .aqua-assessment-benefit-icon,
+body.dark-mode .aqua-assessment-benefit-icon,
+html.dark .aqua-assessment-benefit-icon,
+body.dark .aqua-assessment-benefit-icon,
+body.contact-dark-mode .aqua-assessment-benefit-icon {
+    background: rgba(34, 197, 94, 0.12) !important;
+    color: #22c55e !important;
+}
+
+/* Small privacy text */
+html.dark-mode .aqua-assessment-submit-area small,
+body.dark-mode .aqua-assessment-submit-area small,
+html.dark .aqua-assessment-submit-area small,
+body.dark .aqua-assessment-submit-area small,
+body.contact-dark-mode .aqua-assessment-submit-area small {
+    color: #777777 !important;
+}
+
+/* Success message */
+html.dark-mode .aqua-assessment-success,
+body.dark-mode .aqua-assessment-success,
+html.dark .aqua-assessment-success,
+body.dark .aqua-assessment-success,
+body.contact-dark-mode .aqua-assessment-success {
+    background: rgba(34, 197, 94, 0.10) !important;
+    border-color: rgba(34, 197, 94, 0.35) !important;
+    color: #86efac !important;
+}
+
+/* Focus */
+html.dark-mode .aqua-assessment-input:focus-within,
+body.dark-mode .aqua-assessment-input:focus-within,
+html.dark .aqua-assessment-input:focus-within,
+body.dark .aqua-assessment-input:focus-within,
+body.contact-dark-mode .aqua-assessment-input:focus-within {
+    border-color: #2563eb !important;
+    background: #050505 !important;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15) !important;
+}
+
+
+/* =========================================================
+   FORCE PURE BLACK EVEN IF OTHER CSS OVERRIDES IT
+========================================================= */
+
+html.dark-mode body,
+body.dark-mode {
+    background-color: #000000 !important;
+}
+
+html.dark-mode .aqua-assessment-section,
+body.dark-mode .aqua-assessment-section {
+    background: #000000 !important;
+    background-color: #000000 !important;
+}
+
+
+
+/* =====================================================
+   AQUASCAPE MEDIUM MAP SECTION
+===================================================== */
+
+.aqua-map-section {
+    position: relative;
+    padding: 85px 7%;
+    background: #f5fbff;
+    overflow: hidden;
+    transition: 0.4s ease;
+}
+
+.aqua-map-container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* -------------------------------
+   HEADING
+-------------------------------- */
+
+.aqua-map-heading {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 45px;
+}
+
+.aqua-map-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 17px;
+    color: var(--blue);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+
+.aqua-map-heading h2 {
+    margin: 17px 0 12px;
+    font-size: clamp(26px, 5vw, 35px);
+    line-height: 1.15;
+    color: #111827;
+    font-weight: 800;
+}
+
+.aqua-map-heading h2 span {
+    color: #16a34a;
+}
+
+.aqua-map-heading p {
+    margin: 0;
+    color: #667085;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+/* -------------------------------
+   MAP CARD
+-------------------------------- */
+
+.aqua-map-card {
+    display: grid;
+    grid-template-columns: 1.45fr 0.75fr;
+    background: #ffffff;
+    border-radius: 24px;
+    overflow: hidden;
+    border: 1px solid rgba(37, 99, 235, 0.12);
+    box-shadow: 0 20px 55px rgba(15, 23, 42, 0.10);
+}
+
+/* -------------------------------
+   MAP
+-------------------------------- */
+
+.aqua-map-frame {
+    min-height: 380px;
+    position: relative;
+    overflow: hidden;
+}
+
+.aqua-map-frame iframe {
+    width: 100%;
+    height: 100%;
+    min-height: 380px;
+    display: block;
+    border: 0;
+}
+
+/* -------------------------------
+   INFORMATION PANEL
+-------------------------------- */
+
+.aqua-map-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 26px;
+    padding: 42px 34px;
+    background: linear-gradient(
+        145deg,
+        #ffffff,
+        #f1faff
+    );
+}
+
+.aqua-map-info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.aqua-map-icon {
+    width: 45px;
+    height: 45px;
+    min-width: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 13px;
+    background: rgba(37, 99, 235, 0.09);
+    color: #2563eb;
+    font-size: 17px;
+}
+
+.aqua-map-info-item:nth-child(2) .aqua-map-icon {
+    background: rgba(22, 163, 74, 0.10);
+    color: #16a34a;
+}
+
+.aqua-map-info-item span {
+    display: block;
+    margin-bottom: 5px;
+    color: #7b8494;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.7px;
+}
+
+.aqua-map-info-item strong {
+    display: block;
+    color: #172033;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* -------------------------------
+   BUTTON
+-------------------------------- */
+
+.aqua-map-button {
+    width: 100%;
+    min-height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 5px;
+    padding: 14px 20px;
+    border-radius: 13px;
+    background: linear-gradient(
+        135deg,
+        #2563eb,
+        #16a34a
+    );
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    transition: 0.3s ease;
+}
+
+.aqua-map-button i {
+    transition: 0.3s ease;
+}
+
+.aqua-map-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(37, 99, 235, 0.22);
+}
+
+.aqua-map-button:hover i {
+    transform: translateX(5px);
+}
+
+/* =====================================================
+   DARK MODE — PURE BLACK
+===================================================== */
+
+html.dark-mode .aqua-map-section,
+body.dark-mode .aqua-map-section,
+html.dark .aqua-map-section,
+body.dark .aqua-map-section,
+body.contact-dark-mode .aqua-map-section,
+body.dark-theme .aqua-map-section,
+html[data-theme="dark"] .aqua-map-section,
+body[data-theme="dark"] .aqua-map-section {
+    background: #000000 !important;
+    background-image: none !important;
+    color: #ffffff !important;
+}
+
+html.dark-mode .aqua-map-heading h2,
+body.dark-mode .aqua-map-heading h2,
+html.dark .aqua-map-heading h2,
+body.dark .aqua-map-heading h2,
+body.contact-dark-mode .aqua-map-heading h2 {
+    color: #ffffff !important;
+}
+
+html.dark-mode .aqua-map-heading p,
+body.dark-mode .aqua-map-heading p,
+html.dark .aqua-map-heading p,
+body.dark .aqua-map-heading p,
+body.contact-dark-mode .aqua-map-heading p {
+    color: #999999 !important;
+}
+
+html.dark-mode .aqua-map-card,
+body.dark-mode .aqua-map-card,
+html.dark .aqua-map-card,
+body.dark .aqua-map-card,
+body.contact-dark-mode .aqua-map-card {
+    background: #050505 !important;
+    border-color: #222222 !important;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.75) !important;
+}
+
+html.dark-mode .aqua-map-info,
+body.dark-mode .aqua-map-info,
+html.dark .aqua-map-info,
+body.dark .aqua-map-info,
+body.contact-dark-mode .aqua-map-info {
+    background: #050505 !important;
+}
+
+html.dark-mode .aqua-map-info-item strong,
+body.dark-mode .aqua-map-info-item strong,
+html.dark .aqua-map-info-item strong,
+body.dark .aqua-map-info-item strong,
+body.contact-dark-mode .aqua-map-info-item strong {
+    color: #ffffff !important;
+}
+
+html.dark-mode .aqua-map-info-item span,
+body.dark-mode .aqua-map-info-item span,
+html.dark .aqua-map-info-item span,
+body.dark .aqua-map-info-item span,
+body.contact-dark-mode .aqua-map-info-item span {
+    color: #777777 !important;
+}
+
+html.dark-mode .aqua-map-icon,
+body.dark-mode .aqua-map-icon,
+html.dark .aqua-map-icon,
+body.dark .aqua-map-icon {
+    background: #101010 !important;
+}
+
+/* =====================================================
+   RTL SUPPORT
+===================================================== */
+
+body.contact-rtl .aqua-map-section,
+body.rtl .aqua-map-section {
+    direction: rtl;
+}
+
+body.contact-rtl .aqua-map-info,
+body.rtl .aqua-map-info {
+    text-align: right;
+}
+
+body.contact-rtl .aqua-map-button i,
+body.rtl .aqua-map-button i {
+    transform: rotate(180deg);
+}
+
+body.contact-rtl .aqua-map-button:hover i,
+body.rtl .aqua-map-button:hover i {
+    transform: rotate(180deg) translateX(5px);
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 950px) {
+
+    .aqua-map-section {
+        padding: 70px 5%;
+    }
+
+    .aqua-map-card {
+        grid-template-columns: 1fr;
+    }
+
+    .aqua-map-frame,
+    .aqua-map-frame iframe {
+        min-height: 330px;
+    }
+
+    .aqua-map-info {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+    }
+
+    .aqua-map-button {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .aqua-map-section {
+        padding: 60px 5%;
+    }
+
+    .aqua-map-heading {
+        margin-bottom: 30px;
+    }
+
+    .aqua-map-heading h2 {
+        font-size: 30px;
+    }
+
+    .aqua-map-card {
+        border-radius: 18px;
+    }
+
+    .aqua-map-frame,
+    .aqua-map-frame iframe {
+        min-height: 280px;
+    }
+
+    .aqua-map-info {
+        display: flex;
+        padding: 30px 22px;
+    }
+}
+
+
+
+
+/* =========================================
+   AQUASCAPE CONTACT CTA
+========================================= */
+
+.aqua-contact-cta {
+    position: relative;
+    padding: 75px 7%;
+    overflow: hidden;
+    background: linear-gradient(
+        135deg,
+        #eef8ff 0%,
+        #f4fff7 100%
+    );
+}
+
+.aqua-contact-cta-container {
+    position: relative;
+    z-index: 2;
+
+    max-width: 1150px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 35px;
+
+    padding: 38px 45px;
+
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(37, 99, 235, 0.12);
+    border-radius: 24px;
+
+    box-shadow:
+        0 20px 55px rgba(15, 23, 42, 0.10);
+
+    backdrop-filter: blur(12px);
+}
+
+/* -----------------------------------------
+   ICON
+----------------------------------------- */
+
+.aqua-contact-cta-icon {
+    width: 70px;
+    height: 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 20px;
+
+    background: linear-gradient(
+        135deg,
+        #2563eb,
+        #16a34a
+    );
+
+    color: #ffffff;
+    font-size: 27px;
+
+    box-shadow:
+        0 12px 30px rgba(37, 99, 235, 0.22);
+}
+
+.aqua-contact-cta-icon i {
+    animation: aquaCtaFloat 3s ease-in-out infinite;
+}
+
+@keyframes aquaCtaFloat {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+/* -----------------------------------------
+   CONTENT
+----------------------------------------- */
+
+.aqua-contact-cta-tag {
+    display: inline-block;
+
+    margin-bottom: 8px;
+
+    color: var(--blue);
+
+    font-size: 11px;
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+}
+
+.aqua-contact-cta-content h2 {
+    margin: 0 0 8px;
+
+    color: #111827;
+
+    font-size: clamp(26px, 5vw, 35px);
+    line-height: 1.2;
+
+    font-weight: 800;
+}
+
+.aqua-contact-cta-content h2 span {
+    color: #16a34a;
+}
+
+.aqua-contact-cta-content p {
+    max-width: 620px;
+
+    margin: 0;
+
+    color: #667085;
+
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* -----------------------------------------
+   BUTTONS
+----------------------------------------- */
+
+.aqua-contact-cta-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    min-width: 205px;
+}
+
+.aqua-contact-cta-primary,
+.aqua-contact-cta-secondary {
+    min-height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    padding: 12px 20px;
+
+    border-radius: 11px;
+
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    transition: 0.3s ease;
+}
+
+/* Primary */
+
+.aqua-contact-cta-primary {
+    background: linear-gradient(
+        135deg,
+        #2563eb,
+        #16a34a
+    );
+
+    color: #ffffff;
+
+    box-shadow:
+        0 10px 25px rgba(37, 99, 235, 0.20);
+}
+
+.aqua-contact-cta-primary:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 15px 30px rgba(37, 99, 235, 0.28);
+}
+
+.aqua-contact-cta-primary i {
+    transition: 0.3s ease;
+}
+
+.aqua-contact-cta-primary:hover i {
+    transform: translateX(5px);
+}
+
+/* Secondary */
+
+.aqua-contact-cta-secondary {
+    border: 1px solid rgba(37, 99, 235, 0.18);
+
+    color: #2563eb;
+
+    background: #ffffff;
+}
+
+.aqua-contact-cta-secondary:hover {
+    border-color: #16a34a;
+    color: #16a34a;
+
+    transform: translateY(-2px);
+}
+
+/* -----------------------------------------
+   DECORATIVE GLOW
+----------------------------------------- */
+
+.aqua-contact-cta-glow {
+    position: absolute;
+
+    width: 350px;
+    height: 350px;
+
+    top: -180px;
+    right: -100px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(37, 99, 235, 0.13),
+            transparent 70%
+        );
+
+    pointer-events: none;
+}
+
+.aqua-contact-cta::after {
+    content: "";
+
+    position: absolute;
+
+    width: 280px;
+    height: 280px;
+
+    bottom: -180px;
+    left: -100px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(22, 163, 74, 0.12),
+            transparent 70%
+        );
+
+    pointer-events: none;
+}
+
+/* =========================================
+   PURE BLACK DARK MODE
+========================================= */
+
+html.dark-mode .aqua-contact-cta,
+body.dark-mode .aqua-contact-cta,
+html.dark .aqua-contact-cta,
+body.dark .aqua-contact-cta,
+body.contact-dark-mode .aqua-contact-cta,
+body.dark-theme .aqua-contact-cta,
+html[data-theme="dark"] .aqua-contact-cta,
+body[data-theme="dark"] .aqua-contact-cta {
+    background: #000000 !important;
+    background-image: none !important;
+}
+
+html.dark-mode .aqua-contact-cta-container,
+body.dark-mode .aqua-contact-cta-container,
+html.dark .aqua-contact-cta-container,
+body.dark .aqua-contact-cta-container,
+body.contact-dark-mode .aqua-contact-cta-container {
+    background: #050505 !important;
+
+    border-color: #222222 !important;
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.75) !important;
+}
+
+html.dark-mode .aqua-contact-cta-content h2,
+body.dark-mode .aqua-contact-cta-content h2,
+html.dark .aqua-contact-cta-content h2,
+body.dark .aqua-contact-cta-content h2,
+body.contact-dark-mode .aqua-contact-cta-content h2 {
+    color: #ffffff !important;
+}
+
+html.dark-mode .aqua-contact-cta-content p,
+body.dark-mode .aqua-contact-cta-content p,
+html.dark .aqua-contact-cta-content p,
+body.dark .aqua-contact-cta-content p,
+body.contact-dark-mode .aqua-contact-cta-content p {
+    color: #999999 !important;
+}
+
+html.dark-mode .aqua-contact-cta-secondary,
+body.dark-mode .aqua-contact-cta-secondary,
+html.dark .aqua-contact-cta-secondary,
+body.dark .aqua-contact-cta-secondary,
+body.contact-dark-mode .aqua-contact-cta-secondary {
+    background: #0b0b0b !important;
+    border-color: #292929 !important;
+    color: #60a5fa !important;
+}
+
+/* =========================================
+   RTL
+========================================= */
+
+body.contact-rtl .aqua-contact-cta,
+body.rtl .aqua-contact-cta {
+    direction: rtl;
+}
+
+body.contact-rtl .aqua-contact-cta-content,
+body.rtl .aqua-contact-cta-content {
+    text-align: right;
+}
+
+body.contact-rtl .aqua-contact-cta-primary i,
+body.rtl .aqua-contact-cta-primary i {
+    transform: rotate(180deg);
+}
+
+body.contact-rtl .aqua-contact-cta-primary:hover i,
+body.rtl .aqua-contact-cta-primary:hover i {
+    transform: rotate(180deg) translateX(5px);
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+
+    .aqua-contact-cta {
+        padding: 65px 5%;
+    }
+
+    .aqua-contact-cta-container {
+        grid-template-columns: auto 1fr;
+        padding: 35px;
+    }
+
+    .aqua-contact-cta-actions {
+        grid-column: 1 / -1;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .aqua-contact-cta {
+        padding: 55px 5%;
+    }
+
+    .aqua-contact-cta-container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        padding: 28px 24px;
+    }
+
+    .aqua-contact-cta-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 23px;
+    }
+
+    .aqua-contact-cta-content h2 {
+        font-size: 27px;
+    }
+
+    .aqua-contact-cta-actions {
+        width: 100%;
+
+        display: flex;
+    }
+
+    .aqua-contact-cta-primary,
+    .aqua-contact-cta-secondary {
+        width: 100%;
+    }
+}
+
+
+
+
+
+

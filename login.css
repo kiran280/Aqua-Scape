@@ -1,0 +1,1225 @@
+/* =========================================================
+           ROOT VARIABLES
+        ========================================================= */
+ 
+       :root {
+
+            --blue: #168bd1;
+            --blue-dark: #0869a8;
+            --blue-light: #e9f7ff;
+
+            --green: #299447;
+            --green-dark: #176c31;
+            --green-light: #edf8f0;
+
+            --page-bg: #ffffff;
+            --section-bg: #f7faf8;
+            --card-bg: #ffffff;
+
+            --text: #203129;
+            --muted: #68776f;
+
+            --header-bg: rgba(255, 255, 255, 0.97);
+
+            --border: rgba(30, 48, 39, 0.10);
+
+            --footer-bg:
+                linear-gradient(
+                    135deg,
+                    #f1faf5,
+                    #e8f4ed
+                );
+
+            --footer-text: #23362c;
+            --footer-muted: #68776f;
+
+            --shadow:
+                0 8px 30px rgba(20, 70, 40, 0.09);
+
+            --transition: 0.3s ease;
+        }
+
+
+        /* =========================================================
+           DARK THEME
+        ========================================================= */
+
+        body.dark {
+
+            --page-bg: #000000;
+
+            --section-bg: #000000;
+
+            --card-bg: #050505;
+
+            --text: #ffffff;
+
+            --muted: #b8b8b8;
+
+            --header-bg: rgba(0, 0, 0, 0.98);
+
+            --border:
+                rgba(255, 255, 255, 0.12);
+
+            --footer-bg: #000000;
+
+            --footer-text: #ffffff;
+
+            --footer-muted:
+                rgba(255, 255, 255, 0.72);
+
+            --shadow:
+                0 10px 35px rgba(0, 0, 0, 0.65);
+        }
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+                font-family:
+                "Segoe UI",
+                Arial,
+                Helvetica,
+                sans-serif;
+
+    background: #f5f9fc;
+    color: #17212b;
+    transition: background 0.3s ease,
+                color 0.3s ease;
+}
+
+
+/* =========================================
+   MAIN LOGIN PAGE
+========================================= */
+
+.aqua-login-page {
+    width: 100%;
+    height: 100vh;
+    height: 100dvh;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 55px 25px 25px;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 10% 20%,
+            rgba(22, 140, 255, 0.10),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 90% 80%,
+            rgba(36, 169, 87, 0.10),
+            transparent 30%
+        ),
+        #f5f9fc;
+}
+
+
+/* =========================================
+   BACKGROUND GLOWS
+========================================= */
+
+.aqua-login-glow {
+    position: absolute;
+
+    border-radius: 50%;
+
+    filter: blur(70px);
+
+    pointer-events: none;
+}
+
+.aqua-login-glow-blue {
+    width: 220px;
+    height: 220px;
+
+    top: -80px;
+    left: -60px;
+
+    background: rgba(22, 140, 255, 0.15);
+}
+
+.aqua-login-glow-green {
+    width: 220px;
+    height: 220px;
+
+    bottom: -80px;
+    right: -60px;
+
+    background: rgba(36, 169, 87, 0.15);
+}
+
+
+/* =========================================
+   TOP CONTROLS
+========================================= */
+
+.aqua-login-controls {
+    position: absolute;
+
+    top: 18px;
+    right: 25px;
+
+    z-index: 20;
+
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+}
+
+.aqua-login-control {
+    height: 34px;
+
+    padding: 0 12px;
+
+    border: 1px solid #dbe5ec;
+
+    border-radius: 30px;
+
+    background: rgba(255, 255, 255, 0.9);
+
+    color: #35404a;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    transition: all 0.3s ease;
+}
+
+.aqua-login-control:hover {
+    border-color: #168cff;
+
+    color: #168cff;
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================================
+   MAIN LAYOUT
+========================================= */
+
+.aqua-login-layout {
+    width: min(940px, 100%);
+
+    height: min(
+        570px,
+        calc(100vh - 85px)
+    );
+
+    min-height: 500px;
+
+    display: grid;
+
+    grid-template-columns:
+        1.05fr 0.95fr;
+
+    overflow: hidden;
+
+    border-radius: 28px;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 25px 70px rgba(19, 48, 72, 0.15);
+
+    position: relative;
+
+    z-index: 5;
+}
+
+
+/* =========================================
+   LEFT VISUAL
+========================================= */
+
+.aqua-login-visual {
+    position: relative;
+
+    overflow: hidden;
+
+    padding: 40px;
+
+    display: flex;
+    align-items: center;
+
+    background:
+       var(--soft-blue);
+}
+
+.aqua-login-visual-content {
+    position: relative;
+
+    z-index: 3;
+
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    height: 100%;
+}
+
+
+/* =========================================
+   BRAND
+========================================= */
+
+.aqua-login-brand {
+    display: inline-flex;
+
+    width: fit-content;
+
+    align-items: center;
+
+    gap: 12px;
+
+    text-decoration: none;
+
+    color: #ffffff;
+
+    transition:
+        transform 0.3s ease,
+        opacity 0.3s ease;
+
+    font-weight: 800;
+}
+
+.aqua-login-brand:hover {
+    transform: translateY(-2px);
+
+    opacity: 0.95;
+}
+
+
+/* Logo */
+
+.aqua-login-brand-logo {
+    width: 58px;
+    height: 58px;
+
+    object-fit: contain;
+
+    display: block;
+
+    transition:
+        transform 0.3s ease;
+}
+
+
+
+/* Brand Info */
+
+.aqua-login-brand-info {
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+.aqua-login-brand-info h2 {
+    margin: 0;
+
+    font-size: 26px;
+
+    line-height: 1;
+
+    font-weight: 800;
+
+    letter-spacing: -0.6px;
+}
+
+
+/* Aqua */
+
+.aqua-login-aqua {
+    color: var(--blue);
+}
+
+
+/* Scape */
+
+.aqua-login-scape {
+    color: var(--green);
+}
+
+
+.aqua-login-brand-info p {
+    margin-top: 5px;
+
+    font-size: 9px;
+
+    letter-spacing: 0.4px;
+
+    color: grey;
+}
+
+
+/* =========================================
+   VISUAL MAIN CONTENT
+========================================= */
+
+.aqua-login-visual-main {
+    margin-top: auto;
+
+    margin-bottom: 45px;
+
+    max-width: 430px;
+}
+
+.aqua-login-label {
+    display: inline-block;
+
+    margin-bottom: 15px;
+
+    padding: 7px 12px;
+
+    border-radius: 30px;
+
+    background: rgba(255, 255, 255, 0.15);
+
+    border: 1px solid var(--blue);
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+    color: var(--green);
+}
+
+.aqua-login-visual-main h1 {
+    font-size: clamp(
+        25px,
+        5vw,
+        35px
+    );
+
+    line-height: 1.02;
+
+    font-weight: 800;
+
+    letter-spacing: -2px;
+}
+
+.aqua-login-visual-main h1 span {
+    color:var(--green);
+}
+
+.aqua-login-visual-main p {
+    margin-top: 18px;
+
+    max-width: 390px;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+
+    color: grey;
+}
+
+
+/* =========================================
+   FEATURES
+========================================= */
+
+.aqua-login-features {
+    display: flex;
+
+    gap: 12px;
+}
+
+.aqua-login-feature {
+    flex: 1;
+
+    min-height: 68px;
+
+    padding: 11px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    border-radius: 14px;
+
+    background: rgba(255, 255, 255, 0.12);
+
+    border: 1px solid var(--green);
+
+    backdrop-filter: blur(10px);
+}
+
+.aqua-login-feature-icon {
+    width: 36px;
+    height: 36px;
+
+    flex-shrink: 0;
+
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(255, 255, 255, 0.18);
+
+    font-size: 14px;
+
+    color: var(--green);
+}
+
+.aqua-login-feature strong {
+    display: block;
+
+    font-size: 11px;
+
+    color: var(--blue);
+}
+
+.aqua-login-feature small {
+    display: block;
+
+    margin-top: 4px;
+
+    font-size: 9px;
+
+    color: grey;
+}
+
+
+/* =========================================
+   DECORATIVE CIRCLE
+========================================= */
+
+.aqua-login-circle {
+    position: absolute;
+
+    width: 300px;
+    height: 300px;
+
+    right: -130px;
+    bottom: -130px;
+
+    border-radius: 50%;
+
+    border: 70px solid rgba(255, 255, 255, 0.08);
+}
+
+
+/* =========================================
+   RIGHT PANEL
+========================================= */
+
+.aqua-login-panel {
+    padding: 35px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #ffffff;
+}
+
+.aqua-login-card {
+    width: 100%;
+
+    max-width: 360px;
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.aqua-login-heading {
+    margin-bottom: 23px;
+}
+
+.aqua-login-kicker {
+    color: #168cff;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.8px;
+}
+
+.aqua-login-heading h1 {
+    margin-top: 7px;
+
+    font-size: 31px;
+
+    line-height: 1.1;
+
+    font-weight: 800;
+
+    color: var(--green);
+}
+
+.aqua-login-heading p {
+    margin-top: 7px;
+
+    font-size: 12px;
+
+    color: #7a8791;
+}
+
+
+/* =========================================
+   FIELDS
+========================================= */
+
+.aqua-login-field {
+    margin-bottom: 15px;
+}
+
+.aqua-login-field label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    color: #35404a;
+}
+
+.aqua-login-input {
+    height: 47px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 0 13px;
+
+    border: 1px solid var(--green);
+
+    border-radius: 11px;
+
+    background: #f9fbfc;
+
+    transition:
+        border 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.aqua-login-input:focus-within {
+    border-color: #168cff;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(22, 140, 255, 0.10);
+}
+
+.aqua-login-input > i {
+    color: #168cff;
+
+    font-size: 14px;
+}
+
+.aqua-login-input input {
+    width: 100%;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    color: #17212b;
+
+    font-size: 12px;
+}
+
+.aqua-login-input input::placeholder {
+    color: #a0aab2;
+}
+
+
+/* =========================================
+   PASSWORD EYE
+========================================= */
+
+.aqua-login-eye {
+    border: none;
+
+    background: transparent;
+
+    color: #7d8992;
+
+    cursor: pointer;
+
+    padding: 5px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+.aqua-login-eye:hover {
+    color: #168cff;
+}
+
+
+/* =========================================
+   OPTIONS
+========================================= */
+
+.aqua-login-options {
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 10px;
+
+    margin: 3px 0 17px;
+
+    font-size: 10px;
+}
+
+.aqua-login-remember {
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    cursor: pointer;
+
+    color: #6d7881;
+}
+
+.aqua-login-remember input {
+    width: 13px;
+    height: 13px;
+
+    accent-color: #168cff;
+
+    cursor: pointer;
+}
+
+.aqua-login-options > a {
+    color: #168cff;
+
+    text-decoration: none;
+
+    font-weight: 700;
+}
+
+.aqua-login-options > a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================
+   SIGN IN BUTTON
+========================================= */
+
+.aqua-login-signin {
+    width: 100%;
+
+    height: 47px;
+
+    border: none;
+
+    border-radius: 11px;
+
+    background:
+        linear-gradient(
+            100deg,
+            #168cff,
+            #24a957
+        );
+
+    color: #ffffff;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    box-shadow:
+        0 10px 22px
+        rgba(22, 140, 255, 0.20);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.aqua-login-signin:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 14px 27px
+        rgba(22, 140, 255, 0.25);
+}
+
+
+/* =========================================
+   DIVIDER
+========================================= */
+
+.aqua-login-divider {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin: 18px 0;
+}
+
+.aqua-login-divider::before,
+.aqua-login-divider::after {
+    content: "";
+
+    flex: 1;
+
+    height: 1px;
+
+    background: #e3e9ed;
+}
+
+.aqua-login-divider span {
+    font-size: 8px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.8px;
+
+    color: #a0aab2;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================
+   SOCIAL BUTTONS
+========================================= */
+
+.aqua-login-social {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 10px;
+}
+
+.aqua-login-social-btn {
+    height: 42px;
+
+    border: 1px solid var(--green);
+
+    border-radius: 10px;
+
+    background: #ffffff;
+
+    color: #35404a;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    transition: all 0.3s ease;
+}
+
+.aqua-login-social-btn:hover {
+    border-color: var(--blue);
+
+    color: var(--blue);
+
+    transform: translateY(-1px);
+}
+
+.aqua-login-social-btn i {
+    font-size: 15px;
+}
+
+
+/* =========================================
+   REGISTER
+========================================= */
+
+.aqua-login-register {
+    margin-top: 20px;
+
+    text-align: center;
+
+    font-size: 10px;
+
+    color: #7a8791;
+}
+
+.aqua-login-register a {
+    margin-left: 4px;
+
+    color: var(--blue);
+
+    font-weight: 800;
+
+    text-decoration: none;
+}
+
+.aqua-login-register a:hover {
+    text-decoration: underline;
+}
+
+
+
+/* =========================================
+   PURE BLACK DARK MODE
+========================================= */
+
+body.dark-mode {
+    background: #000000 !important;
+
+    color: #ffffff !important;
+}
+
+body.dark-mode .aqua-login-page {
+    background: #000000 !important;
+}
+
+body.dark-mode .aqua-login-layout {
+    background: #000000 !important;
+
+    border: 1px solid #1b1b1b;
+
+    box-shadow:
+        0 25px 70px
+        rgba(0, 0, 0, 0.8);
+}
+
+body.dark-mode .aqua-login-panel {
+    background: #000000 !important;
+}
+
+body.dark-mode .aqua-login-card {
+    background: #000000 !important;
+}
+
+body.dark-mode .aqua-login-heading h1 {
+    color: #ffffff !important;
+}
+
+body.dark-mode .aqua-login-heading p {
+    color: #9ca6ad !important;
+}
+
+body.dark-mode .aqua-login-field label {
+    color: #d5dbe0 !important;
+}
+
+body.dark-mode .aqua-login-input {
+    background: #080808 !important;
+
+    border-color: var(--green)!important;
+}
+
+body.dark-mode .aqua-login-input input {
+    color: #ffffff !important;
+}
+
+body.dark-mode .aqua-login-input input::placeholder {
+    color: #666f76 !important;
+}
+
+body.dark-mode .aqua-login-options {
+    color: #aeb6bc !important;
+}
+
+body.dark-mode .aqua-login-social-btn {
+    background: #080808 !important;
+
+    border-color: var(--green)!important;
+
+    color: #ffffff !important;
+}
+
+body.dark-mode .aqua-login-social-btn:hover {
+    border-color: #168cff !important;
+
+    color: #35a9ff !important;
+}
+
+body.dark-mode .aqua-login-divider::before,
+body.dark-mode .aqua-login-divider::after {
+    background: #292929 !important;
+}
+
+body.dark-mode .aqua-login-register {
+    color: #929ba2 !important;
+}
+
+body.dark-mode .aqua-login-back {
+    color: #929ba2 !important;
+}
+
+body.dark-mode .aqua-login-control {
+    background: #080808 !important;
+
+    border-color: #292929 !important;
+
+    color: #ffffff !important;
+}
+
+body.dark-mode .aqua-login-control:hover {
+    border-color: #35a9ff !important;
+
+    color: #35a9ff !important;
+}
+
+
+/* =========================================
+   RTL
+========================================= */
+
+html[dir="rtl"] .aqua-login-controls {
+    right: auto;
+    left: 25px;
+}
+
+html[dir="rtl"] .aqua-login-layout {
+    direction: rtl;
+}
+
+html[dir="rtl"] .aqua-login-brand {
+    flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .aqua-login-brand-info {
+    text-align: right;
+}
+
+html[dir="rtl"] .aqua-login-visual-main {
+    text-align: right;
+}
+
+html[dir="rtl"] .aqua-login-field label {
+    text-align: right;
+}
+
+html[dir="rtl"] .aqua-login-input {
+    direction: rtl;
+}
+
+html[dir="rtl"] .aqua-login-options {
+    direction: rtl;
+}
+
+html[dir="rtl"] .aqua-login-options > a {
+    margin-right: auto;
+}
+
+html[dir="rtl"] .aqua-login-register {
+    direction: rtl;
+}
+
+html[dir="rtl"] .aqua-login-back {
+    direction: rtl;
+}
+
+html[dir="rtl"] .aqua-login-visual {
+    direction: rtl;
+}
+
+html[dir="rtl"] .aqua-login-circle {
+    right: auto;
+    left: -130px;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 800px) {
+
+    .aqua-login-layout {
+        grid-template-columns: 1fr;
+
+        width: min(460px, 100%);
+
+        height: min(
+            590px,
+            calc(100vh - 85px)
+        );
+    }
+
+    .aqua-login-visual {
+        display: none;
+    }
+
+    .aqua-login-panel {
+        padding: 35px;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 500px) {
+
+    .aqua-login-page {
+        padding: 55px 15px 15px;
+    }
+
+    .aqua-login-controls {
+        top: 12px;
+        right: 15px;
+    }
+
+    html[dir="rtl"] .aqua-login-controls {
+        right: auto;
+        left: 15px;
+    }
+
+    .aqua-login-control {
+        height: 31px;
+
+        padding: 0 9px;
+
+        font-size: 10px;
+    }
+
+    .aqua-login-layout {
+        height: calc(100vh - 75px);
+
+        min-height: 0;
+
+        border-radius: 20px;
+    }
+
+    .aqua-login-panel {
+        padding: 25px 20px;
+    }
+
+    .aqua-login-heading {
+        margin-bottom: 20px;
+    }
+
+    .aqua-login-heading h1 {
+        font-size: 27px;
+    }
+
+    .aqua-login-social {
+        gap: 8px;
+    }
+}
+
+
+/* =========================================
+   SHORT SCREENS
+========================================= */
+
+@media (max-height: 650px) {
+
+    .aqua-login-page {
+        padding-top: 48px;
+    }
+
+    .aqua-login-layout {
+        height: calc(100vh - 68px);
+    }
+
+    .aqua-login-panel {
+        padding-top: 18px;
+        padding-bottom: 18px;
+    }
+
+    .aqua-login-heading {
+        margin-bottom: 13px;
+    }
+
+    .aqua-login-field {
+        margin-bottom: 10px;
+    }
+
+    .aqua-login-input {
+        height: 42px;
+    }
+
+    .aqua-login-signin {
+        height: 42px;
+    }
+
+    .aqua-login-divider {
+        margin: 12px 0;
+    }
+
+    .aqua-login-social-btn {
+        height: 37px;
+    }
+
+    .aqua-login-register {
+        margin-top: 12px;
+    }
+
+    .aqua-login-back {
+        margin-top: 8px;
+    }
+}

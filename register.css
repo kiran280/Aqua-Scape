@@ -1,0 +1,1075 @@
+ /* =====================================================
+           AQUASCAPE THEME VARIABLES
+        ===================================================== */
+
+        :root {
+
+            --blue: #168bd1;
+            --blue-dark: #0869a8;
+            --blue-light: #e9f7ff;
+
+            --green: #299447;
+            --green-dark: #176c31;
+            --green-light: #edf8f0;
+
+            --page-bg: #ffffff;
+            --section-bg: #f7faf8;
+            --card-bg: #ffffff;
+
+            --text: #203129;
+            --muted: #68776f;
+
+            --header-bg: rgba(255, 255, 255, 0.97);
+
+            --border: rgba(30, 48, 39, 0.10);
+
+            --footer-bg:
+                linear-gradient(
+                    135deg,
+                    #f1faf5,
+                    #e8f4ed
+                );
+
+            --footer-text: #23362c;
+            --footer-muted: #68776f;
+
+            --shadow:
+                0 8px 30px rgba(20, 70, 40, 0.09);
+
+            --transition: 0.3s ease;
+
+            --input-bg: #f7faf8;
+            --input-text: #203129;
+            --social-bg: #f7faf8;
+        }
+
+
+        /* =====================================================
+           DARK THEME
+        ===================================================== */
+
+        body.dark {
+
+            --page-bg: #000000;
+            --section-bg: #000000;
+            --card-bg: #050505;
+
+            --text: #ffffff;
+            --muted: #b8b8b8;
+
+            --header-bg: rgba(0, 0, 0, 0.98);
+
+            --border: rgba(255, 255, 255, 0.12);
+
+            --footer-bg: #000000;
+
+            --footer-text: #ffffff;
+
+            --footer-muted:
+                rgba(255, 255, 255, 0.72);
+
+            --shadow:
+                0 10px 35px rgba(0, 0, 0, 0.65);
+
+            --input-bg: #000000;
+            --input-text: #ffffff;
+            --social-bg: #000000;
+        }
+
+
+        /* =====================================================
+           RESET
+        ===================================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        html,
+        body {
+
+            width: 100%;
+            height: 100%;
+        }
+
+
+        body {
+
+            font-family:
+                "Segoe UI",
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            background: var(--page-bg);
+
+            color: var(--text);
+
+            transition:
+                background var(--transition),
+                color var(--transition);
+
+            overflow: hidden;
+        }
+
+
+        /* =====================================================
+           MAIN PAGE
+        ===================================================== */
+
+        .asc-create-page {
+
+            width: 100%;
+            height: 100vh;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            padding: 15px;
+
+            background: var(--page-bg);
+
+            transition:
+                background var(--transition);
+        }
+
+
+        /* =====================================================
+           CREATE ACCOUNT CARD
+        ===================================================== */
+
+        .asc-create-card {
+
+            width: 100%;
+            max-width: 1050px;
+
+            height: calc(100vh - 30px);
+            max-height: 650px;
+
+            display: grid;
+
+            grid-template-columns: 40% 60%;
+
+            background: var(--card-bg);
+
+            border: 1px solid var(--green);
+
+            border-radius: 22px;
+
+            overflow: hidden;
+
+            box-shadow: var(--shadow);
+
+            transition:
+                background var(--transition),
+                border var(--transition),
+                box-shadow var(--transition);
+        }
+
+
+        /* =====================================================
+           LEFT BRAND PANEL
+        ===================================================== */
+
+        .asc-create-left {
+
+            position: relative;
+
+            padding: 32px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: space-between;
+
+            color: #ffffff;
+
+            background:
+             var(--soft-blue);
+
+            overflow: hidden;
+        }
+
+
+        /* Decorative circles */
+
+        .asc-create-left::before {
+
+            content: "";
+
+            position: absolute;
+
+            width: 280px;
+            height: 280px;
+
+            border-radius: 50%;
+
+            background:
+                rgba(255,255,255,0.09);
+
+            right: -130px;
+            top: -110px;
+        }
+
+
+        .asc-create-left::after {
+
+            content: "";
+
+            position: absolute;
+
+            width: 220px;
+            height: 220px;
+
+            border-radius: 50%;
+
+            background:
+                rgba(255,255,255,0.08);
+
+            left: -110px;
+            bottom: -100px;
+        }
+
+
+        /* =====================================================
+           BRAND
+        ===================================================== */
+
+        .asc-create-brand {
+
+            position: relative;
+
+            z-index: 2;
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 10px;
+
+            width: max-content;
+
+            text-decoration: none;
+
+            color: #ffffff;
+        }
+
+
+        .asc-create-brand img {
+
+            width: 48px;
+            height: 48px;
+
+            object-fit: contain;
+
+            border-radius: 9px;
+        }
+
+
+        .asc-create-brand-text {
+
+            display: flex;
+
+            flex-direction: column;
+        }
+
+
+        .asc-create-brand-name {
+
+            font-size: 24px;
+
+            font-weight: 800;
+
+            line-height: 1;
+        }
+
+
+        .asc-create-brand-name .aqua {
+
+            color:var(--blue);
+        }
+
+
+        .asc-create-brand-name .scape {
+
+            color: var(--green);
+        }
+
+
+        .asc-create-tagline {
+
+            margin-top: 5px;
+
+            font-size: 9px;
+
+            color:
+                grey;
+
+            letter-spacing: .2px;
+        }
+
+
+        /* =====================================================
+           LEFT CONTENT
+        ===================================================== */
+
+        .asc-create-intro {
+
+            position: relative;
+
+            z-index: 2;
+        }
+
+
+        .asc-create-intro h1 {
+
+            font-size: 35px;
+
+            line-height: 1.08;
+
+            margin-bottom: 13px;
+
+            color: black;
+        }
+
+
+        .asc-create-intro h1 span {
+
+            color: var(--green);
+        }
+
+
+        .asc-create-intro p {
+
+            max-width: 330px;
+
+            font-size: 12px;
+
+            line-height: 1.7;
+
+            color:
+                grey;
+        }
+
+
+        /* =====================================================
+           LEFT FEATURES
+        ===================================================== */
+
+        .asc-create-features {
+
+            position: relative;
+
+            z-index: 2;
+
+            display: grid;
+
+            gap: 9px;
+        }
+
+
+        .asc-create-feature {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 9px;
+
+            font-size: 11px;
+
+            color: grey;
+        }
+
+
+        .asc-create-feature-icon {
+
+            width: 28px;
+            height: 28px;
+
+            flex-shrink: 0;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 50%;
+
+            background:
+                rgba(255,255,255,0.15);
+
+            color: var(--blue);
+        }
+
+
+        /* =====================================================
+           RIGHT SIDE
+        ===================================================== */
+
+        .asc-create-right {
+
+            padding: 20px 42px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: center;
+
+            background: var(--card-bg);
+
+            color: var(--green);
+
+            transition:
+                background var(--transition),
+                color var(--transition);
+        }
+
+
+        /* =====================================================
+           TOP TOOLS
+        ===================================================== */
+
+        .asc-create-tools {
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: flex-end;
+
+            gap: 7px;
+
+            margin-bottom: 5px;
+        }
+
+
+        .asc-create-tool {
+
+            width: 31px;
+            height: 31px;
+
+            border: 1px solid var(--green);
+
+            border-radius: 7px;
+
+            background: var(--section-bg);
+
+            color: var(--text);
+
+            cursor: pointer;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            transition: var(--transition);
+        }
+
+
+        .asc-create-tool:hover {
+
+            color: var(--blue);
+
+            border-color: var(--blue);
+
+            transform: translateY(-1px);
+        }
+
+
+        /* =====================================================
+           HEADING
+        ===================================================== */
+
+        .asc-create-heading {
+
+            margin-bottom: 11px;
+        }
+
+
+        .asc-create-heading h2 {
+
+            font-size: 25px;
+
+            line-height: 1.2;
+
+            margin-bottom: 4px;
+
+            color: var(--text);
+        }
+
+
+        .asc-create-heading h2 span {
+
+            color: var(--green);
+        }
+
+
+        .asc-create-heading p {
+
+            font-size: 11px;
+
+            color: var(--muted);
+        }
+
+
+        /* =====================================================
+           FORM
+        ===================================================== */
+
+        .asc-create-row {
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 10px;
+        }
+
+
+        .asc-create-field {
+
+            margin-bottom: 8px;
+        }
+
+
+        .asc-create-field label {
+
+            display: block;
+
+            font-size: 10px;
+
+            font-weight: 600;
+
+            margin-bottom: 4px;
+
+            color: var(--text);
+        }
+
+
+        .asc-create-input-box {
+
+            position: relative;
+        }
+
+
+        .asc-create-input-icon {
+
+            position: absolute;
+
+            left: 11px;
+
+            top: 50%;
+
+            transform:
+                translateY(-50%);
+
+            color: var(--muted);
+
+            font-size: 11px;
+
+            pointer-events: none;
+        }
+
+
+        .asc-create-input {
+
+            width: 100%;
+
+            height: 35px;
+
+            border: 1px solid var(--green);
+
+            border-radius: 7px;
+
+            outline: none;
+
+            background: var(--input-bg);
+
+            color: var(--input-text);
+
+            padding:
+                0 34px;
+
+            font-family: inherit;
+
+            font-size: 11px;
+
+            transition: var(--transition);
+        }
+
+
+        .asc-create-input::placeholder {
+
+            color: var(--muted);
+        }
+
+
+        .asc-create-input:focus {
+
+            border-color: var(--blue);
+
+            box-shadow:
+                0 0 0 2px
+                rgba(22,139,209,0.10);
+        }
+
+
+        /* =====================================================
+           PASSWORD EYE
+        ===================================================== */
+
+        .asc-create-eye {
+
+            position: absolute;
+
+            right: 9px;
+
+            top: 50%;
+
+            transform:
+                translateY(-50%);
+
+            border: none;
+
+            background: transparent;
+
+            color: var(--muted);
+
+            cursor: pointer;
+
+            font-size: 11px;
+        }
+
+
+        .asc-create-eye:hover {
+
+            color: var(--blue);
+        }
+
+
+        /* =====================================================
+           TERMS
+        ===================================================== */
+
+        .asc-create-terms {
+
+            display: flex;
+
+            align-items: flex-start;
+
+            gap: 6px;
+
+            margin:
+                2px 0 9px;
+
+            font-size: 9px;
+
+            line-height: 1.4;
+
+            color: var(--muted);
+        }
+
+
+        .asc-create-terms input {
+
+            margin-top: 2px;
+
+            accent-color: var(--blue);
+
+            flex-shrink: 0;
+        }
+
+
+        .asc-create-terms a {
+
+            color: var(--blue);
+
+            text-decoration: none;
+        }
+
+
+        .asc-create-terms a:hover {
+
+            color: var(--green);
+
+            text-decoration: underline;
+        }
+
+
+        /* =====================================================
+           CREATE BUTTON
+        ===================================================== */
+
+        .asc-create-submit {
+
+            width: 100%;
+
+            height: 37px;
+
+            border: none;
+
+            border-radius: 7px;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    var(--blue),
+                    var(--green)
+                );
+
+            color: #ffffff;
+
+            font-size: 11px;
+
+            font-weight: 700;
+
+            cursor: pointer;
+
+            transition: var(--transition);
+        }
+
+
+        .asc-create-submit:hover {
+
+            transform: translateY(-1px);
+
+            box-shadow:
+                0 7px 18px
+                rgba(22,139,209,0.25);
+        }
+
+
+        /* =====================================================
+           DIVIDER
+        ===================================================== */
+
+        .asc-create-divider {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+            margin: 8px 0;
+
+            color: var(--muted);
+
+            font-size: 9px;
+        }
+
+
+        .asc-create-divider::before,
+        .asc-create-divider::after {
+
+            content: "";
+
+            height: 1px;
+
+            flex: 1;
+
+            background: var(--border);
+        }
+
+
+        /* =====================================================
+           SOCIAL BUTTONS
+        ===================================================== */
+
+        .asc-create-social {
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 8px;
+        }
+
+
+        .asc-create-social button {
+
+            height: 33px;
+
+            border: 1px solid var(--green);
+
+            border-radius: 7px;
+
+            background: var(--social-bg);
+
+            color: var(--text);
+
+            cursor: pointer;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 7px;
+
+            font-size: 10px;
+
+            transition: var(--transition);
+        }
+
+
+        .asc-create-social button:hover {
+
+            border-color: var(--blue);
+
+            color: var(--blue);
+        }
+
+
+        .asc-google-icon {
+
+            color: #db4437;
+        }
+
+
+        .asc-apple-icon {
+
+            color: var(--muted);
+        }
+
+
+        /* =====================================================
+           LOGIN
+        ===================================================== */
+
+        .asc-create-login {
+
+            text-align: center;
+
+            margin-top: 9px;
+
+            font-size: 10px;
+
+            color: var(--muted);
+        }
+
+
+        .asc-create-login a {
+
+            color: var(--blue);
+
+            font-weight: 700;
+
+            text-decoration: none;
+
+            margin-left: 3px;
+        }
+
+
+        .asc-create-login a:hover {
+
+            color: var(--green);
+
+            text-decoration: underline;
+        }
+
+
+        /* =====================================================
+           RTL
+        ===================================================== */
+
+        [dir="rtl"] .asc-create-left {
+
+            text-align: right;
+        }
+
+
+        [dir="rtl"] .asc-create-right {
+
+            text-align: right;
+        }
+
+
+        [dir="rtl"] .asc-create-feature {
+
+            flex-direction: row-reverse;
+        }
+
+
+        [dir="rtl"] .asc-create-input-icon {
+
+            left: auto;
+
+            right: 11px;
+        }
+
+
+        [dir="rtl"] .asc-create-input {
+
+            padding-left: 34px;
+
+            padding-right: 34px;
+        }
+
+
+        [dir="rtl"] .asc-create-eye {
+
+            right: auto;
+
+            left: 9px;
+        }
+
+
+        [dir="rtl"] .asc-create-login a {
+
+            margin-left: 0;
+
+            margin-right: 3px;
+        }
+
+
+        /* =====================================================
+           DARK MODE
+        ===================================================== */
+
+        body.dark .asc-create-left {
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #064e79,
+                    #075f91 55%,
+                    #145c2b
+                );
+        }
+
+
+        body.dark .asc-create-input {
+
+            background: #000000;
+
+            color: #ffffff;
+        }
+
+
+        body.dark .asc-create-social button {
+
+            background: #000000;
+
+            color: #ffffff;
+        }
+
+
+        body.dark .asc-create-tool {
+
+            background: #000000;
+
+            color: #ffffff;
+        }
+
+
+        /* =====================================================
+           MOBILE
+        ===================================================== */
+
+        @media (max-width: 850px) {
+
+            body {
+                overflow: auto;
+            }
+
+
+            .asc-create-page {
+
+                min-height: 100vh;
+
+                height: auto;
+
+                padding: 10px;
+            }
+
+
+            .asc-create-card {
+
+                height: auto;
+
+                max-height: none;
+
+                grid-template-columns: 1fr;
+            }
+
+
+            .asc-create-left {
+
+                min-height: 220px;
+
+                padding: 25px;
+            }
+
+
+            .asc-create-features {
+
+                display: none;
+            }
+
+
+            .asc-create-right {
+
+                padding: 25px;
+            }
+        }
+
+
+        @media (max-width: 520px) {
+
+            .asc-create-page {
+
+                padding: 7px;
+            }
+
+
+            .asc-create-left {
+
+                min-height: 190px;
+
+                padding: 20px;
+            }
+
+
+            .asc-create-intro h1 {
+
+                font-size: 27px;
+            }
+
+
+            .asc-create-right {
+
+                padding:
+                    20px 17px;
+            }
+
+
+            .asc-create-row {
+
+                grid-template-columns: 1fr;
+
+                gap: 0;
+            }
+
+
+            .asc-create-heading h2 {
+
+                font-size: 22px;
+            }
+
+
+            .asc-create-social {
+
+                grid-template-columns: 1fr;
+            }
+        }

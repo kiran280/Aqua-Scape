@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Create Account | AquaScape</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+          <link rel="stylesheet" href="register.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         CREATE ACCOUNT PAGE
+    ===================================================== -->
+
+    <main class="asc-create-page">
+
+
+        <!-- =================================================
+             MAIN CARD
+        ================================================= -->
+
+        <div class="asc-create-card">
+
+
+            <!-- =============================================
+                 LEFT PANEL
+            ============================================== -->
+
+            <section class="asc-create-left">
+
+
+                <!-- BRAND -->
+
+                <a href="index.html"
+                   class="asc-create-brand">
+
+                    <img src="images/logo.png"
+                         alt="AquaScape Logo">
+
+                    <div class="asc-create-brand-text">
+
+                        <div class="asc-create-brand-name">
+
+                            <span class="aqua">
+                                Aqua
+                            </span>
+
+                            <span class="scape">
+                                Scape
+                            </span>
+
+                        </div>
+
+                        <div class="asc-create-tagline">
+                            Refresh Your World.
+                        </div>
+
+                    </div>
+
+                </a>
+
+
+                <!-- INTRO -->
+
+                <div class="asc-create-intro">
+
+                    <h1>
+                        Create your
+                        <span>AquaScape</span>
+                        account.
+                    </h1>
+
+                    <p>
+                        Join AquaScape and manage your
+                        irrigation services, site assessments,
+                        appointments and watering solutions
+                        with ease.
+                    </p>
+
+                </div>
+
+
+                <!-- FEATURES -->
+
+                <div class="asc-create-features">
+
+                    <div class="asc-create-feature">
+
+                        <div class="asc-create-feature-icon">
+                            <i class="fa-solid fa-droplet"></i>
+                        </div>
+
+                        <span>
+                            Smart and efficient watering solutions
+                        </span>
+
+                    </div>
+
+
+                    <div class="asc-create-feature">
+
+                        <div class="asc-create-feature-icon">
+                            <i class="fa-solid fa-leaf"></i>
+                        </div>
+
+                        <span>
+                            Water-conscious landscape management
+                        </span>
+
+                    </div>
+
+
+                    <div class="asc-create-feature">
+
+                        <div class="asc-create-feature-icon">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
+
+                        <span>
+                            Secure account and service management
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+            </section>
+
+
+            <!-- =============================================
+                 RIGHT FORM PANEL
+            ============================================== -->
+
+            <section class="asc-create-right">
+
+
+                <!-- TOOLS -->
+
+                <div class="asc-create-tools">
+
+                    <!-- RTL -->
+
+                    <button
+                        type="button"
+                        class="asc-create-tool"
+                        onclick="toggleDirection()"
+                        aria-label="Toggle RTL">
+ 
+                           <i class="fa-solid fa-language"></i>
+
+                    </button>
+
+
+                    <!-- THEME -->
+
+                    <button
+                        type="button"
+                        class="asc-create-tool"
+                        onclick="toggleTheme()"
+                        aria-label="Toggle dark and light theme">
+
+                        <i
+                            id="ascThemeIcon"
+                            class="fa-solid fa-moon">
+                        </i>
+
+                    </button>
+
+                </div>
+
+
+                <!-- HEADING -->
+
+                <div class="asc-create-heading">
+
+                    <h2>
+                        Create
+                        <span>Account</span>
+                    </h2>
+
+                    <p>
+                        Fill in your details to get started.
+                    </p>
+
+                </div>
+
+
+                <!-- FORM -->
+
+                <form id="createAccountForm"
+                      onsubmit="createAccount(event)">
+
+
+                    <!-- FIRST + LAST NAME -->
+
+                    <div class="asc-create-row">
+
+
+                        <div class="asc-create-field">
+
+                            <label for="firstName">
+                                First Name
+                            </label>
+
+                            <div class="asc-create-input-box">
+
+                                <i class="fa-solid fa-user asc-create-input-icon"></i>
+
+                                <input
+                                    type="text"
+                                    id="firstName"
+                                    class="asc-create-input"
+                                    placeholder="Enter first name"
+                                    required>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="asc-create-field">
+
+                            <label for="lastName">
+                                Last Name
+                            </label>
+
+                            <div class="asc-create-input-box">
+
+                                <i class="fa-solid fa-user asc-create-input-icon"></i>
+
+                                <input
+                                    type="text"
+                                    id="lastName"
+                                    class="asc-create-input"
+                                    placeholder="Enter last name"
+                                    required>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <!-- EMAIL + PHONE -->
+
+                    <div class="asc-create-row">
+
+
+                        <div class="asc-create-field">
+
+                            <label for="email">
+                                Email Address
+                            </label>
+
+                            <div class="asc-create-input-box">
+
+                                <i class="fa-solid fa-envelope asc-create-input-icon"></i>
+
+                                <input
+                                    type="email"
+                                    id="email"
+                                    class="asc-create-input"
+                                    placeholder="Enter email address"
+                                    required>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="asc-create-field">
+
+                            <label for="phone">
+                                Phone Number
+                            </label>
+
+                            <div class="asc-create-input-box">
+
+                                <i class="fa-solid fa-phone asc-create-input-icon"></i>
+
+                                <input
+                                    type="tel"
+                                    id="phone"
+                                    class="asc-create-input"
+                                    placeholder="Enter phone number"
+                                    required>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <!-- PASSWORD + CONFIRM -->
+
+                    <div class="asc-create-row">
+
+
+                        <div class="asc-create-field">
+
+                            <label for="password">
+                                Password
+                            </label>
+
+                            <div class="asc-create-input-box">
+
+                                <i class="fa-solid fa-lock asc-create-input-icon"></i>
+
+                                <input
+                                    type="password"
+                                    id="password"
+                                    class="asc-create-input"
+                                    placeholder="Create password"
+                                    required>
+
+                                <button
+                                    type="button"
+                                    class="asc-create-eye"
+                                    onclick="togglePassword('password','passwordEye')">
+
+                                    <i
+                                        id="passwordEye"
+                                        class="fa-solid fa-eye">
+                                    </i>
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="asc-create-field">
+
+                            <label for="confirmPassword">
+                                Confirm Password
+                            </label>
+
+                            <div class="asc-create-input-box">
+
+                                <i class="fa-solid fa-lock asc-create-input-icon"></i>
+
+                                <input
+                                    type="password"
+                                    id="confirmPassword"
+                                    class="asc-create-input"
+                                    placeholder="Confirm password"
+                                    required>
+
+                                <button
+                                    type="button"
+                                    class="asc-create-eye"
+                                    onclick="togglePassword('confirmPassword','confirmPasswordEye')">
+
+                                    <i
+                                        id="confirmPasswordEye"
+                                        class="fa-solid fa-eye">
+                                    </i>
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <!-- TERMS -->
+
+                    <div class="asc-create-terms">
+
+                        <input
+                            type="checkbox"
+                            id="terms"
+                            required>
+
+                        <label for="terms">
+
+                            I agree to the
+                            <a href="#">
+                                Terms & Conditions
+                            </a>
+                            and
+                            <a href="#">
+                                Privacy Policy
+                            </a>.
+
+                        </label>
+
+                    </div>
+
+
+                    <!-- CREATE ACCOUNT -->
+
+                    <button
+                        type="submit"
+                        class="asc-create-submit">
+
+                        Create Account
+
+                    </button>
+
+
+                </form>
+
+
+                <!-- DIVIDER -->
+
+                <div class="asc-create-divider">
+
+                    <span>
+                        Or continue with
+                    </span>
+
+                </div>
+
+
+                <!-- SOCIAL LOGIN -->
+
+                <div class="asc-create-social">
+
+
+                    <button
+                        type="button"
+                        onclick="googleSignup()">
+
+                        <i class="fa-brands fa-google asc-google-icon"></i>
+
+                        Google
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        onclick="appleSignup()">
+
+                        <i class="fa-brands fa-apple asc-apple-icon"></i>
+
+                        Apple
+
+                    </button>
+
+
+                </div>
+
+
+                <!-- LOGIN -->
+
+                <div class="asc-create-login">
+
+                    Already have an account?
+
+                    <a href="login.html">
+                        Login
+                    </a>
+
+                </div>
+
+
+            </section>
+
+
+        </div>
+
+    </main>
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ===================================================== -->
+
+    <script>
+
+
+        /* =====================================================
+           THEME TOGGLE
+        ===================================================== */
+
+        function toggleTheme() {
+
+            document.body.classList.toggle("dark");
+
+            const icon =
+                document.getElementById("ascThemeIcon");
+
+
+            if (
+                document.body.classList.contains("dark")
+            ) {
+
+                icon.classList.remove("fa-moon");
+
+                icon.classList.add("fa-sun");
+
+                localStorage.setItem(
+                    "theme",
+                    "dark"
+                );
+
+            } else {
+
+                icon.classList.remove("fa-sun");
+
+                icon.classList.add("fa-moon");
+
+                localStorage.setItem(
+                    "theme",
+                    "light"
+                );
+            }
+        }
+
+
+        /* =====================================================
+           LOAD SAVED THEME
+        ===================================================== */
+
+        window.addEventListener(
+            "DOMContentLoaded",
+            function () {
+
+                const savedTheme =
+                    localStorage.getItem("theme");
+
+                const icon =
+                    document.getElementById("ascThemeIcon");
+
+
+                if (savedTheme === "dark") {
+
+                    document.body.classList.add("dark");
+
+                    if (icon) {
+
+                        icon.classList.remove(
+                            "fa-moon"
+                        );
+
+                        icon.classList.add(
+                            "fa-sun"
+                        );
+                    }
+
+                } else {
+
+                    document.body.classList.remove("dark");
+
+                    if (icon) {
+
+                        icon.classList.remove(
+                            "fa-sun"
+                        );
+
+                        icon.classList.add(
+                            "fa-moon"
+                        );
+                    }
+                }
+
+
+                /* Load saved direction */
+
+                const savedDirection =
+                    localStorage.getItem("direction");
+
+
+                if (savedDirection === "rtl") {
+
+                    document.documentElement.dir =
+                        "rtl";
+
+                    document.documentElement.lang =
+                        "ar";
+
+                } else {
+
+                    document.documentElement.dir =
+                        "ltr";
+
+                    document.documentElement.lang =
+                        "en";
+                }
+
+            }
+        );
+
+
+        /* =====================================================
+           RTL / LTR TOGGLE
+        ===================================================== */
+
+        function toggleDirection() {
+
+            const html =
+                document.documentElement;
+
+
+            if (html.dir === "rtl") {
+
+                html.dir = "ltr";
+
+                html.lang = "en";
+
+                localStorage.setItem(
+                    "direction",
+                    "ltr"
+                );
+
+            } else {
+
+                html.dir = "rtl";
+
+                html.lang = "ar";
+
+                localStorage.setItem(
+                    "direction",
+                    "rtl"
+                );
+            }
+        }
+
+
+        /* =====================================================
+           PASSWORD VISIBILITY
+        ===================================================== */
+
+        function togglePassword(
+            inputId,
+            iconId
+        ) {
+
+            const input =
+                document.getElementById(inputId);
+
+            const icon =
+                document.getElementById(iconId);
+
+
+            if (input.type === "password") {
+
+                input.type = "text";
+
+                icon.classList.remove(
+                    "fa-eye"
+                );
+
+                icon.classList.add(
+                    "fa-eye-slash"
+                );
+
+            } else {
+
+                input.type = "password";
+
+                icon.classList.remove(
+                    "fa-eye-slash"
+                );
+
+                icon.classList.add(
+                    "fa-eye"
+                );
+            }
+        }
+
+
+        /* =====================================================
+           CREATE ACCOUNT
+        ===================================================== */
+
+        function createAccount(event) {
+
+            event.preventDefault();
+
+
+            const password =
+                document.getElementById(
+                    "password"
+                ).value;
+
+
+            const confirmPassword =
+                document.getElementById(
+                    "confirmPassword"
+                ).value;
+
+
+            if (password !== confirmPassword) {
+
+                alert(
+                    "Passwords do not match."
+                );
+
+                return;
+            }
+
+
+            alert(
+                "Account created successfully!"
+            );
+
+        }
+
+
+        /* =====================================================
+           GOOGLE
+        ===================================================== */
+
+        function googleSignup() {
+
+            alert(
+                "Google sign-up will be connected here."
+            );
+        }
+
+
+        /* =====================================================
+           APPLE
+        ===================================================== */
+
+        function appleSignup() {
+
+            alert(
+                "Apple sign-up will be connected here."
+            );
+        }
+
+
+    </script>
+
+
+</body>
+
+</html>

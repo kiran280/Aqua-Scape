@@ -1,0 +1,2001 @@
+/* =========================
+       HERO
+    ========================= */
+
+    .hero {
+      width: 100%;
+      height: 90vh;
+      height: 90dvh;
+      min-height: 460px;
+      position: relative;
+      overflow: hidden;
+
+      display: flex;
+      align-items: center;
+
+      background:
+        radial-gradient(
+          circle at 85% 15%,
+          rgba(20, 121, 209, 0.18),
+          transparent 32%
+        ),
+        radial-gradient(
+          circle at 10% 90%,
+          rgba(25, 155, 86, 0.15),
+          transparent 35%
+        ),
+        var(--surface);
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 480px;
+      height: 480px;
+      border-radius: 50%;
+      background: rgba(25, 155, 86, 0.08);
+      right: -180px;
+      top: -160px;
+      filter: blur(10px);
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 380px;
+      height: 380px;
+      border-radius: 50%;
+      background: rgba(20, 121, 209, 0.08);
+      left: -180px;
+      bottom: -160px;
+      filter: blur(10px);
+    }
+
+    .hero-container {
+      width: min(1180px, 92%);
+      margin: auto;
+
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      align-items: center;
+      gap: 60px;
+
+      position: relative;
+      z-index: 2;
+    }
+
+    /* =========================
+       LEFT CONTENT
+    ========================= */
+
+    .hero-content {
+      max-width: 650px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+
+      padding: 8px 15px;
+      color: var(--green);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+
+      margin-bottom: 22px;
+
+      backdrop-filter: blur(12px);
+    }
+
+    body.dark .eyebrow {
+      background: rgba(255,255,255,0.06);
+    }
+
+    .eyebrow i {
+      width: 16px;
+      height: 16px;
+    }
+
+    .hero-title {
+
+      font-size: clamp(20px, 5vw, 35px);
+      line-height: 1.02;
+
+      letter-spacing: -2.5px;
+
+      margin-bottom: 22px;
+
+      font-weight: 800;
+    }
+
+    .hero-title .blue {
+      color: var(--blue);
+    }
+
+    .hero-title .green {
+      color: var(--green);
+    }
+
+    .hero-description {
+      max-width: 590px;
+
+      color: var(--muted);
+
+      font-size: 17px;
+      line-height: 1.75;
+
+      margin-bottom: 30px;
+    }
+
+    /* =========================
+       BUTTONS
+    ========================= */
+
+    .hero-buttons {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+
+      min-height: 50px;
+
+      padding: 0 22px;
+
+      border-radius: 12px;
+
+      text-decoration: none;
+
+      font-size: 14px;
+      font-weight: 800;
+
+      transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+    }
+
+    .btn i {
+      width: 18px;
+      height: 18px;
+    }
+
+    .btn-primary {
+      color: #ffffff;
+
+      background:
+        linear-gradient(
+          135deg,
+          var(--blue),
+          var(--green)
+        );
+
+      box-shadow:
+        0 12px 30px rgba(20,121,209,0.25);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+
+      box-shadow:
+        0 17px 35px rgba(20,121,209,0.35);
+    }
+
+    .btn-secondary {
+      color: var(--text);
+
+      border: 1px solid var(--green);
+
+      background: rgba(255,255,255,0.55);
+
+      backdrop-filter: blur(10px);
+    }
+
+    body.dark .btn-secondary {
+      background: rgba(255,255,255,0.06);
+    }
+
+    .btn-secondary:hover {
+      transform: translateY(-3px);
+      border-color: rgba(20,121,209,0.4);
+      color: var(--blue);
+    }
+
+    /* =========================
+       TRUST ROW
+    ========================= */
+
+    .trust-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 22px;
+    }
+
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+
+      color: var(--muted);
+
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .trust-item i {
+      width: 17px;
+      height: 17px;
+      color: var(--green);
+    }
+
+    /* =========================
+       IMAGE SIDE
+    ========================= */
+
+    .hero-visual {
+      position: relative;
+
+      width: 100%;
+      max-width: 530px;
+
+      justify-self: end;
+    }
+
+    .image-frame {
+      position: relative;
+
+      height: min(560px, 68vh);
+
+      min-height: 420px;
+
+      overflow: hidden;
+
+      border-radius: 32px;
+
+      border: 1px solid rgba(255,255,255,0.3);
+
+      box-shadow: var(--shadow);
+
+      background: #dce9e1;
+    }
+
+    .image-frame::after {
+      content: "";
+
+      position: absolute;
+      inset: 0;
+
+      background:
+        linear-gradient(
+          180deg,
+          transparent 45%,
+          rgba(0,0,0,0.48)
+        );
+    }
+
+    .image-frame img {
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+
+      display: block;
+
+      transition: transform 0.7s ease;
+    }
+
+    .hero-visual:hover img {
+      transform: scale(1.04);
+    }
+
+    /* =========================
+       FLOATING CARD 1
+    ========================= */
+
+    .water-card {
+      position: absolute;
+
+      left: -35px;
+      bottom: 50px;
+
+      z-index: 4;
+
+      width: 205px;
+
+      padding: 17px;
+
+      border-radius: 18px;
+
+      background: rgba(255,255,255,0.92);
+
+      border: 1px solid rgba(255,255,255,0.5);
+
+      box-shadow: 0 20px 45px rgba(0,0,0,0.18);
+
+      backdrop-filter: blur(18px);
+
+      animation: floatOne 4s ease-in-out infinite;
+    }
+
+    body.dark .water-card {
+      background: rgba(12,12,12,0.94);
+      border-color: rgba(255,255,255,0.10);
+    }
+
+    .card-icon {
+      width: 40px;
+      height: 40px;
+
+      display: grid;
+      place-items: center;
+
+      border-radius: 12px;
+
+      background:
+        linear-gradient(
+          135deg,
+          rgba(20,121,209,0.14),
+          rgba(25,155,86,0.14)
+        );
+
+      margin-bottom: 10px;
+    }
+
+    .card-icon i {
+      width: 21px;
+      height: 21px;
+      color: var(--blue);
+    }
+
+    .water-card h3 {
+      font-size: 15px;
+      margin-bottom: 4px;
+    }
+
+    .water-card p {
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.5;
+    }
+
+    /* =========================
+       FLOATING CARD 2
+    ========================= */
+
+    .smart-card {
+      position: absolute;
+
+      right: -28px;
+      top: 55px;
+
+      z-index: 4;
+
+      display: flex;
+      align-items: center;
+      gap: 11px;
+
+      padding: 14px 17px;
+
+      border-radius: 16px;
+
+      background: rgba(255,255,255,0.92);
+
+      border: 1px solid rgba(255,255,255,0.5);
+
+      box-shadow: 0 18px 40px rgba(0,0,0,0.15);
+
+      backdrop-filter: blur(18px);
+
+      animation: floatTwo 4.5s ease-in-out infinite;
+    }
+
+    body.dark .smart-card {
+      background: rgba(12,12,12,0.94);
+      border-color: rgba(255,255,255,0.10);
+    }
+
+    .smart-icon {
+      width: 38px;
+      height: 38px;
+
+      display: grid;
+      place-items: center;
+
+      border-radius: 50%;
+
+      background: var(--green);
+      color: #ffffff;
+    }
+
+    .smart-icon i {
+      width: 18px;
+      height: 18px;
+    }
+
+    .smart-text strong {
+      display: block;
+      font-size: 13px;
+    }
+
+    .smart-text span {
+      display: block;
+      color: var(--muted);
+      font-size: 11px;
+      margin-top: 2px;
+    }
+
+    /* =========================
+       WATER DROPS
+    ========================= */
+
+    .drop {
+      position: absolute;
+
+      border-radius: 50%;
+
+      background:
+        linear-gradient(
+          135deg,
+          var(--blue-light),
+          var(--blue)
+        );
+
+      opacity: 0.16;
+    }
+
+    .drop-one {
+      width: 75px;
+      height: 75px;
+
+      right: 4%;
+      bottom: 7%;
+    }
+
+    .drop-two {
+      width: 34px;
+      height: 34px;
+
+      right: 15%;
+      top: 12%;
+    }
+
+    .drop-three {
+      width: 50px;
+      height: 50px;
+
+      left: 38%;
+      top: 9%;
+    }
+
+    /* =========================
+       ANIMATIONS
+    ========================= */
+
+    @keyframes floatOne {
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    @keyframes floatTwo {
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(9px);
+      }
+    }
+
+    /* =========================
+       SHORT SCREEN
+    ========================= */
+
+    @media (max-height: 700px) and (min-width: 769px) {
+
+      .hero-container {
+        gap: 40px;
+      }
+
+      .hero-title {
+        font-size: 50px;
+        margin-bottom: 15px;
+      }
+
+      .hero-description {
+        font-size: 14px;
+        line-height: 1.55;
+        margin-bottom: 20px;
+      }
+
+      .eyebrow {
+        margin-bottom: 14px;
+      }
+
+      .hero-buttons {
+        margin-bottom: 20px;
+      }
+
+      .image-frame {
+        height: 450px;
+        min-height: 0;
+      }
+
+      .water-card {
+        bottom: 30px;
+      }
+
+      .smart-card {
+        top: 30px;
+      }
+    }
+
+    /* =========================
+       TABLET
+    ========================= */
+
+    @media (max-width: 900px) {
+
+      html,
+      body {
+        overflow: auto;
+      }
+
+      .hero {
+        min-height: 700px;
+        height: auto;
+        padding: 60px 0;
+      }
+
+      .hero-container {
+        grid-template-columns: 1fr;
+        gap: 45px;
+      }
+
+      .hero-content {
+        max-width: 750px;
+        margin: auto;
+        text-align: center;
+      }
+
+      .hero-description {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .hero-buttons,
+      .trust-row {
+        justify-content: center;
+      }
+
+      .hero-visual {
+        justify-self: center;
+      }
+    }
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media (max-width: 600px) {
+
+      .hero {
+        padding: 45px 0;
+        min-height: auto;
+      }
+
+      .hero-container {
+        width: 90%;
+        gap: 35px;
+      }
+
+      .hero-title {
+        font-size: 40px;
+        letter-spacing: -1.5px;
+      }
+
+      .hero-description {
+        font-size: 14px;
+        line-height: 1.6;
+      }
+
+      .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .trust-row {
+        gap: 12px;
+        flex-direction: column;
+      }
+
+      .hero-visual {
+        width: 100%;
+      }
+
+      .image-frame {
+        height: 380px;
+        min-height: 0;
+        border-radius: 24px;
+      }
+
+      .water-card {
+        left: 12px;
+        bottom: 18px;
+        width: 180px;
+        padding: 13px;
+      }
+
+      .smart-card {
+        right: 10px;
+        top: 15px;
+        padding: 10px 12px;
+      }
+
+      .smart-icon {
+        width: 32px;
+        height: 32px;
+      }
+
+      .smart-text strong {
+        font-size: 11px;
+      }
+
+      .smart-text span {
+        font-size: 9px;
+      }
+    }
+
+    @media (max-width: 380px) {
+
+      .hero-title {
+        font-size: 34px;
+      }
+
+      .hero-description {
+        font-size: 13px;
+      }
+
+      .image-frame {
+        height: 320px;
+      }
+
+      .water-card {
+        width: 160px;
+      }
+    }
+
+
+     /* =====================================================
+           COMMON SECTION HEADING
+        ===================================================== */
+
+        .as-section-heading {
+            max-width: 720px;
+            margin: 0 auto 55px;
+            text-align: center;
+        }
+
+        .as-section-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+
+            margin-bottom: 14px;
+
+            color: var(--green);
+
+            font-size: 13px;
+            font-weight: 800;
+
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+        }
+
+        .as-section-label svg {
+            width: 17px;
+            height: 17px;
+        }
+
+        .as-section-heading h2,
+        .as-about-content h2,
+        .as-smart-content h2 {
+            margin-bottom: 18px;
+
+            color: var(--text);
+
+            font-size: clamp(20px, 5vw, 35px);
+            font-weight: 800;
+
+            line-height: 1.15;
+            letter-spacing: -1px;
+        }
+
+        .as-section-heading p,
+        .as-about-content p,
+        .as-smart-content > p {
+            color: var(--muted);
+
+            font-size: 15px;
+            line-height: 1.8;
+        }
+
+        .as-blue-text {
+            color: var(--blue);
+        }
+
+        .as-green-text {
+            color: var(--green);
+        }
+
+
+
+
+
+      /* =====================================================
+           SECTION 2 — ABOUT AQUASCAPE
+        ===================================================== */
+
+        .as-about-section {
+            padding: 100px 20px;
+            background: var(--page-bg);
+        }
+
+        .as-about-container {
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            align-items: center;
+
+            gap: 75px;
+        }
+
+        .as-about-image {
+            position: relative;
+        }
+
+        .as-image-wrapper {
+            position: relative;
+
+            overflow: hidden;
+
+            border-radius: 24px;
+
+            box-shadow: var(--shadow);
+        }
+
+        .as-image-wrapper img {
+            width: 100%;
+            height: 500px;
+
+            object-fit: cover;
+
+            transition:
+                transform .5s ease;
+        }
+
+        .as-image-wrapper:hover img {
+            transform: scale(1.04);
+        }
+
+        .as-experience-card {
+            position: absolute;
+
+            right: 25px;
+            bottom: 25px;
+
+            display: flex;
+            align-items: center;
+
+            gap: 12px;
+
+            padding: 16px 20px;
+
+            border:
+                1px solid var(--border);
+
+            border-radius: 14px;
+
+            background: var(--card-bg);
+
+            box-shadow: var(--shadow);
+        }
+
+        .as-experience-card svg {
+            width: 30px;
+            height: 30px;
+
+            color: var(--green);
+        }
+
+        .as-experience-card strong,
+        .as-experience-card span {
+            display: block;
+        }
+
+        .as-experience-card strong {
+            color: var(--text);
+            font-size: 14px;
+        }
+
+        .as-experience-card span {
+            color: var(--muted);
+            font-size: 12px;
+        }
+
+        .as-about-content h2 {
+            max-width: 570px;
+        }
+
+        .as-about-content > p {
+            max-width: 600px;
+            margin-bottom: 14px;
+        }
+
+        .as-about-features {
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 13px;
+
+            margin:
+                25px 0 30px;
+        }
+
+        .as-about-feature {
+            display: flex;
+            align-items: center;
+
+            gap: 9px;
+
+            color: var(--text);
+
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .as-about-feature svg {
+            width: 18px;
+            height: 18px;
+
+            color: var(--green);
+
+            flex-shrink: 0;
+        }
+
+        .as-outline-btn {
+            display: inline-flex;
+
+            align-items: center;
+            justify-content: center;
+
+            gap: 9px;
+
+            min-height: 46px;
+
+            padding:
+                0 20px;
+
+            border:
+                1px solid var(--green);
+
+            border-radius: 9px;
+
+            color: var(--black);
+
+            font-size: 14px;
+            font-weight: 700;
+
+            transition: all .3s ease;
+        }
+
+        .as-outline-btn svg {
+            width: 17px;
+            height: 17px;
+        }
+
+        .as-outline-btn:hover {
+            color: var(--blue);
+
+            border:
+                1px solid var(--blue);
+
+            transform:
+                translateY(-2px);
+        }
+
+
+
+        /* =====================================================
+           SECTION 5 — HOW IT WORKS
+        ===================================================== */
+
+        .as-process-section {
+            padding: 100px 20px;
+
+            background:
+                var(--section-bg);
+        }
+
+        .as-process-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 20px;
+        }
+
+        .as-process-card {
+            position: relative;
+
+            overflow: hidden;
+
+            padding: 35px 25px;
+
+            border:
+                1px solid var(--green);
+
+            border-radius: 18px;
+
+            background: var(--card-bg);
+
+            box-shadow: var(--shadow);
+
+            transition:
+                all .3s ease;
+        }
+
+        .as-process-card:hover {
+            transform:
+                translateY(-7px);
+
+            border-color:
+                var(--blue);
+        }
+
+        .as-step-number {
+            position: absolute;
+
+            top: 12px;
+            right: 18px;
+            bottom: 12px;
+
+            color: var(--green);
+
+
+            font-size: 54px;
+            font-weight: 900;
+
+            line-height: 1;
+        }
+
+       
+
+        .as-process-card h3 {
+
+            margin-top: 30px;
+            margin-bottom: 10px;
+
+            color: var(--text);
+
+            font-size: 18px;
+        }
+
+        .as-process-card p {
+            color: var(--muted);
+
+            font-size: 14px;
+            line-height: 1.75;
+        }
+
+
+
+        /* =====================================================
+           SECTION 6 — IRRIGATION SOLUTIONS
+        ===================================================== */
+
+        .as-solutions-section {
+            padding: 100px 20px;
+
+            background:
+                var(--page-bg);
+        }
+
+        .as-solutions-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 20px;
+        }
+
+        .as-solution-card {
+            overflow: hidden;
+
+            border:
+                1px solid var(--green);
+
+            border-radius: 18px;
+
+            background: var(--card-bg);
+
+            box-shadow: var(--shadow);
+
+            transition:
+                all .3s ease;
+        }
+
+        .as-solution-card:hover {
+            transform:
+                translateY(-7px);
+
+            border: 1px solid var(--blue);
+        }
+
+        .as-solution-image {
+            height: 210px;
+
+            overflow: hidden;
+        }
+
+        .as-solution-image img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+
+            transition:
+                transform .5s ease;
+        }
+
+        .as-solution-card:hover
+        .as-solution-image img {
+            transform:
+                scale(1.07);
+        }
+
+        .as-solution-content {
+            position: relative;
+
+            padding: 23px;
+        }
+
+        .as-solution-icon {
+            width: 45px;
+            height: 45px;
+
+            position: relative;
+            z-index: 2;
+
+            display: grid;
+            place-items: center;
+
+            margin-top: -45px;
+            margin-bottom: 18px;
+
+            border-radius: 12px;
+
+            color: #ffffff;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--blue),
+                    var(--green)
+                );
+        }
+
+        .as-solution-icon svg {
+            width: 21px;
+            height: 21px;
+        }
+
+        .as-solution-content h3 {
+            margin-bottom: 9px;
+
+            color: var(--text);
+
+            font-size: 18px;
+        }
+
+        .as-solution-content p {
+            min-height: 75px;
+
+            margin-bottom: 17px;
+
+            color: var(--muted);
+
+            font-size: 13px;
+            line-height: 1.7;
+        }
+
+        .as-solution-link {
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 7px;
+
+            color: var(--green);
+
+
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        .as-solution-link svg {
+            width: 16px;
+            height: 16px;
+
+        }
+
+
+
+        /* =====================================================
+           SECTION 7 — WATER SAVING
+        ===================================================== */
+
+        .as-water-section {
+            padding: 100px 20px;
+
+            background:
+             var(--section-bg)
+        }
+
+        .as-water-container {
+            width: min(1200px, 92%);
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            align-items: center;
+
+            gap: 70px;
+        }
+
+        .as-water-label {
+            color: var(--green);
+        }
+
+        .as-water-content h2 {
+            max-width: 570px;
+
+            margin-bottom: 20px;
+
+            color: var(--black);
+
+            font-size:
+                clamp(20px, 5vw, 35px);
+
+            font-weight: 800;
+
+            line-height: 1.15;
+        }
+
+        .as-water-content h2 span {
+            display: block;
+
+            color: var(--green);
+        }
+
+        .as-water-content > p {
+            max-width: 570px;
+
+            margin-bottom: 30px;
+
+            color:
+                var(--grey);
+
+            font-size: 15px;
+            line-height: 1.8;
+        }
+
+        .as-water-points {
+            display: grid;
+
+            gap: 15px;
+        }
+
+        .as-water-point {
+            display: flex;
+            align-items: center;
+
+            gap: 14px;
+        }
+
+        .as-water-point-icon {
+            width: 42px;
+            height: 42px;
+
+            display: grid;
+            place-items: center;
+
+            flex-shrink: 0;
+
+            border:
+                1px solid
+                var(--green);
+
+            border-radius: 50%;
+
+            color: grey;
+
+            background:
+                rgba(255,255,255,.10);
+        }
+
+        .as-water-point-icon svg {
+            width: 19px;
+            height: 19px;
+        }
+
+        .as-water-point strong,
+        .as-water-point span {
+            display: block;
+        }
+
+        .as-water-point strong {
+            color: var(--blue);
+            font-size: 14px;
+        }
+
+        .as-water-point span {
+            margin-top: 3px;
+
+            color:
+                grey;
+
+            font-size: 12px;
+        }
+
+        .as-water-visual {
+            position: relative;
+        }
+
+        .as-water-image {
+            overflow: hidden;
+
+            border:
+                5px solid
+                var(--blue);
+
+            border-radius: 24px;
+        }
+
+        .as-water-image img {
+            width: 100%;
+            height: 440px;
+
+            object-fit: cover;
+
+            transition:
+                transform .5s ease;
+        }
+
+        .as-water-image:hover img {
+            transform:
+                scale(1.05);
+        }
+
+        .as-water-badge {
+            position: absolute;
+
+            left: -25px;
+            bottom: 25px;
+
+            display: flex;
+            align-items: center;
+
+            gap: 11px;
+
+            padding: 15px 20px;
+
+            border-radius: 13px;
+
+            background: #ffffff;
+
+            box-shadow:
+                0 15px 35px
+                rgba(0,0,0,.22);
+        }
+
+        .as-water-badge svg {
+            width: 28px;
+            height: 28px;
+
+            color: var(--blue);
+        }
+
+        .as-water-badge strong,
+        .as-water-badge span {
+            display: block;
+        }
+
+        .as-water-badge strong {
+            color: #203129;
+            font-size: 14px;
+        }
+
+        .as-water-badge span {
+            color: #68776f;
+            font-size: 11px;
+        }
+
+
+        /* =====================================================
+           SECTION 8 — FEATURED PROJECTS
+        ===================================================== */
+
+        .as-projects-section {
+            padding: 100px 20px;
+
+            background:
+                var(--section-bg);
+        }
+
+        .as-project-heading {
+            display: flex;
+
+            align-items: end;
+
+            justify-content:
+                space-between;
+
+            gap: 30px;
+
+            margin-bottom: 45px;
+        }
+
+        .as-project-heading h2 {
+            margin: 0;
+
+            color: var(--text);
+
+            font-size:
+                clamp(20px, 5vw, 35px);
+
+            line-height: 1.15;
+
+            font-weight: 800;
+        }
+
+        .as-project-grid {
+            display: grid;
+
+            grid-template-columns:
+                1.35fr 1fr 1.35fr;
+
+            grid-template-rows:
+                260px 290px;
+
+            gap: 18px;
+        }
+
+        .as-project-card {
+            position: relative;
+
+            overflow: hidden;
+
+            border-radius: 18px;
+
+            box-shadow: var(--shadow);
+        }
+
+        .as-project-large {
+            grid-row:
+                span 2;
+        }
+
+        .as-project-card img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+
+            transition:
+                transform .5s ease;
+        }
+
+        .as-project-card:hover img {
+            transform:
+                scale(1.07);
+        }
+
+        .as-project-card::after {
+            content: "";
+
+            position: absolute;
+
+            inset: 0;
+
+            background:
+                linear-gradient(
+                    to top,
+                    rgba(0,0,0,.78),
+                    rgba(0,0,0,.05) 65%
+                );
+        }
+
+        .as-project-overlay {
+            position: absolute;
+
+            z-index: 2;
+
+            right: 20px;
+            bottom: 20px;
+            left: 20px;
+        }
+
+        .as-project-overlay span {
+            display: inline-block;
+
+            margin-bottom: 7px;
+
+            color: #7bd18e;
+
+            font-size: 11px;
+            font-weight: 800;
+
+            letter-spacing: 1px;
+
+            text-transform: uppercase;
+        }
+
+        .as-project-overlay h3 {
+            max-width: 250px;
+
+            color: #ffffff;
+
+            font-size: 19px;
+
+            line-height: 1.3;
+        }
+
+        .as-project-arrow {
+            position: absolute;
+
+            right: 0;
+            bottom: 0;
+
+            width: 38px;
+            height: 38px;
+
+            display: grid;
+            place-items: center;
+
+            border-radius: 50%;
+
+            color: #ffffff;
+
+            background:
+                rgba(255,255,255,.15);
+
+            backdrop-filter:
+                blur(8px);
+        }
+
+        .as-project-arrow svg {
+            width: 17px;
+            height: 17px;
+        }
+
+
+
+
+          
+        /* =====================================================
+           SECTION 9 — SMART IRRIGATION
+        ===================================================== */
+
+        .as-smart-section {
+            padding: 100px 20px;
+
+            background:
+                var(--page-bg);
+        }
+
+        .as-smart-container {
+            display: grid;
+
+            grid-template-columns:
+                .95fr 1.05fr;
+
+            align-items: center;
+
+            gap: 75px;
+        }
+
+        .as-smart-visual {
+            position: relative;
+        }
+
+        .as-smart-image {
+            overflow: hidden;
+
+            border-radius: 24px;
+
+            box-shadow: var(--shadow);
+        }
+
+        .as-smart-image img {
+            width: 100%;
+            height: 500px;
+
+            object-fit: cover;
+
+            transition:
+                transform .5s ease;
+        }
+
+        .as-smart-image:hover img {
+            transform:
+                scale(1.04);
+        }
+
+        .as-smart-floating-card {
+            position: absolute;
+
+            right: -25px;
+            bottom: 30px;
+
+            display: flex;
+            align-items: center;
+
+            gap: 12px;
+
+            padding: 16px 20px;
+
+            border:
+                1px solid var(--blue);
+
+            border-radius: 14px;
+
+            background: var(--card-bg);
+
+            box-shadow: var(--shadow);
+        }
+
+        .as-smart-floating-icon {
+            width: 42px;
+            height: 42px;
+
+            display: grid;
+            place-items: center;
+
+            border-radius: 11px;
+
+            color: #ffffff;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--blue),
+                    var(--green)
+                );
+        }
+
+        .as-smart-floating-icon svg {
+            width: 21px;
+            height: 21px;
+        }
+
+        .as-smart-floating-card strong,
+        .as-smart-floating-card span {
+            display: block;
+        }
+
+        .as-smart-floating-card strong {
+            color: var(--text);
+            font-size: 13px;
+        }
+
+        .as-smart-floating-card span {
+            color: var(--muted);
+            font-size: 11px;
+        }
+
+        .as-smart-content h2 {
+            max-width: 600px;
+
+            font-size: clamp((20px, 5vw, 35px));
+        }
+
+        .as-smart-content > p {
+            max-width: 600px;
+
+            margin-bottom: 30px;
+        }
+
+        .as-smart-features {
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 18px;
+        }
+
+        .as-smart-feature {
+            display: flex;
+            align-items: flex-start;
+
+            gap: 13px;
+
+            padding: 18px;
+
+            border:
+                1px solid var(--green);
+
+            border-radius: 14px;
+
+            background:
+                var(--card-bg);
+
+            transition:
+                all .3s ease;
+        }
+
+        .as-smart-feature:hover {
+            transform:
+                translateY(-4px);
+
+            border-color:
+                var(--blue);
+
+            
+        }
+
+        .as-smart-feature-icon {
+            width: 40px;
+            height: 40px;
+
+            display: grid;
+            place-items: center;
+
+            flex-shrink: 0;
+
+            border-radius: 10px;
+
+            color: var(--green);
+
+            background:
+                rgba(41,148,71,.10);
+        }
+
+        .as-smart-feature-icon svg {
+            width: 19px;
+            height: 19px;
+        }
+
+        .as-smart-feature h3 {
+            margin-bottom: 5px;
+
+            color: var(--text);
+
+            font-size: 14px;
+        }
+
+        .as-smart-feature p {
+            color: var(--muted);
+
+            font-size: 12px;
+
+            line-height: 1.65;
+        }
+
+
+
+
+/* =========================================
+   AQUASCAPE COMPACT HOME CTA
+========================================= */
+
+.aqua-mini-cta {
+    position: relative;
+    padding: 45px 6%;
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eef8ff,
+            #f2fff6
+        );
+}
+
+.aqua-mini-cta-container {
+    position: relative;
+    z-index: 2;
+
+    max-width: 1100px;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    gap: 22px;
+
+    padding: 25px 30px;
+
+    border-radius: 18px;
+
+    background: #ffffff;
+
+    border: 1px solid rgba(37, 99, 235, 0.12);
+
+    box-shadow:
+        0 12px 35px rgba(15, 23, 42, 0.08);
+}
+
+/* ICON */
+
+.aqua-mini-cta-icon {
+    width: 52px;
+    height: 52px;
+    min-width: 52px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 14px;
+
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            135deg,
+            #2563eb,
+            #16a34a
+        );
+
+    font-size: 20px;
+}
+
+/* CONTENT */
+
+.aqua-mini-cta-content {
+    flex: 1;
+}
+
+.aqua-mini-cta-content > span {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #2563eb;
+
+    font-size: 10px;
+    font-weight: 800;
+
+    letter-spacing: 1.3px;
+}
+
+.aqua-mini-cta-content h2 {
+    margin: 0 0 5px;
+
+    color: #111827;
+
+    font-size: clamp(26px, 5vh, 35px);
+    line-height: 1.3;
+
+    font-weight: 800;
+
+    color: var(--green);
+}
+
+.aqua-mini-cta-content p {
+    margin: 0;
+
+    color: #667085;
+
+    font-size: 13px;
+}
+
+/* BUTTON */
+
+.aqua-mini-cta-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 9px;
+
+    min-width: 145px;
+
+    padding: 13px 18px;
+
+    border-radius: 10px;
+
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            135deg,
+            #2563eb,
+            #16a34a
+        );
+
+    text-decoration: none;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    transition: 0.3s ease;
+}
+
+.aqua-mini-cta-button:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 22px rgba(37, 99, 235, 0.22);
+}
+
+.aqua-mini-cta-button i {
+    transition: 0.3s ease;
+}
+
+.aqua-mini-cta-button:hover i {
+    transform: translateX(4px);
+}
+
+/* =========================================
+   DECORATIVE BACKGROUND
+========================================= */
+
+.aqua-mini-cta::before {
+    content: "";
+
+    position: absolute;
+
+    width: 230px;
+    height: 230px;
+
+    top: -150px;
+    right: -50px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(37, 99, 235, 0.12),
+            transparent 70%
+        );
+}
+
+/* =========================================
+   PURE BLACK DARK MODE
+========================================= */
+
+html.dark-mode .aqua-mini-cta,
+body.dark-mode .aqua-mini-cta,
+html.dark .aqua-mini-cta,
+body.dark .aqua-mini-cta,
+body.dark-theme .aqua-mini-cta,
+body.contact-dark-mode .aqua-mini-cta,
+html[data-theme="dark"] .aqua-mini-cta,
+body[data-theme="dark"] .aqua-mini-cta {
+    background: #000000 !important;
+}
+
+html.dark-mode .aqua-mini-cta-container,
+body.dark-mode .aqua-mini-cta-container,
+html.dark .aqua-mini-cta-container,
+body.dark .aqua-mini-cta-container,
+body.contact-dark-mode .aqua-mini-cta-container {
+    background: #050505 !important;
+
+    border-color: #222222 !important;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.75) !important;
+}
+
+html.dark-mode .aqua-mini-cta-content h2,
+body.dark-mode .aqua-mini-cta-content h2,
+html.dark .aqua-mini-cta-content h2,
+body.dark .aqua-mini-cta-content h2,
+body.contact-dark-mode .aqua-mini-cta-content h2 {
+    color: var(--green) !important;
+}
+
+html.dark-mode .aqua-mini-cta-content p,
+body.dark-mode .aqua-mini-cta-content p,
+html.dark .aqua-mini-cta-content p,
+body.dark .aqua-mini-cta-content p,
+body.contact-dark-mode .aqua-mini-cta-content p {
+    color: #999999 !important;
+}
+
+/* =========================================
+   RTL
+========================================= */
+
+body.rtl .aqua-mini-cta,
+body.contact-rtl .aqua-mini-cta {
+    direction: rtl;
+}
+
+body.rtl .aqua-mini-cta-content,
+body.contact-rtl .aqua-mini-cta-content {
+    text-align: right;
+}
+
+body.rtl .aqua-mini-cta-button i,
+body.contact-rtl .aqua-mini-cta-button i {
+    transform: rotate(180deg);
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 750px) {
+
+    .aqua-mini-cta {
+        padding: 35px 5%;
+    }
+
+    .aqua-mini-cta-container {
+        flex-wrap: wrap;
+        padding: 24px;
+    }
+
+    .aqua-mini-cta-content {
+        min-width: 200px;
+    }
+
+    .aqua-mini-cta-button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .aqua-mini-cta-container {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 15px;
+    }
+
+    .aqua-mini-cta-button {
+        grid-column: 1 / -1;
+    }
+
+    .aqua-mini-cta-content h2 {
+        font-size: 19px;
+    }
+
+    .aqua-mini-cta-content p {
+        font-size: 12px;
+    }
+}
