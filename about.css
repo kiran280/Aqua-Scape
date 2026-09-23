@@ -101,17 +101,12 @@
 
     margin-bottom: 20px;
 
-    border-radius: 50px;
 
-    background: rgba(22, 139, 209, 0.08);
-
-    border: 1px solid rgba(22, 139, 209, 0.18);
-
-    color: #168bd1;
+    color:var(--blue);
 
     font-size: 13px;
 
-    font-weight: 700;
+    font-weight: 800;
 
     animation: abx2FadeUp 0.7s ease both;
 }
@@ -1222,7 +1217,7 @@ body.rtl .abx2-primary:hover i {
 
 .section-header h2 {
 
-    color: var(--heading);
+    color: var(--blue);
 
     font-size:
         clamp(26px, 5vw, 35px);

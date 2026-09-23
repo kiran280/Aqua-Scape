@@ -68,10 +68,7 @@
             align-items: center;
             gap: 8px;
             padding: 8px 13px;
-            border-radius: 50px;
-            background: rgba(40,168,107,.18);
-            border: 1px solid rgba(40,168,107,.45);
-            color: #75e4a9;
+            color:var(--green);
             font-size: 12px;
             font-weight: 800;
             letter-spacing: 1.5px;
@@ -486,7 +483,7 @@
         }
 
         .tip-card {
-            border: 1px solid var(--border);
+            border: 1px solid var(--green);
             padding: 28px;
             border-radius: 18px;
             background: var(--card);

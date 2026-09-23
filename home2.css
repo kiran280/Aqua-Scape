@@ -2134,214 +2134,438 @@ body.dark .testimonial-stat span {
 }
 
 
-/* =========================
-   CTA SECTION
-========================= */
 
-.aqua-cta {
-  position: relative;
-  padding: 100px 7%;
-  overflow: hidden;
-  background:
-    linear-gradient(
-      135deg,
-      rgba(22, 135, 217, 0.12),
-      rgba(38, 166, 91, 0.10)
-    ),
-    #f4f8fa;
-  text-align: center;
-  transition: 0.4s ease;
+/* =========================================================
+   AQUASCAPE HOME 2 CTA
+   ========================================================= */
+
+.aqua-home2-cta {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 80px 7%;
+
+    background-image:
+        url("images/beautiful\ lawn\ irrigation.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    isolation: isolate;
 }
 
-/* Decorative circles */
 
-.aqua-cta::before,
-.aqua-cta::after {
-  content: "";
-  position: absolute;
-  border-radius: 50%;
-  pointer-events: none;
+/* Dark Image Overlay */
+
+.aqua-home2-cta-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(3, 20, 28, 0.93),
+            rgba(4, 35, 43, 0.78),
+            rgba(4, 45, 38, 0.58)
+        );
+
+    z-index: -1;
 }
 
-.aqua-cta::before {
-  width: 300px;
-  height: 300px;
-  left: -150px;
-  top: -150px;
-  border: 1px solid rgba(22, 135, 217, 0.18);
+
+/* Content */
+
+.aqua-home2-cta-content {
+    position: relative;
+    z-index: 3;
+
+    max-width: 850px;
+    text-align: center;
+
+    animation: aquaCtaReveal 1s ease forwards;
 }
 
-.aqua-cta::after {
-  width: 350px;
-  height: 350px;
-  right: -180px;
-  bottom: -180px;
-  border: 1px solid rgba(38, 166, 91, 0.18);
+
+.aqua-home2-cta-label {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 8px 18px;
+
+
+    color: var(--blue);
+
+    backdrop-filter: blur(8px);
+
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+
+    margin-bottom: 20px;
 }
 
-/* CTA Content */
 
-.cta-content {
-  position: relative;
-  z-index: 2;
-  max-width: 850px;
-  margin: auto;
+/* Heading */
+
+.aqua-home2-cta-content h2 {
+    margin: 0 auto 18px;
+
+    color: #ffffff;
+
+    font-size: clamp(39px, 5vw, 48px);
+    line-height: 1.1;
+    font-weight: 800;
+    letter-spacing: -1.5px;
 }
 
-.cta-label {
-  display: inline-block;
-  margin-bottom: 18px;
-  color: #1687d9;
-  font-size: 12px;
-  font-weight: 800;
-  letter-spacing: 3px;
+
+.aqua-home2-cta-content h2 span {
+    display: block;
+
+    background: linear-gradient(
+        90deg,
+        #32c8ff,
+        #45d36d
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
-.cta-content h2 {
-  margin: 0 auto 20px;
-  max-width: 750px;
-  font-size: clamp(20px, 5vw, 35px);
-  line-height: 1.08;
-  color: #111827;
-  font-weight: 800;
+
+/* Paragraph */
+
+.aqua-home2-cta-content p {
+    max-width: 680px;
+
+    margin: 0 auto 32px;
+
+    color: rgba(255, 255, 255, 0.82);
+
+    font-size: 16px;
+    line-height: 1.8;
 }
 
-.cta-content p {
-  max-width: 680px;
-  margin: 0 auto 35px;
-  color: #64748b;
-  font-size: 17px;
-  line-height: 1.8;
-}
 
 /* Buttons */
 
-.cta-buttons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 15px;
-  flex-wrap: wrap;
+.aqua-home2-cta-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
 }
 
-.cta-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  min-width: 210px;
-  padding: 15px 25px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-size: 14px;
-  font-weight: 700;
-  transition: 0.3s ease;
-}
 
 /* Primary Button */
 
-.cta-btn.primary {
-  color: #ffffff;
-  background: linear-gradient(
-    135deg,
-    #1687d9,
-    #26a65b
-  );
-  box-shadow: 0 12px 30px rgba(22, 135, 217, 0.20);
+.aqua-home2-cta-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    padding: 14px 25px;
+
+    color: #ffffff;
+    background: linear-gradient(
+        135deg,
+        #129fe8,
+        #25b963
+    );
+
+    border-radius: 8px;
+
+    text-decoration: none;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.25);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
 }
 
-.cta-btn.primary:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 16px 35px rgba(22, 135, 217, 0.30);
+
+.aqua-home2-cta-primary i {
+    font-size: 15px;
 }
 
-.cta-btn.primary i {
-  transition: 0.3s ease;
+
+.aqua-home2-cta-primary:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 18px 35px rgba(18, 159, 232, 0.35);
 }
 
-.cta-btn.primary:hover i {
-  transform: translateX(5px);
-}
 
 /* Secondary Button */
 
-.cta-btn.secondary {
-  color: black;
-  background: transparent;
-  border: 1px solid var(--green);
-}
+.aqua-home2-cta-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 
-.cta-btn.secondary:hover {
-  color: var(--blue);
+    gap: 10px;
 
-  border: 1px solid var(--blue);
-}
+    padding: 13px 23px;
 
+    color: #ffffff;
 
-/* =========================
-   DARK THEME
-========================= */
+    background: rgba(255, 255, 255, 0.08);
 
-body.dark .aqua-cta {
-  background: #000000;
-}
+    border: 1px solid var(--green);
 
-body.dark .aqua-cta::before {
-  border-color: rgba(22, 135, 217, 0.22);
-}
+    border-radius: 8px;
 
-body.dark .aqua-cta::after {
-  border-color: rgba(38, 166, 91, 0.22);
-}
+    text-decoration: none;
 
-body.dark .cta-label {
-  color: #1687d9;
-}
-
-body.dark .cta-content h2 {
-  color: #ffffff;
-}
-
-body.dark .cta-content p {
-  color: #a1a1aa;
-}
-
-body.dark .cta-btn.secondary {
-  color: #ffffff;
-  border-color: rgba(255, 255, 255, 0.25);
-}
-
-body.dark .cta-btn.secondary:hover {
-  color: #ffffff;
-  border-color: #26a65b;
-  background: #26a65b;
-}
-
-
-/* =========================
-   MOBILE
-========================= */
-
-@media (max-width: 600px) {
-
-  .aqua-cta {
-    padding: 75px 20px;
-  }
-
-  .cta-content h2 {
-    font-size: 38px;
-  }
-
-  .cta-content p {
     font-size: 15px;
-  }
+    font-weight: 600;
 
-  .cta-buttons {
-    flex-direction: column;
-  }
+    backdrop-filter: blur(10px);
 
-  .cta-btn {
-    width: 100%;
-    max-width: 300px;
-  }
+    transition:
+        background 0.3s ease,
+        border-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+.aqua-home2-cta-secondary:hover {
+    background: rgba(255, 255, 255, 0.16);
+
+    border-color:var(--blue);
+
+    color: var(--blue);
+
+    transform: translateY(-4px);
+}
+
+
+.aqua-home2-cta-secondary i {
+    transition: transform 0.3s ease;
+}
+
+
+.aqua-home2-cta-secondary:hover i {
+    transform: translateX(5px);
+}
+
+
+/* Decorative Circles */
+
+.aqua-home2-cta-circle {
+    position: absolute;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(69, 211, 109, 0.25);
+
+    pointer-events: none;
+}
+
+
+.circle-one {
+    width: 280px;
+    height: 280px;
+
+    right: -100px;
+    top: -90px;
+
+    animation: aquaFloat 7s ease-in-out infinite;
+}
+
+
+.circle-two {
+    width: 420px;
+    height: 420px;
+
+    left: -220px;
+    bottom: -240px;
+
+    border-color: rgba(50, 200, 255, 0.18);
+
+    animation: aquaFloat 9s ease-in-out infinite reverse;
+}
+
+
+/* Water Drop */
+
+.aqua-home2-water-drop {
+    position: absolute;
+
+    right: 8%;
+    bottom: 45px;
+
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #45d36d;
+
+    border: 1px solid rgba(69, 211, 109, 0.4);
+    border-radius: 50%;
+
+    background: rgba(0, 0, 0, 0.2);
+
+    backdrop-filter: blur(8px);
+
+    animation: aquaDropFloat 3s ease-in-out infinite;
+}
+
+
+.aqua-home2-water-drop i {
+    font-size: 18px;
+}
+
+
+/* =========================================================
+   DARK THEME
+   ========================================================= */
+
+body.dark-mode .aqua-home2-cta {
+    background-color: #000000;
+}
+
+
+body.dark-mode .aqua-home2-cta-overlay {
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.96),
+            rgba(0, 0, 0, 0.84),
+            rgba(0, 18, 14, 0.72)
+        );
+}
+
+
+body.dark-mode .aqua-home2-cta-content p {
+    color: rgba(255, 255, 255, 0.78);
+}
+
+
+/* =========================================================
+   ANIMATIONS
+   ========================================================= */
+
+@keyframes aquaCtaReveal {
+
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes aquaFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+
+@keyframes aquaDropFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .aqua-home2-cta {
+        min-height: 500px;
+
+        padding: 70px 6%;
+    }
+
+    .aqua-home2-cta-content h2 {
+        font-size: 38px;
+    }
+
+    .aqua-home2-cta-content p {
+        font-size: 15px;
+    }
+
+    .aqua-home2-cta-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .aqua-home2-cta-primary,
+    .aqua-home2-cta-secondary {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .aqua-home2-water-drop {
+        display: none;
+    }
+
+    .circle-one {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .aqua-home2-cta {
+        min-height: 520px;
+    }
+
+    .aqua-home2-cta-content h2 {
+        font-size: 32px;
+    }
+
+    .aqua-home2-cta-label {
+        font-size: 11px;
+    }
+
+    .aqua-home2-cta-content p {
+        line-height: 1.7;
+    }
 }

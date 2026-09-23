@@ -1,0 +1,1097 @@
+/* =========================================================
+   AQUASCAPE GET QUOTE
+========================================================= */
+
+:root {
+    --blue: #168bd1;
+    --blue-dark: #0869a8;
+    --blue-light: #e9f7ff;
+
+    --green: #299447;
+    --green-dark: #176c31;
+    --green-light: #edf8f0;
+
+
+    --page-bg: #f4f8fc;
+    --card-bg: #ffffff;
+    --input-bg: #f7fafc;
+
+    --text: #142b40;
+    --muted: #718196;
+
+    --border: #dce6ee;
+
+    --shadow:
+        0 20px 50px rgba(20, 60, 90, .10);
+
+    --transition: .3s ease;
+}
+
+
+/* =========================================================
+   DARK MODE
+========================================================= */
+
+body.dark-theme {
+
+    --page-bg: #000000;
+    --card-bg: #101010;
+    --input-bg: #181818;
+
+    --text: #ffffff;
+    --muted: #a5a5a5;
+
+    --border: #292929;
+
+    --shadow:
+        0 20px 50px rgba(0, 0, 0, .60);
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+}
+
+
+html,
+body {
+
+    width: 100%;
+
+    min-height: 100%;
+}
+
+
+body {
+
+    min-height: 100vh;
+
+     font-family:
+                "Segoe UI",
+                Arial,
+                Helvetica,
+                sans-serif;
+
+    background: var(--page-bg);
+
+    color: var(--text);
+
+    overflow: hidden;
+
+    transition:
+        background var(--transition),
+        color var(--transition);
+}
+
+
+button,
+input,
+select,
+textarea {
+
+    font-family: inherit;
+}
+
+
+/* =========================================================
+   TOP
+========================================================= */
+
+.quote-top {
+
+    position: absolute;
+
+    top: 18px;
+
+    left: 4%;
+
+    right: 4%;
+
+    z-index: 100;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+
+/* =========================================================
+   BRAND
+========================================================= */
+
+.quote-brand {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    text-decoration: none;
+
+    color: var(--text);
+}
+
+
+.quote-brand img {
+
+    width: 58px;
+
+    height: 58px;
+
+    object-fit: contain;
+}
+
+
+.brand-content {
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+.brand-name {
+
+    font-size: 25px;
+
+    line-height: 1;
+
+    font-weight: 800;
+
+    letter-spacing: -.6px;
+}
+
+
+.aqua {
+
+    color: var(--blue);
+}
+
+
+.scape {
+
+    color: var(--green);
+}
+
+
+.brand-tagline {
+
+      display: block;
+
+    margin-top: 5px;
+
+    font-size: 10px;
+    font-weight: 500;
+
+    letter-spacing: 1px;
+
+    line-height: 1.2;
+
+    color: var(--muted);
+
+    white-space: nowrap;
+
+    transition:
+        color var(--transition);
+}
+
+
+/* =========================================================
+   CONTROLS
+========================================================= */
+
+.quote-controls {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+}
+
+
+.control-btn {
+
+    min-width: 38px;
+
+    height: 38px;
+
+    padding: 0 10px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 7px;
+
+    border: 1px solid var(--green);
+
+    border-radius: 50%;
+
+    background: var(--card-bg);
+
+    color: var(--text);
+
+    cursor: pointer;
+
+    transition: .3s ease;
+}
+
+
+.control-btn:hover {
+
+
+    border-color: var(--blue);
+
+    color: var(--blue);
+
+}
+
+
+.rtl-btn span {
+
+    font-size: 9px;
+
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   MAIN
+========================================================= */
+
+.quote-wrapper {
+
+    width: min(1180px, 90%);
+
+    height: 100vh;
+
+    margin: auto;
+
+    padding-top: 76px;
+
+    padding-bottom: 18px;
+
+    display: grid;
+
+    grid-template-columns: .82fr 1.18fr;
+
+    align-items: center;
+
+    gap: 55px;
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.quote-intro {
+
+    min-width: 0;
+}
+
+
+.quote-tag {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    padding: 7px 12px;
+
+
+    color: var(--green);
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: .5px;
+}
+
+
+.quote-intro h1 {
+
+    font-size: clamp(32px, 3.6vw, 48px);
+
+    line-height: 1.1;
+
+    letter-spacing: -1.7px;
+
+    margin-bottom: 14px;
+
+    font-weight: 800;
+}
+
+
+.quote-intro h1 span {
+
+    display: block;
+
+    color: var(--blue);
+}
+
+
+.intro-text {
+
+    max-width: 465px;
+
+    margin-bottom: 19px;
+
+    color: var(--muted);
+
+    font-size: 12px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   FEATURES
+========================================================= */
+
+.features {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 11px;
+}
+
+
+.feature-item {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+
+.feature-icon {
+
+    width: 38px;
+
+    height: 38px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 10px;
+
+    color: var(--blue);
+
+    background: rgba(22,133,229,.10);
+
+    font-size: 13px;
+}
+
+
+.feature-icon.green {
+
+    color: var(--green);
+
+    background: rgba(37,184,121,.10);
+}
+
+
+.feature-item h3 {
+
+    margin-bottom: 2px;
+
+    font-size: 12px;
+
+    font-weight: 700;
+}
+
+
+.feature-item p {
+
+    color: var(--muted);
+
+    font-size: 12px;
+
+    line-height: 1.45;
+}
+
+
+/* =========================================================
+   CONTACT
+========================================================= */
+
+.quick-contact {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-top: 18px;
+
+    padding-top: 13px;
+
+    border-top: 1px solid var(--green);
+}
+
+
+.phone-icon {
+
+    width: 34px;
+
+    height: 34px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    color: #ffffff;
+
+    background: var(--blue);
+
+    font-size: 10px;
+}
+
+
+.quick-contact small {
+
+    display: block;
+
+    margin-bottom: 2px;
+
+    color: var(--muted);
+
+    font-size: 8px;
+}
+
+
+.quick-contact strong {
+
+    font-size: 10px;
+}
+
+
+/* =========================================================
+   FORM CARD
+========================================================= */
+
+.quote-card {
+
+    width: 100%;
+
+    padding: 21px 24px;
+
+    background: var(--card-bg);
+
+    border: 1px dashed var(--green);
+
+    border-radius: 17px;
+
+    box-shadow: var(--shadow);
+
+    transition: .3s ease;
+}
+
+
+/* =========================================================
+   FORM HEADER
+========================================================= */
+
+.form-heading {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    margin-bottom: 16px;
+}
+
+
+.form-small-title {
+
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: var(--green);
+
+    font-size: 8px;
+
+    letter-spacing: 1.3px;
+
+    font-weight: 800;
+}
+
+
+.form-heading h2 {
+
+    margin-bottom: 4px;
+
+    font-size: 21px;
+
+    font-weight: 800;
+}
+
+
+.form-heading p {
+
+    color: var(--muted);
+
+    font-size: 12px;
+}
+
+
+.form-heading-icon {
+
+    width: 42px;
+
+    height: 42px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 10px;
+
+    color: var(--blue);
+
+    background: rgba(22,133,229,.10);
+
+    font-size: 16px;
+}
+
+
+/* =========================================================
+   FORM GRID
+========================================================= */
+
+.form-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 9px 11px;
+}
+
+
+.form-group {
+
+    min-width: 0;
+}
+
+
+.full-width {
+
+    grid-column: 1 / -1;
+}
+
+
+.form-group label {
+
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: var(--text);
+
+    font-size: 12px;
+
+    font-weight: 700;
+}
+
+
+.form-group label span {
+
+    color: #ef5350;
+}
+
+
+/* =========================================================
+   INPUT
+========================================================= */
+
+.input-box {
+
+    min-height: 36px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    padding: 0 9px;
+
+    background: var(--input-bg);
+
+    border: 1px solid var(--border);
+
+    border-radius: 7px;
+
+    transition: .3s ease;
+}
+
+
+.input-box:focus-within {
+
+    border-color: var(--blue);
+}
+
+
+.input-box > i {
+
+    flex-shrink: 0;
+
+    color: var(--muted);
+
+    font-size: 12px;
+}
+
+
+.input-box input,
+.input-box select,
+.input-box textarea {
+
+    width: 100%;
+
+    min-width: 0;
+
+    border: none;
+
+    outline: none;
+
+    background: transparent;
+
+    color: var(--text);
+
+    font-size: 12px;
+}
+
+
+.input-box input,
+.input-box select {
+
+    height: 34px;
+}
+
+
+.input-box input::placeholder,
+.input-box textarea::placeholder {
+
+    color: var(--muted);
+}
+
+
+.input-box select {
+
+    cursor: pointer;
+}
+
+
+.input-box select option {
+
+    background: var(--card-bg);
+
+    color: var(--text);
+}
+
+
+/* =========================================================
+   MESSAGE
+========================================================= */
+
+.message-box {
+
+    height: 48px;
+
+    align-items: flex-start;
+
+    padding-top: 8px;
+}
+
+
+.message-box textarea {
+
+    height: 31px;
+
+    resize: none;
+
+    line-height: 1.4;
+}
+
+
+/* =========================================================
+   FORM BOTTOM
+========================================================= */
+
+.form-bottom {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 12px;
+
+    margin-top: 13px;
+}
+
+
+.secure-text {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 5px;
+
+    color: var(--muted);
+
+    font-size: 11px;
+}
+
+
+.secure-text i {
+
+    color: var(--green);
+}
+
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+.quote-button {
+
+    min-height: 37px;
+
+    padding: 0 15px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--blue),
+            var(--green)
+        );
+
+    color: #ffffff;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: .3s ease;
+}
+
+
+.quote-button:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 18px rgba(22,133,229,.25);
+}
+
+
+.quote-button i {
+
+    transition: .3s ease;
+}
+
+
+.quote-button:hover i {
+
+    transform: translateX(3px);
+}
+
+
+/* =========================================================
+   FORM MESSAGE
+========================================================= */
+
+.form-message {
+
+    display: none;
+
+    margin-top: 7px;
+
+    padding: 7px;
+
+    border-radius: 6px;
+
+    font-size: 8px;
+}
+
+
+.form-message.success {
+
+    display: block;
+
+    color: var(--green);
+
+    background: rgba(37,184,121,.10);
+}
+
+
+.form-message.error {
+
+    display: block;
+
+    color: #ef5350;
+
+    background: rgba(239,83,80,.10);
+}
+
+
+/* =========================================================
+   RTL
+========================================================= */
+
+html[dir="rtl"] .quote-intro,
+html[dir="rtl"] .quote-card {
+
+    text-align: right;
+}
+
+
+html[dir="rtl"] .quote-tag,
+html[dir="rtl"] .feature-item,
+html[dir="rtl"] .quick-contact,
+html[dir="rtl"] .input-box,
+html[dir="rtl"] .secure-text {
+
+    direction: rtl;
+}
+
+
+html[dir="rtl"] .quote-button i {
+
+    transform: rotate(180deg);
+}
+
+
+html[dir="rtl"] .quote-button:hover i {
+
+    transform:
+        rotate(180deg)
+        translateX(3px);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    body {
+
+        overflow-y: auto;
+    }
+
+
+    .quote-wrapper {
+
+        width: min(650px, 92%);
+
+        height: auto;
+
+        min-height: 100vh;
+
+        grid-template-columns: 1fr;
+
+        padding-top: 90px;
+
+        padding-bottom: 30px;
+
+        gap: 30px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .quote-top {
+
+        top: 12px;
+
+        left: 4%;
+
+        right: 4%;
+    }
+
+
+    .brand-name {
+
+        font-size: 19px;
+    }
+
+
+    .brand-tagline {
+
+        font-size: 6px;
+    }
+
+
+    .quote-brand img {
+
+        width: 34px;
+
+        height: 34px;
+    }
+
+
+    .control-btn {
+
+        width: 35px;
+
+        min-width: 35px;
+
+        height: 35px;
+
+        padding: 0;
+    }
+
+
+    .rtl-btn {
+
+        padding: 0 8px;
+    }
+
+
+    .quote-wrapper {
+
+        width: 92%;
+
+        padding-top: 82px;
+    }
+
+
+    .quote-intro h1 {
+
+        font-size: 31px;
+    }
+
+
+    .quote-card {
+
+        padding: 18px 14px;
+    }
+
+
+    .form-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .full-width {
+
+        grid-column: auto;
+    }
+
+
+    .form-bottom {
+
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+
+    .secure-text {
+
+        justify-content: center;
+    }
+
+
+    .quote-button {
+
+        width: 100%;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 380px) {
+
+    .brand-name {
+
+        font-size: 17px;
+    }
+
+
+    .brand-tagline {
+
+        display: none;
+    }
+
+
+    .quote-intro h1 {
+
+        font-size: 27px;
+    }
+
+}
