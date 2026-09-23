@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Get a Quote | AquaScape</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="quote.css">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- ==================================================
+         TOP BRAND + CONTROLS
+    =================================================== -->
+
+    <div class="quote-top">
+
+        <!-- Brand -->
+        <a href="index.html" class="quote-brand">
+
+            <img
+                src="images/logo.png"
+                alt="AquaScape Logo">
+
+            <div class="brand-content">
+
+                <div class="brand-name">
+                    <span class="aqua">Aqua</span>  
+                    
+                    <span class="scape">Scape</span>
+                </div>
+
+                <span class="brand-tagline">
+                    Refresh Your World.
+                </span>
+
+            </div>
+
+        </a>
+
+
+        <!-- Theme + RTL -->
+        <div class="quote-controls">
+
+            <button
+                class="control-btn"
+                id="themeToggle"
+                type="button"
+                title="Dark Mode">
+
+                <i class="fa-solid fa-moon"></i>
+
+            </button>
+
+
+            <button
+                class="control-btn rtl-btn"
+                id="rtlToggle"
+                type="button"
+                title="RTL">
+
+                <i class="fa-solid fa-arrows-left-right"></i>
+
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ==================================================
+         MAIN
+    =================================================== -->
+
+    <main class="quote-wrapper">
+
+
+        <!-- ==================================================
+             LEFT CONTENT
+        =================================================== -->
+
+        <section class="quote-intro">
+
+            <div class="quote-tag">
+
+
+                SMART IRRIGATION SOLUTIONS
+
+            </div>
+
+
+            <h1>
+
+                Let's Create Your
+
+                <span>
+                    Perfect Landscape.
+                </span>
+
+            </h1>
+
+
+            <p class="intro-text">
+
+                Tell us about your irrigation project and our
+                experts will create a water-efficient solution
+                designed specifically for your landscape.
+
+            </p>
+
+
+            <!-- Features -->
+
+            <div class="features">
+
+
+                <div class="feature-item">
+
+                    <div class="feature-icon blue">
+
+                        <i class="fa-solid fa-droplet"></i>
+
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Water Efficient
+                        </h3>
+
+                        <p>
+                            Reduce water waste with intelligent
+                            irrigation solutions.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="feature-item">
+
+                    <div class="feature-icon green">
+
+                        <i class="fa-solid fa-ruler-combined"></i>
+
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Custom Solutions
+                        </h3>
+
+                        <p>
+                            Irrigation designed around your
+                            landscape requirements.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="feature-item">
+
+                    <div class="feature-icon blue">
+
+                        <i class="fa-solid fa-headset"></i>
+
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Expert Support
+                        </h3>
+
+                        <p>
+                            Professional guidance from planning
+                            through installation.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+            <!-- Contact -->
+
+            <div class="quick-contact">
+
+                <div class="phone-icon">
+
+                    <i class="fa-solid fa-phone"></i>
+
+                </div>
+
+                <div>
+
+                    <small>
+                        Need help?
+                    </small>
+
+                    <strong>
+                        +91 98765 43210
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- ==================================================
+             QUOTE FORM
+        =================================================== -->
+
+        <section class="quote-card">
+
+
+            <!-- Form Heading -->
+
+            <div class="form-heading">
+
+                <div>
+
+                    <span class="form-small-title">
+                        START YOUR PROJECT
+                    </span>
+
+                    <h2>
+                        Request a Quote
+                    </h2>
+
+                    <p>
+                        Fill in your details and we'll contact you.
+                    </p>
+
+                </div>
+
+
+                <div class="form-heading-icon">
+
+                    <i class="fa-solid fa-file-signature"></i>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Form -->
+
+            <form id="quoteForm">
+
+
+                <div class="form-grid">
+
+
+                    <!-- Full Name -->
+
+                    <div class="form-group">
+
+                        <label for="fullName">
+                            Full Name <span>*</span>
+                        </label>
+
+                        <div class="input-box">
+
+                            <i class="fa-regular fa-user"></i>
+
+                            <input
+                                type="text"
+                                id="fullName"
+                                placeholder="Enter your name"
+                                required>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Email -->
+
+                    <div class="form-group">
+
+                        <label for="email">
+                            Email Address <span>*</span>
+                        </label>
+
+                        <div class="input-box">
+
+                            <i class="fa-regular fa-envelope"></i>
+
+                            <input
+                                type="email"
+                                id="email"
+                                placeholder="Enter your email"
+                                required>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Phone -->
+
+                    <div class="form-group">
+
+                        <label for="phone">
+                            Phone Number <span>*</span>
+                        </label>
+
+                        <div class="input-box">
+
+                            <i class="fa-solid fa-phone"></i>
+
+                            <input
+                                type="tel"
+                                id="phone"
+                                placeholder="Enter phone number"
+                                required>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Service -->
+
+                    <div class="form-group">
+
+                        <label for="service">
+                            Select Service <span>*</span>
+                        </label>
+
+                        <div class="input-box">
+
+                            <i class="fa-solid fa-list-check"></i>
+
+                            <select id="service" required>
+
+                                <option value="">
+                                    Select service
+                                </option>
+
+                                <option>
+                                    System Design
+                                </option>
+
+                                <option>
+                                    Professional Installation
+                                </option>
+
+                                <option>
+                                    Seasonal Winterization
+                                </option>
+
+                                <option>
+                                    Smart Irrigation
+                                </option>
+
+                                <option>
+                                    Water Management
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Property -->
+
+                    <div class="form-group">
+
+                        <label for="property">
+                            Property Type
+                        </label>
+
+                        <div class="input-box">
+
+                            <i class="fa-solid fa-house"></i>
+
+                            <select id="property">
+
+                                <option value="">
+                                    Select property
+                                </option>
+
+                                <option>
+                                    Residential
+                                </option>
+
+                                <option>
+                                    Commercial
+                                </option>
+
+                                <option>
+                                    Garden
+                                </option>
+
+                                <option>
+                                    Lawn
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Budget -->
+
+                    <div class="form-group">
+
+                        <label for="budget">
+                            Estimated Budget
+                        </label>
+
+                        <div class="input-box">
+
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+
+                            <select id="budget">
+
+                                <option value="">
+                                    Select budget
+                                </option>
+
+                                <option>
+                                    Below ₹25,000
+                                </option>
+
+                                <option>
+                                    ₹25,000 - ₹50,000
+                                </option>
+
+                                <option>
+                                    ₹50,000 - ₹1,00,000
+                                </option>
+
+                                <option>
+                                    Above ₹1,00,000
+                                </option>
+
+                                <option>
+                                    Not sure
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Location -->
+
+                    <div class="form-group full-width">
+
+                        <label for="location">
+                            Project Location
+                        </label>
+
+                        <div class="input-box">
+
+                            <i class="fa-solid fa-location-dot"></i>
+
+                            <input
+                                type="text"
+                                id="location"
+                                placeholder="Enter project location">
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Message -->
+
+                    <div class="form-group full-width">
+
+                        <label for="message">
+                            Project Details
+                        </label>
+
+                        <div class="input-box message-box">
+
+                            <i class="fa-regular fa-message"></i>
+
+                            <textarea
+                                id="message"
+                                placeholder="Tell us about your irrigation requirements..."></textarea>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+                <!-- Form Bottom -->
+
+                <div class="form-bottom">
+
+
+                    <div class="secure-text">
+
+                        <i class="fa-solid fa-shield-halved"></i>
+
+                        Your information is secure
+
+                    </div>
+
+
+
+                    <button
+                        type="submit"
+                        class="quote-button">
+
+                        Get My Free Quote
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </button>
+
+
+                </div>
+
+
+                <div
+                    id="formMessage"
+                    class="form-message">
+                </div>
+
+
+            </form>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- JavaScript -->
+    <script src="get-quote.js"></script>
+
+</body>
+
+</html>
