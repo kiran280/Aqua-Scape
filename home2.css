@@ -65,15 +65,15 @@
 
             color: var(--blue);
 
-            font-size: 13px;
+            font-size: 12px;
             font-weight: 800;
-            letter-spacing: 1.5px;
+            letter-spacing: 1.2px;
             text-transform: uppercase;
         }
 
 
         .hero h1 {
-            color: #ffffff;
+            color: var(--blue);
             font-size: clamp(70px, 5vw, 55px);
             line-height: 1.02;
             font-weight: 800;
@@ -82,7 +82,7 @@
         }
 
         .hero h1 span {
-            color: #55d96e;
+            color: var(--green);
         }
 
         .hero-description {
@@ -305,10 +305,10 @@
 
 .process-label {
   display: inline-block;
-  color: #1687d9;
-  font-size: 13px;
+  color:var(--blue);
+  font-size: 12px;
   font-weight: 800;
-  letter-spacing: 3px;
+  letter-spacing: 1.2px;
   margin-bottom: 15px;
 }
 
@@ -631,9 +631,9 @@ body.dark .process-card p {
   font-size: 12px;
   font-weight: 800;
 
-  letter-spacing: 3px;
+  letter-spacing: 1.2px;
 
-  color: #1687d9;
+  color: var(--blue);
 
   margin-bottom: 18px;
 }
@@ -1161,9 +1161,9 @@ body.dark .saving-card strong {
 
   font-size: 12px;
 
-  font-weight: 900;
+  font-weight: 800;
 
-  letter-spacing: 3px;
+  letter-spacing: 1.2px;
 }
 
 .section-heading h2 {
@@ -1589,13 +1589,13 @@ body.dark .saving-card strong {
 
   margin-bottom: 16px;
 
-  color: #1687d9;
+  color: var(--blue);
 
   font-size: 12px;
 
   font-weight: 800;
 
-  letter-spacing: 3px;
+  letter-spacing: 1.2px;
 }
 
 

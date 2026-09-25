@@ -52,7 +52,7 @@
     }
 
     .hero-container {
-      width: min(1180px, 92%);
+      width: min(1130px, 92%);
       margin: auto;
 
       display: grid;
@@ -78,7 +78,7 @@
       gap: 9px;
 
       padding: 8px 15px;
-      color: var(--green);
+      color: var(--blue);
       font-size: 12px;
       font-weight: 800;
       letter-spacing: 0.8px;
@@ -89,18 +89,12 @@
       backdrop-filter: blur(12px);
     }
 
-    body.dark .eyebrow {
-      background: rgba(255,255,255,0.06);
-    }
-
-    .eyebrow i {
-      width: 16px;
-      height: 16px;
-    }
 
     .hero-title {
 
-      font-size: clamp(20px, 5vw, 35px);
+     color: var(--blue);
+
+      font-size: clamp(70px, 5vw, 55px);
       line-height: 1.02;
 
       letter-spacing: -2.5px;
@@ -702,19 +696,15 @@
 
             margin-bottom: 14px;
 
-            color: var(--green);
+            color: var(--blue);
 
-            font-size: 13px;
+            font-size: 12px;
             font-weight: 800;
 
             letter-spacing: 1.2px;
             text-transform: uppercase;
         }
 
-        .as-section-label svg {
-            width: 17px;
-            height: 17px;
-        }
 
         .as-section-heading h2,
         .as-about-content h2,
@@ -761,6 +751,7 @@
         }
 
         .as-about-container {
+
             display: grid;
 
             grid-template-columns:
@@ -1183,7 +1174,11 @@
         }
 
         .as-water-label {
-            color: var(--green);
+            color: var(--blue);
+
+            font-size: 12px;
+
+            font-weight: 800;
         }
 
         .as-water-content h2 {
@@ -1791,9 +1786,9 @@
 
     margin-bottom: 5px;
 
-    color: #2563eb;
+    color: var(--blue);
 
-    font-size: 10px;
+    font-size: 12px;
     font-weight: 800;
 
     letter-spacing: 1.3px;
@@ -1838,11 +1833,12 @@
     color: #ffffff;
 
     background:
-        linear-gradient(
-            135deg,
-            #2563eb,
-            #16a34a
+      linear-gradient(
+          135deg,
+          var(--blue),
+          var(--green)
         );
+
 
     text-decoration: none;
 
@@ -1998,4 +1994,185 @@ body.contact-rtl .aqua-mini-cta-button i {
     .aqua-mini-cta-content p {
         font-size: 12px;
     }
+}
+
+
+
+
+            /* =========================================================
+   AQUASCAPE — UNIFIED CONTENT ALIGNMENT
+   Same left/right margin for header, hero, sections & footer
+========================================================= */
+
+:root {
+    --home-content-width: 1130px;
+    --home-content-side: 92%;
+}
+
+/* ---------------------------------------------------------
+   COMMON CONTENT WIDTH
+--------------------------------------------------------- */
+
+.as-container,
+.as-about-container,
+.as-water-container,
+.as-smart-container,
+.aqua-mini-cta-container {
+    width: min(var(--home-content-width), var(--home-content-side));
+    max-width: var(--home-content-width);
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+}
+
+
+/* ---------------------------------------------------------
+   FULL-WIDTH SECTION WRAPPERS
+--------------------------------------------------------- */
+
+.as-about-section,
+.as-process-section,
+.as-solutions-section,
+.as-water-section,
+.as-projects-section,
+.as-smart-section,
+.aqua-mini-cta {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+/* ---------------------------------------------------------
+   PROCESS / SOLUTIONS / PROJECTS
+--------------------------------------------------------- */
+
+.as-process-section > .as-container,
+.as-solutions-section > .as-container,
+.as-projects-section > .as-container {
+    width: min(var(--home-content-width), var(--home-content-side));
+    max-width: var(--home-content-width);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* ---------------------------------------------------------
+   SECTION HEADINGS
+--------------------------------------------------------- */
+
+.as-section-heading,
+.as-project-heading,
+.as-project-grid {
+    width: 100%;
+    max-width: var(--home-content-width);
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+}
+
+
+/* ---------------------------------------------------------
+   WATER MANAGEMENT
+--------------------------------------------------------- */
+
+.as-water-container {
+    width: min(var(--home-content-width), var(--home-content-side));
+    max-width: var(--home-content-width);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* ---------------------------------------------------------
+   SMART IRRIGATION
+--------------------------------------------------------- */
+
+.as-smart-container {
+    width: min(var(--home-content-width), var(--home-content-side));
+    max-width: var(--home-content-width);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* ---------------------------------------------------------
+   CTA
+--------------------------------------------------------- */
+
+.aqua-mini-cta-container {
+    width: min(var(--home-content-width), var(--home-content-side));
+    max-width: var(--home-content-width);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+
+/* ---------------------------------------------------------
+   REMOVE EXTRA SIDE OFFSET
+--------------------------------------------------------- */
+
+.as-about-section,
+.as-process-section,
+.as-solutions-section,
+.as-water-section,
+.as-projects-section,
+.as-smart-section,
+.aqua-mini-cta {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+
+/* ---------------------------------------------------------
+   TABLET
+--------------------------------------------------------- */
+
+@media (max-width: 900px) {
+
+    .as-container,
+    .as-about-container,
+    .as-water-container,
+    .as-smart-container,
+    .aqua-mini-cta-container,
+    .as-process-section > .as-container,
+    .as-solutions-section > .as-container,
+    .as-projects-section > .as-container {
+        width: 92%;
+        max-width: none;
+    }
+
+}
+
+
+/* ---------------------------------------------------------
+   MOBILE
+--------------------------------------------------------- */
+
+@media (max-width: 600px) {
+
+    .as-container,
+    .as-about-container,
+    .as-water-container,
+    .as-smart-container,
+    .aqua-mini-cta-container,
+    .as-process-section > .as-container,
+    .as-solutions-section > .as-container,
+    .as-projects-section > .as-container {
+        width: 90%;
+        max-width: none;
+    }
+
+    .as-about-section,
+    .as-process-section,
+    .as-solutions-section,
+    .as-water-section,
+    .as-projects-section,
+    .as-smart-section,
+    .aqua-mini-cta {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
 }
