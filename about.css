@@ -61,7 +61,7 @@
 ========================================= */
 
 .abx2-hero-inner {
-    width: min(1250px, 92%);
+    width: min(1130px, 92%);
 
     margin: auto;
 
@@ -104,30 +104,27 @@
 
     color:var(--blue);
 
-    font-size: 13px;
+    font-size: 12px;
 
     font-weight: 800;
 
     animation: abx2FadeUp 0.7s ease both;
 }
 
-.abx2-badge i {
-    color: #299447;
-}
-
 
 /* Heading */
 
 .abx2-content h1 {
+
+    color: var(--blue);
     max-width: 650px;
 
     margin: 0 0 20px;
 
-    font-size: clamp(30px, 5vw, 40px);
+    font-size: clamp(60px, 5vw, 35px);
 
-    line-height: 1.05;
+            line-height: 1.02;
 
-    letter-spacing: -2px;
 
     font-weight: 800;
 
@@ -137,12 +134,14 @@
 .abx2-content h1 span {
     display: block;
 
-    background:
+    color: var(--green);
+     
+        background:
         linear-gradient(
             90deg,
-            #168bd1,
-            #299447
+            var(--green)
         );
+
 
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -1204,11 +1203,11 @@ body.rtl .abx2-primary:hover i {
 
     color: var(--blue);
 
-    font-size: 13px;
+    font-size: 12px;
 
     font-weight: 800;
 
-    letter-spacing: 2px;
+    letter-spacing: 1.2px;
 
     margin-bottom: 12px;
 
@@ -1935,115 +1934,306 @@ body.dark-theme .conservation-section {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* =========================================================
-   6. FINAL CTA
+   AQUASCAPE ABOUT CTA
 ========================================================= */
 
-.cta-section {
+.aquascape-about-cta {
+    position: relative;
+    width: 100%;
+    min-height: 430px;
+    margin: 80px 0 0;
+    padding: 80px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    padding: 90px 7%;
+    background-image: url("images/about\ cta.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+
+/* ---------------------------------------------------------
+   OVERLAY
+--------------------------------------------------------- */
+
+.aquascape-about-cta-overlay {
+    position: absolute;
+    inset: 0;
 
     background:
-        var(--soft-blue);
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.82),
+            rgba(0, 30, 35, 0.68),
+            rgba(0, 0, 0, 0.48)
+        );
 
-    text-align: center;
-
+    z-index: 1;
 }
 
-.cta-container {
 
-    max-width: 850px;
+/* ---------------------------------------------------------
+   CONTENT
+--------------------------------------------------------- */
 
+.aquascape-about-cta-content {
+    position: relative;
+    z-index: 2;
+
+    width: min(100%, 850px);
     margin: auto;
 
-    padding: 50px 30px;
-
-    border:
-        2px solid var(--blue);
-
-    border-radius:
-        var(--radius);
-
+    text-align: center;
+    color: #ffffff;
 }
 
-.cta-container .section-tag {
 
-    color: var(--blue-dark);
-}
+/* ---------------------------------------------------------
+   LABEL
+--------------------------------------------------------- */
 
-.cta-container h2 {
+.aquascape-about-cta-label {
+    display: inline-block;
+
+    margin-bottom: 16px;
+
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
 
     color: var(--blue);
-
-    font-size:
-        clamp(26px, 5vw, 35px);
-
-    line-height: 1.2;
-
-    margin-bottom: 18px;
-
-    font-weight: 800;
 }
 
-.cta-container h2 span {
 
+/* ---------------------------------------------------------
+   HEADING
+--------------------------------------------------------- */
+
+.aquascape-about-cta-content h2 {
+    margin: 0 auto 20px;
+
+    font-size: clamp(32px, 5vw, 56px);
+    line-height: 1.12;
+    font-weight: 800;
+
+    color: var(--blue);
+}
+
+.aquascape-about-cta-content h2 span {
     color: var(--green);
 }
 
-.cta-container p {
 
-    color: grey;
+/* ---------------------------------------------------------
+   DESCRIPTION
+--------------------------------------------------------- */
 
-    max-width: 700px;
+.aquascape-about-cta-content p {
+    max-width: 680px;
 
-    margin:
-        0 auto 28px;
+    margin: 0 auto 32px;
 
+    font-size: 16px;
     line-height: 1.8;
+
+    color: rgba(255, 255, 255, 0.88);
 }
 
-.cta-button {
 
-    display: inline-flex;
+/* ---------------------------------------------------------
+   BUTTONS
+--------------------------------------------------------- */
 
-    align-items: center;
-
+.aquascape-about-cta-buttons {
+    display: flex;
     justify-content: center;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+}
 
-    padding:
-        14px 28px;
 
-    border-radius: 10px;
+/* PRIMARY BUTTON */
 
+.aquascape-about-cta-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
 
-       background:
-        linear-gradient(
+    min-width: 155px;
+    padding: 14px 24px;
+
+    border-radius: 8px;
+
+    background:linear-gradient(
           135deg,
           var(--blue),
           var(--green)
         );
 
+    color: #ffffff;
 
-    color: var(--white);
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 700;
 
-    font-size: 14px;
-
-    font-weight: 800;
-
-    transition:
-        transform 0.3s ease,
-        background 0.3s ease;
+    transition: 0.3s ease;
 }
 
-.cta-button:hover {
+.aquascape-about-cta-primary:hover {
+    transform: translateY(-3px);
+}
 
-    transform:
-        translateY(-3px);
+.aquascape-about-cta-primary i {
+    transition: 0.3s ease;
+}
+
+.aquascape-about-cta-primary:hover i {
+    transform: translateX(5px);
+}
+
+
+/* SECONDARY BUTTON */
+
+.aquascape-about-cta-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 155px;
+    padding: 13px 24px;
+
+    border: 1px solid var(--green);
+    border-radius: 8px;
+
+    background: rgba(255, 255, 255, 0.08);
+    color: #ffffff;
+
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 700;
+
+    backdrop-filter: blur(6px);
+
+    transition: 0.3s ease;
+}
+
+.aquascape-about-cta-secondary:hover {
+    border-color: var(--blue);
+    color: var(--blue);
 
 }
 
 
+/* =========================================================
+   DARK MODE
+========================================================= */
 
-.section-header {
-    position: sticky;
+body.dark .aquascape-about-cta-overlay {
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.90),
+            rgba(0, 20, 22, 0.82),
+            rgba(0, 0, 0, 0.72)
+        );
+}
+
+body.dark .aquascape-about-cta {
+    border-top: 1px solid rgba(73, 200, 120, 0.12);
+    border-bottom: 1px solid rgba(73, 200, 120, 0.12);
+}
+
+
+/* =========================================================
+   RTL
+========================================================= */
+
+html[dir="rtl"] .aquascape-about-cta-primary i {
+    transform: rotate(180deg);
+}
+
+html[dir="rtl"] .aquascape-about-cta-primary:hover i {
+    transform: rotate(180deg) translateX(5px);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .aquascape-about-cta {
+        min-height: 400px;
+        padding: 70px 20px;
+    }
+
+    .aquascape-about-cta-content h2 {
+        font-size: 38px;
+    }
+
+    .aquascape-about-cta-content p {
+        font-size: 15px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 520px) {
+
+    .aquascape-about-cta {
+        min-height: 450px;
+        padding: 60px 18px;
+    }
+
+    .aquascape-about-cta-label {
+        font-size: 11px;
+        letter-spacing: 1.5px;
+    }
+
+    .aquascape-about-cta-content h2 {
+        font-size: 31px;
+    }
+
+    .aquascape-about-cta-content p {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .aquascape-about-cta-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .aquascape-about-cta-primary,
+    .aquascape-about-cta-secondary {
+        width: 100%;
+        max-width: 250px;
+    }
+
 }

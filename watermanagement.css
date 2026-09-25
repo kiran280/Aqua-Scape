@@ -91,7 +91,7 @@
     padding: 9px 17px;
 
 
-    color: var(--green);
+    color: var(--blue);
 
 
     backdrop-filter: blur(10px);
@@ -99,7 +99,7 @@
 
     font-size: 12px;
     font-weight: 800;
-    letter-spacing: 1.4px;
+    letter-spacing: 1.2px;
     text-transform: uppercase;
 }
 
@@ -114,9 +114,9 @@
 .aqua-water-hero-content h1 {
     margin: 22px 0 20px;
 
-    color: #ffffff;
+    color: var(--blue);
 
-    font-size: clamp(36px, 5vw, 50px);
+    font-size: clamp(55px, 5vw, 35px);
 
     line-height: 1.06;
 
@@ -132,8 +132,7 @@
     background:
         linear-gradient(
             90deg,
-            #38c9ff,
-            #48d477
+            var(--green)
         );
 
     -webkit-background-clip: text;
@@ -742,11 +741,13 @@ body.dark-mode .aqua-water-hero-bottom {
     );
 }
 
-.container{
+.container1{
 
-    max-width:1200px;
+    max: width 1200px, 92%;
 
-    margin:auto;
+    margin-left: 50px;
+
+    margin-right: 50px;
 }
 
 .heading{
@@ -763,13 +764,13 @@ body.dark-mode .aqua-water-hero-bottom {
 
     display:inline-block;
 
-    color:var(--green);
+    color:var(--blue);
 
-    font-size:11px;
+    font-size:12px;
 
     font-weight:800;
 
-    letter-spacing:2px;
+    letter-spacing:1.2px;
 
     text-transform:uppercase;
 
@@ -1880,384 +1881,628 @@ body.dark-mode .aqua-water-hero-bottom {
 }
 
 
-
 /* =========================================================
-   CTA
+   AQUASCAPE - WATER MANAGEMENT CTA
+   Unique class names
+   Centered Layout
 ========================================================= */
 
-.cta{
 
-    max-width:1200px;
+/* =========================================================
+   CTA MAIN SECTION
+========================================================= */
 
-    margin:
-    0 auto 100px;
+.wm-action-banner {
+    position: relative;
 
-    padding:80px 30px;
+    width: 100%;
+    min-height: 460px;
 
-    border-radius:28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    color:white;
+    padding: 80px 20px;
 
-    text-align:center;
+    box-sizing: border-box;
 
-    position:relative;
+    background-image:
+        url("images/water-management-cta.jpg");
 
-    overflow:hidden;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    overflow: hidden;
+
+    isolation: isolate;
+}
+
+
+/* =========================================================
+   BACKGROUND OVERLAY
+========================================================= */
+
+.wm-action-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
 
     background:
-    linear-gradient(
-        135deg,
-        var(--blue-dark),
-        var(--green-dark)
-    );
-}
+        linear-gradient(
+            135deg,
+            rgba(0, 0, 0, 0.86),
+            rgba(0, 42, 52, 0.76)
+        );
 
-.cta::before{
-
-    content:"";
-
-    position:absolute;
-
-    width:400px;
-
-    height:400px;
-
-    left:-180px;
-
-    top:-240px;
-
-    border-radius:50%;
-
-    background:rgba(255,255,255,.07);
-}
-
-.cta::after{
-
-    content:"";
-
-    position:absolute;
-
-    width:280px;
-
-    height:280px;
-
-    right:-100px;
-
-    bottom:-180px;
-
-    border-radius:50%;
-
-    border:
-    1px solid rgba(255,255,255,.15);
-}
-
-.cta-content{
-
-    position:relative;
-
-    z-index:2;
-}
-
-.cta h2{
-
-    font-size:
-    clamp(30px,4vw,46px);
-
-    line-height:1.15;
-
-    margin-bottom:13px;
-}
-
-.cta p{
-
-    max-width:650px;
-
-    margin:
-    0 auto 26px;
-
-    color:rgba(255,255,255,.8);
-
-    font-size:13px;
+    z-index: -1;
 }
 
 
 /* =========================================================
-   RESPONSIVE
+   CTA INNER CONTAINER
 ========================================================= */
 
-@media(max-width:1050px){
+.wm-action-wrapper {
+    position: relative;
 
-    nav{
-        gap:14px;
+    z-index: 2;
+
+    width: min(1200px, 92%);
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   CTA CONTENT
+========================================================= */
+
+.wm-action-content {
+    width: 100%;
+    max-width: 780px;
+
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   SMALL LABEL
+========================================================= */
+
+.wm-action-label {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 20px;
+
+    padding: 8px 18px;
+
+
+    color: var(--blue);
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.2px;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   CTA HEADING
+========================================================= */
+
+.wm-action-content h2 {
+    margin: 0 auto 20px;
+
+    max-width: 750px;
+
+    color: var(--blue);
+
+    font-size: clamp(36px, 5vw, 36px);
+
+    font-weight: 800;
+
+    line-height: 1.12;
+
+    letter-spacing: -1px;
+
+    text-align: center;
+}
+
+
+.wm-action-content h2 span {
+    color: var(--green);
+}
+
+
+/* =========================================================
+   CTA DESCRIPTION
+========================================================= */
+
+.wm-action-content p {
+    max-width: 650px;
+
+    margin: 0 auto 32px;
+
+    color: rgba(255, 255, 255, 0.86);
+
+    font-size: 16px;
+
+    font-weight: 400;
+
+    line-height: 1.8;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   BUTTON CONTAINER
+========================================================= */
+
+.wm-action-buttons {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+
+    width: 100%;
+}
+
+
+/* =========================================================
+   PRIMARY BUTTON
+========================================================= */
+
+.wm-action-primary {
+    position: relative;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    min-width: 155px;
+    min-height: 50px;
+
+    padding: 0 26px;
+
+    border: 1px solid #28a9e0;
+
+    border-radius: 7px;
+
+    background: linear-gradient(
+        135deg,
+        var(--blue),
+        var(--green)
+    );
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: 800;
+
+    box-sizing: border-box;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* Primary button shine */
+
+.wm-action-primary::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -120%;
+
+    width: 80%;
+    height: 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255, 255, 255, 0.25),
+            transparent
+        );
+
+    transform: skewX(-20deg);
+
+    transition: left 0.6s ease;
+}
+
+
+.wm-action-primary:hover::before {
+    left: 130%;
+}
+
+
+.wm-action-primary:hover {
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 12px 30px var(--blue);
+}
+
+
+.wm-action-primary i {
+    font-size: 13px;
+
+    transition: transform 0.3s ease;
+}
+
+
+.wm-action-primary:hover i {
+    transform: translateX(5px);
+}
+
+
+/* =========================================================
+   SECONDARY BUTTON
+========================================================= */
+
+.wm-action-secondary {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-width: 175px;
+    min-height: 50px;
+
+    padding: 0 26px;
+
+    border: 1px solid var(--green);
+
+    border-radius: 7px;
+
+    background: rgba(255, 255, 255, 0.04);
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    box-sizing: border-box;
+
+    backdrop-filter: blur(5px);
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        border-color 0.3s ease;
+}
+
+
+.wm-action-secondary:hover {
+    background: rgba(88, 185, 71, 0.12);
+
+    border-color: var(--blue);
+
+    color: var(--blue);
+
+}
+
+
+/* =========================================================
+   DECORATIVE CIRCLES
+========================================================= */
+
+.wm-action-banner::before {
+    content: "";
+
+    position: absolute;
+
+    width: 300px;
+    height: 300px;
+
+    right: -120px;
+    top: -120px;
+
+    border: 1px solid rgba(40, 169, 224, 0.20);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+
+.wm-action-banner::after {
+    content: "";
+
+    position: absolute;
+
+    width: 220px;
+    height: 220px;
+
+    left: -100px;
+    bottom: -100px;
+
+    border: 1px solid rgba(88, 185, 71, 0.20);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   LIGHT THEME
+========================================================= */
+
+body.light-theme .wm-action-banner {
+    background-image:
+        url("images/water-management-cta.jpg");
+
+    background-color: #eef9fb;
+}
+
+
+body.light-theme .wm-action-overlay {
+    background:
+        linear-gradient(
+            135deg,
+            rgba(0, 38, 48, 0.82),
+            rgba(0, 68, 75, 0.62)
+        );
+}
+
+
+/* =========================================================
+   DARK THEME
+========================================================= */
+
+body.dark-theme .wm-action-banner {
+    background-color: #000000;
+}
+
+
+body.dark-theme .wm-action-overlay {
+    background:
+        linear-gradient(
+            135deg,
+            rgba(0, 0, 0, 0.94),
+            rgba(0, 15, 20, 0.90)
+        );
+}
+
+
+body.dark-theme .wm-action-secondary {
+    border-color: rgba(255, 255, 255, 0.35);
+
+    background: rgba(255, 255, 255, 0.03);
+}
+
+
+/* =========================================================
+   RTL SUPPORT
+========================================================= */
+
+html[dir="rtl"] .wm-action-content {
+    text-align: center;
+}
+
+
+html[dir="rtl"] .wm-action-content h2,
+html[dir="rtl"] .wm-action-content p {
+    text-align: center;
+}
+
+
+html[dir="rtl"] .wm-action-buttons {
+    flex-direction: row-reverse;
+
+    justify-content: center;
+}
+
+
+html[dir="rtl"] .wm-action-primary i {
+    transform: rotate(180deg);
+}
+
+
+html[dir="rtl"] .wm-action-primary:hover i {
+    transform:
+        translateX(-5px)
+        rotate(180deg);
+}
+
+
+/* =========================================================
+   LARGE TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .wm-action-banner {
+        min-height: 440px;
+
+        padding: 75px 20px;
     }
 
-    .process{
-
-        grid-template-columns:
-        repeat(3,1fr);
-
-        row-gap:40px;
+    .wm-action-wrapper {
+        width: 92%;
     }
 
-    .process::before{
-        display:none;
+    .wm-action-content {
+        max-width: 700px;
     }
 
-    .tips{
-
-        grid-template-columns:
-        repeat(3,1fr);
-    }
-
-    .footer-grid{
-
-        grid-template-columns:
-        repeat(2,1fr);
+    .wm-action-content h2 {
+        font-size: 46px;
     }
 }
 
 
-@media(max-width:850px){
+/* =========================================================
+   TABLET
+========================================================= */
 
-    nav{
+@media (max-width: 768px) {
 
-        display:none;
+    .wm-action-banner {
+        min-height: 420px;
 
-        position:absolute;
-
-        left:15px;
-
-        right:15px;
-
-        top:72px;
-
-        padding:22px;
-
-        flex-direction:column;
-
-        align-items:flex-start;
-
-        background:var(--card);
-
-        border:
-        1px solid var(--border);
-
-        border-radius:18px;
-
-        box-shadow:var(--shadow);
+        padding: 70px 20px;
     }
 
-    nav.open{
-        display:flex;
+    .wm-action-wrapper {
+        width: 92%;
     }
 
-    .menu-btn{
-        display:flex;
+    .wm-action-content h2 {
+        font-size: 40px;
+
+        letter-spacing: -0.5px;
     }
 
-    .intro-grid,
-    .smart-grid{
+    .wm-action-content p {
+        font-size: 15px;
 
-        grid-template-columns:1fr;
+        line-height: 1.75;
     }
 
-    .problem-grid{
-
-        grid-template-columns:
-        repeat(2,1fr);
-    }
-
-    .strategy-grid{
-
-        grid-template-columns:
-        repeat(2,1fr);
-    }
-
-    .compare{
-
-        grid-template-columns:1fr;
-    }
-
-    .property-grid{
-
-        grid-template-columns:1fr;
-    }
-
-    .dashboard-grid{
-
-        grid-template-columns:1fr;
-    }
-
-    .metrics{
-
-        grid-template-columns:
-        repeat(2,1fr);
-    }
-
-    .metric:nth-child(2){
-
-        border-right:0;
-    }
-
-    .metric:nth-child(-n+2){
-
-        border-bottom:
-        1px solid var(--border);
+    .wm-action-buttons {
+        gap: 12px;
     }
 }
 
 
-@media(max-width:600px){
+/* =========================================================
+   MOBILE
+========================================================= */
 
-    .header-container{
+@media (max-width: 600px) {
 
-        padding:
-        12px 16px;
+    .wm-action-banner {
+        min-height: auto;
+
+        padding: 65px 20px;
     }
 
-    .logo{
-
-        font-size:18px;
+    .wm-action-wrapper {
+        width: 92%;
     }
 
-    .logo-icon{
-
-        width:38px;
-
-        height:38px;
+    .wm-action-content {
+        max-width: 100%;
     }
 
-    .hero{
+    .wm-action-label {
+        margin-bottom: 16px;
 
-        min-height:670px;
+        padding: 7px 14px;
+
+        font-size: 10px;
+
+        letter-spacing: 1.5px;
     }
 
-    .hero-container{
+    .wm-action-content h2 {
+        margin-bottom: 18px;
 
-        padding:
-        70px 18px;
+        font-size: 34px;
+
+        line-height: 1.18;
     }
 
-    .hero h1{
+    .wm-action-content p {
+        margin-bottom: 25px;
 
-        font-size:40px;
+        font-size: 14px;
 
-        letter-spacing:-1px;
+        line-height: 1.7;
     }
 
-    .hero p{
+    .wm-action-buttons {
+        flex-direction: column;
 
-        font-size:14px;
+        width: 100%;
+
+        gap: 12px;
     }
 
-    .hero-stats{
+    .wm-action-primary,
+    .wm-action-secondary {
+        width: 100%;
 
-        grid-template-columns:1fr;
+        min-width: 0;
+
+        min-height: 50px;
     }
 
-    .hero-stat{
-
-        border-right:0;
-
-        border-bottom:
-        1px solid rgba(255,255,255,.12);
-    }
-
-    .hero-stat:last-child{
-
-        border-bottom:0;
-    }
-
-    .section{
-
-        padding:
-        75px 18px;
-    }
-
-    .intro-image{
-
-        height:390px;
-    }
-
-    .problem-grid,
-    .strategy-grid{
-
-        grid-template-columns:1fr;
-    }
-
-    .process{
-
-        grid-template-columns:
-        repeat(2,1fr);
-    }
-
-    .smart-features{
-
-        grid-template-columns:1fr;
-    }
-
-    .tips{
-
-        grid-template-columns:
-        repeat(2,1fr);
-    }
-
-    .metrics{
-
-        grid-template-columns:1fr;
-    }
-
-    .metric{
-
-        border-right:0;
-
-        border-bottom:
-        1px solid var(--border);
-    }
-
-    .metric:last-child{
-
-        border-bottom:0;
-    }
-
-    .footer-grid{
-
-        grid-template-columns:1fr;
-    }
-
-    .footer-bottom{
-
-        flex-direction:column;
-
-        align-items:flex-start;
+    html[dir="rtl"] .wm-action-buttons {
+        flex-direction: column;
     }
 }
 
 
-@media(max-width:420px){
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
 
-    .hero h1{
+@media (max-width: 400px) {
 
-        font-size:35px;
+    .wm-action-banner {
+        padding: 55px 16px;
     }
 
-    .hero-buttons{
-
-        flex-direction:column;
+    .wm-action-wrapper {
+        width: 94%;
     }
 
-    .btn{
-
-        width:100%;
+    .wm-action-content h2 {
+        font-size: 30px;
     }
 
-    .process{
-
-        grid-template-columns:1fr;
+    .wm-action-content p {
+        font-size: 13px;
     }
 
-    .tips{
+    .wm-action-label {
+        font-size: 9px;
 
-        grid-template-columns:1fr;
+        letter-spacing: 1.2px;
     }
 }

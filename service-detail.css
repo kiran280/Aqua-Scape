@@ -113,13 +113,13 @@
 
     padding: 8px 14px;
 
-    color: var(--green);
+    color: var(--blue);
 
-    font-size: 10px;
+    font-size: 12px;
 
     font-weight: 800;
 
-    letter-spacing: 1.5px;
+    letter-spacing: 1.2px;
 }
 
 
@@ -127,10 +127,10 @@
 
     margin-top: 20px;
 
-    color: var(--blue);
+    color: var(--green);
 
     font-size:
-        clamp(26px,5vw,35px);
+        clamp(70px,5vw,35px);
 
     line-height: 1.02;
 
@@ -200,7 +200,7 @@
 
     background:
         linear-gradient(
-            90deg,
+            135deg,
             var(--blue),
             var(--green)
         );
@@ -459,13 +459,13 @@
 
 .section-heading small {
 
-    color: var(--green);
+    color: var(--blue);
 
-    font-size: 10px;
+    font-size: 12px;
 
     font-weight: 800;
 
-    letter-spacing: 1.5px;
+    letter-spacing: 1.2px;
 }
 
 
@@ -473,7 +473,7 @@
 
     margin-top: 12px;
 
-    color: var(--blue);
+    color: var(--green);
 
     font-size:
         clamp(26px,5vw,35px);
@@ -1022,13 +1022,13 @@
 
 .cta-container small {
 
-    color: #00c98b;
+    color: var(--blue);
 
-    font-size: 10px;
+    font-size: 12px;
 
     font-weight: 800;
 
-    letter-spacing: 1.5px;
+    letter-spacing: 1.2px;
 }
 
 
@@ -1036,7 +1036,7 @@
 
     margin-top: 14px;
 
-    color: var(--blue);
+    color: var(--green);
 
     font-size:
         clamp(26px,5vw,35px);
