@@ -300,7 +300,7 @@
 .aqua-contact-hero-title {
 
     font-size:
-        clamp(45px, 5vw, 50px);
+        clamp(60px, 5vw, 50px);
 
     line-height: 1.04;
 
@@ -308,7 +308,7 @@
 
     letter-spacing: -2.5px;
 
-    color: #ffffff;
+    color: var(--blue);
 
     margin-bottom: 24px;
 }
@@ -321,9 +321,8 @@
     background:
 
         linear-gradient(
-            90deg,
-            #20a9ef,
-            #45dd92
+            135deg,
+           var(--green)
         );
 
     -webkit-background-clip: text;
