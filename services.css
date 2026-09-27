@@ -5183,3 +5183,1138 @@ html[dir="rtl"] .services-cta-primary:hover i {
     }
 
 }
+
+
+
+
+
+
+/* =========================================================
+   AQUASCAPE SERVICES PAGE
+   FINAL RESPONSIVE MEDIA QUERIES
+   ========================================================= */
+
+
+/* =========================================================
+   LARGE TABLET / SMALL LAPTOP
+   ========================================================= */
+
+@media (max-width: 1200px){
+
+    /* ---------------- HERO ---------------- */
+
+    .hero-container{
+        width:92%;
+        gap:40px;
+    }
+
+    .hero-content h1{
+        font-size:clamp(40px,5vw,60px);
+    }
+
+    .service-showcase{
+        gap:12px;
+    }
+
+    .service{
+        height:145px;
+    }
+
+
+    /* ---------------- SERVICE INTRO ---------------- */
+
+    #aqua-service-intro{
+        padding:95px 5%;
+    }
+
+    #aqua-service-list{
+        gap:20px;
+    }
+
+    #aqua-service-content-one,
+    #aqua-service-content-two,
+    #aqua-service-content-three{
+        padding:24px;
+    }
+
+
+    /* ---------------- DESIGN ---------------- */
+
+    #aqua-design-section,
+    #aqua-installation-section,
+    #aqua-winterization-section{
+        padding:100px 5%;
+    }
+
+    #aqua-design-wrapper,
+    #aqua-installation-wrapper,
+    #aqua-winterization-box{
+        gap:45px;
+    }
+
+
+    /* ---------------- SMART IRRIGATION ---------------- */
+
+    .smart-irrigation-container{
+        width:92%;
+    }
+
+    .smart-dashboard{
+        width:100%;
+    }
+
+
+    /* ---------------- WATERING ZONES ---------------- */
+
+    .watering-zones-container{
+        width:92%;
+    }
+
+
+    /* ---------------- PRICING ---------------- */
+
+    .pricing-container{
+        width:92%;
+    }
+
+
+    /* ---------------- CTA ---------------- */
+
+    .services-cta-container{
+        width:92%;
+    }
+}
+
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1000px){
+
+    /* ---------------- HERO ---------------- */
+
+    .services-hero{
+        height:auto;
+        min-height:720px;
+        padding:80px 0;
+    }
+
+    .hero-container{
+        grid-template-columns:1fr;
+        gap:45px;
+        text-align:center;
+    }
+
+    .hero-content{
+        max-width:720px;
+        margin:auto;
+    }
+
+    .hero-content p{
+        margin-left:auto;
+        margin-right:auto;
+        max-width:650px;
+    }
+
+    .hero-buttons{
+        justify-content:center;
+    }
+
+    .service-showcase{
+        max-width:720px;
+        width:100%;
+        margin:auto;
+    }
+
+
+    /* ---------------- SERVICE INTRO ---------------- */
+
+    #aqua-service-intro{
+        padding:90px 6%;
+    }
+
+    #aqua-service-list{
+        grid-template-columns:1fr;
+        max-width:650px;
+    }
+
+    #aqua-service-card-one,
+    #aqua-service-card-two,
+    #aqua-service-card-three{
+        min-height:auto;
+    }
+
+    #aqua-service-image-one,
+    #aqua-service-image-two,
+    #aqua-service-image-three{
+        height:300px;
+    }
+
+
+    /* ---------------- DESIGN ---------------- */
+
+    #aqua-design-wrapper,
+    #aqua-installation-wrapper,
+    #aqua-winterization-box{
+        grid-template-columns:1fr;
+        gap:50px;
+        max-width:750px;
+    }
+
+    #aqua-design-image,
+    #aqua-installation-image,
+    #aqua-winterization-image{
+        height:480px;
+    }
+
+    #aqua-design-content,
+    #aqua-installation-content,
+    #aqua-winterization-content{
+        width:100%;
+    }
+
+
+    /* ---------------- INSTALLATION ---------------- */
+
+    #aqua-installation-content{
+        order:1;
+    }
+
+    #aqua-installation-image{
+        order:2;
+    }
+
+
+    /* ---------------- PROCESS ---------------- */
+
+    #aqua-process-section{
+        padding:90px 6%;
+    }
+
+
+    /* ---------------- SMART IRRIGATION ---------------- */
+
+    .smart-irrigation-container{
+        grid-template-columns:1fr;
+        gap:55px;
+    }
+
+    .smart-irrigation-content{
+        max-width:700px;
+        margin:auto;
+        text-align:center;
+    }
+
+    .smart-feature-list{
+        text-align:left;
+    }
+
+    .smart-irrigation-btn{
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+    .smart-irrigation-visual{
+        max-width:650px;
+        width:100%;
+        margin:auto;
+    }
+
+    .smart-process-grid{
+        grid-template-columns:1fr;
+        gap:18px;
+        max-width:500px;
+        margin:auto;
+    }
+
+    .process-arrow{
+        margin:auto;
+        transform:rotate(90deg);
+    }
+
+    html[dir="rtl"] .process-arrow{
+        transform:rotate(90deg);
+    }
+
+
+    /* ---------------- WATERING ZONES ---------------- */
+
+    .zones-dashboard{
+        grid-template-columns:1fr;
+    }
+
+    .zone-info{
+        width:100%;
+    }
+
+    .landscape-map{
+        min-height:420px;
+    }
+
+    .zone-benefits{
+        grid-template-columns:1fr 1fr;
+    }
+
+
+    /* ---------------- PRICING ---------------- */
+
+    .pricing-grid{
+        grid-template-columns:1fr;
+        max-width:650px;
+        margin:auto;
+    }
+
+    .price-card.featured{
+        transform:none;
+    }
+
+    .price-card.featured:hover{
+        transform:translateY(-8px);
+    }
+
+
+    /* ---------------- CTA ---------------- */
+
+    .services-cta-container{
+        grid-template-columns:1fr;
+        padding:60px 40px;
+        text-align:center;
+    }
+
+    .services-cta-content{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .services-cta-buttons{
+        justify-content:center;
+    }
+
+    .services-cta-visual{
+        margin-top:25px;
+    }
+}
+
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 768px){
+
+    /* ---------------- HERO ---------------- */
+
+    .services-hero{
+        min-height:auto;
+        padding:75px 0 65px;
+    }
+
+    .hero-container{
+        width:90%;
+        gap:40px;
+    }
+
+    .hero-label{
+        font-size:10px;
+        padding:7px 12px;
+        margin-bottom:15px;
+    }
+
+    .hero-content h1{
+        font-size:clamp(38px,9vw,52px);
+        letter-spacing:-1.8px;
+        line-height:1.05;
+    }
+
+    .hero-content p{
+        font-size:14px;
+        line-height:1.7;
+        margin-bottom:24px;
+    }
+
+    .hero-buttons{
+        flex-wrap:wrap;
+        gap:10px;
+    }
+
+    .btn{
+        padding:12px 19px;
+        font-size:12px;
+    }
+
+    .service-showcase{
+        grid-template-columns:1fr 1fr;
+        gap:10px;
+    }
+
+    .service{
+        height:145px;
+        padding:14px;
+        border-radius:14px;
+    }
+
+    .service-content{
+        left:14px;
+        right:12px;
+        bottom:14px;
+    }
+
+    .service-content h3{
+        font-size:13px;
+    }
+
+    .service-content p{
+        font-size:10px;
+    }
+
+
+    /* ---------------- SERVICE INTRO ---------------- */
+
+    #aqua-service-intro{
+        padding:75px 6%;
+    }
+
+    #aqua-service-intro-heading{
+        margin-bottom:45px;
+    }
+
+    #aqua-service-intro-title{
+        font-size:32px;
+    }
+
+    #aqua-service-intro-description{
+        font-size:14px;
+        line-height:1.7;
+    }
+
+    #aqua-service-image-one,
+    #aqua-service-image-two,
+    #aqua-service-image-three{
+        height:250px;
+    }
+
+    #aqua-service-content-one,
+    #aqua-service-content-two,
+    #aqua-service-content-three{
+        padding:22px;
+    }
+
+    #aqua-service-content-one h3,
+    #aqua-service-content-two h3,
+    #aqua-service-content-three h3{
+        font-size:20px;
+    }
+
+
+    /* ---------------- DESIGN ---------------- */
+
+    #aqua-design-section,
+    #aqua-installation-section,
+    #aqua-winterization-section{
+        padding:80px 6%;
+    }
+
+    #aqua-design-wrapper,
+    #aqua-installation-wrapper,
+    #aqua-winterization-box{
+        gap:35px;
+    }
+
+    #aqua-design-image,
+    #aqua-installation-image,
+    #aqua-winterization-image{
+        height:380px;
+        border-radius:20px;
+    }
+
+    #aqua-design-content-title,
+    #aqua-installation-title,
+    #aqua-winterization-title{
+        font-size:32px;
+    }
+
+    #aqua-design-content-text,
+    #aqua-installation-description,
+    #aqua-winterization-text{
+        font-size:14px;
+        line-height:1.75;
+    }
+
+    #aqua-design-points{
+        margin-top:22px;
+    }
+
+    #aqua-design-point{
+        padding:14px 16px;
+        font-size:13px;
+    }
+
+
+    /* ---------------- INSTALLATION FEATURES ---------------- */
+
+    #aqua-installation-features{
+        grid-template-columns:1fr;
+        gap:10px;
+    }
+
+    #aqua-installation-feature-one,
+    #aqua-installation-feature-two,
+    #aqua-installation-feature-three,
+    #aqua-installation-feature-four{
+        padding:15px;
+    }
+
+
+    /* ---------------- WINTERIZATION ---------------- */
+
+    #aqua-winterization-list{
+        margin-top:22px;
+    }
+
+    #aqua-winterization-list div{
+        padding:13px 15px;
+        font-size:13px;
+    }
+
+
+    /* ---------------- SMART IRRIGATION ---------------- */
+
+    .smart-irrigation-section{
+        padding:80px 6%;
+    }
+
+    .smart-irrigation-content h2{
+        font-size:34px;
+        line-height:1.15;
+    }
+
+    .smart-irrigation-intro{
+        font-size:14px;
+        line-height:1.7;
+    }
+
+    .smart-feature-item{
+        padding:15px;
+        gap:13px;
+    }
+
+    .smart-feature-icon{
+        width:42px;
+        height:42px;
+        flex-shrink:0;
+    }
+
+    .smart-feature-item h4{
+        font-size:15px;
+    }
+
+    .smart-feature-item p{
+        font-size:12px;
+    }
+
+    .smart-dashboard{
+        padding:20px;
+        border-radius:22px;
+    }
+
+    .dashboard-header{
+        gap:12px;
+    }
+
+    .dashboard-header h3{
+        font-size:20px;
+    }
+
+    .water-orbit{
+        transform:scale(.85);
+        margin:5px auto;
+    }
+
+    .smart-statistics,
+    .dashboard-controls{
+        grid-template-columns:1fr;
+    }
+
+    .smart-process{
+        margin-top:65px;
+    }
+
+    .smart-process-heading h3{
+        font-size:28px;
+    }
+
+
+    /* ---------------- WATERING ZONES ---------------- */
+
+    .watering-zones{
+        padding:80px 6%;
+    }
+
+    .watering-zones-heading h2{
+        font-size:34px;
+        line-height:1.15;
+    }
+
+    .watering-zones-heading p{
+        font-size:14px;
+    }
+
+    .zones-dashboard{
+        padding:12px;
+        border-radius:20px;
+    }
+
+    .zone-info{
+        padding:20px;
+    }
+
+    .zone-data{
+        grid-template-columns:1fr;
+    }
+
+    .landscape-map{
+        min-height:360px;
+    }
+
+    .zone-benefits{
+        grid-template-columns:1fr;
+    }
+
+    .map-title{
+        left:18px;
+        top:18px;
+    }
+
+    html[dir="rtl"] .map-title{
+        left:auto;
+        right:18px;
+    }
+
+    .map-legend{
+        right:15px;
+        bottom:15px;
+    }
+
+    html[dir="rtl"] .map-legend{
+        right:auto;
+        left:15px;
+    }
+
+
+    /* ---------------- PRICING ---------------- */
+
+    .irrigation-pricing{
+        padding:80px 6%;
+    }
+
+    .pricing-heading{
+        margin-bottom:45px;
+    }
+
+    .pricing-heading h2{
+        font-size:34px;
+        line-height:1.15;
+    }
+
+    .pricing-heading p{
+        font-size:14px;
+    }
+
+    .price-card{
+        padding:30px 24px;
+    }
+
+    .pricing-note{
+        align-items:flex-start;
+        flex-direction:column;
+        gap:14px;
+        padding:20px;
+    }
+
+    .pricing-note a{
+        margin-left:0;
+        width:100%;
+        justify-content:center;
+    }
+
+    html[dir="rtl"] .pricing-note a{
+        margin-right:0;
+    }
+
+
+    /* ---------------- CTA ---------------- */
+
+    .services-cta{
+        padding:75px 6%;
+    }
+
+    .services-cta-container{
+        padding:50px 25px;
+        border-radius:24px;
+    }
+
+    .services-cta-content h2{
+        font-size:34px;
+        line-height:1.15;
+    }
+
+    .services-cta-content p{
+        font-size:13px;
+        line-height:1.7;
+    }
+
+    .services-cta-buttons{
+        width:100%;
+        flex-direction:column;
+        gap:12px;
+    }
+
+    .services-cta-primary,
+    .services-cta-secondary{
+        width:100%;
+        justify-content:center;
+    }
+
+    .services-cta-visual{
+        transform:scale(.9);
+    }
+}
+
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 550px){
+
+    /* ---------------- HERO ---------------- */
+
+    .services-hero{
+        padding:60px 0 55px;
+    }
+
+    .hero-container{
+        width:90%;
+    }
+
+    .hero-content h1{
+        font-size:38px;
+        letter-spacing:-1.3px;
+    }
+
+    .hero-content p{
+        font-size:13px;
+    }
+
+    .hero-buttons{
+        flex-direction:column;
+        align-items:center;
+        width:100%;
+    }
+
+    .btn{
+        width:100%;
+        max-width:260px;
+        text-align:center;
+    }
+
+    .service-showcase{
+        grid-template-columns:1fr;
+        max-width:380px;
+    }
+
+    .service{
+        height:145px;
+    }
+
+
+    /* ---------------- SERVICE INTRO ---------------- */
+
+    #aqua-service-intro{
+        padding:65px 5%;
+    }
+
+    #aqua-service-intro-title{
+        font-size:29px;
+    }
+
+    #aqua-service-intro-description{
+        font-size:13px;
+    }
+
+    #aqua-service-image-one,
+    #aqua-service-image-two,
+    #aqua-service-image-three{
+        height:220px;
+    }
+
+    #aqua-service-content-one,
+    #aqua-service-content-two,
+    #aqua-service-content-three{
+        padding:20px;
+    }
+
+
+    /* ---------------- SERVICE SECTIONS ---------------- */
+
+    #aqua-design-section,
+    #aqua-installation-section,
+    #aqua-winterization-section{
+        padding:65px 5%;
+    }
+
+    #aqua-design-image,
+    #aqua-installation-image,
+    #aqua-winterization-image{
+        height:300px;
+        border-radius:18px;
+    }
+
+    #aqua-design-content-title,
+    #aqua-installation-title,
+    #aqua-winterization-title{
+        font-size:29px;
+    }
+
+    #aqua-design-content-text,
+    #aqua-installation-description,
+    #aqua-winterization-text{
+        font-size:13px;
+    }
+
+
+    /* ---------------- SMART ---------------- */
+
+    .smart-irrigation-section{
+        padding:65px 5%;
+    }
+
+    .smart-irrigation-content h2{
+        font-size:30px;
+    }
+
+    .smart-irrigation-intro{
+        font-size:13px;
+    }
+
+    .smart-dashboard{
+        padding:16px;
+        border-radius:18px;
+    }
+
+    .dashboard-header{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    .water-orbit{
+        transform:scale(.72);
+        margin-top:-10px;
+        margin-bottom:-10px;
+    }
+
+    .smart-process-heading h3{
+        font-size:25px;
+    }
+
+    .smart-process-card{
+        padding:22px 18px;
+    }
+
+
+    /* ---------------- WATERING ZONES ---------------- */
+
+    .watering-zones{
+        padding:65px 5%;
+    }
+
+    .watering-zones-heading h2{
+        font-size:29px;
+    }
+
+    .zones-dashboard{
+        padding:8px;
+    }
+
+    .zone-info{
+        padding:17px;
+    }
+
+    .landscape-map{
+        min-height:310px;
+    }
+
+    .map-zone{
+        width:52px;
+        height:52px;
+    }
+
+    .map-house{
+        transform:scale(.85);
+    }
+
+
+    /* ---------------- PRICING ---------------- */
+
+    .irrigation-pricing{
+        padding:65px 5%;
+    }
+
+    .pricing-heading h2{
+        font-size:30px;
+    }
+
+    .price-card{
+        padding:27px 20px;
+    }
+
+    .pricing-note{
+        padding:18px;
+    }
+
+
+    /* ---------------- CTA ---------------- */
+
+    .services-cta{
+        padding:65px 5%;
+    }
+
+    .services-cta-container{
+        padding:40px 18px;
+        border-radius:20px;
+    }
+
+    .services-cta-content h2{
+        font-size:29px;
+    }
+
+    .services-cta-content p{
+        font-size:12px;
+    }
+
+    .services-cta-visual{
+        transform:scale(.78);
+        margin-left:-25px;
+        margin-right:-25px;
+    }
+}
+
+
+
+/* =========================================================
+   EXTRA SMALL DEVICES
+   ========================================================= */
+
+@media (max-width: 380px){
+
+    .services-hero{
+        padding-top:50px;
+    }
+
+    .hero-content h1{
+        font-size:33px;
+    }
+
+    .hero-content p{
+        font-size:12px;
+    }
+
+    .hero-label{
+        font-size:9px;
+        letter-spacing:1px;
+    }
+
+    .service{
+        height:135px;
+    }
+
+    .service-content h3{
+        font-size:12px;
+    }
+
+    .service-content p{
+        font-size:9px;
+    }
+
+
+    #aqua-service-intro-title,
+    #aqua-design-content-title,
+    #aqua-installation-title,
+    #aqua-winterization-title{
+        font-size:27px;
+    }
+
+    #aqua-process-title{
+        font-size:28px;
+    }
+
+    .smart-irrigation-content h2{
+        font-size:27px;
+    }
+
+    .watering-zones-heading h2{
+        font-size:27px;
+    }
+
+    .pricing-heading h2{
+        font-size:28px;
+    }
+
+    .services-cta-content h2{
+        font-size:27px;
+    }
+
+    .smart-dashboard{
+        padding:13px;
+    }
+
+    .water-orbit{
+        transform:scale(.62);
+    }
+
+    .landscape-map{
+        min-height:280px;
+    }
+
+    .map-zone{
+        width:45px;
+        height:45px;
+    }
+
+    .map-house{
+        transform:scale(.72);
+    }
+}
+
+
+
+/* =========================================================
+   RTL RESPONSIVE SUPPORT
+   ========================================================= */
+
+@media (max-width: 768px){
+
+    html[dir="rtl"] .hero-container,
+    html[dir="rtl"] #aqua-service-intro,
+    html[dir="rtl"] #aqua-design-section,
+    html[dir="rtl"] #aqua-installation-section,
+    html[dir="rtl"] #aqua-winterization-section,
+    html[dir="rtl"] #aqua-process-section,
+    html[dir="rtl"] .smart-irrigation-section,
+    html[dir="rtl"] .watering-zones,
+    html[dir="rtl"] .irrigation-pricing,
+    html[dir="rtl"] .services-cta{
+        direction:rtl;
+    }
+
+
+    html[dir="rtl"] .hero-buttons{
+        justify-content:center;
+    }
+
+    html[dir="rtl"] .hero-content,
+    html[dir="rtl"] #aqua-service-intro-heading,
+    html[dir="rtl"] .smart-irrigation-content,
+    html[dir="rtl"] .watering-zones-heading,
+    html[dir="rtl"] .pricing-heading,
+    html[dir="rtl"] .services-cta-content{
+        text-align:center;
+    }
+
+
+    html[dir="rtl"] .smart-feature-item{
+        direction:rtl;
+        text-align:right;
+    }
+
+    html[dir="rtl"] .dashboard-header,
+    html[dir="rtl"] .flow-header,
+    html[dir="rtl"] .flow-details,
+    html[dir="rtl"] .dashboard-controls{
+        direction:rtl;
+    }
+
+    html[dir="rtl"] .zone-info,
+    html[dir="rtl"] .zone-data-item,
+    html[dir="rtl"] .zone-benefit{
+        direction:rtl;
+        text-align:right;
+    }
+
+    html[dir="rtl"] .pricing-note{
+        direction:rtl;
+        text-align:right;
+    }
+
+    html[dir="rtl"] .services-cta-buttons{
+        direction:rtl;
+    }
+}
+
+
+
+/* =========================================================
+   TOUCH DEVICES
+   ========================================================= */
+
+@media (hover:none) and (pointer:coarse){
+
+    .service:hover{
+        transform:none;
+    }
+
+    .service:hover img{
+        transform:none;
+    }
+
+    #aqua-service-card-one:hover,
+    #aqua-service-card-two:hover,
+    #aqua-service-card-three:hover{
+        transform:none;
+    }
+
+    #aqua-design-image img,
+    #aqua-installation-image img,
+    #aqua-winterization-image img{
+        transform:none;
+    }
+
+    .aqua-process-content:hover{
+        transform:none;
+    }
+
+    .smart-feature-item:hover{
+        transform:none;
+    }
+
+    .price-card:hover{
+        transform:none;
+    }
+
+    .services-cta-primary:hover i{
+        transform:none;
+    }
+}
+
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce){
+
+    *,
+    *::before,
+    *::after{
+        animation-duration:.01ms !important;
+        animation-iteration-count:1 !important;
+        scroll-behavior:auto !important;
+        transition-duration:.01ms !important;
+    }
+}

@@ -2508,3 +2508,1303 @@ html[dir="rtl"] .wm-action-primary:hover i {
         letter-spacing: 1.2px;
     }
 }
+
+
+
+/* =========================================================
+   AQUASCAPE WATER MANAGEMENT
+   COMPLETE RESPONSIVE MEDIA QUERIES
+   Add this at the END of watermanagement.css
+========================================================= */
+
+
+/* =========================================================
+   LARGE TABLET / SMALL LAPTOP
+========================================================= */
+
+@media (max-width: 1200px) {
+
+    .aqua-water-hero-container {
+        width: 92%;
+        gap: 45px;
+    }
+
+    .aqua-water-hero-content h1 {
+        font-size: clamp(44px, 5vw, 58px);
+    }
+
+    .aqua-water-image-card {
+        width: min(430px, 100%);
+        height: 430px;
+    }
+
+    .aqua-water-orbit {
+        width: 470px;
+        height: 470px;
+        right: -110px;
+    }
+
+    .container1 {
+        width: auto;
+        margin-left: 6%;
+        margin-right: 6%;
+    }
+
+    .intro-grid {
+        gap: 45px;
+    }
+
+    .intro-image {
+        height: 500px;
+    }
+
+    .problem-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .process {
+        grid-template-columns: repeat(3, 1fr);
+        row-gap: 50px;
+    }
+
+    .process::before {
+        display: none;
+    }
+
+    .smart-grid {
+        gap: 40px;
+    }
+
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .strategy-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .property-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    /* ---------- HERO ---------- */
+
+    .aqua-water-hero {
+        min-height: auto;
+    }
+
+    .aqua-water-hero-container {
+        grid-template-columns: 1fr;
+        gap: 55px;
+        padding: 90px 0 110px;
+    }
+
+    .aqua-water-hero-content {
+        max-width: 760px;
+        margin: auto;
+        text-align: center;
+    }
+
+    .aqua-water-hero-tag {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .aqua-water-hero-content h1 {
+        font-size: 52px;
+    }
+
+    .aqua-water-hero-content p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .aqua-water-hero-buttons {
+        justify-content: center;
+    }
+
+    .aqua-water-hero-features {
+        justify-content: center;
+    }
+
+    .aqua-water-hero-visual {
+        min-height: 430px;
+    }
+
+    .aqua-water-image-card {
+        width: min(470px, 85%);
+        height: 440px;
+    }
+
+    .aqua-water-stat-card {
+        left: 4%;
+    }
+
+    .aqua-water-orbit {
+        right: 4%;
+        width: 430px;
+        height: 430px;
+    }
+
+
+    /* ---------- GENERAL SECTIONS ---------- */
+
+    .section {
+        padding: 85px 20px;
+    }
+
+    .container1 {
+        width: auto;
+        margin-left: 3%;
+        margin-right: 3%;
+    }
+
+    .heading {
+        margin-bottom: 45px;
+    }
+
+
+    /* ---------- INTRO ---------- */
+
+    .intro-grid {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .intro-image {
+        height: 450px;
+        max-width: 700px;
+        width: 100%;
+        margin: auto;
+    }
+
+    .intro-content {
+        max-width: 760px;
+        margin: auto;
+    }
+
+
+    /* ---------- WATER PROBLEMS ---------- */
+
+    .problem-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    /* ---------- PROCESS ---------- */
+
+    .process {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px 20px;
+    }
+
+    .process::before {
+        display: none;
+    }
+
+    .process-number {
+        width: 70px;
+        height: 70px;
+        font-size: 17px;
+    }
+
+
+    /* ---------- SMART IRRIGATION ---------- */
+
+    .smart-grid {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .smart-text {
+        max-width: 760px;
+        margin: auto;
+    }
+
+    .smart-text h2,
+    .smart-text p {
+        max-width: 700px;
+    }
+
+    .dashboard {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .dashboard-grid {
+        grid-template-columns: 1.2fr .8fr;
+    }
+
+
+    /* ---------- STRATEGIES ---------- */
+
+    .strategy-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    /* ---------- BEFORE / AFTER ---------- */
+
+    .compare {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+
+    /* ---------- PROPERTY ---------- */
+
+    .property-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+
+    /* ---------- TIPS ---------- */
+
+    .tips {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+
+/* =========================================================
+   TABLET / LARGE MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    /* ---------- GENERAL ---------- */
+
+    .section {
+        padding: 75px 18px;
+    }
+
+    .container1 {
+        width: auto;
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+
+    .heading {
+        max-width: 620px;
+        margin-bottom: 40px;
+    }
+
+    .heading h2 {
+        font-size: 31px;
+    }
+
+    .heading p {
+        font-size: 13px;
+        line-height: 1.7;
+    }
+
+
+    /* ---------- HERO ---------- */
+
+    .aqua-water-hero {
+        min-height: auto;
+    }
+
+    .aqua-water-hero-container {
+        width: 90%;
+        padding: 75px 0 90px;
+        gap: 45px;
+    }
+
+    .aqua-water-hero-content h1 {
+        font-size: 45px;
+        letter-spacing: -1.5px;
+    }
+
+    .aqua-water-hero-content p {
+        font-size: 14px;
+        line-height: 1.75;
+    }
+
+    .aqua-water-hero-buttons {
+        gap: 12px;
+    }
+
+    .aqua-water-btn-primary,
+    .aqua-water-btn-secondary {
+        min-height: 46px;
+    }
+
+    .aqua-water-hero-features {
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .aqua-water-hero-visual {
+        min-height: 400px;
+    }
+
+    .aqua-water-image-card {
+        width: 82%;
+        height: 400px;
+    }
+
+    .aqua-water-stat-card {
+        left: 2%;
+        bottom: 20px;
+        min-width: 185px;
+        padding: 12px 15px;
+    }
+
+    .aqua-water-orbit {
+        width: 360px;
+        height: 360px;
+        right: 0;
+    }
+
+
+    /* ---------- INTRO ---------- */
+
+    .intro-grid {
+        gap: 38px;
+    }
+
+    .intro-image {
+        height: 400px;
+    }
+
+    .intro-content h2 {
+        font-size: 31px;
+    }
+
+    .intro-content > p {
+        font-size: 13px;
+        line-height: 1.75;
+    }
+
+    .point {
+        padding: 13px;
+    }
+
+
+    /* ---------- PROBLEMS ---------- */
+
+    .problem-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .problem {
+        padding: 23px 18px;
+    }
+
+    .problem h3 {
+        font-size: 16px;
+    }
+
+    .problem p {
+        font-size: 11px;
+        line-height: 1.7;
+    }
+
+
+    /* ---------- PROCESS ---------- */
+
+    .process {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px 20px;
+    }
+
+    .process-item h3 {
+        font-size: 14px;
+    }
+
+    .process-item p {
+        font-size: 11px;
+        line-height: 1.6;
+    }
+
+
+    /* ---------- SMART ---------- */
+
+    .smart-grid {
+        gap: 35px;
+    }
+
+    .smart-text h2 {
+        font-size: 31px;
+    }
+
+    .smart-text p {
+        font-size: 13px;
+        line-height: 1.7;
+    }
+
+    .smart-features {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .smart-card {
+        padding: 17px;
+    }
+
+    .dashboard {
+        padding: 18px;
+        border-radius: 20px;
+    }
+
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .chart-box {
+        min-height: 250px;
+    }
+
+    .dash-side {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+
+    /* ---------- STRATEGIES ---------- */
+
+    .strategy-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .strategy {
+        padding: 22px;
+    }
+
+
+    /* ---------- BEFORE / AFTER ---------- */
+
+    .compare {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .compare-card img {
+        height: 330px;
+    }
+
+
+    /* ---------- PROPERTY ---------- */
+
+    .property-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+
+    .property {
+        min-height: 330px;
+    }
+
+
+    /* ---------- TIPS ---------- */
+
+    .tips {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .tip {
+        padding: 22px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    /* ---------- GENERAL ---------- */
+
+    .section {
+        padding: 65px 15px;
+    }
+
+    .container1 {
+        width: auto;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .heading {
+        margin-bottom: 35px;
+    }
+
+    .heading span {
+        font-size: 10px;
+    }
+
+    .heading h2 {
+        font-size: 27px;
+        line-height: 1.2;
+    }
+
+    .heading p {
+        font-size: 12px;
+    }
+
+
+    /* ---------- HERO ---------- */
+
+    .aqua-water-hero {
+        min-height: auto;
+    }
+
+    .aqua-water-hero-container {
+        width: 88%;
+        padding: 65px 0 80px;
+        gap: 38px;
+    }
+
+    .aqua-water-hero-tag {
+        font-size: 10px;
+        padding: 8px 13px;
+    }
+
+    .aqua-water-hero-content h1 {
+        font-size: 38px;
+        line-height: 1.08;
+        letter-spacing: -1px;
+        margin-top: 18px;
+    }
+
+    .aqua-water-hero-content p {
+        font-size: 13px;
+        line-height: 1.75;
+        margin-bottom: 25px;
+    }
+
+    .aqua-water-hero-buttons {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+
+    .aqua-water-btn-primary,
+    .aqua-water-btn-secondary {
+        width: 100%;
+        max-width: 320px;
+        box-sizing: border-box;
+    }
+
+    .aqua-water-hero-features {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        width: fit-content;
+        margin: 30px auto 0;
+    }
+
+    .aqua-water-feature-icon {
+        width: 36px;
+        height: 36px;
+    }
+
+    .aqua-water-feature strong {
+        font-size: 11px;
+    }
+
+    .aqua-water-feature small {
+        font-size: 9px;
+    }
+
+    .aqua-water-hero-visual {
+        min-height: 350px;
+    }
+
+    .aqua-water-image-card {
+        width: 100%;
+        height: 350px;
+        border-radius: 20px;
+        transform: none;
+    }
+
+    .aqua-water-image-card:hover {
+        transform: none;
+    }
+
+    .aqua-water-stat-card {
+        left: 12px;
+        bottom: 15px;
+        min-width: 170px;
+        padding: 10px 13px;
+        gap: 9px;
+    }
+
+    .aqua-water-stat-icon {
+        width: 37px;
+        height: 37px;
+    }
+
+    .aqua-water-stat-card strong {
+        font-size: 11px;
+    }
+
+    .aqua-water-stat-card span {
+        font-size: 9px;
+    }
+
+    .aqua-water-orbit {
+        width: 290px;
+        height: 290px;
+        right: -45px;
+    }
+
+    .aqua-water-glow-one {
+        width: 180px;
+        height: 180px;
+    }
+
+    .aqua-water-glow-two {
+        width: 160px;
+        height: 160px;
+    }
+
+
+    /* ---------- INTRO ---------- */
+
+    .intro-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .intro-image {
+        height: 330px;
+        border-radius: 20px;
+    }
+
+    .image-badge {
+        left: 15px;
+        bottom: 15px;
+        width: 190px;
+        padding: 15px;
+    }
+
+    .image-badge strong {
+        font-size: 16px;
+    }
+
+    .image-badge small {
+        font-size: 9px;
+    }
+
+    .intro-content h2 {
+        font-size: 27px;
+    }
+
+    .intro-content > p {
+        font-size: 12px;
+        line-height: 1.75;
+    }
+
+    .points {
+        gap: 10px;
+    }
+
+    .point {
+        padding: 12px;
+        gap: 11px;
+    }
+
+    .point-icon {
+        width: 39px;
+        height: 39px;
+        flex: 0 0 39px;
+    }
+
+    .point h4 {
+        font-size: 13px;
+    }
+
+    .point p {
+        font-size: 10px;
+        line-height: 1.6;
+    }
+
+
+    /* ---------- PROBLEMS ---------- */
+
+    .problem-grid {
+        grid-template-columns: 1fr;
+        gap: 13px;
+    }
+
+    .problem {
+        padding: 22px 18px;
+    }
+
+    .problem-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 19px;
+        margin-bottom: 14px;
+    }
+
+    .problem h3 {
+        font-size: 15px;
+    }
+
+    .problem p {
+        font-size: 11px;
+    }
+
+
+    /* ---------- PROCESS ---------- */
+
+    .process {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .process-item {
+        display: grid;
+        grid-template-columns: 65px 1fr;
+        column-gap: 16px;
+        text-align: left;
+        align-items: start;
+    }
+
+    .process-number {
+        width: 62px;
+        height: 62px;
+        margin: 0;
+        font-size: 16px;
+        border-width: 4px;
+    }
+
+    .process-item h3 {
+        margin-top: 8px;
+        font-size: 15px;
+    }
+
+    .process-item p {
+        font-size: 11px;
+        line-height: 1.65;
+    }
+
+
+    /* ---------- SMART ---------- */
+
+    .smart-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .smart-text h2 {
+        font-size: 27px;
+    }
+
+    .smart-text p {
+        font-size: 12px;
+    }
+
+    .smart-features {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .smart-card {
+        padding: 16px;
+    }
+
+    .smart-card i {
+        font-size: 17px;
+    }
+
+    .smart-card h4 {
+        font-size: 12px;
+    }
+
+    .smart-card p {
+        font-size: 10px;
+        line-height: 1.6;
+    }
+
+    .dashboard {
+        padding: 14px;
+        border-radius: 18px;
+    }
+
+    .dashboard-header {
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    .dashboard-header strong {
+        font-size: 11px;
+    }
+
+    .status {
+        font-size: 9px;
+    }
+
+    .chart-box {
+        min-height: 220px;
+        padding: 15px;
+    }
+
+    .chart-info {
+        margin-bottom: 25px;
+    }
+
+    .chart-info strong {
+        font-size: 18px;
+    }
+
+    .chart {
+        height: 110px;
+        gap: 6px;
+    }
+
+    .dash-side {
+        grid-template-columns: 1fr;
+        gap: 9px;
+    }
+
+    .dash-card {
+        padding: 14px;
+    }
+
+    .dash-card strong {
+        font-size: 16px;
+    }
+
+
+    /* ---------- STRATEGIES ---------- */
+
+    .strategy-grid {
+        grid-template-columns: 1fr;
+        gap: 13px;
+    }
+
+    .strategy {
+        padding: 21px;
+    }
+
+    .strategy-icon {
+        margin-bottom: 13px;
+    }
+
+    .strategy h3 {
+        font-size: 15px;
+    }
+
+    .strategy p {
+        font-size: 11px;
+        line-height: 1.65;
+    }
+
+
+    /* ---------- BEFORE / AFTER ---------- */
+
+    .compare {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .compare-card {
+        border-radius: 18px;
+    }
+
+    .compare-card img {
+        height: 280px;
+    }
+
+    .compare-content {
+        padding: 18px;
+    }
+
+    .compare-content h3 {
+        font-size: 17px;
+    }
+
+    .compare-content p {
+        font-size: 11px;
+    }
+
+
+    /* ---------- PROPERTY ---------- */
+
+    .property-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .property {
+        min-height: 330px;
+    }
+
+    .property-content {
+        padding: 20px;
+    }
+
+    .property-content h3 {
+        font-size: 17px;
+    }
+
+    .property-content p {
+        font-size: 11px;
+        line-height: 1.65;
+    }
+
+
+    /* ---------- TIPS ---------- */
+
+    .tips {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .tip {
+        padding: 20px;
+    }
+
+    .tip-number {
+        margin-bottom: 12px;
+    }
+
+    .tip h3 {
+        font-size: 15px;
+    }
+
+    .tip p {
+        font-size: 11px;
+        line-height: 1.6;
+    }
+
+
+    /* ---------- CTA ---------- */
+
+    .wm-action-banner {
+        min-height: 500px;
+    }
+
+    .wm-action-wrapper {
+        padding: 60px 6%;
+    }
+
+    .wm-action-content {
+        width: 100%;
+    }
+
+    .wm-action-label {
+        font-size: 10px;
+    }
+
+    .wm-action-content h2 {
+        font-size: 34px;
+        line-height: 1.12;
+    }
+
+    .wm-action-content p {
+        font-size: 12px;
+        line-height: 1.7;
+    }
+
+    .wm-action-buttons {
+        flex-direction: column;
+        width: 100%;
+        align-items: stretch;
+    }
+
+    .wm-action-primary,
+    .wm-action-secondary {
+        width: 100%;
+        box-sizing: border-box;
+        text-align: center;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .section {
+        padding: 55px 13px;
+    }
+
+    .aqua-water-hero-container {
+        width: 90%;
+        padding: 55px 0 70px;
+    }
+
+    .aqua-water-hero-content h1 {
+        font-size: 33px;
+    }
+
+    .aqua-water-hero-content p {
+        font-size: 12px;
+    }
+
+    .aqua-water-image-card {
+        height: 300px;
+    }
+
+    .aqua-water-hero-visual {
+        min-height: 300px;
+    }
+
+    .aqua-water-stat-card {
+        left: 8px;
+        bottom: 10px;
+        min-width: 150px;
+    }
+
+    .aqua-water-stat-card strong {
+        font-size: 10px;
+    }
+
+    .aqua-water-stat-card span {
+        font-size: 8px;
+    }
+
+    .aqua-water-orbit {
+        width: 230px;
+        height: 230px;
+        right: -55px;
+    }
+
+    .heading h2 {
+        font-size: 24px;
+    }
+
+    .intro-image {
+        height: 280px;
+    }
+
+    .image-badge {
+        width: 165px;
+        padding: 12px;
+    }
+
+    .image-badge strong {
+        font-size: 14px;
+    }
+
+    .point {
+        align-items: flex-start;
+    }
+
+    .point-icon {
+        width: 36px;
+        height: 36px;
+        flex-basis: 36px;
+    }
+
+    .process-item {
+        grid-template-columns: 55px 1fr;
+        column-gap: 13px;
+    }
+
+    .process-number {
+        width: 52px;
+        height: 52px;
+        font-size: 14px;
+    }
+
+    .process-item h3 {
+        font-size: 14px;
+    }
+
+    .process-item p {
+        font-size: 10px;
+    }
+
+    .smart-text h2 {
+        font-size: 24px;
+    }
+
+    .dashboard {
+        padding: 11px;
+    }
+
+    .chart-box {
+        padding: 12px;
+    }
+
+    .chart-info strong {
+        font-size: 16px;
+    }
+
+    .compare-card img {
+        height: 240px;
+    }
+
+    .property {
+        min-height: 290px;
+    }
+
+    .wm-action-banner {
+        min-height: 450px;
+    }
+
+    .wm-action-wrapper {
+        padding: 50px 6%;
+    }
+
+    .wm-action-content h2 {
+        font-size: 29px;
+    }
+
+    .wm-action-content p {
+        font-size: 11px;
+    }
+}
+
+
+/* =========================================================
+   EXTRA SMALL DEVICES
+========================================================= */
+
+@media (max-width: 340px) {
+
+    .aqua-water-hero-content h1 {
+        font-size: 29px;
+    }
+
+    .aqua-water-hero-tag {
+        font-size: 9px;
+    }
+
+    .aqua-water-image-card {
+        height: 270px;
+    }
+
+    .aqua-water-stat-card {
+        min-width: 135px;
+        padding: 8px 10px;
+    }
+
+    .aqua-water-stat-icon {
+        width: 32px;
+        height: 32px;
+    }
+
+    .heading h2 {
+        font-size: 22px;
+    }
+
+    .intro-content h2 {
+        font-size: 24px;
+    }
+
+    .problem {
+        padding: 18px 15px;
+    }
+
+    .smart-text h2 {
+        font-size: 22px;
+    }
+
+    .wm-action-content h2 {
+        font-size: 26px;
+    }
+}
+
+
+/* =========================================================
+   RTL RESPONSIVE SUPPORT
+========================================================= */
+
+@media (max-width: 768px) {
+
+    html[dir="rtl"] .aqua-water-hero-content {
+        text-align: center;
+    }
+
+    html[dir="rtl"] .aqua-water-hero-buttons {
+        justify-content: center;
+    }
+
+    html[dir="rtl"] .aqua-water-feature {
+        direction: rtl;
+    }
+
+    html[dir="rtl"] .point {
+        direction: rtl;
+        text-align: right;
+    }
+
+    html[dir="rtl"] .process-item {
+        direction: rtl;
+        text-align: right;
+    }
+
+    html[dir="rtl"] .process-number {
+        margin-left: 0;
+    }
+
+    html[dir="rtl"] .smart-text {
+        text-align: right;
+    }
+
+    html[dir="rtl"] .wm-action-content {
+        text-align: right;
+    }
+
+    html[dir="rtl"] .wm-action-buttons {
+        direction: rtl;
+    }
+
+    html[dir="rtl"] .aqua-water-stat-card {
+        left: auto;
+        right: 12px;
+    }
+}
+
+
+/* =========================================================
+   TOUCH DEVICES
+========================================================= */
+
+@media (hover: none) and (pointer: coarse) {
+
+    .aqua-water-image-card:hover {
+        transform: none;
+    }
+
+    .aqua-water-btn-primary:hover,
+    .aqua-water-btn-secondary:hover {
+        transform: none;
+    }
+
+    .problem:hover,
+    .strategy:hover,
+    .tip:hover {
+        transform: none;
+    }
+
+    .intro-image:hover img {
+        transform: none;
+    }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+
+}

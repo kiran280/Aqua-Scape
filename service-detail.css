@@ -1481,3 +1481,842 @@ html[dir="rtl"] .primary-btn i {
     }
 
 }
+
+
+
+
+
+
+
+/* =========================================================
+   ENHANCED RESPONSIVE MEDIA QUERIES
+   SERVICE DETAIL PAGES
+========================================================= */
+
+
+/* =========================================================
+   LARGE TABLETS / SMALL LAPTOPS
+========================================================= */
+
+@media (max-width: 1200px) {
+
+    .hero-container {
+        width: 90%;
+        max-width: 1050px;
+        gap: 45px;
+    }
+
+    .hero-content h1 {
+        font-size: clamp(48px, 5vw, 64px);
+    }
+
+    .hero-visual-card {
+        inset: 10px;
+        padding: 32px;
+    }
+
+    .detail-section {
+        padding: 90px 5%;
+    }
+
+    .content-grid {
+        gap: 40px;
+    }
+
+    .content-area h3 {
+        font-size: 27px;
+    }
+
+    .card-grid {
+        gap: 15px;
+    }
+
+    .process-grid {
+        gap: 15px;
+    }
+
+    .cta-container {
+        max-width: 950px;
+    }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 950px) {
+
+    .service-hero {
+        min-height: auto;
+        padding: 90px 0 70px;
+    }
+
+    .hero-container {
+        width: 90%;
+        grid-template-columns: 1fr;
+        gap: 45px;
+        text-align: center;
+    }
+
+    .hero-content {
+        max-width: 700px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-label {
+        justify-content: center;
+    }
+
+    .hero-content h1 {
+        font-size: clamp(44px, 7vw, 60px);
+    }
+
+    .hero-content > p {
+        max-width: 650px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-visual {
+        width: 100%;
+        max-width: 600px;
+        min-height: 390px;
+        margin: auto;
+    }
+
+    .hero-visual-card {
+        inset: 15px;
+    }
+
+
+    /* CONTENT */
+
+    .content-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .content-grid > .content-area,
+    .content-grid > .image-panel {
+        order: unset;
+    }
+
+    .content-area {
+        text-align: center;
+    }
+
+    .content-area > p {
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .feature-list {
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .feature-list div {
+        justify-content: center;
+    }
+
+
+    /* CARDS */
+
+    .card-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    /* PROCESS */
+
+    .process-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    /* IMAGE */
+
+    .image-panel {
+        min-height: 350px;
+    }
+
+
+    /* FAQ */
+
+    .faq-container {
+        max-width: 750px;
+    }
+
+
+    /* CTA */
+
+    .cta-container {
+        padding: 55px 30px;
+    }
+}
+
+
+/* =========================================================
+   TABLET PORTRAIT
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .service-hero {
+        padding: 80px 0 60px;
+    }
+
+    .hero-container {
+        width: 90%;
+        gap: 35px;
+    }
+
+    .hero-content h1 {
+        font-size: 46px;
+        line-height: 1.08;
+        letter-spacing: -1.5px;
+    }
+
+    .hero-content > p {
+        font-size: 14px;
+        line-height: 1.75;
+    }
+
+    .hero-buttons {
+        width: 100%;
+        max-width: 500px;
+    }
+
+    .primary-btn,
+    .secondary-btn {
+        min-height: 46px;
+    }
+
+    .hero-visual {
+        min-height: 350px;
+    }
+
+    .hero-visual-card {
+        min-height: 320px;
+        padding: 30px;
+        border-radius: 26px;
+    }
+
+    .hero-icon {
+        width: 90px;
+        height: 90px;
+        font-size: 36px;
+        border-radius: 25px;
+    }
+
+    .hero-visual-card h3 {
+        font-size: 22px;
+    }
+
+    .visual-stats {
+        max-width: 450px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+    /* SECTIONS */
+
+    .detail-section {
+        padding: 70px 6%;
+    }
+
+    .section-heading {
+        margin-bottom: 40px;
+    }
+
+    .section-heading h2 {
+        font-size: 31px;
+    }
+
+    .section-heading p {
+        font-size: 13px;
+    }
+
+
+    /* CONTENT */
+
+    .content-grid {
+        gap: 35px;
+    }
+
+    .content-area h3 {
+        font-size: 25px;
+    }
+
+    .content-area > p {
+        font-size: 13px;
+    }
+
+
+    /* IMAGE PANEL */
+
+    .image-panel {
+        min-height: 320px;
+        border-radius: 25px;
+    }
+
+    .panel-icon {
+        width: 105px;
+        height: 105px;
+        font-size: 40px;
+        border-radius: 28px;
+    }
+
+
+    /* CARDS */
+
+    .info-card {
+        padding: 25px;
+    }
+
+    .info-card h3 {
+        font-size: 16px;
+    }
+
+
+    /* PROCESS */
+
+    .process-card {
+        padding: 25px 18px;
+    }
+
+
+    /* FAQ */
+
+    .faq-item {
+        padding: 19px 20px;
+    }
+
+
+    /* CTA */
+
+    .service-cta {
+        padding: 65px 6%;
+    }
+
+    .cta-container {
+        padding: 50px 25px;
+        border-radius: 25px;
+    }
+
+    .cta-container h2 {
+        font-size: 30px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .service-hero {
+        padding: 70px 0 50px;
+        min-height: auto;
+    }
+
+    .hero-container {
+        width: 90%;
+        gap: 30px;
+    }
+
+    .service-label {
+        font-size: 10px;
+        letter-spacing: 1px;
+    }
+
+    .hero-content h1 {
+        font-size: 38px;
+        line-height: 1.08;
+        letter-spacing: -1px;
+        margin-top: 15px;
+    }
+
+    .hero-content > p {
+        font-size: 13px;
+        line-height: 1.7;
+        margin-top: 17px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+        margin-top: 25px;
+    }
+
+    .primary-btn,
+    .secondary-btn {
+        width: 100%;
+        min-height: 47px;
+    }
+
+
+    /* HERO VISUAL */
+
+    .hero-visual {
+        min-height: 310px;
+    }
+
+    .hero-visual-card {
+        inset: 5px;
+        min-height: 300px;
+        padding: 22px;
+        border-radius: 22px;
+    }
+
+    .hero-icon {
+        width: 75px;
+        height: 75px;
+        font-size: 30px;
+        border-radius: 20px;
+    }
+
+    .hero-visual-card h3 {
+        margin-top: 18px;
+        font-size: 20px;
+    }
+
+    .hero-visual-card > p {
+        font-size: 11px;
+        line-height: 1.6;
+    }
+
+    .visual-stats {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 6px;
+        margin-top: 18px;
+    }
+
+    .visual-stats div {
+        padding: 9px 4px;
+    }
+
+    .visual-stats strong {
+        font-size: 14px;
+    }
+
+    .visual-stats span {
+        font-size: 7px;
+    }
+
+
+    /* SECTIONS */
+
+    .detail-section {
+        padding: 60px 5%;
+    }
+
+    .section-heading {
+        margin-bottom: 32px;
+    }
+
+    .section-heading small {
+        font-size: 10px;
+    }
+
+    .section-heading h2 {
+        font-size: 28px;
+        line-height: 1.15;
+    }
+
+    .section-heading p {
+        font-size: 12px;
+        line-height: 1.7;
+    }
+
+
+    /* CONTENT */
+
+    .content-grid {
+        gap: 30px;
+    }
+
+    .content-area {
+        text-align: center;
+    }
+
+    .content-area h3 {
+        font-size: 23px;
+    }
+
+    .content-area > p {
+        font-size: 12px;
+        line-height: 1.8;
+    }
+
+
+    /* IMAGE */
+
+    .image-panel {
+        min-height: 270px;
+        border-radius: 22px;
+    }
+
+    .panel-icon {
+        width: 90px;
+        height: 90px;
+        font-size: 34px;
+        border-radius: 24px;
+    }
+
+
+    /* FEATURE LIST */
+
+    .feature-list {
+        margin-top: 20px;
+        gap: 10px;
+    }
+
+    .feature-list div {
+        justify-content: center;
+        font-size: 12px;
+        gap: 9px;
+    }
+
+    .feature-list i {
+        width: 24px;
+        height: 24px;
+        font-size: 9px;
+    }
+
+
+    /* CARDS */
+
+    .card-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .info-card {
+        padding: 22px;
+        border-radius: 17px;
+    }
+
+    .card-icon {
+        width: 47px;
+        height: 47px;
+        border-radius: 13px;
+        font-size: 18px;
+    }
+
+    .info-card h3 {
+        margin-top: 15px;
+        font-size: 16px;
+    }
+
+    .info-card p {
+        font-size: 11px;
+        line-height: 1.7;
+    }
+
+
+    /* PROCESS */
+
+    .process-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .process-card {
+        padding: 24px 18px;
+        border-radius: 17px;
+    }
+
+    .process-card > span {
+        width: 38px;
+        height: 38px;
+    }
+
+    .process-card > i {
+        margin-top: 16px;
+        font-size: 20px;
+    }
+
+    .process-card h3 {
+        font-size: 15px;
+    }
+
+    .process-card p {
+        font-size: 10px;
+    }
+
+
+    /* FAQ */
+
+    .faq-item {
+        padding: 17px 16px;
+        border-radius: 13px;
+    }
+
+    .faq-item h3 {
+        font-size: 13px;
+        gap: 12px;
+    }
+
+    .faq-item p {
+        font-size: 11px;
+        line-height: 1.7;
+    }
+
+
+    /* CTA */
+
+    .service-cta {
+        padding: 55px 5%;
+    }
+
+    .cta-container {
+        padding: 40px 18px;
+        border-radius: 22px;
+    }
+
+    .cta-container small {
+        font-size: 10px;
+    }
+
+    .cta-container h2 {
+        font-size: 28px;
+    }
+
+    .cta-container p {
+        font-size: 11px;
+        line-height: 1.7;
+    }
+
+    .cta-container .primary-btn {
+        width: 100%;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .service-hero {
+        padding: 60px 0 40px;
+    }
+
+    .hero-container {
+        width: 92%;
+    }
+
+    .hero-content h1 {
+        font-size: 32px;
+    }
+
+    .hero-content > p {
+        font-size: 12px;
+    }
+
+    .hero-visual {
+        min-height: 285px;
+    }
+
+    .hero-visual-card {
+        min-height: 275px;
+        padding: 18px;
+        border-radius: 19px;
+    }
+
+    .hero-icon {
+        width: 65px;
+        height: 65px;
+        font-size: 26px;
+    }
+
+    .hero-visual-card h3 {
+        font-size: 18px;
+    }
+
+    .hero-visual-card > p {
+        font-size: 10px;
+    }
+
+    .visual-stats {
+        gap: 4px;
+    }
+
+    .visual-stats strong {
+        font-size: 12px;
+    }
+
+    .visual-stats span {
+        font-size: 6px;
+    }
+
+
+    .detail-section {
+        padding: 50px 5%;
+    }
+
+    .section-heading h2 {
+        font-size: 25px;
+    }
+
+    .content-area h3 {
+        font-size: 21px;
+    }
+
+    .image-panel {
+        min-height: 240px;
+    }
+
+    .panel-icon {
+        width: 75px;
+        height: 75px;
+        font-size: 30px;
+    }
+
+    .info-card {
+        padding: 19px;
+    }
+
+    .process-card {
+        padding: 21px 15px;
+    }
+
+    .cta-container {
+        padding: 35px 15px;
+    }
+
+    .cta-container h2 {
+        font-size: 24px;
+    }
+}
+
+
+/* =========================================================
+   EXTRA SMALL DEVICES
+========================================================= */
+
+@media (max-width: 340px) {
+
+    .hero-content h1 {
+        font-size: 28px;
+    }
+
+    .hero-content > p {
+        font-size: 11px;
+    }
+
+    .hero-visual-card {
+        padding: 15px;
+    }
+
+    .hero-visual-card h3 {
+        font-size: 16px;
+    }
+
+    .visual-stats strong {
+        font-size: 11px;
+    }
+
+    .visual-stats span {
+        font-size: 5px;
+    }
+
+    .section-heading h2 {
+        font-size: 23px;
+    }
+
+    .content-area h3 {
+        font-size: 19px;
+    }
+
+    .faq-item h3 {
+        font-size: 12px;
+    }
+
+    .cta-container h2 {
+        font-size: 22px;
+    }
+}
+
+
+/* =========================================================
+   RTL RESPONSIVE SUPPORT
+========================================================= */
+
+@media (max-width: 950px) {
+
+    html[dir="rtl"] .hero-container {
+        direction: rtl;
+    }
+
+    html[dir="rtl"] .hero-content,
+    html[dir="rtl"] .content-area {
+        text-align: center;
+    }
+
+    html[dir="rtl"] .feature-list div {
+        flex-direction: row-reverse;
+        justify-content: center;
+    }
+
+    html[dir="rtl"] .faq-item h3 {
+        text-align: right;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    html[dir="rtl"] .hero-buttons {
+        align-items: stretch;
+    }
+
+    html[dir="rtl"] .faq-item h3 {
+        gap: 10px;
+    }
+}
+
+
+/* =========================================================
+   TOUCH DEVICES
+========================================================= */
+
+@media (hover: none) and (pointer: coarse) {
+
+    .info-card:hover,
+    .process-card:hover,
+    .primary-btn:hover,
+    .secondary-btn:hover {
+        transform: none;
+    }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}

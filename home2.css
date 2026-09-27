@@ -2569,3 +2569,1509 @@ body.dark-mode .aqua-home2-cta-content p {
         line-height: 1.7;
     }
 }
+
+
+
+
+
+
+/* =========================================================
+   AQUASCAPE HOME 2
+   COMPLETE RESPONSIVE MEDIA QUERIES
+   ========================================================= */
+
+
+/* =========================================================
+   LARGE TABLET / SMALL LAPTOP
+   ========================================================= */
+
+@media (max-width: 1200px) {
+
+    /* ---------- HEADER ---------- */
+
+    .header-container {
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+
+    .main-nav {
+        gap: 18px;
+    }
+
+    .nav-link {
+        font-size: 13px;
+    }
+
+    .header-actions {
+        gap: 8px;
+    }
+
+
+    /* ---------- HERO ---------- */
+
+    .hero-content {
+        width: 88%;
+    }
+
+    .hero-content-inner {
+        max-width: 620px;
+    }
+
+    .hero h1 {
+        font-size: clamp(52px, 6vw, 70px);
+    }
+
+    .hero-description {
+        max-width: 560px;
+    }
+
+    .water-circle {
+        right: 7%;
+        width: 180px;
+        height: 180px;
+    }
+
+
+    /* ---------- PROCESS ---------- */
+
+    .process-section {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .process-timeline {
+        gap: 18px;
+    }
+
+    .process-card {
+        padding: 28px 20px;
+    }
+
+
+    /* ---------- SMART IRRIGATION ---------- */
+
+    .smart-irrigation {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .smart-container {
+        gap: 50px;
+    }
+
+    .smart-image-box {
+        height: 520px;
+    }
+
+
+    /* ---------- COMMON SECTIONS ---------- */
+
+    .section {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .services-grid {
+        gap: 20px;
+    }
+
+    .service-card {
+        padding: 30px 25px;
+    }
+
+
+    /* ---------- COMPARISON ---------- */
+
+    .comparison-wrapper {
+        gap: 18px;
+    }
+
+    .comparison-content {
+        padding: 25px;
+    }
+
+    .comparison-benefits {
+        gap: 15px;
+    }
+
+
+    /* ---------- TESTIMONIALS ---------- */
+
+    .testimonials-section {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .testimonials-grid {
+        gap: 20px;
+    }
+
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+    /* ---------- HEADER ---------- */
+
+    .header-container {
+        padding: 0 5%;
+    }
+
+    .main-nav {
+        gap: 12px;
+    }
+
+    .nav-link {
+        font-size: 12px;
+    }
+
+    .login-btn {
+        padding: 10px 16px;
+        font-size: 12px;
+    }
+
+
+    /* ---------- HERO ---------- */
+
+    .hero {
+        min-height: 650px;
+    }
+
+    .hero-content {
+        width: 88%;
+    }
+
+    .hero-content-inner {
+        max-width: 570px;
+    }
+
+    .hero h1 {
+        font-size: 55px;
+    }
+
+    .hero-description {
+        font-size: 15px;
+    }
+
+    .water-circle {
+        right: 3%;
+        top: 30%;
+        width: 170px;
+        height: 170px;
+    }
+
+
+    /* ---------- PROCESS ---------- */
+
+    .process-timeline {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px 22px;
+    }
+
+    .process-timeline::before {
+        display: none;
+    }
+
+    .process-card {
+        min-height: 270px;
+    }
+
+
+    /* ---------- SMART IRRIGATION ---------- */
+
+    .smart-container {
+        grid-template-columns: 1fr;
+        gap: 55px;
+    }
+
+    .smart-content {
+        max-width: 800px;
+    }
+
+    .smart-image-box {
+        height: 520px;
+    }
+
+
+    /* ---------- SERVICES ---------- */
+
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    /* ---------- BEFORE / AFTER ---------- */
+
+    .comparison-wrapper {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .comparison-arrow {
+        transform: rotate(90deg);
+    }
+
+    .comparison-image {
+        height: 300px;
+    }
+
+    .comparison-benefits {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    /* ---------- TESTIMONIALS ---------- */
+
+    .testimonials-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .featured-testimonial {
+        transform: none;
+    }
+
+    .featured-testimonial:hover {
+        transform: translateY(-10px);
+    }
+
+    .testimonial-stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+
+    .testimonial-stat {
+        border-right: none;
+    }
+
+    .testimonial-stat:nth-child(3),
+    .testimonial-stat:nth-child(4) {
+        border-top: 1px solid rgba(15, 23, 42, 0.08);
+        padding-top: 25px;
+    }
+
+    body.dark .testimonial-stat:nth-child(3),
+    body.dark .testimonial-stat:nth-child(4) {
+        border-top-color: rgba(255, 255, 255, 0.08);
+    }
+
+
+    /* ---------- CTA ---------- */
+
+    .aqua-home2-cta {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+}
+
+
+/* =========================================================
+   TABLET / MOBILE
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+    html,
+    body {
+        overflow-x: hidden;
+    }
+
+
+    /* ---------- HEADER ---------- */
+
+    header {
+        height: 70px;
+        padding: 0 5%;
+    }
+
+    .main-nav {
+        display: none;
+    }
+
+    .header-actions {
+        gap: 7px;
+    }
+
+    .menu-button {
+        display: flex;
+    }
+
+    .login-btn {
+        padding: 9px 14px;
+        font-size: 11px;
+    }
+
+
+    /* ---------- HERO ---------- */
+
+    .hero {
+        min-height: 700px;
+        height: 100vh;
+        background-position: 65% center;
+    }
+
+    .hero-content {
+        width: 90%;
+        padding-top: 45px;
+    }
+
+    .hero-content-inner {
+        max-width: 600px;
+    }
+
+    .small-title {
+        font-size: 10px;
+        padding: 8px 14px;
+        margin-bottom: 18px;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+        line-height: 1.05;
+        letter-spacing: -1px;
+        margin-bottom: 18px;
+    }
+
+    .hero-description {
+        max-width: 540px;
+        font-size: 15px;
+        line-height: 1.7;
+        margin-bottom: 25px;
+    }
+
+    .hero-buttons {
+        gap: 12px;
+    }
+
+    .btn {
+        min-width: 145px;
+        padding: 13px 20px;
+    }
+
+    .hero-features {
+        display: none;
+    }
+
+    .water-circle {
+        right: -90px;
+        top: 42%;
+        width: 200px;
+        height: 200px;
+    }
+
+
+    /* ---------- PROCESS ---------- */
+
+    .process-section {
+        padding: 85px 6%;
+    }
+
+    .process-heading {
+        margin-bottom: 55px;
+    }
+
+    .process-heading h2 {
+        font-size: 30px;
+    }
+
+    .process-heading p {
+        font-size: 14px;
+    }
+
+    .process-timeline {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px 18px;
+    }
+
+    .process-number {
+        width: 72px;
+        height: 72px;
+        font-size: 18px;
+        margin-bottom: 25px;
+    }
+
+    .process-card {
+        min-height: 270px;
+        padding: 25px 20px;
+        border-radius: 18px;
+    }
+
+    .process-icon {
+        width: 52px;
+        height: 52px;
+        font-size: 19px;
+        margin-bottom: 20px;
+    }
+
+    .process-card h3 {
+        font-size: 20px;
+    }
+
+    .process-card p {
+        font-size: 13px;
+    }
+
+
+    /* ---------- SMART IRRIGATION ---------- */
+
+    .smart-irrigation {
+        padding: 80px 6%;
+    }
+
+    .smart-container {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .smart-content {
+        max-width: 100%;
+    }
+
+    .smart-content h2 {
+        font-size: 32px;
+    }
+
+    .smart-intro {
+        font-size: 14px;
+        margin-bottom: 30px;
+    }
+
+    .smart-features {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    .smart-feature {
+        gap: 12px;
+    }
+
+    .smart-icon {
+        width: 48px;
+        height: 48px;
+        font-size: 18px;
+    }
+
+    .smart-feature h3 {
+        font-size: 15px;
+    }
+
+    .smart-feature p {
+        font-size: 12px;
+    }
+
+    .smart-btn {
+        padding: 13px 20px;
+    }
+
+    .smart-image-box {
+        height: 500px;
+        border-radius: 28px;
+    }
+
+
+    /* ---------- COMMON SECTIONS ---------- */
+
+    .section {
+        padding: 80px 6%;
+    }
+
+    .section-heading {
+        margin-bottom: 50px;
+    }
+
+    .section-heading h2 {
+        font-size: 30px;
+    }
+
+    .section-heading p {
+        font-size: 14px;
+    }
+
+
+    /* ---------- SERVICES ---------- */
+
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px;
+    }
+
+    .service-card {
+        padding: 28px 22px;
+        border-radius: 18px;
+    }
+
+    .service-icon {
+        width: 52px;
+        height: 52px;
+        font-size: 19px;
+    }
+
+    .service-card h3 {
+        font-size: 18px;
+    }
+
+    .service-card p {
+        font-size: 12px;
+    }
+
+
+    /* ---------- COMPARISON ---------- */
+
+    .comparison-wrapper {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .comparison-arrow {
+        transform: rotate(90deg);
+    }
+
+    .comparison-image {
+        height: 280px;
+    }
+
+    .comparison-content {
+        padding: 25px;
+    }
+
+    .comparison-content h3 {
+        font-size: 20px;
+    }
+
+    .comparison-content p {
+        font-size: 13px;
+    }
+
+    .comparison-benefits {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        margin-top: 40px;
+    }
+
+    .benefit-item {
+        padding: 16px;
+    }
+
+
+    /* ---------- TESTIMONIALS ---------- */
+
+    .testimonials-section {
+        padding: 80px 6%;
+    }
+
+    .testimonials-heading {
+        margin-bottom: 50px;
+    }
+
+    .testimonials-heading h2 {
+        font-size: 30px;
+    }
+
+    .testimonials-heading p {
+        font-size: 14px;
+    }
+
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .testimonial-card {
+        min-height: auto;
+        padding: 30px 25px;
+    }
+
+    .testimonial-stats {
+        grid-template-columns: 1fr 1fr;
+        gap: 0;
+        padding: 20px;
+    }
+
+    .testimonial-stat {
+        padding: 20px 10px;
+        border-right: none;
+    }
+
+    .testimonial-stat:nth-child(odd) {
+        border-right: 1px solid rgba(15, 23, 42, 0.08);
+    }
+
+    .testimonial-stat:nth-child(3),
+    .testimonial-stat:nth-child(4) {
+        border-top: 1px solid rgba(15, 23, 42, 0.08);
+    }
+
+    body.dark .testimonial-stat:nth-child(odd) {
+        border-right-color: rgba(255, 255, 255, 0.08);
+    }
+
+    body.dark .testimonial-stat:nth-child(3),
+    body.dark .testimonial-stat:nth-child(4) {
+        border-top-color: rgba(255, 255, 255, 0.08);
+    }
+
+
+    /* ---------- CTA ---------- */
+
+    .aqua-home2-cta {
+        min-height: 500px;
+        padding: 70px 6%;
+    }
+
+    .aqua-home2-cta-content h2 {
+        font-size: 38px;
+    }
+
+    .aqua-home2-cta-content p {
+        font-size: 15px;
+    }
+
+    .aqua-home2-cta-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .aqua-home2-cta-primary,
+    .aqua-home2-cta-secondary {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .aqua-home2-water-drop {
+        display: none;
+    }
+
+    .circle-one {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 650px) {
+
+    /* ---------- HEADER ---------- */
+
+    .header-container {
+        padding: 0 4%;
+    }
+
+    .brand-content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .brand-name {
+        font-size: 20px;
+    }
+
+    .brand-tagline {
+        font-size: 8px;
+    }
+
+    .header-actions {
+        gap: 5px;
+    }
+
+    .icon-button {
+        width: 38px;
+        height: 38px;
+    }
+
+    .login-btn {
+        display: none;
+    }
+
+
+    /* ---------- HERO ---------- */
+
+    .hero {
+        min-height: 680px;
+        height: auto;
+        padding-bottom: 70px;
+    }
+
+    .hero-content {
+        width: 88%;
+        padding-top: 35px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+        line-height: 1.08;
+    }
+
+    .hero-description {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .small-title {
+        font-size: 9px;
+        letter-spacing: 1px;
+        padding: 7px 12px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+    }
+
+    .btn {
+        width: 100%;
+        min-width: 0;
+        padding: 14px 18px;
+    }
+
+    .water-circle {
+        width: 160px;
+        height: 160px;
+        right: -85px;
+        top: 55%;
+    }
+
+
+    /* ---------- PROCESS ---------- */
+
+    .process-section {
+        padding: 70px 6%;
+    }
+
+    .process-heading {
+        margin-bottom: 45px;
+    }
+
+    .process-heading h2 {
+        font-size: 27px;
+    }
+
+    .process-heading p {
+        font-size: 13px;
+    }
+
+    .process-timeline {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .process-item {
+        display: grid;
+        grid-template-columns: 68px 1fr;
+        gap: 15px;
+        align-items: start;
+    }
+
+    .process-number {
+        width: 62px;
+        height: 62px;
+        margin: 0;
+        font-size: 16px;
+    }
+
+    .process-card {
+        min-height: auto;
+        padding: 23px 19px;
+        border-radius: 17px;
+    }
+
+    .process-icon {
+        width: 48px;
+        height: 48px;
+        margin-bottom: 17px;
+        border-radius: 13px;
+    }
+
+    .process-card h3 {
+        font-size: 18px;
+    }
+
+    .process-card p {
+        font-size: 12px;
+        line-height: 1.7;
+    }
+
+    .step-tag {
+        font-size: 9px;
+    }
+
+    .process-line {
+        display: none;
+    }
+
+
+    /* ---------- SMART IRRIGATION ---------- */
+
+    .smart-irrigation {
+        padding: 70px 6%;
+    }
+
+    .smart-content h2 {
+        font-size: 28px;
+    }
+
+    .smart-intro {
+        font-size: 13px;
+        line-height: 1.7;
+    }
+
+    .smart-features {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        margin-bottom: 30px;
+    }
+
+    .smart-feature {
+        gap: 12px;
+    }
+
+    .smart-icon {
+        width: 45px;
+        height: 45px;
+        min-width: 45px;
+        font-size: 17px;
+        border-radius: 12px;
+    }
+
+    .smart-feature h3 {
+        font-size: 15px;
+    }
+
+    .smart-feature p {
+        font-size: 12px;
+    }
+
+    .smart-btn {
+        width: 100%;
+        justify-content: center;
+        padding: 13px 18px;
+        font-size: 13px;
+    }
+
+    .smart-image-box {
+        height: 430px;
+        border-radius: 22px;
+    }
+
+    .smart-status {
+        top: 15px;
+        left: 15px;
+        right: 15px;
+        padding: 15px;
+        border-radius: 16px;
+    }
+
+    .status-top {
+        font-size: 8px;
+        margin-bottom: 10px;
+    }
+
+    .status-main {
+        gap: 10px;
+    }
+
+    .status-main > i {
+        width: 38px;
+        height: 38px;
+        font-size: 16px;
+    }
+
+    .status-main strong {
+        font-size: 13px;
+    }
+
+    .status-main small {
+        font-size: 10px;
+    }
+
+    .saving-card {
+        left: 15px;
+        bottom: 15px;
+        padding: 13px 16px;
+        border-radius: 15px;
+        gap: 10px;
+    }
+
+    .saving-icon {
+        width: 38px;
+        height: 38px;
+        border-radius: 11px;
+    }
+
+    .saving-card span {
+        font-size: 8px;
+    }
+
+    .saving-card strong {
+        font-size: 13px;
+    }
+
+
+    /* ---------- COMMON SECTIONS ---------- */
+
+    .section {
+        padding: 70px 6%;
+    }
+
+    .section-heading {
+        margin-bottom: 45px;
+    }
+
+    .section-heading h2 {
+        font-size: 27px;
+    }
+
+    .section-heading p {
+        font-size: 13px;
+        line-height: 1.7;
+    }
+
+
+    /* ---------- SERVICES ---------- */
+
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .service-card {
+        padding: 25px 20px;
+    }
+
+    .service-icon {
+        width: 48px;
+        height: 48px;
+        font-size: 18px;
+        border-radius: 13px;
+    }
+
+    .service-card h3 {
+        font-size: 17px;
+    }
+
+    .service-card p {
+        font-size: 12px;
+        line-height: 1.7;
+    }
+
+
+    /* ---------- BEFORE / AFTER ---------- */
+
+    .comparison-wrapper {
+        gap: 20px;
+    }
+
+    .comparison-image {
+        height: 230px;
+    }
+
+    .comparison-label {
+        top: 14px;
+        left: 14px;
+        padding: 4px 12px;
+        font-size: 8px;
+    }
+
+    .comparison-content {
+        padding: 22px 19px;
+    }
+
+    .comparison-content h3 {
+        font-size: 18px;
+    }
+
+    .comparison-content p {
+        font-size: 12px;
+    }
+
+    .comparison-arrow {
+        transform: rotate(90deg);
+    }
+
+    .comparison-benefits {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        margin-top: 35px;
+    }
+
+    .benefit-item {
+        padding: 15px;
+        border-radius: 15px;
+    }
+
+    .benefit-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .benefit-item strong {
+        font-size: 12px;
+    }
+
+    .benefit-item p {
+        font-size: 10px;
+    }
+
+
+    /* ---------- TESTIMONIALS ---------- */
+
+    .testimonials-section {
+        padding: 70px 6%;
+    }
+
+    .testimonials-heading {
+        margin-bottom: 45px;
+    }
+
+    .testimonials-heading h2 {
+        font-size: 27px;
+    }
+
+    .testimonials-heading p {
+        font-size: 13px;
+    }
+
+    .testimonial-card {
+        padding: 27px 21px;
+        border-radius: 20px;
+    }
+
+    .quote-icon {
+        width: 46px;
+        height: 46px;
+        font-size: 17px;
+        border-radius: 13px;
+    }
+
+    .testimonial-text {
+        font-size: 13px;
+        line-height: 1.75;
+        margin-bottom: 25px;
+    }
+
+    .client-avatar {
+        width: 43px;
+        height: 43px;
+        font-size: 11px;
+    }
+
+    .client {
+        gap: 10px;
+    }
+
+    .testimonial-stats {
+        grid-template-columns: 1fr;
+        padding: 10px 18px;
+        margin-top: 40px;
+    }
+
+    .testimonial-stat {
+        padding: 17px 0;
+        border-right: none !important;
+        border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+    }
+
+    .testimonial-stat:last-child {
+        border-bottom: none;
+    }
+
+    body.dark .testimonial-stat {
+        border-bottom-color: rgba(255, 255, 255, 0.08);
+    }
+
+    .testimonial-stat strong {
+        font-size: 26px;
+    }
+
+
+    /* ---------- CTA ---------- */
+
+    .aqua-home2-cta {
+        min-height: 520px;
+        padding: 65px 6%;
+    }
+
+    .aqua-home2-cta-content h2 {
+        font-size: 32px;
+        letter-spacing: -0.8px;
+    }
+
+    .aqua-home2-cta-content p {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .aqua-home2-cta-label {
+        font-size: 10px;
+        letter-spacing: 1.2px;
+    }
+
+    .aqua-home2-cta-primary,
+    .aqua-home2-cta-secondary {
+        max-width: 280px;
+        font-size: 13px;
+    }
+
+    .circle-one {
+        width: 170px;
+        height: 170px;
+        right: -80px;
+        top: -70px;
+    }
+
+    .circle-two {
+        width: 260px;
+        height: 260px;
+        left: -150px;
+        bottom: -160px;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    /* ---------- HEADER ---------- */
+
+    .logo-text {
+        font-size: 18px;
+    }
+
+    .logo-icon {
+        width: 38px;
+        height: 38px;
+        font-size: 18px;
+    }
+
+    .theme-btn {
+        width: 38px;
+        height: 38px;
+    }
+
+    .icon-button {
+        width: 35px;
+        height: 35px;
+    }
+
+    .menu-button {
+        width: 35px;
+        height: 35px;
+    }
+
+
+    /* ---------- HERO ---------- */
+
+    .hero {
+        min-height: 650px;
+    }
+
+    .hero h1 {
+        font-size: 35px;
+    }
+
+    .hero-description {
+        font-size: 13px;
+    }
+
+    .small-title {
+        font-size: 8px;
+    }
+
+
+    /* ---------- PROCESS ---------- */
+
+    .process-section {
+        padding: 60px 5%;
+    }
+
+    .process-heading h2 {
+        font-size: 25px;
+    }
+
+    .process-item {
+        grid-template-columns: 58px 1fr;
+        gap: 12px;
+    }
+
+    .process-number {
+        width: 55px;
+        height: 55px;
+        font-size: 14px;
+    }
+
+    .process-card {
+        padding: 20px 17px;
+    }
+
+    .process-card h3 {
+        font-size: 17px;
+    }
+
+
+    /* ---------- SMART ---------- */
+
+    .smart-irrigation {
+        padding: 60px 5%;
+    }
+
+    .smart-content h2 {
+        font-size: 25px;
+    }
+
+    .smart-image-box {
+        height: 370px;
+        border-radius: 18px;
+    }
+
+    .smart-status {
+        padding: 12px;
+    }
+
+    .status-main > i {
+        width: 34px;
+        height: 34px;
+        font-size: 14px;
+    }
+
+    .status-main strong {
+        font-size: 12px;
+    }
+
+    .status-main small {
+        font-size: 9px;
+    }
+
+    .saving-card {
+        left: 12px;
+        bottom: 12px;
+        padding: 11px 13px;
+    }
+
+
+    /* ---------- SECTIONS ---------- */
+
+    .section {
+        padding: 60px 5%;
+    }
+
+    .section-heading h2 {
+        font-size: 25px;
+    }
+
+
+    /* ---------- SERVICES ---------- */
+
+    .service-card {
+        padding: 23px 18px;
+    }
+
+
+    /* ---------- COMPARISON ---------- */
+
+    .comparison-image {
+        height: 210px;
+    }
+
+    .comparison-content {
+        padding: 20px 17px;
+    }
+
+    .comparison-content h3 {
+        font-size: 17px;
+    }
+
+
+    /* ---------- TESTIMONIALS ---------- */
+
+    .testimonials-section {
+        padding: 60px 5%;
+    }
+
+    .testimonials-heading h2 {
+        font-size: 25px;
+    }
+
+    .testimonial-card {
+        padding: 24px 18px;
+    }
+
+
+    /* ---------- CTA ---------- */
+
+    .aqua-home2-cta {
+        min-height: 500px;
+        padding: 60px 5%;
+    }
+
+    .aqua-home2-cta-content h2 {
+        font-size: 29px;
+    }
+
+    .aqua-home2-cta-content p {
+        font-size: 13px;
+    }
+
+    .aqua-home2-cta-primary,
+    .aqua-home2-cta-secondary {
+        max-width: 260px;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL DEVICES
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+    .hero h1 {
+        font-size: 31px;
+    }
+
+    .hero-description {
+        font-size: 12px;
+    }
+
+    .small-title {
+        padding: 6px 10px;
+    }
+
+    .process-heading h2,
+    .section-heading h2,
+    .smart-content h2,
+    .testimonials-heading h2 {
+        font-size: 23px;
+    }
+
+    .process-item {
+        grid-template-columns: 1fr;
+    }
+
+    .process-number {
+        margin-bottom: 5px;
+    }
+
+    .process-card {
+        padding: 18px 16px;
+    }
+
+    .smart-image-box {
+        height: 330px;
+    }
+
+    .comparison-image {
+        height: 190px;
+    }
+
+    .aqua-home2-cta-content h2 {
+        font-size: 26px;
+    }
+}
+
+
+/* =========================================================
+   RTL RESPONSIVE SUPPORT
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+    html[dir="rtl"] .hero-content {
+        text-align: right;
+    }
+
+    html[dir="rtl"] .hero-buttons {
+        justify-content: flex-start;
+    }
+
+    html[dir="rtl"] .process-item {
+        direction: rtl;
+    }
+
+    html[dir="rtl"] .smart-feature {
+        direction: rtl;
+    }
+
+    html[dir="rtl"] .smart-content {
+        text-align: right;
+    }
+
+    html[dir="rtl"] .comparison-content {
+        text-align: right;
+    }
+
+    html[dir="rtl"] .benefit-item {
+        direction: rtl;
+    }
+
+    html[dir="rtl"] .testimonial-card {
+        text-align: right;
+    }
+
+    html[dir="rtl"] .client {
+        direction: rtl;
+    }
+
+    html[dir="rtl"] .aqua-home2-cta-content {
+        text-align: center;
+    }
+
+    html[dir="rtl"] .smart-btn i {
+        transform: rotate(180deg);
+    }
+}
+
+
+/* =========================================================
+   TOUCH DEVICE HOVER FIX
+   ========================================================= */
+
+@media (hover: none) and (pointer: coarse) {
+
+    .process-card:hover,
+    .service-card:hover,
+    .comparison-card:hover,
+    .testimonial-card:hover {
+        transform: none;
+    }
+
+    .smart-image-box:hover img,
+    .comparison-card:hover .comparison-image img {
+        transform: none;
+    }
+
+    .primary-btn:hover,
+    .secondary-btn:hover,
+    .smart-btn:hover,
+    .aqua-home2-cta-primary:hover,
+    .aqua-home2-cta-secondary:hover {
+        transform: none;
+    }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}

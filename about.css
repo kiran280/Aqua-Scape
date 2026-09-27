@@ -1932,21 +1932,6 @@ body.dark-theme .conservation-section {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* =========================================================
    AQUASCAPE ABOUT CTA
 ========================================================= */
@@ -2236,4 +2221,815 @@ html[dir="rtl"] .aquascape-about-cta-primary:hover i {
         max-width: 250px;
     }
 
+}
+
+
+
+
+/* =========================================================
+   AQUASCAPE ABOUT PAGE
+   COMPLETE RESPONSIVE MEDIA QUERIES
+========================================================= */
+
+
+/* =========================================================
+   LARGE TABLET / SMALL LAPTOP
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    /* GENERAL SECTIONS */
+    .about-section {
+        padding: 85px 5%;
+    }
+
+    .section-header {
+        max-width: 720px;
+        margin-bottom: 45px;
+    }
+
+
+    /* WHO WE ARE */
+    .who-wrapper {
+        grid-template-columns: 1fr 1fr;
+        gap: 35px;
+        padding: 25px;
+    }
+
+    .who-image {
+        height: 520px;
+        margin-top: 50px;
+    }
+
+    .who-content h3 {
+        font-size: 30px;
+    }
+
+    .who-content p {
+        font-size: 15px;
+    }
+
+    .who-highlights {
+        gap: 12px;
+    }
+
+    .highlight {
+        padding: 15px;
+    }
+
+    .who-stats {
+        gap: 10px;
+    }
+
+
+    /* MISSION */
+    .mission-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
+    }
+
+    .mission-card {
+        padding: 28px 22px;
+    }
+
+
+    /* CONSERVATION */
+    .conservation-wrapper {
+        gap: 35px;
+    }
+
+    .conservation-image {
+        height: 460px;
+    }
+
+
+    /* TEAM */
+    .team-grid {
+        gap: 18px;
+    }
+
+    .team-image {
+        height: 280px;
+    }
+
+    .team-info {
+        padding: 20px;
+    }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .about-section {
+        padding: 75px 5%;
+    }
+
+    .section-header h2 {
+        font-size: 32px;
+    }
+
+    .section-header p {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+
+    /* WHO WE ARE */
+
+    .who-wrapper {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        padding: 25px;
+    }
+
+    .who-image {
+        height: 450px;
+        margin-top: 0;
+        width: 100%;
+    }
+
+    .who-content {
+        padding: 5px;
+    }
+
+    .who-content h3 {
+        font-size: 30px;
+    }
+
+    .who-highlights {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .who-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    /* MISSION */
+
+    .mission-grid {
+        grid-template-columns: 1fr;
+        max-width: 650px;
+    }
+
+    .mission-card {
+        padding: 30px;
+    }
+
+
+    /* CONSERVATION */
+
+    .conservation-wrapper {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .conservation-image {
+        height: 420px;
+        width: 100%;
+    }
+
+    .conservation-content {
+        padding: 5px;
+    }
+
+
+    /* COMMITMENT */
+
+    .commitment-section {
+        min-height: 500px;
+    }
+
+    .commitment-content {
+        padding: 30px;
+    }
+
+
+    /* TEAM */
+
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 750px;
+    }
+
+    .team-image {
+        height: 300px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    /* GENERAL */
+
+    .about-section {
+        padding: 65px 20px;
+    }
+
+    .section-header {
+        margin-bottom: 35px;
+    }
+
+    .section-header h2 {
+        font-size: 28px;
+        line-height: 1.25;
+    }
+
+    .section-header p {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .section-tag {
+        font-size: 11px;
+        letter-spacing: 1px;
+    }
+
+
+    /* WHO WE ARE */
+
+    .who-section {
+        padding-top: 70px;
+    }
+
+    .who-wrapper {
+        padding: 18px;
+        border-radius: 18px;
+        gap: 30px;
+    }
+
+    .who-image {
+        height: 350px;
+        border-radius: 15px;
+    }
+
+    .who-content h3 {
+        font-size: 27px;
+        line-height: 1.3;
+        margin-bottom: 18px;
+    }
+
+    .who-content p {
+        font-size: 14px;
+        line-height: 1.8;
+    }
+
+    .content-tag {
+        font-size: 10px;
+        letter-spacing: 1.4px;
+    }
+
+
+    /* HIGHLIGHTS */
+
+    .who-highlights {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        margin-top: 25px;
+    }
+
+    .highlight {
+        padding: 16px;
+    }
+
+    .highlight h4 {
+        font-size: 15px;
+    }
+
+    .highlight p {
+        font-size: 12px;
+    }
+
+
+    /* STATS */
+
+    .who-stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        margin-top: 22px;
+    }
+
+    .stat-box {
+        padding: 16px 8px;
+    }
+
+    .stat-box strong {
+        font-size: 21px;
+    }
+
+    .stat-box span {
+        font-size: 10px;
+    }
+
+
+    /* MISSION */
+
+    .mission-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .mission-card {
+        padding: 25px 20px;
+    }
+
+    .mission-icon {
+        width: 48px;
+        height: 48px;
+        font-size: 17px;
+        margin-bottom: 16px;
+    }
+
+    .mission-card h3 {
+        font-size: 19px;
+    }
+
+    .mission-card p {
+        font-size: 13px;
+        line-height: 1.75;
+    }
+
+
+    /* WATER CONSERVATION */
+
+    .conservation-wrapper {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .conservation-image {
+        height: 350px;
+        border-radius: 16px;
+    }
+
+    .conservation-content {
+        padding: 0;
+    }
+
+    .conservation-content h2 {
+        font-size: 28px;
+    }
+
+    .conservation-content p {
+        font-size: 14px;
+        line-height: 1.8;
+        margin-bottom: 18px;
+    }
+
+    .check-list {
+        gap: 11px;
+    }
+
+    .check-item {
+        font-size: 13px;
+        gap: 10px;
+    }
+
+    .check {
+        width: 21px;
+        height: 21px;
+        font-size: 11px;
+    }
+
+
+    /* COMMITMENT */
+
+    .commitment-section {
+        min-height: 450px;
+    }
+
+    .commitment-content {
+        padding: 25px 10px;
+    }
+
+    .commitment-content h2 {
+        font-size: 28px;
+    }
+
+    .commitment-content p {
+        font-size: 14px;
+        line-height: 1.8;
+    }
+
+
+    /* TEAM */
+
+    .team-grid {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+        gap: 18px;
+    }
+
+    .team-image {
+        height: 330px;
+    }
+
+    .team-info {
+        padding: 22px 18px;
+    }
+
+    .team-info h3 {
+        font-size: 19px;
+    }
+
+    .team-role {
+        font-size: 12px;
+    }
+
+    .team-info p {
+        font-size: 13px;
+        line-height: 1.7;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 520px) {
+
+    .about-section {
+        padding: 55px 15px;
+    }
+
+    .section-header {
+        margin-bottom: 30px;
+    }
+
+    .section-header h2 {
+        font-size: 25px;
+    }
+
+    .section-header p {
+        font-size: 13px;
+    }
+
+
+    /* WHO WE ARE */
+
+    .who-wrapper {
+        padding: 14px;
+        gap: 25px;
+    }
+
+    .who-image {
+        height: 290px;
+    }
+
+    .who-content h3 {
+        font-size: 24px;
+    }
+
+    .who-content p {
+        font-size: 13px;
+    }
+
+    .content-tag {
+        font-size: 9px;
+    }
+
+
+    /* HIGHLIGHTS */
+
+    .highlight {
+        padding: 14px;
+        border-radius: 12px;
+    }
+
+    .highlight h4 {
+        font-size: 14px;
+    }
+
+    .highlight p {
+        font-size: 11.5px;
+    }
+
+
+    /* STATS */
+
+    .who-stats {
+        gap: 8px;
+    }
+
+    .stat-box {
+        padding: 14px 6px;
+        border-radius: 12px;
+    }
+
+    .stat-box strong {
+        font-size: 19px;
+    }
+
+    .stat-box span {
+        font-size: 9px;
+    }
+
+
+    /* MISSION */
+
+    .mission-card {
+        padding: 22px 17px;
+        border-radius: 15px;
+    }
+
+    .mission-card h3 {
+        font-size: 18px;
+    }
+
+    .mission-card p {
+        font-size: 12.5px;
+    }
+
+
+    /* CONSERVATION */
+
+    .conservation-image {
+        height: 280px;
+    }
+
+    .conservation-content h2 {
+        font-size: 25px;
+    }
+
+    .conservation-content p {
+        font-size: 13px;
+    }
+
+    .check-item {
+        font-size: 12px;
+    }
+
+
+    /* COMMITMENT */
+
+    .commitment-section {
+        min-height: 420px;
+    }
+
+    .commitment-content {
+        padding: 20px 5px;
+    }
+
+    .commitment-content h2 {
+        font-size: 25px;
+    }
+
+    .commitment-content p {
+        font-size: 13px;
+    }
+
+
+    /* TEAM */
+
+    .team-image {
+        height: 280px;
+    }
+
+    .team-info {
+        padding: 20px 15px;
+    }
+
+    .team-info h3 {
+        font-size: 18px;
+    }
+
+    .team-info p {
+        font-size: 12px;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 380px) {
+
+    .about-section {
+        padding: 48px 12px;
+    }
+
+    .section-header h2 {
+        font-size: 23px;
+    }
+
+    .section-header p {
+        font-size: 12px;
+    }
+
+
+    /* WHO WE ARE */
+
+    .who-wrapper {
+        padding: 12px;
+    }
+
+    .who-image {
+        height: 245px;
+    }
+
+    .who-content h3 {
+        font-size: 22px;
+    }
+
+    .who-content p {
+        font-size: 12px;
+    }
+
+
+    /* STATS */
+
+    .who-stats {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .stat-box strong {
+        font-size: 17px;
+    }
+
+    .stat-box span {
+        font-size: 8px;
+    }
+
+
+    /* MISSION */
+
+    .mission-card {
+        padding: 20px 14px;
+    }
+
+    .mission-icon {
+        width: 44px;
+        height: 44px;
+        font-size: 15px;
+    }
+
+    .mission-card h3 {
+        font-size: 17px;
+    }
+
+    .mission-card p {
+        font-size: 11.5px;
+    }
+
+
+    /* CONSERVATION */
+
+    .conservation-image {
+        height: 240px;
+    }
+
+    .conservation-content h2 {
+        font-size: 23px;
+    }
+
+
+    /* COMMITMENT */
+
+    .commitment-section {
+        min-height: 390px;
+    }
+
+    .commitment-content h2 {
+        font-size: 23px;
+    }
+
+
+    /* TEAM */
+
+    .team-image {
+        height: 245px;
+    }
+
+    .team-info {
+        padding: 18px 12px;
+    }
+}
+
+
+/* =========================================================
+   RTL RESPONSIVE SUPPORT
+========================================================= */
+
+@media (max-width: 900px) {
+
+    html[dir="rtl"] .who-wrapper,
+    html[dir="rtl"] .conservation-wrapper {
+        direction: rtl;
+    }
+
+    html[dir="rtl"] .who-content,
+    html[dir="rtl"] .conservation-content {
+        text-align: right;
+    }
+
+    html[dir="rtl"] .check-item {
+        flex-direction: row;
+    }
+
+    html[dir="rtl"] .mission-card,
+    html[dir="rtl"] .team-card {
+        text-align: right;
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    html[dir="rtl"] .who-content,
+    html[dir="rtl"] .conservation-content,
+    html[dir="rtl"] .mission-card,
+    html[dir="rtl"] .team-card {
+        text-align: center;
+    }
+
+    html[dir="rtl"] .check-item {
+        justify-content: flex-start;
+        text-align: right;
+    }
+}
+
+
+/* =========================================================
+   MOBILE IMAGE SAFETY
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .who-image img,
+    .conservation-image img,
+    .team-image img {
+        width: 100%;
+        display: block;
+    }
+
+    .who-image,
+    .conservation-image,
+    .team-image {
+        max-width: 100%;
+    }
+
+    .about-section,
+    .who-wrapper,
+    .mission-grid,
+    .conservation-wrapper,
+    .team-grid {
+        box-sizing: border-box;
+    }
+}
+
+
+/* =========================================================
+   REDUCE ANIMATION ON SMALL DEVICES
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .abx2-main-image,
+    .abx2-small-image,
+    .abx2-experience,
+    .abx2-water-card,
+    .abx2-floating-leaf,
+    .abx2-drop {
+        animation-duration: 7s;
+    }
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .abx2-main-image,
+    .abx2-small-image,
+    .abx2-experience,
+    .abx2-water-card,
+    .abx2-floating-leaf,
+    .abx2-drop,
+    .abx2-content h1,
+    .abx2-content p,
+    .abx2-buttons,
+    .abx2-mini-info,
+    .abx2-badge {
+        animation: none !important;
+    }
+
+    .highlight,
+    .mission-card,
+    .team-card,
+    .who-image img,
+    .team-image img {
+        transition: none !important;
+    }
 }
