@@ -614,6 +614,18 @@
         var(--green),
     );
 }
+
+
+.nav-link.active {
+    color: linear-gradient(
+        135deg,
+        var(--blue),
+        var(--green));
+}
+
+.nav-link.active::after {
+    width: 60%;
+}
  
 
 
