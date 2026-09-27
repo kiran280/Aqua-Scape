@@ -607,6 +607,15 @@
                 var(--muted);
         }
 
+        .nav-link.active {
+    color: linear-gradient(
+        135deg,
+        var(--blue),
+        var(--green),
+    );
+}
+ 
+
 
         /* =========================================================
            HEADER ACTIONS
