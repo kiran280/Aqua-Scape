@@ -317,7 +317,7 @@
   font-size: clamp(20px, 5vw, 35px);
   line-height: 1.1;
   margin: 0 0 20px;
-  font-weight: 800;
+  font-weight: 600;
 }
 
 .process-heading h2 span {
@@ -328,6 +328,8 @@
   color: #64748b;
   line-height: 1.8;
   font-size: 16px;
+
+  font-weight: 500;
 }
 
 /* Timeline */
@@ -644,7 +646,7 @@ body.dark .process-card p {
 
   line-height: 1.08;
 
-  font-weight: 800;
+  font-weight: 600;
 
   margin: 0 0 25px;
 }
@@ -664,6 +666,8 @@ body.dark .process-card p {
   max-width: 560px;
 
   margin-bottom: 38px;
+
+  font-weight: 500;
 }
 
 
@@ -1177,7 +1181,7 @@ body.dark .saving-card strong {
 
   margin-bottom: 20px;
 
-  font-weight: 800;
+  font-weight: 600;
 }
 
 .section-heading h2 span {
@@ -1194,6 +1198,8 @@ body.dark .saving-card strong {
   line-height: 1.8;
 
   font-size: 15px;
+
+  font-weight: 500;
 }
 
 
@@ -1218,9 +1224,6 @@ body.dark .saving-card strong {
 
   background: var(--light-card);
 
-  border:
-    1px solid var(--green);
-
   border-radius: 22px;
 
   transition: var(--transition);
@@ -1229,7 +1232,7 @@ body.dark .saving-card strong {
 .service-card:hover {
 
   transform: translateY(-8px);
-
+  
   border-color:
     var(--blue);
 }
@@ -1238,6 +1241,7 @@ body.dark .saving-card strong {
 
   width: 58px;
   height: 58px;
+
 
   display: flex;
 
@@ -1256,11 +1260,12 @@ body.dark .saving-card strong {
   margin-bottom: 22px;
 }
 
-.service-card:nth-child(even)
 .service-icon {
 
   background:
     rgba(38,166,91,0.1);
+
+ margin-top: 20px;
 
   color: var(--green);
 }
@@ -1280,6 +1285,14 @@ body.dark .saving-card strong {
 
   line-height: 1.7;
 }
+
+
+
+
+
+
+
+
 
 
 
@@ -1542,597 +1555,504 @@ body.dark .saving-card strong {
 
 
 
-/* =========================================
-   TESTIMONIALS
-========================================= */
 
-.testimonials-section {
 
-  padding: 115px 7%;
 
-  background: #f4f8fa;
 
-  color: #111827;
 
-  position: relative;
 
-  overflow: hidden;
 
-  transition: 0.4s ease;
+/* ==========================================
+   AQUASCAPE TESTIMONIALS
+========================================== */
+
+.aqua-testimonials {
+
+    width: 100%;
+
+    padding: 90px 6%;
+
+    background: #f5f9fb;
+
+    color: #172536;
+
+    transition: 0.35s ease;
 }
 
 
-.testimonials-container {
+/* ==========================================
+   CONTAINER
+========================================== */
 
-  max-width: 1250px;
+.aqua-testimonials-container {
 
-  margin: auto;
+    width: 100%;
+
+    max-width: 1500px;
+
+    margin: auto;
 }
 
 
-/* =========================================
+/* ==========================================
    HEADING
-========================================= */
+========================================== */
 
-.testimonials-heading {
+.aqua-testimonials-heading {
 
-  max-width: 720px;
+    text-align: center;
 
-  margin: 0 auto 70px;
+    max-width: 760px;
 
-  text-align: center;
+    margin: 0 auto 55px;
 }
 
 
-.testimonials-label {
+.aqua-testimonials-label {
 
-  display: inline-block;
+    display: inline-block;
 
-  margin-bottom: 16px;
+    margin-bottom: 12px;
 
-  color: var(--blue);
+    color: var(--blue);
 
-  font-size: 12px;
+    font-size: 12px;
 
-  font-weight: 800;
+    font-weight: 800;
 
-  letter-spacing: 1.2px;
+    letter-spacing: 1.22px;
 }
 
 
-.testimonials-heading h2 {
+.aqua-testimonials-heading h2 {
 
-  margin: 0 0 20px;
+    margin: 0 0 16px;
 
- 
-  font-size:
-    clamp(20px, 5vw, 35px);
+    font-size: clamp(25px, 5vw, 36px);
 
-  line-height: 1.08;
+    line-height: 1.2;
 
-  font-weight: 800;
+    color: var(--black);
+
+    font-weight: 600;
 }
 
 
-.testimonials-heading h2 span {
+.aqua-testimonials-heading p {
 
-  display: block;
+    margin: 0;
 
-  color: #26a65b;
+    font-size: 17px;
+
+    line-height: 1.7;
+
+    color: grey;
+
+    font-weight: 500;
 }
 
 
-.testimonials-heading p {
-
-  color: #64748b;
-
-  font-size: 15px;
-
-  line-height: 1.8;
-
-  margin: 0;
-}
-
-
-/* =========================================
+/* ==========================================
    TESTIMONIAL GRID
-========================================= */
+========================================== */
 
-.testimonials-grid {
+.aqua-testimonials-grid {
 
-  display: grid;
+    display: grid;
 
-  grid-template-columns:
-    repeat(3, 1fr);
+    grid-template-columns:
+        repeat(3, 1fr);
 
-  gap: 25px;
+    gap: 35px;
 }
 
 
-/* =========================================
+/* ==========================================
    TESTIMONIAL CARD
-========================================= */
+========================================== */
 
-.testimonial-card {
+.aqua-testimonial-card {
 
-  position: relative;
+    min-height: 500px;
 
-  padding: 35px 30px;
+    padding: 40px;
 
-  min-height: 350px;
+    background: #ffffff;
 
-  background: #ffffff;
+    border: 1px solid var(--green);
 
-  border:
-    1px solid var(--green);
+    border-radius: 30px;
 
-  border-radius: 25px;
+    display: flex;
 
-  box-shadow:
-    0 20px 55px rgba(15,23,42,0.08);
+    flex-direction: column;
 
-  transition:
-    transform 0.4s ease,
-    box-shadow 0.4s ease,
-    background 0.4s ease;
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        border-color 0.35s ease,
+        background 0.35s ease;
 }
 
 
-.testimonial-card:hover {
+/* ==========================================
+   HOVER
+========================================== */
 
-  transform: translateY(-10px);
+.aqua-testimonial-card:hover {
 
-  box-shadow:
-    0 30px 70px rgba(15,23,42,0.15);
+    transform: translateY(-8px);
+
+    border-color: var(--blue);
+
+    box-shadow:
+        0 20px 45px var(--blue);
 }
 
 
-/* Featured Card */
-
-.featured-testimonial {
-
-  border:
-    1px solid var(--green);
-
-}
-
-
-.featured-testimonial:hover {
-
-  transform:
-    translateY(-16px);
-}
-
-
-/* =========================================
+/* ==========================================
    QUOTE ICON
-========================================= */
+========================================== */
 
-.quote-icon {
+.aqua-quote-box {
 
-  width: 52px;
+    width: 55px;
 
-  height: 52px;
+    height: 55px;
 
-  display: flex;
+    border-radius: 20px;
 
-  align-items: center;
+    margin-bottom: 25px;
 
-  justify-content: center;
+    background: #e6f3fa;
 
-  border-radius: 15px;
+    color: #299447;
 
-  background:
-    rgba(22,135,217,0.10);
+    display: flex;
 
-  color: var(--green);
+    align-items: center;
 
-  font-size: 19px;
+    justify-content: center;
 
-  margin-bottom: 20px;
+    font-size: 30px;
 }
 
 
-.featured-testimonial
-.quote-icon {
+.aqua-green-quote {
 
-  background:
-    rgba(38,166,91,0.10);
-
-  color: #26a65b;
+    background: #e8f6ee;
 }
 
 
-/* =========================================
+/* ==========================================
    STARS
-========================================= */
+========================================== */
 
-.stars {
+.aqua-stars {
 
-  display: flex;
+    display: flex;
 
-  gap: 4px;
+    gap: 6px;
 
-  margin-bottom: 18px;
-
-  color: gold;
-
-  font-size: 12px;
+    margin-bottom: 25px;
 }
 
 
-/* =========================================
-   TESTIMONIAL TEXT
-========================================= */
+.aqua-stars i {
 
-.testimonial-text {
+    color: #ffc400;
 
-  color: #64748b;
-
-  font-size: 14px;
-
-  line-height: 1.8;
-
-  margin-bottom: 30px;
+    font-size: 18px;
 }
 
 
-/* =========================================
+/* ==========================================
+   REVIEW
+========================================== */
+
+.aqua-review {
+
+    flex: 1;
+
+
+    color: #657a92;
+
+    font-size: 13px;
+
+    line-height: 1.8;
+}
+
+
+/* ==========================================
    CLIENT
-========================================= */
+========================================== */
 
-.client {
+.aqua-client {
 
-  display: flex;
+    padding-top: 12px;
 
-  align-items: center;
+    border-top: 1px solid #e5e9ed;
 
-  gap: 13px;
+    display: flex;
 
-  padding-top: 20px;
+    align-items: center;
 
-  border-top:
-    1px solid rgba(15,23,42,0.07);
+    gap: 17px;
 }
 
 
-.client-avatar {
+/* ==========================================
+   PROFILE IMAGE
+========================================== */
 
-  width: 48px;
+.aqua-profile {
 
-  height: 48px;
+    width: 70px;
 
-  display: flex;
+    height: 70px;
 
-  align-items: center;
+    min-width: 70px;
 
-  justify-content: center;
+    border-radius: 50%;
 
-  border-radius: 50%;
+    overflow: hidden;
 
-  background:
-    linear-gradient(
-      135deg,
-      #1687d9,
-      #0967aa
-    );
+    border: 3px solid #168bd1;
 
-  color: #ffffff;
-
-  font-size: 13px;
-
-  font-weight: 800;
+    background: #eaf5fa;
 }
 
 
-.green-avatar {
+.aqua-profile img {
 
-  background:
-    linear-gradient(
-      135deg,
-      #26a65b,
-      #198347
-    );
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
 }
 
 
-.client h3 {
+/* Green profile border */
 
-  font-size: 15px;
+.aqua-profile-green {
 
-  margin-bottom: 4px;
+    border-color: #299447;
 }
 
 
-.client span {
+/* ==========================================
+   CLIENT DETAILS
+========================================== */
 
-  color: #64748b;
+.aqua-client-details h3 {
 
-  font-size: 11px;
+    margin: 0 0 7px;
+
+    font-size: 20px;
+
+    color: #172536;
+
+    font-weight: 700;
 }
 
 
-/* =========================================
-   STATISTICS
-========================================= */
+.aqua-client-details span {
 
-.testimonial-stats {
+    color: #71849a;
 
-  display: grid;
-
-  grid-template-columns:
-    repeat(4, 1fr);
-
-  margin-top: 55px;
-
-  padding: 30px;
-
-  background: #ffffff;
-
-  border:
-    1px solid rgba(15,23,42,0.08);
-
-  border-radius: 22px;
-
-  box-shadow:
-    0 15px 45px rgba(15,23,42,0.06);
+    font-size: 14px;
 }
 
 
-.testimonial-stat {
 
-  text-align: center;
-
-  border-right:
-    1px solid rgba(15,23,42,0.08);
-}
-
-
-.testimonial-stat:last-child {
-
-  border-right: none;
-}
-
-
-.testimonial-stat strong {
-
-  display: block;
-
-  color: #1687d9;
-
-  font-size: 30px;
-
-  font-weight: 800;
-
-  margin-bottom: 5px;
-}
-
-
-.testimonial-stat:nth-child(even)
-strong {
-
-  color: #26a65b;
-}
-
-
-.testimonial-stat span {
-
-  color: #64748b;
-
-  font-size: 11px;
-
-  font-weight: 600;
-}
-
-
-/* =========================================
-   DARK MODE
-========================================= */
-
-body.dark .testimonials-section {
-
-  background: #000000;
-
-  color: #ffffff;
-}
-
-
-body.dark .testimonials-heading h2 {
-
-  color: #ffffff;
-}
-
-
-body.dark .testimonials-heading p {
-
-  color: #a1a1aa;
-}
-
-
-body.dark .testimonial-card {
-
-  background: #080808;
-
-  border:
-    1px solid rgba(255,255,255,0.08);
-
-  box-shadow:
-    0 25px 65px rgba(0,0,0,0.80);
-}
-
-
-body.dark .testimonial-card:hover {
-
-  background: #0c0c0c;
-
-  box-shadow:
-    0 30px 75px rgba(0,0,0,0.90);
-}
-
-
-body.dark .featured-testimonial {
-
-  border:
-    1px solid rgba(38,166,91,0.30);
-}
-
-
-body.dark .testimonial-text {
-
-  color: #a1a1aa;
-}
-
-
-body.dark .client {
-
-  border-top:
-    1px solid rgba(255,255,255,0.08);
-}
-
-
-body.dark .client h3 {
-
-  color: #ffffff;
-}
-
-
-body.dark .client span {
-
-  color: #a1a1aa;
-}
-
-
-body.dark .testimonial-stats {
-
-  background: #080808;
-
-  border:
-    1px solid rgba(255,255,255,0.08);
-
-  box-shadow:
-    0 20px 60px rgba(0,0,0,0.80);
-}
-
-
-body.dark .testimonial-stat {
-
-  border-right:
-    1px solid rgba(255,255,255,0.08);
-}
-
-
-body.dark .testimonial-stat span {
-
-  color: #a1a1aa;
-}
-
-
-/* =========================================
+/* ==========================================
    TABLET
-========================================= */
+========================================== */
 
-@media (max-width: 950px) {
+@media (max-width: 1100px) {
 
-  .testimonials-grid {
+    .aqua-testimonials {
 
-    grid-template-columns:
-      repeat(2, 1fr);
-  }
+        padding: 75px 4%;
+    }
 
-  .featured-testimonial {
+    .aqua-testimonials-grid {
 
-    transform: none;
-  }
+        grid-template-columns:
+            repeat(2, 1fr);
 
-  .featured-testimonial:hover {
-
-    transform: translateY(-10px);
-  }
-
-  .testimonial-stats {
-
-    grid-template-columns:
-      repeat(2, 1fr);
-
-    gap: 25px;
-  }
-
-  .testimonial-stat:nth-child(2) {
-
-    border-right: none;
-  }
-
-  .testimonial-stat:nth-child(3),
-  .testimonial-stat:nth-child(4) {
-
-    border-top:
-      1px solid rgba(15,23,42,0.08);
-
-    padding-top: 25px;
-  }
+        gap: 28px;
+    }
 
 }
 
 
-/* =========================================
+/* ==========================================
    MOBILE
-========================================= */
+========================================== */
 
-@media (max-width: 650px) {
+@media (max-width: 700px) {
 
-  .testimonials-section {
+    .aqua-testimonials {
 
-    padding: 80px 6%;
-  }
+        padding: 60px 20px;
+    }
 
-  .testimonials-heading {
+    .aqua-testimonials-heading {
 
-    margin-bottom: 50px;
-  }
+        margin-bottom: 40px;
+    }
 
-  .testimonials-grid {
+    .aqua-testimonials-heading h2 {
 
-    grid-template-columns: 1fr;
+        font-size: 32px;
+    }
 
-  }
+    .aqua-testimonials-heading p {
 
-  .testimonial-card {
+        font-size: 15px;
+    }
 
-    min-height: auto;
+    .aqua-testimonials-grid {
 
-    padding: 30px 25px;
-  }
+        grid-template-columns: 1fr;
 
-  .testimonial-stats {
+        gap: 25px;
+    }
 
-    grid-template-columns: 1fr;
+    .aqua-testimonial-card {
 
-    gap: 0;
+        min-height: auto;
 
-  }
+        padding: 30px;
 
-  .testimonial-stat {
+        border-radius: 25px;
+    }
 
-    border-right: none;
+    .aqua-quote-box {
 
-    border-bottom:
-      1px solid rgba(15,23,42,0.08);
+        width: 65px;
 
-    padding: 20px 0;
-  }
+        height: 65px;
 
-  .testimonial-stat:last-child {
+        font-size: 25px;
+    }
 
-    border-bottom: none;
-  }
+    .aqua-review {
 
-  body.dark .testimonial-stat {
+        font-size: 16px;
 
-    border-bottom:
-      1px solid rgba(255,255,255,0.08);
-  }
+        line-height: 1.75;
+    }
+
+    .aqua-profile {
+
+        width: 62px;
+
+        height: 62px;
+
+        min-width: 62px;
+    }
+
+    .aqua-client-details h3 {
+
+        font-size: 18px;
+    }
 
 }
+
+
+
+/* ==========================================
+   AQUASCAPE TESTIMONIALS - DARK MODE
+========================================== */
+
+body.dark .aqua-testimonials {
+    background: #000000 !important;
+    color: #ffffff !important;
+}
+
+/* Heading */
+body.dark .aqua-testimonials-heading h2 {
+    color: #ffffff !important;
+}
+
+body.dark .aqua-testimonials-heading p {
+    color: #b8c2cc !important;
+}
+
+body.dark .aqua-testimonials-label {
+    color: #39b85a !important;
+}
+
+/* Testimonial cards */
+body.dark .aqua-testimonial-card {
+    background: #111111 !important;
+    color: #ffffff !important;
+    border-color: #299447 !important;
+    box-shadow: none !important;
+}
+
+/* Card hover */
+body.dark .aqua-testimonial-card:hover {
+    background: #151515 !important;
+    border-color: #168bd1 !important;
+    box-shadow: 0 20px 45px rgba(22, 139, 209, 0.20) !important;
+}
+
+/* Quote box */
+body.dark .aqua-quote-box {
+    background: #18252b !important;
+    color: #39a955 !important;
+}
+
+body.dark .aqua-green-quote {
+    background: #18291f !important;
+    color: #39a955 !important;
+}
+
+/* Stars */
+body.dark .aqua-stars i {
+    color: #ffc400 !important;
+}
+
+/* Review text */
+body.dark .aqua-review {
+    color: #d0d7df !important;
+}
+
+/* Client section divider */
+body.dark .aqua-client {
+    border-top-color: #333333 !important;
+}
+
+/* Profile background */
+body.dark .aqua-profile {
+    background: #1b252b !important;
+    border-color: #168bd1 !important;
+}
+
+body.dark .aqua-profile-green {
+    border-color: #299447 !important;
+}
+
+/* Client name */
+body.dark .aqua-client-details h3 {
+    color: #ffffff !important;
+}
+
+/* Client role */
+body.dark .aqua-client-details span {
+    color: #9da9b5 !important;
+}
+
+
+
+
+
 
 
 
@@ -2223,7 +2143,7 @@ body.dark .testimonial-stat span {
 
     font-size: clamp(39px, 5vw, 48px);
     line-height: 1.1;
-    font-weight: 800;
+    font-weight: 600;
     letter-spacing: -1.5px;
 }
 
@@ -2254,6 +2174,8 @@ body.dark .testimonial-stat span {
 
     font-size: 16px;
     line-height: 1.8;
+
+    font-weight: 500;
 }
 
 
@@ -4076,3 +3998,8 @@ body.dark-mode .aqua-home2-cta-content p {
         scroll-behavior: auto !important;
     }
 }
+
+
+
+
+

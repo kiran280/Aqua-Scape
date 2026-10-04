@@ -822,31 +822,105 @@
 
 </section>
 
-<!-- =====================================================
-     5. OUR COMMITMENT
-===================================================== -->
 
-<section class="about-section commitment-section">
 
-    <div class="commitment-content">
+<!-- ==========================================
+     OUR COMMITMENT SECTION
+========================================== -->
 
-        <div class="section-tag">
-            OUR COMMITMENT
+<section class="aqua-commitment">
+
+    <div class="aqua-commitment-container">
+
+        <!-- LEFT CONTENT -->
+        <div class="aqua-commitment-content">
+
+            <span class="aqua-commitment-label">
+                OUR COMMITMENT
+            </span>
+
+            <h2>
+                Smarter Watering.
+                <span>Healthier Landscapes.</span>
+            </h2>
+
+            <p class="aqua-commitment-intro">
+                At AquaScape, we are committed to creating irrigation
+                systems that keep your landscape beautiful while using
+                water responsibly.
+            </p>
+
+            <p>
+                Every irrigation solution we design is carefully planned
+                around your landscape, soil, plants, and watering needs.
+                Our goal is to deliver consistent coverage while reducing
+                unnecessary water usage.
+            </p>
+
+            <div class="aqua-commitment-points">
+
+                <div class="aqua-commitment-point">
+                    <div class="aqua-commitment-icon">
+                        <i class="fa-solid fa-droplet"></i>
+                    </div>
+
+                    <div>
+                        <h3>Water Efficient</h3>
+                        <p>
+                            Smart irrigation solutions designed to minimize
+                            water waste.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="aqua-commitment-point">
+                    <div class="aqua-commitment-icon green">
+                        <i class="fa-solid fa-leaf"></i>
+                    </div>
+
+                    <div>
+                        <h3>Healthy Landscapes</h3>
+                        <p>
+                            Balanced watering that supports healthier lawns
+                            and gardens.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <a href="contact.html" class="aqua-commitment-btn">
+                Learn More
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
         </div>
 
-        <h2>
-            Beautiful Landscapes.
-            <span>Responsible Watering.</span>
-        </h2>
 
-        <p>
-            We are committed to creating irrigation solutions that
-            balance landscape health, system performance, convenience,
-            and responsible water use. From understanding the property
-            and planning irrigation zones to careful installation,
-            testing, and support, we focus on the details that help
-            an irrigation system perform effectively over time.
-        </p>
+        <!-- RIGHT IMAGE -->
+        <div class="aqua-commitment-image">
+
+            <img
+                src="images/our commitment.jpg"
+                alt="AquaScape sustainable irrigation and healthy landscape"
+            >
+
+            <div class="aqua-commitment-image-card">
+
+                <span class="aqua-commitment-image-icon">
+                    <i class="fa-solid fa-water"></i>
+                </span>
+
+                <div>
+                    <strong>Smart Water Management</strong>
+                    <small>
+                        Efficient irrigation for a greener future
+                    </small>
+                </div>
+
+            </div>
+
+        </div>
 
     </div>
 
@@ -1686,6 +1760,77 @@ if (homeDropdown) {
 }
  
 lucide.createIcons();
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const navItems = document.querySelectorAll(".nav-item");
+
+    navItems.forEach(function (item) {
+
+        const link = item.querySelector(":scope > .nav-link");
+        const dropdown = item.querySelector(":scope > .dropdown-menu");
+
+        /* Only process items that actually contain a dropdown */
+        if (!link || !dropdown) {
+            return;
+        }
+
+        link.addEventListener("click", function (event) {
+
+            /* Only use click dropdown on tablet/mobile */
+            if (window.innerWidth <= 1024) {
+
+                event.preventDefault();
+                event.stopPropagation();
+
+                /* Close other dropdowns */
+                navItems.forEach(function (otherItem) {
+
+                    if (otherItem !== item) {
+                        otherItem.classList.remove("open");
+                    }
+
+                });
+
+                /* Toggle current dropdown */
+                item.classList.toggle("open");
+            }
+
+        });
+
+    });
+
+
+    /* Close dropdown when clicking outside */
+    document.addEventListener("click", function (event) {
+
+        if (!event.target.closest(".nav-item")) {
+
+            navItems.forEach(function (item) {
+                item.classList.remove("open");
+            });
+
+        }
+
+    });
+
+
+    /* Reset when returning to desktop */
+    window.addEventListener("resize", function () {
+
+        if (window.innerWidth > 1024) {
+
+            navItems.forEach(function (item) {
+                item.classList.remove("open");
+            });
+
+        }
+
+    });
+
+});
 
     </script>
 

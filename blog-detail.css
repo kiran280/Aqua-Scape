@@ -355,7 +355,7 @@ body.rtl .bd-hero-meta {
 
             line-height: 1.2;
 
-            font-weight: 800;
+            font-weight: 600;
         }
 
 
@@ -379,6 +379,8 @@ body.rtl .bd-hero-meta {
             font-size: 15px;
 
             line-height: 1.85;
+
+            font-weight: 500;
         }
 
 
@@ -830,7 +832,7 @@ body.rtl .bd-hero-meta {
 
             font-size: clamp(26px, 5vw, 35px);
 
-            font-weight: 800;
+            font-weight: 600;
         }
 
 
@@ -839,6 +841,8 @@ body.rtl .bd-hero-meta {
             color: var(--muted);
 
             font-size: 14px;
+
+            font-weight: 500;
         }
 
 
@@ -1082,7 +1086,7 @@ body.rtl .bd-hero-meta {
 
     line-height: 1.1;
 
-    font-weight: 800;
+    font-weight: 600;
 
     letter-spacing: -1.5px;
 }
@@ -1117,6 +1121,8 @@ body.rtl .bd-hero-meta {
     font-size: 15px;
 
     line-height: 1.8;
+
+    font-weight: 500;
 }
 
 

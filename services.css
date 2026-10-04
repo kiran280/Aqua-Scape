@@ -13,7 +13,6 @@
     display:flex;
     align-items:center;
 
-    background:#000;
 }
 
 
@@ -27,9 +26,7 @@
 
     inset:0;
 
-    background:
-        url("images/about\ banner.png")
-        center/cover no-repeat;
+
 
     transform:scale(1.03);
 
@@ -45,16 +42,6 @@
     position:absolute;
 
     inset:0;
-
-    background:
-
-        linear-gradient(
-            90deg,
-            rgba(0,0,0,.97) 0%,
-            rgba(0,0,0,.88) 38%,
-            rgba(0,0,0,.45) 70%,
-            rgba(0,0,0,.72) 100%
-        );
 
 }
 
@@ -211,7 +198,7 @@
 
     max-width:570px;
 
-    color:#c7d2d9;
+    color: grey;
 
     font-size:15px;
 
@@ -279,7 +266,6 @@
 
 .secondary-btn{
 
-    color:#fff;
 
     border:1px solid
         var(--green);
@@ -315,6 +301,7 @@
 
     gap:14px;
 
+
 }
 
 
@@ -324,7 +311,7 @@
 
     position:relative;
 
-    height:155px;
+    height:230px;
 
     padding:20px;
 
@@ -335,10 +322,10 @@
     border:1px solid
         rgba(255,255,255,.14);
 
-    background:
+         background:
         rgba(10,15,18,.60);
 
-    backdrop-filter:
+        backdrop-filter:
         blur(15px);
 
     transition:.35s;
@@ -359,7 +346,6 @@
 
     object-fit:cover;
 
-    opacity:.28;
 
     transition:.4s;
 
@@ -440,7 +426,6 @@
 
 .service:hover img{
 
-    opacity:.42;
 
     transform:scale(1.08);
 
@@ -600,13 +585,14 @@
     line-height:1.1;
     color:var(--green);
     margin-bottom:18px;
-    font-weight: 800;
+    font-weight: 600;
 }
 
 #aqua-service-intro-description{
     color:#687680;
     line-height:1.8;
     font-size:16px;
+    font-weight: 500;
 }
 
 #aqua-service-list{
@@ -774,13 +760,14 @@ body.dark #aqua-service-content-three p{
     line-height:1.12;
     color: var(--green);
     margin-bottom:22px;
-    font-weight: 800;
+    font-weight: 600;
 }
 
 #aqua-design-content-text{
     color:#687680;
     line-height:1.8;
     font-size:16px;
+    font-weight: 500;
 }
 
 #aqua-design-points{
@@ -868,13 +855,14 @@ body.dark #aqua-design-point{
     line-height:1.12;
     color:var(--green);
     margin-bottom:22px;
-    font-weight: 800;
+    font-weight: 600;
 }
 
 #aqua-installation-description{
     color:#687680;
     font-size:16px;
     line-height:1.8;
+    font-weight: 500;
 }
 
 #aqua-installation-features{
@@ -965,13 +953,14 @@ body.dark #aqua-installation-feature-four{
     font-size:clamp(26px,5vw,35px);
     line-height:1.1;
     margin-bottom:22px;
-    font-weight: 800;
+    font-weight: 600;
 }
 
 #aqua-winterization-text{
     color:#687680;
     line-height:1.8;
     font-size:16px;
+    font-weight: 500;
 }
 
 #aqua-winterization-list{
@@ -1066,7 +1055,7 @@ body.dark #aqua-winterization-list div{
 
     letter-spacing:-1.5px;
 
-    font-weight: 800;
+    font-weight: 600;
 }
 
 #aqua-process-description{
@@ -1079,6 +1068,8 @@ body.dark #aqua-winterization-list div{
     font-size:15px;
 
     line-height:1.8;
+
+    font-weight: 500;
 }
 
 
@@ -1678,7 +1669,7 @@ body.dark .aqua-process-marker{
     font-size: clamp(26px, 5vw, 35px);
     line-height: 1.08;
     color: var(--green);
-    font-weight: 800;
+    font-weight: 600;
     letter-spacing: -1.8px;
 }
 
@@ -1688,6 +1679,7 @@ body.dark .aqua-process-marker{
     font-size: 16px;
     line-height: 1.8;
     margin-bottom: 35px;
+    font-weight: 500;
 }
 
 
@@ -2197,7 +2189,7 @@ body.dark .aqua-process-marker{
     margin: 10px 0 0;
     color: var(--green);
     font-size: 32px;
-    font-weight: 800;
+    font-weight: 600;
 }
 
 
@@ -2697,7 +2689,7 @@ html[dir="rtl"] .process-arrow i {
     font-size: clamp(26px, 5vw, 35px);
     line-height: 1.1;
     letter-spacing: -1.5px;
-    font-weight: 800;
+    font-weight: 600;
 }
 
 
@@ -2706,6 +2698,7 @@ html[dir="rtl"] .process-arrow i {
     color: #6d7c85;
     font-size: 15px;
     line-height: 1.8;
+    font-weight: 500;
 }
 
 
@@ -2906,18 +2899,18 @@ html[dir="rtl"] .process-arrow i {
     border-radius: 10px;
     background: rgba(0,140,255,.08);
     color: #008cff;
-    font-size: 13px;
+    font-size: 15px;
 }
 
 .zone-data-item.green > i {
     background: rgba(0,170,105,.08);
-    color: #00a66a;
+    color: var(--green);
 }
 
 .zone-data-item small {
     display: block;
     color: #89959c;
-    font-size: 8px;
+    font-size: 12px;
 }
 
 .zone-data-item strong {
@@ -2973,7 +2966,7 @@ html[dir="rtl"] .process-arrow i {
 .map-title span {
     display: block;
     color: #71827a;
-    font-size: 8px;
+    font-size: 12px;
     font-weight: 800;
     letter-spacing: 1.5px;
 }
@@ -3021,7 +3014,7 @@ html[dir="rtl"] .process-arrow i {
     background: rgba(255,255,255,.7);
     border: 2px solid rgba(0,170,105,.35);
     color: #008b61;
-    font-size: 11px;
+    font-size: 13px;
     font-weight: 800;
     z-index: 3;
 }
@@ -3203,13 +3196,13 @@ html[dir="rtl"] .process-arrow i {
 .zone-benefit h4 {
     margin: 0 0 4px;
     color: var(--blue);
-    font-size: 14px;
+    font-size: 15px;
 }
 
 .zone-benefit p {
     margin: 0;
     color: #78868e;
-    font-size: 11px;
+    font-size: 13px;
     line-height: 1.5;
 }
 
@@ -3540,7 +3533,7 @@ html[dir="rtl"] .map-legend {
     font-size: clamp(26px,5vw,35px);
     line-height: 1.1;
     letter-spacing: -2px;
-    font-weight: 800;
+    font-weight: 600;
 }
 
 
@@ -3549,6 +3542,7 @@ html[dir="rtl"] .map-legend {
     color: #64748b;
     font-size: 15px;
     line-height: 1.8;
+    font-weight: 500;
 }
 
 
@@ -4491,7 +4485,7 @@ body.dark-mode .pricing-note a:hover,
 
     letter-spacing: -1.5px;
 
-    font-weight: 800;
+    font-weight: 600;
 }
 
 
@@ -4511,6 +4505,8 @@ body.dark-mode .pricing-note a:hover,
     font-size: 15px;
 
     line-height: 1.8;
+
+    font-weight: 500;
 }
 
 
