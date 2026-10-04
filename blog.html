@@ -1918,6 +1918,77 @@ if (homeDropdown) {
 }
  
 lucide.createIcons();
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const navItems = document.querySelectorAll(".nav-item");
+
+    navItems.forEach(function (item) {
+
+        const link = item.querySelector(":scope > .nav-link");
+        const dropdown = item.querySelector(":scope > .dropdown-menu");
+
+        /* Only process items that actually contain a dropdown */
+        if (!link || !dropdown) {
+            return;
+        }
+
+        link.addEventListener("click", function (event) {
+
+            /* Only use click dropdown on tablet/mobile */
+            if (window.innerWidth <= 1024) {
+
+                event.preventDefault();
+                event.stopPropagation();
+
+                /* Close other dropdowns */
+                navItems.forEach(function (otherItem) {
+
+                    if (otherItem !== item) {
+                        otherItem.classList.remove("open");
+                    }
+
+                });
+
+                /* Toggle current dropdown */
+                item.classList.toggle("open");
+            }
+
+        });
+
+    });
+
+
+    /* Close dropdown when clicking outside */
+    document.addEventListener("click", function (event) {
+
+        if (!event.target.closest(".nav-item")) {
+
+            navItems.forEach(function (item) {
+                item.classList.remove("open");
+            });
+
+        }
+
+    });
+
+
+    /* Reset when returning to desktop */
+    window.addEventListener("resize", function () {
+
+        if (window.innerWidth > 1024) {
+
+            navItems.forEach(function (item) {
+                item.classList.remove("open");
+            });
+
+        }
+
+    });
+
+});
     </script>
 
 

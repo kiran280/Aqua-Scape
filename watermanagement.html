@@ -11,6 +11,11 @@
      <link
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+            <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+      <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
      <link rel="stylesheet" href="global.css">
     <link rel="stylesheet" href="watermanagement.css">
       <script src="https://unpkg.com/lucide@latest"></script>
@@ -589,6 +594,8 @@ performance and landscape watering.
 
 <div class="problem reveal">
 
+    <img src="images/over watering.jpg" alt="">
+
 <div class="problem-icon">
 
 <i class="fa-solid fa-cloud-rain"></i>
@@ -608,6 +615,8 @@ provide more water than required.
 
 
 <div class="problem reveal">
+
+    <img src="images/poor coverage.jpg" alt="">
 
 <div class="problem-icon">
 
@@ -629,6 +638,8 @@ create wet and dry areas.
 
 <div class="problem reveal">
 
+    <img src="images/evaporation.jpg" alt="">
+
 <div class="problem-icon">
 
 <i class="fa-solid fa-sun"></i>
@@ -648,6 +659,8 @@ the amount of water reaching the soil.
 
 
 <div class="problem reveal">
+
+    <img src="images/leaks.jpg" alt="">
 
 <div class="problem-icon">
 
@@ -1117,6 +1130,8 @@ regular maintenance for better irrigation control.
 
 <div class="strategy reveal">
 
+    <img src="images/smart.jpg" alt="">
+
 <div class="strategy-icon">
 
 <i class="fa-solid fa-calendar-days"></i>
@@ -1136,6 +1151,8 @@ landscape requirements and conditions.
 
 
 <div class="strategy reveal">
+
+    <img src="images/efficient sprinklers.jpg" alt="">
 
 <div class="strategy-icon">
 
@@ -1157,6 +1174,8 @@ for improved coverage.
 
 <div class="strategy reveal">
 
+    <img src="images/drip.jpg" alt="">
+
 <div class="strategy-icon">
 
 <i class="fa-solid fa-seedling"></i>
@@ -1169,13 +1188,15 @@ Drip Irrigation
 
 <p>
 Provide targeted watering for
-appropriate planting areas.
+appropriate planting areas in a landscape.
 </p>
 
 </div>
 
 
 <div class="strategy reveal">
+
+    <img src="images/zone management.jpg" alt="">
 
 <div class="strategy-icon">
 
@@ -1197,6 +1218,8 @@ to individual watering needs.
 
 <div class="strategy reveal">
 
+    <img src="images/leak dedection.jpg" alt="">
+
 <div class="strategy-icon">
 
 <i class="fa-solid fa-magnifying-glass"></i>
@@ -1216,6 +1239,8 @@ potential leaks and problems.
 
 
 <div class="strategy reveal">
+
+    <img src="images/seasonal adjustment.jpg" alt="">
 
 <div class="strategy-icon">
 
@@ -2278,6 +2303,77 @@ if (homeDropdown) {
 }
  
 lucide.createIcons();
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const navItems = document.querySelectorAll(".nav-item");
+
+    navItems.forEach(function (item) {
+
+        const link = item.querySelector(":scope > .nav-link");
+        const dropdown = item.querySelector(":scope > .dropdown-menu");
+
+        /* Only process items that actually contain a dropdown */
+        if (!link || !dropdown) {
+            return;
+        }
+
+        link.addEventListener("click", function (event) {
+
+            /* Only use click dropdown on tablet/mobile */
+            if (window.innerWidth <= 1024) {
+
+                event.preventDefault();
+                event.stopPropagation();
+
+                /* Close other dropdowns */
+                navItems.forEach(function (otherItem) {
+
+                    if (otherItem !== item) {
+                        otherItem.classList.remove("open");
+                    }
+
+                });
+
+                /* Toggle current dropdown */
+                item.classList.toggle("open");
+            }
+
+        });
+
+    });
+
+
+    /* Close dropdown when clicking outside */
+    document.addEventListener("click", function (event) {
+
+        if (!event.target.closest(".nav-item")) {
+
+            navItems.forEach(function (item) {
+                item.classList.remove("open");
+            });
+
+        }
+
+    });
+
+
+    /* Reset when returning to desktop */
+    window.addEventListener("resize", function () {
+
+        if (window.innerWidth > 1024) {
+
+            navItems.forEach(function (item) {
+                item.classList.remove("open");
+            });
+
+        }
+
+    });
+
+});
     </script>
 
 

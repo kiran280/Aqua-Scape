@@ -715,7 +715,7 @@
             color: var(--text);
 
             font-size: clamp(20px, 5vw, 35px);
-            font-weight: 800;
+            font-weight: 600;
 
             line-height: 1.15;
             letter-spacing: -1px;
@@ -728,6 +728,8 @@
 
             font-size: 15px;
             line-height: 1.8;
+
+            font-weight: 500;
         }
 
         .as-blue-text {
@@ -1192,7 +1194,7 @@
             font-size:
                 clamp(20px, 5vw, 35px);
 
-            font-weight: 800;
+            font-weight: 600;
 
             line-height: 1.15;
         }
@@ -1213,6 +1215,8 @@
 
             font-size: 15px;
             line-height: 1.8;
+
+            font-weight: 500;
         }
 
         .as-water-points {
@@ -1377,11 +1381,11 @@
             color: var(--text);
 
             font-size:
-                clamp(20px, 5vw, 35px);
+                clamp(25px, 5vw, 35px);
 
             line-height: 1.15;
 
-            font-weight: 800;
+            font-weight: 600;
         }
 
         .as-project-grid {
@@ -1803,7 +1807,7 @@
     font-size: clamp(26px, 5vh, 35px);
     line-height: 1.3;
 
-    font-weight: 800;
+    font-weight: 600;
 
     color: var(--green);
 }
@@ -1814,6 +1818,8 @@
     color: #667085;
 
     font-size: 13px;
+
+    font-weight: 500;
 }
 
 /* BUTTON */

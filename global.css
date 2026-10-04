@@ -282,22 +282,22 @@ body.dark .brand-tagline {
     width: 100%;
     padding: 11px 14px;
     border-radius: 7px;
-    color: var(--muted);
+    color: var(--grey);
     font-size: 14px;
     font-weight: 600;
     transition: all var(--transition);
 }
  
 .dropdown-menu a:hover {
-    color: #ffffff;
+    color: white;
     background: linear-gradient(135deg, var(--blue), var(--green));
     transform: translateX(2px);
 }
  
-.dropdown-menu a.active {
-    color: var(--green);
+/*.dropdown-menu a.active {
+    color: black;
 }
- 
+*/ 
  
 /* HEADER ACTIONS */
  
@@ -1726,4 +1726,1226 @@ html[dir="rtl"] .nav-item:hover .dropdown-menu {
         letter-spacing: 0.5px;
     }
 
+}
+
+
+
+
+/* =========================================================
+   AQUASCAPE HEADER - COMPLETE RESPONSIVE MEDIA QUERIES
+   Supports:
+   1024px
+   768px
+   650px
+   480px
+   420px
+   360px
+========================================================= */
+
+
+/* =========================================================
+   LARGE TABLET / LAPTOP
+   1024px and below
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .header-container {
+        width: 94%;
+        gap: 14px;
+    }
+
+    .main-nav {
+        gap: 0;
+    }
+
+    .nav-link {
+        padding: 10px 8px;
+        font-size: 14px;
+    }
+
+    .header-actions {
+        gap: 6px;
+    }
+
+    .login-btn {
+        padding: 0 14px;
+        font-size: 13px;
+    }
+
+}
+
+
+/* =========================================================
+   1024px - TOUCH/TABLET HEADER
+========================================================= */
+
+@media (max-width: 1024px) {
+
+    .site-header {
+        z-index: 99999;
+    }
+
+    .header-container {
+        min-height: 78px;
+        width: 94%;
+    }
+
+    .brand {
+        gap: 8px;
+    }
+
+    .brand-logo {
+        width: 50px;
+        height: 50px;
+    }
+
+    .brand-name {
+        font-size: 22px;
+    }
+
+    .brand-tagline {
+        font-size: 9px;
+    }
+
+    .main-nav {
+        gap: 0;
+    }
+
+    .nav-link {
+        padding: 10px 8px;
+        font-size: 14px;
+    }
+
+    /*
+       Make dropdown usable with keyboard/touch focus.
+       Hover is NOT the only trigger.
+    */
+
+    .nav-item:focus-within .dropdown-menu {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        transform: translateX(-50%) translateY(0);
+    }
+
+    .dropdown-menu {
+        z-index: 100001;
+    }
+
+}
+
+
+/* =========================================================
+   TABLET / MOBILE
+   850px and below
+========================================================= */
+
+@media (max-width: 850px) {
+
+    /* ---------------- HEADER ---------------- */
+
+    .site-header {
+        position: sticky;
+        top: 0;
+        z-index: 99999;
+    }
+
+    .header-container {
+        width: 94%;
+        min-height: 74px;
+        gap: 8px;
+        position: relative;
+    }
+
+
+    /* ---------------- BRAND ---------------- */
+
+    .brand {
+        gap: 7px;
+        min-width: 0;
+    }
+
+    .brand-logo {
+        width: 45px;
+        height: 45px;
+    }
+
+    .brand-name {
+        font-size: 20px;
+    }
+
+    .brand-tagline {
+        font-size: 8px;
+        letter-spacing: 0.7px;
+    }
+
+
+    /* ---------------- HEADER ACTIONS ---------------- */
+
+    .header-actions {
+        margin-left: auto;
+        gap: 6px;
+        flex-shrink: 0;
+    }
+
+
+    /* ---------------- ICON BUTTON ---------------- */
+
+    .icon-button,
+    .menu-button {
+        width: 38px;
+        height: 38px;
+        min-width: 38px;
+        flex-shrink: 0;
+    }
+
+
+    /* ---------------- GET QUOTE ---------------- */
+
+    .login-btn {
+        min-height: 38px;
+        padding: 0 12px;
+        font-size: 12px;
+        white-space: nowrap;
+        flex-shrink: 0;
+    }
+
+
+    /* =====================================================
+       MOBILE NAVIGATION
+    ===================================================== */
+
+    .main-nav {
+
+        display: none;
+
+        position: absolute;
+
+        top: calc(100% + 8px);
+        left: 3%;
+        right: 3%;
+
+        width: auto;
+
+        max-height: calc(100vh - 90px);
+
+        overflow-y: auto;
+        overflow-x: hidden;
+
+        padding: 12px;
+
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-start;
+
+        background: var(--header-bg);
+
+        border: 1px solid var(--border);
+        border-radius: 14px;
+
+        box-shadow:
+            0 15px 40px rgba(0, 0, 0, 0.15);
+
+        backdrop-filter: blur(18px);
+        -webkit-backdrop-filter: blur(18px);
+
+        z-index: 100000;
+    }
+
+
+    /* OPEN MOBILE MENU */
+
+    .main-nav.show {
+        display: flex;
+    }
+
+
+    /* ---------------- NAV ITEMS ---------------- */
+
+    .nav-item {
+        width: 100%;
+        position: relative;
+    }
+
+
+    /* ---------------- NAV LINKS ---------------- */
+
+    .nav-link {
+
+        width: 100%;
+
+        min-height: 48px;
+
+        display: flex;
+
+        align-items: center;
+        justify-content: space-between;
+
+        padding: 13px 15px;
+
+        border-radius: 8px;
+
+        font-size: 15px;
+
+        color: var(--text);
+
+        text-align: left;
+    }
+
+    .nav-link:hover {
+        background: rgba(22, 139, 209, 0.08);
+    }
+
+
+    /* Remove desktop underline effect from mobile */
+
+    .nav-link::after {
+        display: none;
+    }
+
+
+    /* =====================================================
+       HOME DROPDOWN
+       IMPORTANT:
+       Do NOT use hover to open it on mobile.
+    ===================================================== */
+
+    .dropdown-menu {
+
+        position: static;
+
+        width: 100%;
+        min-width: 0;
+
+        margin: 4px 0 8px;
+
+        padding: 5px;
+
+        display: none;
+
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+
+        transform: none !important;
+
+        border: 1px solid var(--border);
+        border-radius: 9px;
+
+        background: var(--page-bg);
+
+        box-shadow: none;
+
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+
+        z-index: 100001;
+    }
+
+
+    /*
+       Remove the old hover-only behavior.
+       This is important for 360px / 768px touch devices.
+    */
+
+    .nav-item:hover .dropdown-menu {
+        display: none;
+    }
+
+
+    /*
+       JS should add .open to the Home nav-item.
+    */
+
+    .nav-item.open > .dropdown-menu {
+        display: block;
+    }
+
+
+    /* ---------------- DROPDOWN LINKS ---------------- */
+
+    .dropdown-menu a {
+
+        width: 100%;
+
+        min-height: 44px;
+
+        display: flex;
+        align-items: center;
+
+        padding: 11px 14px;
+
+        border-radius: 7px;
+
+        color: var(--text);
+
+        font-size: 14px;
+    }
+
+    .dropdown-menu a:hover {
+        color: #ffffff;
+        background: linear-gradient(
+            135deg,
+            var(--blue),
+            var(--green)
+        );
+
+        transform: none;
+    }
+
+
+    /* ---------------- MENU BUTTON ---------------- */
+
+    .menu-button {
+        display: block;
+        position: relative;
+        z-index: 100002;
+    }
+
+
+    /* ---------------- DROPDOWN ARROW ---------------- */
+
+    .dropdown-arrow {
+        flex-shrink: 0;
+    }
+
+    .nav-item.open .dropdown-arrow {
+        transform: rotate(225deg);
+        margin-top: 4px;
+    }
+
+
+    /* =====================================================
+       GET QUOTE INSIDE MOBILE NAV
+       
+       If your HTML contains .mobile-quote-btn,
+       this will make it a proper CTA.
+    ===================================================== */
+
+    .mobile-quote-btn {
+
+        width: 100%;
+
+        min-height: 48px;
+
+        margin-top: 8px;
+
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        border-radius: 8px;
+
+        background: linear-gradient(
+            135deg,
+            var(--blue),
+            var(--green)
+        );
+
+        color: #ffffff;
+
+        font-size: 14px;
+        font-weight: 700;
+
+        box-shadow:
+            0 7px 20px rgba(22, 139, 209, 0.20);
+
+        transition: all 0.3s ease;
+    }
+
+    .mobile-quote-btn:hover {
+        transform: translateY(-2px);
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   650px and below
+========================================================= */
+
+@media (max-width: 650px) {
+
+    .header-container {
+        width: 94%;
+        min-height: 72px;
+        gap: 5px;
+    }
+
+    .brand {
+        gap: 6px;
+        min-width: 0;
+    }
+
+    .brand-logo {
+        width: 43px;
+        height: 43px;
+    }
+
+    .brand-name {
+        font-size: 19px;
+    }
+
+    .brand-tagline {
+        font-size: 8px;
+        letter-spacing: 0.6px;
+    }
+
+
+    /* Header buttons */
+
+    .header-actions {
+        gap: 4px;
+    }
+
+    .icon-button,
+    .menu-button {
+        width: 37px;
+        height: 37px;
+        min-width: 37px;
+    }
+
+
+    /* Get Quote remains visible */
+
+    .login-btn {
+
+        width: auto;
+
+        min-width: 72px;
+        min-height: 37px;
+
+        padding: 0 10px;
+
+        font-size: 11px;
+
+        white-space: nowrap;
+    }
+
+
+    /* Mobile menu position */
+
+    .main-nav {
+        top: calc(100% + 7px);
+        left: 3%;
+        right: 3%;
+    }
+
+
+    /* Footer */
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .contact-column {
+        grid-column: auto;
+    }
+
+    .footer-bottom {
+        min-height: auto;
+        padding: 20px 0;
+
+        flex-direction: column;
+
+        justify-content: center;
+
+        text-align: center;
+    }
+
+    .legal-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+}
+
+
+/* =========================================================
+   480px
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .header-container {
+        width: 95%;
+    }
+
+    .brand-logo {
+        width: 40px;
+        height: 40px;
+    }
+
+    .brand-name {
+        font-size: 18px;
+    }
+
+    .brand-tagline {
+        font-size: 7px;
+        letter-spacing: 0.5px;
+    }
+
+    .icon-button,
+    .menu-button {
+        width: 35px;
+        height: 35px;
+        min-width: 35px;
+    }
+
+    .login-btn {
+        min-width: 68px;
+        min-height: 35px;
+        padding: 0 8px;
+        font-size: 10px;
+    }
+
+    .main-nav {
+        left: 2.5%;
+        right: 2.5%;
+        padding: 10px;
+    }
+
+    .nav-link {
+        min-height: 46px;
+        padding: 12px 13px;
+        font-size: 14px;
+    }
+
+}
+
+
+/* =========================================================
+   420px
+========================================================= */
+
+@media (max-width: 420px) {
+
+    .header-container {
+        width: 96%;
+        gap: 4px;
+    }
+
+    .brand {
+        gap: 5px;
+        min-width: 0;
+        flex: 1;
+    }
+
+    .brand-logo {
+        width: 38px;
+        height: 38px;
+    }
+
+    .brand-name {
+        font-size: 17px;
+    }
+
+    .brand-tagline {
+        font-size: 6.5px;
+        letter-spacing: 0.35px;
+    }
+
+    .header-actions {
+        gap: 3px;
+    }
+
+    .icon-button,
+    .menu-button {
+        width: 34px;
+        height: 34px;
+        min-width: 34px;
+    }
+
+    /*
+       Keep Get Quote as a real CTA.
+       Do NOT turn it into an icon-only button.
+    */
+
+    .login-btn {
+        display: inline-flex;
+
+        width: auto;
+        min-width: 64px;
+        height: 34px;
+        min-height: 34px;
+
+        padding: 0 7px;
+
+        font-size: 9px;
+
+        border-radius: 7px;
+
+        white-space: nowrap;
+    }
+
+    .main-nav {
+        top: calc(100% + 6px);
+    }
+
+}
+
+
+/* =========================================================
+   360px - EXTRA SMALL PHONE
+========================================================= */
+
+@media (max-width: 360px) {
+
+    .header-container {
+        width: 96%;
+        min-height: 68px;
+        gap: 3px;
+    }
+
+
+    /* ---------------- BRAND ---------------- */
+
+    .brand {
+        flex: 1;
+        min-width: 0;
+        gap: 4px;
+    }
+
+    .brand-logo {
+        width: 34px;
+        height: 34px;
+    }
+
+    .brand-name {
+        font-size: 15px;
+        letter-spacing: -0.4px;
+    }
+
+    .brand-tagline {
+        font-size: 5.8px;
+        letter-spacing: 0.25px;
+    }
+
+
+    /* ---------------- ACTIONS ---------------- */
+
+    .header-actions {
+        gap: 3px;
+        margin-left: auto;
+    }
+
+
+    /* Theme button */
+
+    .icon-button {
+        width: 32px;
+        height: 32px;
+        min-width: 32px;
+    }
+
+    .icon-button svg {
+        width: 16px;
+        height: 16px;
+    }
+
+
+    /* Hamburger */
+
+    .menu-button {
+        width: 32px;
+        height: 32px;
+        min-width: 32px;
+        padding: 6px;
+    }
+
+    .menu-button span {
+        margin: 4px 0;
+    }
+
+
+    /*
+       IMPORTANT:
+       Keep Get Quote visible at 360px.
+       It remains a proper CTA instead of disappearing.
+    */
+
+    .login-btn {
+
+        display: inline-flex;
+
+        width: auto;
+        min-width: 59px;
+
+        height: 32px;
+        min-height: 32px;
+
+        padding: 0 6px;
+
+        font-size: 8px;
+
+        border-radius: 6px;
+
+        white-space: nowrap;
+
+        box-shadow:
+            0 4px 12px rgba(22, 139, 209, 0.18);
+    }
+
+
+    /* ---------------- MOBILE NAV ---------------- */
+
+    .main-nav {
+
+        top: calc(100% + 5px);
+
+        left: 2%;
+        right: 2%;
+
+        width: 96%;
+
+        padding: 8px;
+
+        border-radius: 12px;
+
+        max-height: calc(100vh - 80px);
+    }
+
+
+    /* ---------------- NAV LINKS ---------------- */
+
+    .nav-link {
+
+        min-height: 45px;
+
+        padding: 11px 12px;
+
+        font-size: 14px;
+    }
+
+
+    /* ---------------- DROPDOWN ---------------- */
+
+    .dropdown-menu {
+
+        margin: 3px 0 6px;
+
+        padding: 4px;
+
+        border-radius: 8px;
+    }
+
+    .dropdown-menu a {
+
+        min-height: 42px;
+
+        padding: 10px 12px;
+
+        font-size: 13px;
+    }
+
+
+    /* ---------------- MOBILE GET QUOTE ---------------- */
+
+    /*
+       If a mobile Get Quote link exists inside the menu,
+       show it prominently.
+    */
+
+    .mobile-quote-btn {
+        min-height: 45px;
+        margin-top: 6px;
+        font-size: 13px;
+    }
+
+}
+
+
+/* =========================================================
+   360px - VERY NARROW DEVICES
+========================================================= */
+
+@media (max-width: 340px) {
+
+    .brand-name {
+        font-size: 14px;
+    }
+
+    .brand-tagline {
+        display: none;
+    }
+
+    .brand-logo {
+        width: 32px;
+        height: 32px;
+    }
+
+    .icon-button,
+    .menu-button {
+        width: 31px;
+        height: 31px;
+        min-width: 31px;
+    }
+
+    .login-btn {
+        min-width: 55px;
+        height: 31px;
+        min-height: 31px;
+        font-size: 7.5px;
+        padding: 0 5px;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================================
+   HOME DROPDOWN - FINAL RESPONSIVE FIX
+   Same existing class names
+   Works: 1024px, 768px, 650px, 480px, 420px, 360px
+========================================================= */
+
+@media (max-width: 1024px) {
+
+    /* Header must stay above dropdown */
+    .site-header {
+        position: relative;
+        z-index: 99999;
+    }
+
+    .header-container {
+        position: relative;
+        z-index: 100000;
+    }
+
+    /* Mobile/tablet navigation */
+    .main-nav {
+        position: absolute !important;
+        z-index: 100001 !important;
+    }
+
+    .nav-item {
+        position: relative;
+        width: 100%;
+    }
+
+    .nav-link {
+        cursor: pointer;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    /* Hide dropdown by default */
+    .dropdown-menu {
+        position: static !important;
+        display: none !important;
+
+        width: 100% !important;
+        min-width: 100% !important;
+
+        margin: 5px 0 8px 0 !important;
+        padding: 5px !important;
+
+        opacity: 1 !important;
+        visibility: visible !important;
+        pointer-events: auto !important;
+
+        transform: none !important;
+
+        border: 1px solid var(--border) !important;
+        border-radius: 8px !important;
+
+        background: var(--page-bg) !important;
+
+        box-shadow: none !important;
+
+        z-index: 100002 !important;
+    }
+
+    /* IMPORTANT:
+       Disable desktop hover behavior on tablet/mobile */
+    .nav-item:hover > .dropdown-menu {
+        display: none !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+
+    /* OPEN STATE */
+    .nav-item.open > .dropdown-menu {
+        display: block !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        pointer-events: auto !important;
+        transform: none !important;
+    }
+
+    /* Dropdown links */
+    .dropdown-menu a {
+        display: flex !important;
+        align-items: center !important;
+
+        width: 100% !important;
+        min-height: 44px;
+
+        padding: 10px 14px !important;
+
+        color: var(--text) !important;
+
+        text-decoration: none !important;
+
+        border-radius: 7px;
+
+        transform: none !important;
+    }
+
+    .dropdown-menu a:hover {
+        color: #ffffff !important;
+        background: linear-gradient(
+            135deg,
+            var(--blue),
+            var(--green)
+        ) !important;
+
+        transform: none !important;
+    }
+
+    /* Arrow */
+    .dropdown-arrow {
+        display: inline-block;
+        flex-shrink: 0;
+
+        transition: transform 0.25s ease !important;
+    }
+
+    /* Rotate arrow when dropdown is open */
+    .nav-item.open > .nav-link .dropdown-arrow {
+        transform: rotate(225deg) !important;
+    }
+}
+
+
+/* =========================================================
+   768px
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .main-nav {
+        top: calc(100% + 5px) !important;
+        left: 3% !important;
+        right: 3% !important;
+
+        width: 94% !important;
+
+        max-height: calc(100vh - 90px);
+
+        overflow-y: auto;
+        overflow-x: hidden;
+
+        padding: 10px !important;
+    }
+
+    .nav-item {
+        width: 100% !important;
+    }
+
+    .nav-link {
+        width: 100% !important;
+
+        min-height: 48px !important;
+
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+
+        padding: 12px 15px !important;
+
+        font-size: 15px !important;
+    }
+
+    .dropdown-menu {
+        width: 100% !important;
+        min-width: 100% !important;
+    }
+}
+
+
+/* =========================================================
+   650px
+========================================================= */
+
+@media (max-width: 650px) {
+
+    .main-nav {
+        left: 3% !important;
+        right: 3% !important;
+        width: 94% !important;
+    }
+
+    .nav-link {
+        min-height: 46px !important;
+        padding: 11px 14px !important;
+        font-size: 14px !important;
+    }
+
+    .dropdown-menu {
+        margin: 4px 0 7px 0 !important;
+        padding: 4px !important;
+    }
+
+    .dropdown-menu a {
+        min-height: 43px !important;
+        padding: 10px 13px !important;
+        font-size: 14px !important;
+    }
+}
+
+
+/* =========================================================
+   480px
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .main-nav {
+        left: 2.5% !important;
+        right: 2.5% !important;
+        width: 95% !important;
+
+        padding: 8px !important;
+    }
+
+    .nav-link {
+        min-height: 45px !important;
+        padding: 10px 13px !important;
+        font-size: 14px !important;
+    }
+
+    .dropdown-menu {
+        width: 100% !important;
+        margin: 3px 0 6px 0 !important;
+        padding: 4px !important;
+    }
+
+    .dropdown-menu a {
+        min-height: 42px !important;
+        padding: 10px 12px !important;
+        font-size: 13px !important;
+    }
+}
+
+
+/* =========================================================
+   420px
+========================================================= */
+
+@media (max-width: 420px) {
+
+    .main-nav {
+        top: calc(100% + 5px) !important;
+
+        left: 2% !important;
+        right: 2% !important;
+
+        width: 96% !important;
+
+        padding: 7px !important;
+    }
+
+    .nav-link {
+        min-height: 44px !important;
+        padding: 10px 12px !important;
+        font-size: 13px !important;
+    }
+
+    .dropdown-menu {
+        margin: 3px 0 6px 0 !important;
+        padding: 3px !important;
+    }
+
+    .dropdown-menu a {
+        min-height: 41px !important;
+        padding: 9px 11px !important;
+        font-size: 13px !important;
+    }
+}
+
+
+/* =========================================================
+   360px
+========================================================= */
+
+@media (max-width: 360px) {
+
+    .main-nav {
+        top: calc(100% + 4px) !important;
+
+        left: 2% !important;
+        right: 2% !important;
+
+        width: 96% !important;
+
+        max-height: calc(100vh - 75px);
+
+        padding: 6px !important;
+    }
+
+    .nav-link {
+        min-height: 43px !important;
+        padding: 9px 10px !important;
+        font-size: 13px !important;
+    }
+
+    .dropdown-menu {
+        width: 100% !important;
+
+        margin: 3px 0 5px 0 !important;
+        padding: 3px !important;
+
+        border-radius: 7px !important;
+    }
+
+    .dropdown-menu a {
+        min-height: 40px !important;
+        padding: 8px 10px !important;
+        font-size: 12px !important;
+    }
+}
+
+
+/* =========================================================
+   RTL
+========================================================= */
+
+@media (max-width: 1024px) {
+
+    html[dir="rtl"] .main-nav {
+        left: 3% !important;
+        right: 3% !important;
+    }
+
+    html[dir="rtl"] .nav-link {
+        text-align: right !important;
+    }
+
+    html[dir="rtl"] .dropdown-menu {
+        margin-right: 0 !important;
+        margin-left: 0 !important;
+    }
+
+    html[dir="rtl"] .dropdown-menu a {
+        text-align: right !important;
+        justify-content: flex-start !important;
+    }
 }
