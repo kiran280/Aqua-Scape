@@ -1198,14 +1198,6 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 
 </section>
 
-
-
-
-
-
-
-
-
 <!-- =========================================
      AQUASCAPE CTA SECTION
 ========================================= -->
@@ -1991,6 +1983,65 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const faqQuestions = document.querySelectorAll(
+        ".aquascape-faq-question"
+    );
+
+    faqQuestions.forEach(function (question) {
+
+        question.addEventListener("click", function () {
+
+            const currentItem = this.parentElement;
+            const currentAnswer =
+                currentItem.querySelector(".aquascape-faq-answer");
+
+            const isActive = currentItem.classList.contains("active");
+
+            /* Close all FAQ items */
+            document
+                .querySelectorAll(".aquascape-faq-item")
+                .forEach(function (item) {
+
+                    item.classList.remove("active");
+
+                    const answer =
+                        item.querySelector(".aquascape-faq-answer");
+
+                    answer.style.maxHeight = null;
+
+                    const icon =
+                        item.querySelector(".faq-icon");
+
+                    icon.textContent = "+";
+                });
+
+            /* Open selected item */
+            if (!isActive) {
+
+                currentItem.classList.add("active");
+
+                currentAnswer.style.maxHeight =
+                    currentAnswer.scrollHeight + "px";
+
+                const currentIcon =
+                    currentItem.querySelector(".faq-icon");
+
+                currentIcon.textContent = "−";
+            }
+
+        });
+
+    });
+
+});
+
+
+
+
+
 
     </script>
 
