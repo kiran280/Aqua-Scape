@@ -292,7 +292,7 @@
 }
 
 .process-container {
-  max-width: 1250px;
+  max-width: 1100px;
   margin: auto;
 }
 
@@ -409,16 +409,9 @@
   border-radius: 22px;
   padding: 32px 25px;
 
-  min-height: 290px;
-
-  box-shadow:
-    0 18px 45px rgba(15, 23, 42, 0.08);
-
-  transition:
-    transform 0.4s ease,
-    box-shadow 0.4s ease,
-    background 0.4s ease;
+  max-height: 310px;
 }
+
 
 .process-card:hover {
   transform: translateY(-10px);
@@ -426,6 +419,7 @@
   box-shadow:
     0 25px 60px var(--blue);
 }
+
 
 /* Icon */
 
@@ -1227,6 +1221,8 @@ body.dark .saving-card strong {
   border-radius: 22px;
 
   transition: var(--transition);
+
+  border: 1px solid var(--green);
 }
 
 .service-card:hover {
@@ -1673,7 +1669,7 @@ body.dark .saving-card strong {
 
 .aqua-testimonial-card {
 
-    min-height: 500px;
+    min-height: 400px;
 
     padding: 40px;
 
