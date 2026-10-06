@@ -3999,3 +3999,1078 @@ body.dark-mode .aqua-home2-cta-content p {
 
 
 
+
+
+
+
+
+
+
+
+
+
+/* =========================================================
+   AQUASCAPE HOME 2 - COMPLETE RESPONSIVE HEADER
+   ========================================================= */
+
+/* =========================================================
+   HEADER BASE
+   ========================================================= */
+
+.site-header {
+    width: 100%;
+    position: relative;
+    z-index: 9999;
+    background: #ffffff;
+}
+
+.header-container {
+    width: 100%;
+    max-width: 1400px;
+    min-height: 82px;
+
+    margin: 0 auto;
+    padding: 0 5%;
+
+    display: flex;
+    align-items: center;
+
+    position: relative;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   LOGO + BRAND
+   ========================================================= */
+
+.header-container .brand {
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    text-decoration: none;
+
+    flex-shrink: 0;
+
+    z-index: 10002;
+}
+
+.header-container .brand img {
+    width: 48px;
+    height: 48px;
+
+    object-fit: contain;
+
+    flex-shrink: 0;
+}
+
+.header-container .brand-name {
+    font-size: 20px;
+    font-weight: 700;
+
+    line-height: 1;
+
+    white-space: nowrap;
+}
+
+.header-container .tagline {
+    font-size: 7px;
+
+    margin-top: 3px;
+
+    white-space: nowrap;
+}
+
+
+/* AQUA / SCAPE */
+
+.header-container .aqua {
+    color: #168bd1;
+}
+
+.header-container .scape {
+    color: #299447;
+}
+
+
+/* =========================================================
+   DESKTOP NAVIGATION
+   ========================================================= */
+
+.main-nav {
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 25px;
+
+    width: max-content;
+
+    z-index: 10000;
+}
+
+.main-nav .nav-link {
+    text-decoration: none;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   HEADER ACTIONS
+   ========================================================= */
+
+.header-actions {
+    margin-left: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    gap: 8px;
+
+    flex-shrink: 0;
+
+    z-index: 10001;
+}
+
+
+/* =========================================================
+   THEME / RTL BUTTONS
+   ========================================================= */
+
+.header-actions .icon-button {
+    width: 40px;
+    height: 40px;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    border: 1px solid #299447;
+
+    background: #ffffff;
+
+    color: #168bd1;
+
+    cursor: pointer;
+
+    flex-shrink: 0;
+
+    transition: all 0.3s ease;
+}
+
+.header-actions .icon-button:hover {
+    background: #168bd1;
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   GET QUOTE
+   ========================================================= */
+
+.login-btn {
+    min-width: 120px;
+    height: 42px;
+
+    padding: 0 18px;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: linear-gradient(
+        135deg,
+        #168bd1,
+        #299447
+    );
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    white-space: nowrap;
+
+    cursor: pointer;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   HAMBURGER
+   ========================================================= */
+
+.menu-button {
+    width: 42px;
+    height: 42px;
+
+    padding: 0;
+    margin: 0;
+
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-direction: column;
+
+    gap: 5px;
+
+    border: 1px solid #d7d7d7;
+
+    border-radius: 8px;
+
+    background: #ffffff;
+
+    cursor: pointer;
+
+    flex-shrink: 0;
+}
+
+.menu-button span {
+    width: 21px;
+    height: 2px;
+
+    display: block;
+
+    background: #333333;
+
+    border-radius: 2px;
+
+    transition: all 0.3s ease;
+}
+
+
+/* =========================================================
+   DESKTOP
+   1201px+
+   ========================================================= */
+
+@media (min-width: 1201px) {
+
+    .header-container {
+        min-height: 86px;
+        padding: 0 5%;
+    }
+
+    .header-container .brand img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .main-nav {
+        gap: 28px;
+    }
+
+    .header-actions {
+        gap: 9px;
+    }
+
+    .menu-button {
+        display: none !important;
+    }
+
+    .login-btn {
+        min-width: 125px;
+        height: 44px;
+    }
+
+    /* DESKTOP DROPDOWN */
+
+    .nav-item {
+        position: relative;
+    }
+
+    .dropdown-menu {
+        position: absolute;
+
+        top: calc(100% + 12px);
+        left: 50%;
+
+        transform: translateX(-50%);
+
+        min-width: 180px;
+
+        display: none;
+
+        z-index: 99999;
+    }
+
+    .nav-item:hover > .dropdown-menu {
+        display: block;
+    }
+}
+
+
+/* =========================================================
+   LAPTOP
+   1025px - 1200px
+   ========================================================= */
+
+@media (min-width: 1025px) and (max-width: 1200px) {
+
+    .header-container {
+        min-height: 80px;
+        padding: 0 4%;
+    }
+
+    .header-container .brand img {
+        width: 45px;
+        height: 45px;
+    }
+
+    .main-nav {
+        gap: 18px;
+    }
+
+    .main-nav .nav-link {
+        font-size: 14px;
+    }
+
+    .header-actions {
+        gap: 7px;
+    }
+
+    .header-actions .icon-button {
+        width: 37px;
+        height: 37px;
+    }
+
+    .login-btn {
+        min-width: 110px;
+        height: 40px;
+
+        padding: 0 14px;
+
+        font-size: 12px;
+    }
+
+    .menu-button {
+        display: none !important;
+    }
+}
+
+
+/* =========================================================
+   TABLET
+   769px - 1024px
+   ========================================================= */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
+    .header-container {
+        min-height: 76px;
+
+        padding: 0 4%;
+    }
+
+    /* LOGO LEFT */
+
+    .header-container .brand {
+        margin-right: auto;
+    }
+
+    .header-container .brand img {
+        width: 43px;
+        height: 43px;
+    }
+
+    .header-container .brand-name {
+        font-size: 19px;
+    }
+
+    .header-container .tagline {
+        font-size: 6px;
+    }
+
+
+    /* HIDE NAV */
+
+    .main-nav {
+        display: none;
+
+        position: absolute;
+
+        top: 76px;
+
+        left: 3%;
+        right: 3%;
+
+        width: auto;
+
+        padding: 18px;
+
+        flex-direction: column;
+        align-items: stretch;
+
+        gap: 3px;
+
+        background: #ffffff;
+
+        box-sizing: border-box;
+
+        max-height: calc(100vh - 85px);
+
+        overflow-y: auto;
+
+        z-index: 10000;
+    }
+
+    .main-nav.show {
+        display: flex !important;
+    }
+
+
+    /* NAV LINKS */
+
+    .main-nav .nav-link {
+        width: 100%;
+
+        min-height: 45px;
+
+        padding: 12px 15px;
+
+        display: flex;
+
+        align-items: center;
+        justify-content: space-between;
+
+        box-sizing: border-box;
+    }
+
+
+    /* RIGHT SIDE */
+
+    .header-actions {
+        margin-left: auto;
+
+        gap: 7px;
+    }
+
+    .header-actions .icon-button {
+        width: 38px;
+        height: 38px;
+    }
+
+
+    /* GET QUOTE */
+
+    .login-btn {
+        min-width: 105px;
+        height: 40px;
+
+        padding: 0 13px;
+
+        font-size: 12px;
+    }
+
+
+    /* HAMBURGER */
+
+    .menu-button {
+        display: flex !important;
+
+        width: 40px;
+        height: 40px;
+    }
+
+
+    /* DROPDOWN */
+
+    .nav-item {
+        width: 100%;
+    }
+
+    .dropdown-menu {
+        position: static !important;
+
+        width: 100%;
+
+        transform: none !important;
+
+        display: none !important;
+
+        padding: 5px 10px;
+    }
+
+    .nav-item.open > .dropdown-menu {
+        display: block !important;
+    }
+
+    .nav-item:hover > .dropdown-menu {
+        display: none !important;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   481px - 768px
+   ========================================================= */
+
+@media (min-width: 481px) and (max-width: 768px) {
+
+    .header-container {
+        min-height: 70px;
+
+        padding: 0 16px;
+    }
+
+
+    /* LOGO LEFT */
+
+    .header-container .brand {
+        margin-right: auto;
+
+        gap: 7px;
+
+        min-width: 0;
+    }
+
+    .header-container .brand img {
+        width: 39px;
+        height: 39px;
+    }
+
+    .header-container .brand-name {
+        font-size: 18px;
+    }
+
+    .header-container .tagline {
+        display: none;
+    }
+
+
+    /* RIGHT */
+
+    .header-actions {
+        margin-left: auto;
+
+        gap: 5px;
+    }
+
+
+    /* ICONS */
+
+    .header-actions .icon-button {
+        width: 36px;
+        height: 36px;
+
+        font-size: 13px;
+    }
+
+
+    /* GET QUOTE */
+
+    .login-btn {
+        min-width: 88px;
+        height: 36px;
+
+        padding: 0 10px;
+
+        font-size: 11px;
+
+        border-radius: 7px;
+    }
+
+
+    /* HAMBURGER */
+
+    .menu-button {
+        display: flex !important;
+
+        width: 37px;
+        height: 37px;
+
+        border-radius: 7px;
+    }
+
+    .menu-button span {
+        width: 20px;
+    }
+
+
+    /* NAV */
+
+    .main-nav {
+        display: none;
+
+        position: absolute;
+
+        top: 70px;
+
+        left: 12px;
+        right: 12px;
+
+        width: auto;
+
+        padding: 12px;
+
+        flex-direction: column;
+        align-items: stretch;
+
+        gap: 2px;
+
+        background: #ffffff;
+
+        box-sizing: border-box;
+
+        max-height: calc(100vh - 80px);
+
+        overflow-y: auto;
+
+        z-index: 10000;
+    }
+
+    .main-nav.show {
+        display: flex !important;
+    }
+
+
+    /* NAV LINKS */
+
+    .main-nav .nav-link {
+        width: 100%;
+
+        min-height: 43px;
+
+        padding: 11px 12px;
+
+        display: flex;
+
+        align-items: center;
+        justify-content: space-between;
+
+        box-sizing: border-box;
+    }
+
+
+    /* DROPDOWN */
+
+    .nav-item {
+        width: 100%;
+    }
+
+    .dropdown-menu {
+        position: static !important;
+
+        width: 100%;
+
+        display: none !important;
+
+        transform: none !important;
+
+        padding: 4px 8px;
+    }
+
+    .nav-item.open > .dropdown-menu {
+        display: block !important;
+    }
+
+    .nav-item:hover > .dropdown-menu {
+        display: none !important;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   360px - 480px
+   ========================================================= */
+
+@media (min-width: 360px) and (max-width: 480px) {
+
+    .header-container {
+        min-height: 68px;
+
+        padding: 0 9px;
+    }
+
+
+    /* LOGO LEFT */
+
+    .header-container .brand {
+        margin-right: auto;
+
+        gap: 5px;
+
+        max-width: calc(100% - 175px);
+
+        min-width: 0;
+    }
+
+    .header-container .brand img {
+        width: 34px;
+        height: 34px;
+    }
+
+    .header-container .brand-name {
+        font-size: 16px;
+    }
+
+    .header-container .tagline {
+        display: none;
+    }
+
+
+    /* RIGHT SIDE */
+
+    .header-actions {
+        margin-left: auto;
+
+        gap: 4px;
+
+        flex-shrink: 0;
+    }
+
+
+    /* THEME / RTL */
+
+    .header-actions .icon-button {
+        width: 34px;
+        height: 34px;
+
+        font-size: 12px;
+
+        border-radius: 50%;
+    }
+
+
+    /* GET QUOTE */
+
+    .login-btn {
+        min-width: 72px;
+
+        height: 34px;
+
+        padding: 0 7px;
+
+        font-size: 10px;
+
+        border-radius: 6px;
+    }
+
+
+    /* HAMBURGER */
+
+    .menu-button {
+        display: flex !important;
+
+        width: 34px;
+        height: 34px;
+
+        border-radius: 7px;
+
+        gap: 4px;
+    }
+
+    .menu-button span {
+        width: 18px;
+        height: 2px;
+    }
+
+
+    /* MOBILE NAV */
+
+    .main-nav {
+        display: none;
+
+        position: absolute;
+
+        top: 68px;
+
+        left: 7px;
+        right: 7px;
+
+        width: auto;
+
+        padding: 10px;
+
+        flex-direction: column;
+        align-items: stretch;
+
+        gap: 2px;
+
+        background: #ffffff;
+
+        box-sizing: border-box;
+
+        max-height: calc(100vh - 78px);
+
+        overflow-y: auto;
+
+        z-index: 10000;
+    }
+
+    .main-nav.show {
+        display: flex !important;
+    }
+
+
+    /* ALL MOBILE NAV LINKS */
+
+    .main-nav .nav-link {
+        width: 100%;
+
+        min-height: 43px;
+
+        padding: 10px 11px;
+
+        display: flex;
+
+        align-items: center;
+        justify-content: space-between;
+
+        font-size: 13px;
+
+        box-sizing: border-box;
+    }
+
+
+    /* HOME DROPDOWN */
+
+    .nav-item {
+        width: 100%;
+    }
+
+    .dropdown-menu {
+        position: static !important;
+
+        width: 100%;
+
+        min-width: 0;
+
+        display: none !important;
+
+        transform: none !important;
+
+        padding: 3px 7px;
+
+        margin: 0;
+
+        box-sizing: border-box;
+    }
+
+    .nav-item.open > .dropdown-menu {
+        display: block !important;
+    }
+
+    .nav-item:hover > .dropdown-menu {
+        display: none !important;
+    }
+
+    .dropdown-menu a {
+        display: block;
+
+        width: 100%;
+
+        padding: 9px 10px;
+
+        font-size: 12px;
+
+        box-sizing: border-box;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+   BELOW 360px
+   ========================================================= */
+
+@media (max-width: 359px) {
+
+    .header-container {
+        min-height: 64px;
+
+        padding: 0 7px;
+    }
+
+
+    /* LOGO */
+
+    .header-container .brand {
+        gap: 4px;
+
+        max-width: calc(100% - 155px);
+
+        margin-right: auto;
+    }
+
+    .header-container .brand img {
+        width: 31px;
+        height: 31px;
+    }
+
+    .header-container .brand-name {
+        font-size: 14px;
+    }
+
+
+    /* RIGHT */
+
+    .header-actions {
+        gap: 3px;
+    }
+
+
+    /* ICON BUTTONS */
+
+    .header-actions .icon-button {
+        width: 31px;
+        height: 31px;
+
+        font-size: 11px;
+    }
+
+
+    /* GET QUOTE */
+
+    .login-btn {
+        min-width: 67px;
+
+        height: 31px;
+
+        padding: 0 6px;
+
+        font-size: 9px;
+    }
+
+
+    /* MENU */
+
+    .menu-button {
+        display: flex !important;
+
+        width: 32px;
+        height: 32px;
+
+        gap: 3px;
+    }
+
+    .menu-button span {
+        width: 17px;
+        height: 2px;
+    }
+
+
+    /* NAV */
+
+    .main-nav {
+        top: 64px;
+
+        left: 5px;
+        right: 5px;
+
+        padding: 8px;
+    }
+
+    .main-nav .nav-link {
+        min-height: 40px;
+
+        padding: 9px;
+
+        font-size: 12px;
+    }
+}
+
+
+/* =========================================================
+   RTL
+   ========================================================= */
+
+html[dir="rtl"] .header-container {
+    direction: rtl;
+}
+
+html[dir="rtl"] .header-actions {
+    margin-left: 0;
+    margin-right: auto;
+}
+
+html[dir="rtl"] .main-nav {
+    direction: rtl;
+}
+
+
+/* =========================================================
+   DARK THEME
+   ========================================================= */
+
+body.dark-theme .site-header,
+body.dark .site-header {
+    background: #000000;
+}
+
+body.dark-theme .main-nav,
+body.dark .main-nav {
+    background: #000000;
+}
+
+body.dark-theme .header-actions .icon-button,
+body.dark .header-actions .icon-button {
+    background: #000000;
+    color: #ffffff;
+    border-color: #299447;
+}
+
+body.dark-theme .menu-button,
+body.dark .menu-button {
+    background: #000000;
+    border-color: #444444;
+}
+
+body.dark-theme .menu-button span,
+body.dark .menu-button span {
+    background: #ffffff;
+}
+
+
+/* =========================================================
+   NO HORIZONTAL SCROLL
+   ========================================================= */
+
+html,
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.site-header,
+.header-container,
+.main-nav,
+.header-actions {
+    box-sizing: border-box;
+}
+
+
+
+
+
+
+
+
+
